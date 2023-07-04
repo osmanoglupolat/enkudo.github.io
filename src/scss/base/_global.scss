@@ -19,11 +19,15 @@ body button:not([type]) {
 //@include fontFace($family, $file, $fontWeight, $fontStyle, $fontDisplay)
 
 //FONT
-//FONT
+@include fontFace($font-face1, '#{$font-face1}/#{$font-face1}-Thin', 100, normal, swap);
+@include fontFace($font-face1, '#{$font-face1}/#{$font-face1}-ExtraLight', 200, normal, swap);
+@include fontFace($font-face1, '#{$font-face1}/#{$font-face1}-Light', 300, normal, swap);
 @include fontFace($font-face1, '#{$font-face1}/#{$font-face1}-Regular', 400, normal, swap);
 @include fontFace($font-face1, '#{$font-face1}/#{$font-face1}-Medium', 500, normal, swap);
 @include fontFace($font-face1, '#{$font-face1}/#{$font-face1}-SemiBold', 600, normal, swap);
-@include fontFace($font-face1, '#{$font-face1}/#{$font-face1}-Bold', 700, normal, swap);
+@include fontFace($font-face1, '#{$font-face1}/#{$font-face1}-ExtraBold', 700, normal, swap);
+@include fontFace($font-face1, '#{$font-face1}/#{$font-face1}-Bold', 800, normal, swap);
+@include fontFace($font-face1, '#{$font-face1}/#{$font-face1}-Black', 900, normal, swap);
 
 /*
  * 1. Set `font-size` to support `rem` units
@@ -50,9 +54,6 @@ body button:not([type]) {
   font-style: normal;
   font-display: swap;
 }
-
-
-
 
 html {
   /* 1 */
@@ -115,7 +116,6 @@ i.bg-icon {
   &-caret-down {
     background-image: url("data:image/svg+xml,%0A%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23000000' d='M11 15h10v1H11z'/%3E%3C/svg%3E%0A");
   }
-  
 
 }
 
@@ -301,7 +301,6 @@ i.bg-icon {
   }
 }
 
-
 // Animations
 @keyframes toTop100 {
   0% {
@@ -343,7 +342,6 @@ $banner-arrow-size: 8px;
         color: $gray;
     }
 }
-
 
 //Breadcrumb
 .breadcrumb {
@@ -409,7 +407,6 @@ $banner-arrow-size: 8px;
   }
 }
 
-
 .card {
   &-rating {
     &-bar,
@@ -428,4 +425,3 @@ $banner-arrow-size: 8px;
     }
   }
 }
-

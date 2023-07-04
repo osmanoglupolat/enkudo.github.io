@@ -1,0 +1,88 @@
+.ems-data-filter {
+    .section-title{
+        padding: 32px 0 24px 0;
+        max-width: 356px;
+    }
+    .ems-data-filter-header {
+        height: 46px;
+        width: 100%;
+        flex-shrink: 0;
+        border-radius: 21px;
+        background: $them-dark-color-1;
+        display: inline-flex;
+        align-items: center;  
+
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-color: #aaa transparent;
+        scrollbar-width: thin;
+        white-space: nowrap;
+        
+        &::-webkit-scrollbar {
+            width: 4px;
+            height: 5px;
+        }
+        &::-webkit-scrollbar-button {
+            width: 0px;
+            height: 0px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: #00000024;
+            border-radius: 100px;
+        }
+        &::-webkit-scrollbar-thumb:hover {
+            background: #00000024;
+        }
+        &::-webkit-scrollbar-thumb:active {
+            background: #00000024;
+        }
+        &::-webkit-scrollbar-track {
+            background: transparent;
+            border-radius: 100px;
+        }
+        &::-webkit-scrollbar-track:hover {
+            background: transparent;
+        }
+
+        &::-webkit-scrollbar-track:active {
+            background: transparent;
+        }
+        &::-webkit-scrollbar-corner {
+            background: transparent;
+        }
+         
+        .ems-data-filter-link{
+            display: flex;
+            height: 46px;
+            padding: 10px 20px;
+            justify-content: center;
+            align-items: center;
+            color: $body-text-color;
+            background: transparent;
+            font-weight: 400;
+            font-size: 14px;
+            border-radius: 28px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s linear 0.1s;
+            &.active{
+                background: $them-color;
+                color: $content-bg-color;
+                transition: all 0.2s linear 0.1s;
+            }
+        }
+    }
+    .ems-data-filter-content {
+        .ems-data-filter-box{
+            display: none;
+            &.active{
+                display: block;                
+                position: relative;
+                opacity: 1;
+                z-index: 0;
+                visibility: visible;
+                height: auto;
+            }
+        }
+    }
+}

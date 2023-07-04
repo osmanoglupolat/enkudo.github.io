@@ -1,87 +1,234 @@
 // Buttons
 .btn {
-  width: fit-content;
-  width: -moz-fit-content;
   white-space: nowrap;
-  border: none;
-  // Reset
-  @at-root {
-    %button-reset {
-      padding: 0;
-      background: none;
-      border: none;
-      outline: none !important;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 62px;
+  padding: 0px 24px 0px 32px;
+  gap: 4px;
+  height: 36px;
+  color: #00070E;
+  transition: 0.7s;
+  span{      
+    cursor: pointer;
+    text-decoration: none;
+  }
+  svg{    
+    width: 32px;
+    height: 32px;
+    path{
+      fill: #00070E;
+      transition: 0.7s;
     }
   }
-
-  &-reset {
-    @extend %button-reset;
+  &.btn-lg{
+    padding: 0px 24px;
+    height: 46px;
   }
-
-  &-primary {
-    color: $white !important;
+  &.btn-md{
+    padding: 0px 24px;
+    height: 36px;
   }
-
-  &-icon {
-    &-right,
-    &-left {
-      display: flex !important;
-      align-items: center;
-      justify-content: center;
-      svg {
-        font-size: 16px;
-      }
-    }
-    &-right {
-      svg {
-        margin-left: 10px;
-      }
-    }
-    &-left {
-      svg {
-        margin-right: 10px;
-      }
-    }
+  &.btn-sm{
+    padding: 0px 24px;
+    height: 32px;
   }
-
-  // WhatsApp
-  &-wp {
-    background: #4dcb5b;
-    border-color: #4dcb5b;
-    color: $white;
-
-    &:hover {
-      color: $white;
-    }
-  }
-
   // Theme Colors
-  &-gray4 {
-    background-color: $gray4 !important;
-    color: $dark !important;
+  &-them-1 {
+    color: #00070E;
+    background: $them-color;
+    border:1px solid $them-color;
+    &:hover{      
+      color: $them-color !important;
+      background: transparent !important;  
+      border:1px solid $them-color;
+      transition: 0.7s;
+      svg{    
+        path{
+          fill: $them-color !important;
+          transition: 0.5s;
+        }
+      }
+    }
   }
-
-  &-dark-light {
-    background-color: $btn-dark-light-bg-color !important;
-    border-color: $btn-dark-light-border-color !important;
-    color: $btn-dark-light-color !important;
+  &-them-2 {
+    color: #00070E;
+    background: $body-text-color;
+    border:1px solid $body-text-color;
+    &:hover{      
+      color: $body-text-color !important;
+      background: transparent !important;  
+      border:1px solid $body-text-color;
+      transition: 0.7s;
+      svg{    
+        path{
+          fill: $body-text-color !important;
+          transition: 0.5s;
+        }
+      }
+    }
   }
-  &-coral {
-    background-color: $coral !important;
-    color: $white !important;
+  &-them-3 {
+    color: #00070E;
+    background: #50575B;
+    border:1px solid #50575B;
+    &.disable{      
+      &:hover{      
+        color: #00070E !important;
+        background: #50575B !important;
+        border:1px solid #50575B !important;
+        transition: 0.7s;
+      }
+    }
   }
-
-  &.disabled {
-    background-color: $gray3 !important;
-    border-color: $gray3 !important;
-    color: $dark !important;
+  &-them-4 {
+    color: $body-text-color;
+    background: transparent;
+    border:1px solid transparent;
+    padding: 0px;
+    height: 32px;    
+    cursor: pointer;
+    text-decoration: none;      
+    svg{    
+      path{
+        fill: $body-text-color !important;
+        transition: 0.7s;
+      }
+    }
+    &:hover{      
+      color: $them-color !important; 
+      transition: 0.7s; 
+      svg{    
+        path{
+          fill: $them-color !important;
+          transition: 0.7s;
+        }
+      }
+    }
   }
-
-  &-save {
+  &-them-5 {
+    background: transparent !important;  
+    border:1px solid $them-color;
+    span{        
+      transition: 0.5s;
+      color: $them-color;
+    }
+    svg{    
+      path{
+        fill: $them-color !important;
+        transition: 0.5s;
+      }
+    }
+    &:hover{
+      color: $body-text-color;
+      background:$body-text-color;
+      border:1px solid $body-text-color;
+      transition: 0.7s;
+      span{        
+        transition: 0.7s;
+        color: $body-text-color;
+      }
+      svg{    
+        path{
+          fill: $body-text-color !important;
+          transition: 0.5s;
+        }
+      }
+    }
+  }
+  &-them-6 {
+    background: transparent !important;  
+    border:1px solid $body-text-color;
+    span{        
+      transition: 0.5s;
+      color: $body-text-color;
+    }
+    svg{    
+      path{
+        fill: $body-text-color !important;
+        transition: 0.5s;
+      }
+    }
+    &:hover{
+      color: $them-color;
+      background:$them-color;
+      border:1px solid $them-color;
+      transition: 0.7s;
+      span{        
+        transition: 0.7s;
+        color: $them-color;
+      }
+      svg{    
+        path{
+          fill: $them-color !important;
+          transition: 0.5s;
+        }
+      }
+    }
+  }
+  &-them-7 {
+    background: transparent;  
+    border:1px solid $body-bg-color;
+    span{        
+      transition: 0.5s;
+      color: $body-bg-color;
+    }
+    svg{    
+      path{
+        fill: $body-bg-color !important;
+        transition: 0.5s;
+      }
+    }
+    &:hover{
+      color: $them-color;
+      background:$body-bg-color;
+      border:1px solid $body-bg-color;
+      transition: 0.7s;
+      span{        
+        transition: 0.7s;
+        color: $them-color;
+      }
+      svg{    
+        path{
+          fill: $them-color !important;
+          transition: 0.5s;
+        }
+      }
+    }
+  }
+  &-them-link {
+    justify-content: space-between;
+    border-radius: 0;
+    padding: 0px 5px 0px 15px;
+    gap: 4px;
+    width: auto;
+    height: 36px;
+    color: #ffffff;
+    background: transparent;
+    border:none;
+    position: absolute;
+    z-index: 1;  
+  }
+  &-fav {
+    border-radius: 0;
+    padding: 0 0 0 8px;
+    gap: 4px;
+    width: 32px;
+    height: 32px;
+    svg{      
+      path{      
+        fill: transparent;
+        stroke: $body-text-color;
+      }
+    }
     &.selected {
-      .icon-save {
-        --fill: #d72027;
-        --stroke: #d72027;
+      svg{      
+        path{      
+          fill: #d72027;
+          stroke: #d72027;
+        }
       }
     }
   }

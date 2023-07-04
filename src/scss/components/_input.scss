@@ -121,6 +121,11 @@ textarea {
     }
 }
 
+select:focus, textarea:focus, input:focus,
+select:active, textarea:active, input:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
 
 .ems-field {
      position: relative;

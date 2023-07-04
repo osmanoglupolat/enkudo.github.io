@@ -57,6 +57,8 @@ $grid-breakpoints: (
 
 // Grid containers :316
 $container-max-widths: (
+  sm: $container-sm,
+  md: $container-md,
   lg: $container-lg,
 );
 

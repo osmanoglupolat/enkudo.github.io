@@ -57,35 +57,6 @@
 }
 
 //THEME
-
-/* Home Slider */
-
-.main-slider {
-    .swiper-button-prev, 
-    .swiper-button-next {
-        top: auto;
-        bottom: 68px;
-        right: 68px;
-    }
-
-    .swiper-button-prev,
-    .swiper-container-rtl .swiper-button-next {
-        transform: scale(-1);
-        left: auto;
-        right: $swiper-nav-width + 74px !important;
-    }
-    .swiper-button-next,
-    .swiper-container-rtl .swiper-button-prev {
-        right: 68px;
-    }
-    .swiper-fraction{
-        right: 33px;
-        bottom: 76px
-    }
-}
-
-
-
 .desktop-no-swipe {
   .swiper-inner>.swiper-wrapper {
     transform: none !important;

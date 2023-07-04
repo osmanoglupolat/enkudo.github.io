@@ -1,0 +1,25 @@
+.brands{
+    padding: 80px 0;
+    .brand-slider{
+        .swiper-slide{
+            a{
+                display: flex;
+                max-width: 200px;
+                max-height: 150px;
+                padding: 82px 35px;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                .prm-media{
+                    max-height: 130px;
+                    flex: 1 0 0;
+                    img{
+                        max-width: 130px;
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+    }
+}

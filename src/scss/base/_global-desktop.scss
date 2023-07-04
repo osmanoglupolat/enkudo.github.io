@@ -108,3 +108,33 @@
     transform: translate(-50%, -50%);
     width: 100%;
 }
+
+
+
+.scroll-top-bx{
+    display: flex;
+    width: 45px;
+    height: 45px;
+    padding: 7px 7px 6px 6px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    position: fixed;
+    border-radius: 80px;
+    background: rgba(255, 255, 255, 0.20);
+    right: 32px;
+    bottom: 40px;
+    z-index: 9;
+    svg{
+      display: flex;
+      width: 32px;
+      height: 32px;
+      padding: 8px 9px;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+    }
+  }
+  html{
+    scroll-behavior: smooth;
+  }

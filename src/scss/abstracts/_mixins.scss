@@ -48,3 +48,92 @@
     @return calc($px / 16) + rem;
 }   
 */
+
+    
+// Zindex
+.z {
+    @for $i from 0 through 1000 {
+        &-#{$i} {
+            z-index: #{$i} !important;
+        }
+    }
+}
+
+// Letter Space
+.ls {
+    @for $i from 0 through 10 {
+        &-#{$i} {
+            letter-spacing: #{$i}px !important;
+        }
+    }
+}      
+
+// Font Weight    
+@for $i from 100 through 900 {
+    @if ($i % 100 == 0) {
+        .fw-#{$i} {
+            font-weight: $i !important;
+        }
+    }
+} 
+
+// Min Widht
+.mnw-25{min-width: 25px;}
+.mnw-35{min-width: 35px;}
+.mnw-50{min-width: 50px;}
+.mnw-75{min-width: 75px;}
+.mnw-100{min-width: 100px;}
+.mnw-125{min-width: 125px;}
+.mnw-150{min-width: 150px;}
+.mnw-200{min-width: 200px;}
+.mnw-250{min-width: 250px;}
+.mnw-300{min-width: 300px;}
+.mnw-350{min-width: 350px;}
+.mnw-400{min-width: 400px;}
+.mnw-450{min-width: 450px;}
+.mnw-500{min-width: 500px;}
+// Min Height
+.mnh-25{min-height: 25px;}
+.mnh-35{min-height: 35px;}
+.mnh-50{min-height: 50px;}
+.mnh-75{min-height: 75px;}
+.mnh-100{min-height: 100px;}
+.mnh-125{min-height: 125px;}
+.mnh-150{min-height: 150px;}
+.mnh-200{min-height: 200px;}
+.mnh-250{min-height: 250px;}
+.mnh-300{min-height: 300px;}
+.mnh-350{min-height: 350px;}
+.mnh-400{min-height: 400px;}
+.mnh-450{min-height: 450px;}
+.mnh-500{min-height: 500px;}    
+// Max Widht
+.mxw-25{max-width: 25px;}
+.mxw-35{max-width: 35px;}
+.mxw-50{max-width: 50px;}
+.mxw-75{max-width: 75px;}
+.mxw-100{max-width: 100px;}
+.mxw-125{max-width: 125px;}
+.mxw-150{max-width: 150px;}
+.mxw-200{max-width: 200px;}
+.mxw-250{max-width: 250px;}
+.mxw-300{max-width: 300px;}
+.mxw-350{max-width: 350px;}
+.mxw-400{max-width: 400px;}
+.mxw-450{max-width: 450px;}
+.mxw-500{max-width: 500px;}
+// Max Height
+.mxh-25{max-height: 25px;}
+.mxh-35{max-height: 35px;}
+.mxh-50{max-height: 50px;}
+.mxh-75{max-height: 75px;}
+.mxh-100{max-height: 100px;}
+.mxh-125{max-height: 125px;}
+.mxh-150{max-height: 150px;}
+.mxh-200{max-height: 200px;}
+.mxh-250{max-height: 250px;}
+.mxh-300{max-height: 300px;}
+.mxh-350{max-height: 350px;}
+.mxh-400{max-height: 400px;}
+.mxh-450{max-height: 450px;}
+.mxh-500{max-height: 500px;}    

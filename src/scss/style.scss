@@ -8,14 +8,22 @@
 // Components
 @import 'components/swiper';
 @import 'components/tab';
+@import 'components/data-filter';
 @import 'components/accordion';
 @import 'components/toastify';
+@import 'components/button';
+@import 'components/breadcrumb';
 
 // Layouts
 @import 'layouts/header';
+@import 'layouts/home-slider-desktop';
+@import 'layouts/banner1-slider-desktop';
+@import 'layouts/brands';
+@import 'layouts/pages';
 @import 'layouts/product-category';
 @import 'layouts/product-detail';
 @import 'layouts/product-list';
+@import 'layouts/footer';
 
 //Modules
 @import 'modules/cookies';
@@ -24,16 +32,27 @@
 
 // MOBILE (< $breakpoint-lg)
 @media (max-width: $breakpoint-lg - 1) {
+  // Base
+  @import 'base/global-mobile';
+
   // Components
   @import 'components/swiper-mobile';
   @import 'components/modal-mobile';
   @import 'components/accordion-mobile';
+  @import 'components/tab-mobile';
+  @import 'components/pagination-mobile';
 
 
   // Layouts
   @import 'layouts/header-mobile';
+  @import 'layouts/home-slider-mobile';
+  @import 'layouts/brands-mobile';
+  @import 'layouts/pages-mobile';
+  @import 'layouts/banner1-slider-mobile';
+  @import 'layouts/product-category-mobile';
   @import 'layouts/product-detail-mobile';
   @import 'layouts/product-list-mobile';
+  @import 'layouts/footer-mobile';
 }
 
 // MIDDLE (> $breakpoint-lg & < $breakpoint-lg)
@@ -43,13 +62,21 @@
 
 // DESKTOP (> $breakpoint-lg)
 @media (min-width: $breakpoint-lg) {
+  // Base
+  @import 'base/global-desktop';
+
   // Components
   @import 'components/swiper-desktop';
   @import 'components/modal-desktop';
   @import 'components/accordion-desktop';
+  @import 'components/tab-desktop';
+  @import 'components/button';
+  @import 'components/pagination-desktop';
 
   // Layouts
   @import 'layouts/header-desktop';
+  @import 'layouts/footer-desktop';
+  @import 'layouts/product-category-desktop';
 
 
   @import 'layouts/product-detail-desktop';

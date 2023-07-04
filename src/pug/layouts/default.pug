@@ -17,18 +17,25 @@ html(lang=lang, dir=dir)
             link(rel="icon" type="image/png" sizes="32x32" href=dirImages + "favicon/favicon.png")
             link(rel="icon" type="image/png" sizes="16x16" href=dirImages + "favicon/favicon.png")
             link(rel="manifest" href="manifest-min.json")
-            link(rel="mask-icon" href=dirImages + "favicon/safari-pinned-tab.svg" color="#ffc40d")
+            link(rel="mask-icon" href=dirImages + "favicon/safari-pinned-tab.svg" color="#4AC6E9")
             link(rel="shortcut icon" href=dirImages + "favicon/favicon.png")
             
-            meta(name="theme-color" content="#D72027")
+            meta(name="theme-color" content="#4AC6E9")
 
             // dns-prefetch
             link(rel="preconnect", href="https://connect.facebook.net")
             link(rel="dns-prefetch", href="https://connect.facebook.net")
 
             // preload
-            link(rel="preload", href=dirFonts + "VelaSans/VelaSans-Regular.woff2", as="font", type="font/woff2" crossorigin)
-            link(rel="preload", href=dirFonts + "VelaSans/VelaSans-Bold.woff2", as="font", type="font/woff2" crossorigin)
+            link(rel="preload", href=dirFonts + "Inter/Inter-Thin.woff2", as="font", type="font/woff2" crossorigin)
+            link(rel="preload", href=dirFonts + "Inter/Inter-ExtraLight.woff2", as="font", type="font/woff2" crossorigin)
+            link(rel="preload", href=dirFonts + "Inter/Inter-Light.woff2", as="font", type="font/woff2" crossorigin)
+            link(rel="preload", href=dirFonts + "Inter/Inter-Regular.woff2", as="font", type="font/woff2" crossorigin)
+            link(rel="preload", href=dirFonts + "Inter/Inter-Medium.woff2", as="font", type="font/woff2" crossorigin)
+            link(rel="preload", href=dirFonts + "Inter/Inter-SemiBold.woff2", as="font", type="font/woff2" crossorigin)
+            link(rel="preload", href=dirFonts + "Inter/Inter-ExtraBold.woff2", as="font", type="font/woff2" crossorigin)
+            link(rel="preload", href=dirFonts + "Inter/Inter-Bold.woff2", as="font", type="font/woff2" crossorigin)
+            link(rel="preload", href=dirFonts + "Inter/Inter-Black.woff2", as="font", type="font/woff2" crossorigin)
 
             //app shell
                 style
@@ -45,8 +52,8 @@ html(lang=lang, dir=dir)
             else 
                 // css
                 link(rel="stylesheet", href=dirFrontend + "css/app-shell.css")
-                link(rel="stylesheet", href=dirFrontend + "css/style.css")
-                       
+                link(rel="stylesheet", href=dirFrontend + "css/style.css")  
+                
             // lang
             script.
                 lang = '#{lang}';
@@ -102,11 +109,11 @@ html(lang=lang, dir=dir)
 
                 // HEAD
     // BODY
-    body(class=pageClass)
+    body(class=pageClass id='scroll-top')
         .site-container
             block header
                 // HEADER
-                header.site-header.sticky-top.text-dark
+                header.site-header.sticky-top.text-white
                     include ../includes/header
                 // HEADER
             
@@ -119,74 +126,8 @@ html(lang=lang, dir=dir)
                 if pageName != "pageNotfound" && pageName != "pageServerError"
                     footer.site-footer
                         include ../includes/footer
-            // MINI CART
-            .ems-cart-overlay.ems-overlay(data-target="body" data-ready="ems-cart-ready" data-animate="ems-cart-animate" data-type="remove")
-            .mini-cart-content-inner.ems-cart.ems-modal.ems-modal-end.ems-modal-lg.ems-modal-lg-end
-                // Class'ı mini-cart-content olmalı ve içeriği widget'tan gelmeli.
-                .modal-header.p-20.border-bottom
-                    span.fs-18 Sepetim (2 ürün)
-                    a.cart-close.modal-close(onclick="targetElement.clicked(this);" href="javascript:void(0);" data-target="body" data-ready="ems-cart-ready" data-animate="ems-cart-animate" data-type="remove")
-                        +icon("close")
-                .mini-cart-body.modal-body.ems-scrollbar.ems-scrollbar-vertical.p-20.mx-10.mb-20
-                    .ems-message.ems-message-warning.my-60.pt-60
-                        .d-flex.flex-column.align-items-center 
-                            .rounded-circle.p-30
-                                +icon('basketemty').fs-64
-                            .mb-40.my-20 Sepetinizde henüz ürün bulunmuyor.
-                            a.btn.btn-dark(href="#") Alışverişe Başla
-                    ul.list-unstyled.ems-cart-grid.ems-grid-wrapper
-                        - for (var x = 0; x < 10; x++)
-                            li.prd.prd-hrz.ems-grid-row.mb-40.pb-40.border-bottom
-                                .row.position-relative.prd-inner.m-0.align-items-center.p-0
-                                    .col-3.ps-0
-                                        +img('ratio ratio-1x1', true, dirUploads + 'image-scaled.jpg').mini-cart-prd-img
-                                    .prd-body.col-6.px-0
-                                        .col1
-                                            .d-block.prd-title
-                                                b Adidas 
-                                                span SXB433P ayakkabı
-                                            .d-block.py-5
-                                                span.prd-price-last 10.300 ₺
-                                                span.text-gray (-%50)    
-                                            span.d-block.mb-10.fs-14
-                                                span.text-gray Adet 
-                                                span 1 Ürün
-                                                
-                                        .col2.d-flex.justify-content-between.align-items-center
-                                            .d-flex.prd-price-holder.align-items-center
-                                                .prd-price-discount.bg-primary.text-white.py-10.px-5.me-10.fs-12 %50
-                                                .prd-price-first.text-gray.me-10.text-decoration-line-through.w-90 10.990 ₺
-                                                .flex-grow-1.prd-price
-                                                    .prd-price-last.w-90 10.300 ₺
-                                    .col-3.d-flex.flex-column.justify-content-between.align-items-end(data-document-id="9a183491-cd38-4483-9179-381f86eda976")
-                                        a.position-relative.prd-remove-to-cart(onclick="shopping.removeFromCart(this);" href="javascript:void(0);")
-                                            +icon("trash")
-                .modal-footer.p-20.border-0
-                    .floating-col.d-flex.align-items-center.justify-content-around.w-100
-                        .floating-total
-                            .floating-total-title.fs-12.py-5 Toplam
-                            .floating-total-price.ems-result.fs-18.fw-600 3.334,00 ₺
-                        a.cart-footer-link.btn.btn-black.d-flex.align-items-center.justify-content-between.btn-lg(href="/sepet") Sepetime Git
-                                        
-           
-            
 
-            // FOOTER
-            // block ajx-popup
-                // BS MODAL PREVIEW
-                .ems-modal-container
-                    .modal-default-overlay.ems-overlay(data-target='.ems-modal-container' data-ready='modal-default-ready' data-animate='modal-default-animate' data-type='remove')
-                    .modal.modal-default
-                        .modal-dialog.modal-dialog-centered.modal-dialog-scrollable.modal-lg.modal-fullscreen-lg-down
-                            .modal-content
-                                .modal-header
-                                    .modal-title.h2
-                                    a.modal-close(onclick='targetElement.clicked(this);' href='javascript:void(0);' data-target='.ems-modal-container' data-ready='modal-default-ready' data-animate='modal-default-animate' data-type='remove')
-                                        +icon('close')
-                                .modal-body
-                // BS MODAL PREVIEW
-            
-            block cookie
+            //block cookie
                 // COOKIE INFORMATION
                 .ems-cookie-bnr.fixed-bottom.py-20.py-lg-30.border-top.shadow-lg.collapse.show
                     .container-lg
@@ -201,7 +142,11 @@ html(lang=lang, dir=dir)
             block loading-page
                 // LOADING PAGE
                 .ems-loading-overlay.ems-overlay
-                // LOADING PAGE
+                
+            // SCROLL TOP
+            block scroll-top-btn
+                a.scroll-top-bx(href='#scroll-top')
+                    +icon("ArrowUp")
 
             block foot
                 #tracker-box
@@ -216,7 +161,8 @@ html(lang=lang, dir=dir)
                     .ems-user-name {name} {surname}
                     a.ems-user-logout(href='/tr/LogOff') Çıkış Yap
                     
-                //<script src="https://img2-ipekyol.mncdn.com/ipekyol/frontend/bundles/NewThemeScripts/14.js"></script>
+                script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.js")
+                script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js")
                 script(src=dirFrontend + "js/620.js")
                 script(src=dirFrontend + "js/custom.js")
                 // FOOT

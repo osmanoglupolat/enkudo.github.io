@@ -1,0 +1,108 @@
+.site-footer {
+    border-top: 2px solid $them-color;
+    background: $content-bg-color;
+    padding: 40px 32px;
+    .logo{
+        width: 106px;
+        max-height: 32px;
+        img{
+            width: 100%;
+        }
+    }
+    .footer-title-big{
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 28px;
+        color: $gray2;
+        max-width: 200px;
+        letter-spacing: -1px;
+        margin-bottom: 40px;
+    }
+    .footer-list{
+        display: block;
+        margin-bottom: 24px;
+        .list-title {
+            border-top: 1px solid rgba(232, 232, 232, 0.15);
+            padding-top: 8px;
+            display: flex;
+            justify-content: space-between;
+            span{
+                font-size: 22px;
+                font-weight: 400;
+                color: $body-text-color;
+            }
+            &::after{
+              display: none;
+            }  
+            svg{            
+              width: 32px;
+              height: 32px;
+              &.icon-plus_minus{
+                display: block;
+              }
+              &.icon-plus_minuss{
+                display: none;
+              }
+              path{
+                fill: #959C9F;
+              }
+            }
+            &.show{   
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              width: 100%;
+              background-color: transparent;       
+              span{
+                color: $white;
+                font-weight: 500;
+              }
+              svg{                
+                &.icon-plus_minus{
+                    display: none;
+                }
+                &.icon-plus_minuss{
+                    display: block;
+                }
+              }
+            }
+        }
+        .dropdown-menu{     
+            &.show{    
+                background: transparent;
+                display: inline-block;  
+                gap:16px;  
+                position: initial !important;
+                transform: none !important;
+                margin-top: 16px !important;
+            }
+            .list-link{                                 
+                width: calc(100% / 2);
+                font-size: 14px;
+                font-weight: 400;
+                color: $gray2;
+                cursor: pointer;
+                text-decoration: none;
+                display: inline-grid;
+                &:hover{
+                    color: $white;
+                }
+            }
+        }
+    }
+    .alt-footer{
+        border-top: 1px solid rgba(232, 232, 232, 0.15);
+        padding: 8px 0 24px 0;
+        margin-top: 40px;
+        margin-bottom: 45px;
+        .copy-right{
+            color: $gray2;
+            font-size: 14px;
+            font-weight: 400;
+        }
+        .copy-brad{
+            width: 25.781px;
+            height: 13px;
+        }
+    }
+}

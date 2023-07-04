@@ -2,14 +2,16 @@ body {
   background: $body-bg-color;
   margin: 0;
   font-size: 1rem;
+  font-family: $font1;
   overflow-x: hidden;
 }
 
 .site {
   &-header {
     position: relative;
-    background: $white;
+    background: transparent;
     height: $site-header-height;
+    color: $body-text-color;
     .header-wrapper {
       height: 100%;
     }
@@ -21,7 +23,7 @@ body {
       }
     }
     &-bg & {
-      background: white;
+      background: $content-bg-color;
     }
   }
 
@@ -113,3 +115,4 @@ body {
 .modal {
   display: none;
 }
+

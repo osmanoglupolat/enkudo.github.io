@@ -1,0 +1,26 @@
+.breadcrumb-list-top{
+    position: absolute;
+    top: 80px;
+    z-index: 99;
+    width: 100%;
+    .breadcrumb{
+        .readcrumb-item{
+            a{
+                color: #50575B;
+                font-size: 12px;
+                font-weight: 400;
+            }
+            &.active{
+                color: #959C9F;
+                &::after {
+                    content: "";
+                }
+            }
+            &::after {
+                padding: 12px;
+                color: #50575B;
+                content: "/";
+            }
+        }
+    }
+}

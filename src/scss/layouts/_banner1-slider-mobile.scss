@@ -1,0 +1,21 @@
+
+/* Bnner 1 Slider */
+.banner1-slider {
+    &-section{
+      .slide-desc{
+        max-width: 200px;
+      }
+      picture{        
+        height: 352px;
+        img{
+          height: 352px;
+        }
+      }      
+      .banner1-slider-text-box{
+        padding: 32px 24px;
+        max-width: 248px;
+        margin: 0 0 0 5px;
+      }
+    }
+  }
+  

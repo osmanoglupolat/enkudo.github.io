@@ -1,21 +1,47 @@
 .ems-tab {
-    &-bordered {
-        .ems-tab-header {
-            a {
-                border-bottom: 1px solid $gray;
-                &.selected {
-                    color: $black;
-                   
-                }
+    .section-title{
+        padding: 32px 0 24px 0;
+        max-width: 356px;
+    }
+    .ems-tab-header {
+        height: 46px;
+        width: 100%;
+        flex-shrink: 0;
+        border-radius: 21px;
+        background: $them-dark-color-1;
+        display: inline-flex;
+        align-items: center;
+        .ems-tab-link{
+            display: flex;
+            height: 46px;
+            padding: 10px 20px;
+            justify-content: center;
+            align-items: center;
+            color: $body-text-color;
+            background: transparent;
+            font-weight: 400;
+            font-size: 14px;
+            border-radius: 28px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s linear 0.1s;
+            &.selected{
+                background: $them-color;
+                color: $content-bg-color;
+                transition: all 0.2s linear 0.1s;
             }
         }
     }
-    &-header {
-        a {
-            color: $black;
-            margin-right: 10px;
-            &.selected {
-                color: $primary;
+    .ems-tab-content {
+        .ems-tab-box{
+            display: none;
+            &.selected{
+                display: block;                
+                position: relative;
+                opacity: 1;
+                z-index: 0;
+                visibility: visible;
+                height: auto;
             }
         }
     }

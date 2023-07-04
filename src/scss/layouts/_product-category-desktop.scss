@@ -1,0 +1,165 @@
+.product-head-title{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: $them-dark-color-1;
+    gap: 16px;
+    min-height: 90px;
+    padding: 32px 24px;
+    margin: 40px 0;
+    h3{
+        color: $body-text-color;
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 38px;
+    }
+    span{
+        color: $body-text-color;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+    }
+}
+
+.product-categories{
+    .filter-box{
+        max-width: 339px;
+        .filter-head{
+            display: flex;
+            width: 100%;
+            height: 44px;
+            padding: 8px 24px;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 32px;
+            background: $them-dark-color-1;
+            margin-bottom: 16px;
+            .filter-btn{
+                span{
+                    color: $them-color;
+                    font-size: 17px;
+                    font-weight: 400;
+                    line-height: 23px;
+                    cursor: pointer;
+                    text-decoration: none;
+                }
+            }
+            .filter-clear{
+                span{
+                    color: $gray2;
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: normal;
+                    text-decoration-line: underline;
+                    cursor: pointer;
+                    text-decoration: none;
+                }
+            }
+        }
+        .filter-tag{
+            display: flex;
+            padding-left: 24px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 32px;
+            .filter-tag-item{
+                display: flex;
+                padding: 0px 2px 0px 8px;
+                justify-content: center;
+                align-items: center;
+                background: rgba(255, 255, 255, 0.10);
+                span{
+                    color: $gray2;
+                    text-align: center;
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 17px;
+                }
+                svg{
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+        .filter-settings{
+            .accordion{
+                .accordion-item{
+                    border: 0;
+                    .accordion-header{
+                        .accordion-button{
+                            display: flex;
+                            height: 48px;
+                            justify-content: space-between;
+                            align-items: center;
+                            align-self: stretch;
+                            border-top: 1px solid #262B30;
+                            background: transparent;
+                            span{
+                                color: $body-text-color;
+                                font-size: 18px;
+                                font-weight: 500;
+                                line-height: 25px;
+                            }
+                            &::after {
+                                display: none;
+                            }
+                            &:not(.collapsed)::after {
+                                background-image: none;
+                            }
+                            svg{                                
+                                width: 32px;
+                                height: 32px;
+                            }
+                            &:not(.collapsed) {
+                                svg{                                
+                                    width: 32px;
+                                    height: 32px;
+                                }
+                            }
+                        }
+                    }
+                    .accordion-collapse{
+                        &.show{
+
+                        }
+                        .accordion-body{
+
+                        }
+                        &.collapse:not(.show) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .ems-data-filter {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        .ems-data-filter-header {    
+            .ems-data-filter-link{
+                display: flex;
+                height: 46px;
+                padding: 10px 20px;
+                justify-content: center;
+                align-items: center;
+                color: $body-text-color;
+                background: transparent;
+                font-weight: 400;
+                font-size: 14px;
+                border-radius: 28px;
+                cursor: pointer;
+                text-decoration: none;
+                transition: all 0.2s linear 0.1s;
+                &.active{
+                    background: $white;
+                    color: $content-bg-color;
+                    transition: all 0.2s linear 0.1s;
+                }
+            }
+        }
+    }
+}

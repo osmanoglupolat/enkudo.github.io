@@ -1,0 +1,93 @@
+
+.tab-nav-box {
+    .section-title{
+        padding: 32px 0 24px 0;
+        max-width: 356px;
+    }
+    .nav-pills {
+        width: 100%;
+        height: auto;
+        background: transparent;
+        border-radius: 0;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 252px;
+        gap: 36px;
+        .nav-link{ 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            height: 32px;
+            padding: 0px;
+            margin: 0;
+            gap: 12px;
+            transition: all 0.4s linear 0.2s; 
+            &::after{
+              display: none;
+            }    
+            span{
+              color: #AFB3B5;
+              font-weight: 300;
+              transition: all 0.4s linear 0.2s; 
+              font-size: 24px;
+              line-height: 22.4px;
+            }
+            svg{            
+              width: 32px;
+              height: 32px;
+              display: none;
+              path{
+                fill: #AFB3B5;
+              }
+              &.icon-arrow-right{                  
+                path{
+                  fill: #AFB3B5;
+                }
+              }
+            }
+            &.active{   
+              background-color: transparent;
+              padding: 0px;
+              span{
+                color: $white;
+                font-weight: 600;
+                transition: all 0.4s linear 0.2s; 
+              }
+              svg{        
+                display: block;  
+                path{
+                    fill: $white;
+                }              
+                &.icon-arrow-right{                  
+                  path{
+                    fill: $white;
+                  }
+                }
+              }
+            }
+            &:hover{    
+                background-color: transparent;
+                padding: 0px;    
+              span{ 
+                color: $white;
+                transition: all 0.4s linear 0.2s;
+              }
+              svg{     
+                display: block;       
+                path{
+                  fill: $white;
+                }
+              }
+            }
+        }
+    }
+    .tab-content {
+        .tab-pane{
+            &.active{
+            }
+        }
+    }
+}

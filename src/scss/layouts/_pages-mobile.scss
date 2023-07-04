@@ -16,3 +16,14 @@
     top: 0;
     left: 0;
 }
+section{
+    &.bg-dark-them-1-sm-dark{        
+        background: $body-bg-color;
+    }
+    .section-title{
+        padding: 10px 0 0px 0 !important;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 28px;
+    }
+}

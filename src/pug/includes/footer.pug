@@ -1,1 +1,64 @@
-Footer Footer Section
+.container-fluid.g-0
+    .row
+        .col-12            
+            .logo.mb-40
+                a(href="index.html")
+                    +img('w-100', false, dirImages + 'logo.svg')
+
+    .row
+        .col-12.col-lg-6
+            h3.footer-title-big For The Produce
+                <br> — You Don’t Yet Know
+        
+        .col-12.col-lg-6
+            .row
+                .col-12.col-lg-4
+                    .footer-list
+                        .list-title.dropdown-toggle(href='javascript:;' id='dropdownMenu' aria-haspopup='true' data-bs-toggle='dropdown' data-bs-auto-close='outside' aria-expanded='false')
+                            span Services
+                            +icon("plus_minus")
+                            +icon("plus_minuss")
+                        .dropdown-menu(aria-labelledby='dropdownMenu')
+                            a(href="index.html").list-link Streaming Video
+                            a(href="index.html").list-link Streaming Music
+                            a(href="index.html").list-link Education
+                            a(href="index.html").list-link News Portal
+                            a(href="index.html").list-link Magazines
+                            a(href="index.html").list-link Newspaper
+                            a(href="index.html").list-link Language
+
+                .col-12.col-lg-4
+                    .footer-list
+                        .list-title.dropdown-toggle(href='javascript:;' id='dropdownMenu' aria-haspopup='true' data-bs-toggle='dropdown' data-bs-auto-close='outside' aria-expanded='false')
+                            span Help
+                            +icon("plus_minus")
+                            +icon("plus_minuss")
+                        .dropdown-menu(aria-labelledby='dropdownMenu')
+                            a(href="index.html").list-link FAQs
+                            a(href="index.html").list-link Plans & Pricing
+                            a(href="index.html").list-link Subscription
+                            a(href="index.html").list-link Contact Us
+                        
+                .col-12.col-lg-4
+                    .footer-list
+                        .list-title.dropdown-toggle(href='javascript:;' id='dropdownMenu' aria-haspopup='true' data-bs-toggle='dropdown' data-bs-auto-close='outside' aria-expanded='false')
+                            span Legal
+                            +icon("plus_minus")
+                            +icon("plus_minuss")
+                        .dropdown-menu(aria-labelledby='dropdownMenu')
+                            a(href="index.html").list-link Privacy Policy
+                            a(href="index.html").list-link Terms of Use
+                            a(href="index.html").list-link Cookie Policy
+                            a(href="index.html").list-link Manage Cookies
+
+        .col-12.col-lg-12
+            .alt-footer
+                .row
+                    .col-9.col-lg-6
+                        .d-flex.align-item-center.justify-content-start
+                            .copy-right © 2023 Enkudo
+
+                    .col-3.col-lg-6
+                        .d-flex.align-item-center.justify-content-end
+                            .copy-brand
+                                +icon("minus99")
