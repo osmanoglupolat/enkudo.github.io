@@ -12,80 +12,85 @@ block content
             +swiper('widgetAuto', true, true, false, true)(class="main-slider")
                 -for(var i=0; i<1; i++)
                     li.swiper-slide
-                        .w-100
+                        .d-flex.align-items-center.justify-content-center
                             picture
                                 source.lazy-picture(media='(max-width:0)' srcset='frontend/images/1x1.svg')
                                 source(media='(max-width: 767px)' srcset='frontend/images/slider/1.png 2x')
                                 source(media='(min-width: 768px)' srcset='frontend/images/slider/1.png')
                                 img.w-100(src='frontend/images/slider/1.png' alt='slide 1')
                                 .overleyslider
-                            .container.px-20.px-lg-0
-                                .row.g-0
-                                    .swiper-slide-overlay.position-absolute.top-50.w-100.h-100.text-start.d-flex.align-items-start.justify-content-start
-                                        .slide-desc.d-flex.flex-column.w-lg-50.mt-0.mt-lg-0
-                                            .d-flex.align-items-center.mb-10.mb-lg-15
-                                                h3.text-white.fs-32.fs-lg-48.fw-600.lh-1.mt-0.mt-lg-0 Ayak İşleri
-                                                .slider-text-line
-                                                span.text-white.fs-18.fs-lg-20.fw-400.lh-1.mt-0.mt-lg-0 GAİN
-                                            span.text-white.fs-16.fs-lg-18 For a limited time get annual Gain subscription %20 off and start to watch your favourite programs on Gain. 
-                                            .d-block
-                                                a.btn.btn-them-1.btn-lg.mt-40.mb-10(href="/")
-                                                    span Learn More
-                                                    svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                                        path(fill-rule='evenodd' clip-rule='evenodd' d='M17.3889 11.2258V9.21393C17.3889 9.03956 17.5525 8.93762 17.6696 9.04224L24.2082 15.5625C24.5973 15.9032 24.5973 16.1701 24.2082 16.5135C24.2082 16.5135 17.7868 22.8575 17.6696 22.9594C17.5525 23.0614 17.3889 22.9594 17.3889 22.7851V20.7731C17.3889 20.6363 17.5348 20.4271 17.5348 20.4271L20.9837 16.875H8.5V15.125H20.9839L17.5348 11.5719C17.4442 11.4914 17.3889 11.3627 17.3889 11.2258Z')
-                                            span.fs-12.fs-lg-14.fw-400.text-white
-                                                p.my-0 *This offer ends April 8th 2023 and valid on annual subscription.
-                                                p.my-0 *Starting at $19.90
+                            .position-absolute.w-100.top-50
+                                .container.px-20.px-lg-0
+                                    .row.g-0
+                                        .w-100.h-100.z-1.text-start.d-flex.align-items-start.justify-content-start
+                                            .slide-desc.d-flex.flex-column.w-lg-50.mt-0.mt-lg-0
+                                                .d-flex.align-items-center.mb-10.mb-lg-15
+                                                    h3.text-white.fs-32.fs-lg-48.fw-600.lh-1.mt-0.mt-lg-0 Ayak İşleri
+                                                    .slider-text-line
+                                                    span.text-white.fs-18.fs-lg-20.fw-400.lh-1.mt-0.mt-lg-0 GAİN
+                                                span.text-white.fs-16.fs-lg-18 For a limited time get annual Gain subscription %20 off and start to watch your favourite programs on Gain. 
+                                                .d-block
+                                                    a.btn.btn-them-1.btn-lg.mt-40.mb-10.mxw-200.w-100(href="product-detail.html")
+                                                        span Learn More
+                                                        svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                                            path(fill-rule='evenodd' clip-rule='evenodd' d='M17.3889 11.2258V9.21393C17.3889 9.03956 17.5525 8.93762 17.6696 9.04224L24.2082 15.5625C24.5973 15.9032 24.5973 16.1701 24.2082 16.5135C24.2082 16.5135 17.7868 22.8575 17.6696 22.9594C17.5525 23.0614 17.3889 22.9594 17.3889 22.7851V20.7731C17.3889 20.6363 17.5348 20.4271 17.5348 20.4271L20.9837 16.875H8.5V15.125H20.9839L17.5348 11.5719C17.4442 11.4914 17.3889 11.3627 17.3889 11.2258Z')
+                                                span.fs-12.fs-lg-14.fw-400.text-white
+                                                    p.my-0 *This offer ends April 8th 2023 and valid on annual subscription.
+                                                    p.my-0 *Starting at $19.90
+                                                    
                     li.swiper-slide
-                        .w-100
+                        .d-flex.align-items-center.justify-content-center
                             picture
                                 source.lazy-picture(media='(max-width:0)' srcset='frontend/images/1x1.svg')
                                 source(media='(max-width: 767px)' srcset='frontend/images/slider/2.png 2x')
                                 source(media='(min-width: 768px)' srcset='frontend/images/slider/2.png')
                                 img.w-100(src='frontend/images/slider/2.png' alt='slide 2')
                                 .overleyslider
-                            .container.px-20.px-lg-0
-                                .row.g-0
-                                    .swiper-slide-overlay.position-absolute.top-50.w-100.h-100.text-start.d-flex.align-items-start.justify-content-start
-                                        .slide-desc.d-flex.flex-column.w-lg-50.mt-0.mt-lg-0
-                                            .d-flex.align-items-center.mb-10.mb-lg-15
-                                                h3.text-white.fs-32.fs-lg-48.fw-600.lh-1.mt-0.mt-lg-0 Ayak İşleri
-                                                .slider-text-line
-                                                span.text-white.fs-18.fs-lg-20.fw-400.lh-1.mt-0.mt-lg-0 GAİN
-                                            span.text-white.fs-16.fs-lg-18 For a limited time get annual Gain subscription %20 off and start to watch your favourite programs on Gain. 
-                                            .d-block
-                                                a.btn.btn-them-1.btn-lg.mt-40.mb-10(href="/")
-                                                    span Learn More
-                                                    svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                                        path(fill-rule='evenodd' clip-rule='evenodd' d='M17.3889 11.2258V9.21393C17.3889 9.03956 17.5525 8.93762 17.6696 9.04224L24.2082 15.5625C24.5973 15.9032 24.5973 16.1701 24.2082 16.5135C24.2082 16.5135 17.7868 22.8575 17.6696 22.9594C17.5525 23.0614 17.3889 22.9594 17.3889 22.7851V20.7731C17.3889 20.6363 17.5348 20.4271 17.5348 20.4271L20.9837 16.875H8.5V15.125H20.9839L17.5348 11.5719C17.4442 11.4914 17.3889 11.3627 17.3889 11.2258Z')
-                                            span.fs-12.fs-lg-14.fw-400.text-white
-                                                p.my-0 *This offer ends April 8th 2023 and valid on annual subscription.
-                                                p.my-0 *Starting at $19.90
+                            .position-absolute.w-100.top-50
+                                .container.px-20.px-lg-0
+                                    .row.g-0
+                                        .w-100.h-100.z-1.text-start.d-flex.align-items-start.justify-content-start
+                                            .slide-desc.d-flex.flex-column.w-lg-50.mt-0.mt-lg-0
+                                                .d-flex.align-items-center.mb-10.mb-lg-15
+                                                    h3.text-white.fs-32.fs-lg-48.fw-600.lh-1.mt-0.mt-lg-0 Ayak İşleri
+                                                    .slider-text-line
+                                                    span.text-white.fs-18.fs-lg-20.fw-400.lh-1.mt-0.mt-lg-0 GAİN
+                                                span.text-white.fs-16.fs-lg-18 For a limited time get annual Gain subscription %20 off and start to watch your favourite programs on Gain. 
+                                                .d-block
+                                                    a.btn.btn-them-1.btn-lg.mt-40.mb-10.mxw-200.w-100(href="product-detail.html")
+                                                        span Learn More
+                                                        svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                                            path(fill-rule='evenodd' clip-rule='evenodd' d='M17.3889 11.2258V9.21393C17.3889 9.03956 17.5525 8.93762 17.6696 9.04224L24.2082 15.5625C24.5973 15.9032 24.5973 16.1701 24.2082 16.5135C24.2082 16.5135 17.7868 22.8575 17.6696 22.9594C17.5525 23.0614 17.3889 22.9594 17.3889 22.7851V20.7731C17.3889 20.6363 17.5348 20.4271 17.5348 20.4271L20.9837 16.875H8.5V15.125H20.9839L17.5348 11.5719C17.4442 11.4914 17.3889 11.3627 17.3889 11.2258Z')
+                                                span.fs-12.fs-lg-14.fw-400.text-white
+                                                    p.my-0 *This offer ends April 8th 2023 and valid on annual subscription.
+                                                    p.my-0 *Starting at $19.90
+                                                    
                     li.swiper-slide
-                        .w-100.video-bg
+                        .d-flex.align-items-center.justify-content-center.video-bg
                             video(poster="frontend/images/slider/video1.png" autobuffer="" autoplay="" loop="" muted="" playsinline="")
                                 source(src="frontend/images/slider/video1.mp4" type="video/mp4")
                                 source(src="frontend/images/slider/video1.webm" type="video/webm")
                                 source(src="frontend/images/slider/video1.ogg" type="video/ogg")
                                 .overleyslider
-                            .container.px-20.px-lg-0
-                                .row.g-0
-                                    .swiper-slide-overlay.position-absolute.top-50.w-100.h-100.text-start.d-flex.align-items-start.justify-content-start
-                                        .slide-desc.d-flex.flex-column.w-lg-50.mt-0.mt-lg-0
-                                            .d-flex.align-items-center.mb-10.mb-lg-15
-                                                h3.text-white.fs-32.fs-lg-48.fw-600.lh-1.mt-0.mt-lg-0 Ayak İşleri
-                                                .slider-text-line
-                                                span.text-white.fs-18.fs-lg-20.fw-400.lh-1.mt-0.mt-lg-0 GAİN
-                                            span.text-white.fs-16.fs-lg-18 For a limited time get annual Gain subscription %20 off and start to watch your favourite programs on Gain. 
-                                            .d-block    
-                                                a.btn.btn-them-1.btn-lg.mt-40.mb-10(href="/")
-                                                    span Learn More
-                                                    svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                                        path(fill-rule='evenodd' clip-rule='evenodd' d='M17.3889 11.2258V9.21393C17.3889 9.03956 17.5525 8.93762 17.6696 9.04224L24.2082 15.5625C24.5973 15.9032 24.5973 16.1701 24.2082 16.5135C24.2082 16.5135 17.7868 22.8575 17.6696 22.9594C17.5525 23.0614 17.3889 22.9594 17.3889 22.7851V20.7731C17.3889 20.6363 17.5348 20.4271 17.5348 20.4271L20.9837 16.875H8.5V15.125H20.9839L17.5348 11.5719C17.4442 11.4914 17.3889 11.3627 17.3889 11.2258Z')
-                                            span.fs-12.fs-lg-14.fw-400.text-white
-                                                p.my-0 *This offer ends April 8th 2023 and valid on annual subscription.
-                                                p.my-0 *Starting at $19.90
-
+                            .position-absolute.w-100.top-50
+                                .container.px-20.px-lg-0
+                                    .row.g-0
+                                        .w-100.h-100.z-1.text-start.d-flex.align-items-start.justify-content-start
+                                            .slide-desc.d-flex.flex-column.w-lg-50.mt-0.mt-lg-0
+                                                .d-flex.align-items-center.mb-10.mb-lg-15
+                                                    h3.text-white.fs-32.fs-lg-48.fw-600.lh-1.mt-0.mt-lg-0 Ayak İşleri
+                                                    .slider-text-line
+                                                    span.text-white.fs-18.fs-lg-20.fw-400.lh-1.mt-0.mt-lg-0 GAİN
+                                                span.text-white.fs-16.fs-lg-18 For a limited time get annual Gain subscription %20 off and start to watch your favourite programs on Gain. 
+                                                .d-block
+                                                    a.btn.btn-them-1.btn-lg.mt-40.mb-10.mxw-200.w-100(href="product-detail.html")
+                                                        span Learn More
+                                                        svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                                            path(fill-rule='evenodd' clip-rule='evenodd' d='M17.3889 11.2258V9.21393C17.3889 9.03956 17.5525 8.93762 17.6696 9.04224L24.2082 15.5625C24.5973 15.9032 24.5973 16.1701 24.2082 16.5135C24.2082 16.5135 17.7868 22.8575 17.6696 22.9594C17.5525 23.0614 17.3889 22.9594 17.3889 22.7851V20.7731C17.3889 20.6363 17.5348 20.4271 17.5348 20.4271L20.9837 16.875H8.5V15.125H20.9839L17.5348 11.5719C17.4442 11.4914 17.3889 11.3627 17.3889 11.2258Z')
+                                                span.fs-12.fs-lg-14.fw-400.text-white
+                                                    p.my-0 *This offer ends April 8th 2023 and valid on annual subscription.
+                                                    p.my-0 *Starting at $19.90
+                                                    
     section.brands.overflow-hidden
         .container
             .row.g-0
@@ -115,22 +120,23 @@ block content
         .container
             .ems-data-filter
                 .ems-data-filter-header.filter-buttons.mb-15
-                    a.ems-data-filter-link.active(href="javascript:void(0);" data-filter="all")
-                        span All
-                    a.ems-data-filter-link(href="javascript:void(0);" data-filter="Gaming")
-                        span Gaming
-                    a.ems-data-filter-link(href="javascript:void(0);" data-filter="StreamingVideo")
-                        span Streaming Video
-                    a.ems-data-filter-link(href="javascript:void(0);" data-filter="StreamingMusic")
-                        span Streaming Music
-                    a.ems-data-filter-link(href="javascript:void(0);" data-filter="MegaPromoTrivia")
-                        span Mega Promo/Trivia
-                    a.ems-data-filter-link(href="javascript:void(0);" data-filter="Education")
-                        span Education
-                    a.ems-data-filter-link(href="javascript:void(0);" data-filter="DigitalPublication")
-                        span Digital Publication
-                    a.ems-data-filter-link(href="javascript:void(0);" data-filter="KidsClubEdutainment")
-                        span Kids’ Club/Edutainment
+                    .ems-data-filter-scroll
+                        a.ems-data-filter-link.active(href="javascript:void(0);" data-filter="all")
+                            .link-item All
+                        a.ems-data-filter-link(href="javascript:void(0);" data-filter="Gaming")
+                            .link-item Gaming
+                        a.ems-data-filter-link(href="javascript:void(0);" data-filter="StreamingVideo")
+                            .link-item Streaming Video
+                        a.ems-data-filter-link(href="javascript:void(0);" data-filter="StreamingMusic")
+                            .link-item Streaming Music
+                        a.ems-data-filter-link(href="javascript:void(0);" data-filter="MegaPromoTrivia")
+                            .link-item Mega Promo/Trivia
+                        a.ems-data-filter-link(href="javascript:void(0);" data-filter="Education")
+                            .link-item Education
+                        a.ems-data-filter-link(href="javascript:void(0);" data-filter="DigitalPublication")
+                            .link-item Digital Publication
+                        a.ems-data-filter-link(href="javascript:void(0);" data-filter="KidsClubEdutainment")
+                            .link-item Kids’ Club/Edutainment
                 
                 .d-lg-flex.align-items-lg-center.mb-30
                     h2.section-title.text-start Popular
@@ -165,7 +171,7 @@ block content
                                         .card-price.d-flex.flex-column.justify-content-start
                                             span.card-price-last.fs-14.fs-lg-16.fw-600.text-white $9.90
                                             
-                                        a.btn.btn-them-1.btn-md(href="/")
+                                        a.btn.btn-them-1.btn-md(href="product-detail.html")
                                             span Learn More
                             
                             li.swiper-slide.product-box(data-filters="StreamingVideo")
@@ -195,7 +201,7 @@ block content
                                             span.discount-rate.fs-12.fs-lg-14.fw-400 Starting from
                                             span.card-price-last.fs-14.fs-lg-16.fw-600.text-white $9.90
                                             
-                                        a.btn.btn-them-1.btn-md(href="/")
+                                        a.btn.btn-them-1.btn-md(href="product-detail.html")
                                             span Learn More
                             
                             li.swiper-slide.product-box(data-filters="StreamingMusic")
@@ -218,7 +224,7 @@ block content
                                             span.discount-rate.fs-12.fs-lg-14.fw-400 Starting from
                                             span.card-price-last.fs-14.fs-lg-16.fw-600.text-white $9.90
                                             
-                                        a.btn.btn-them-1.btn-md(href="/")
+                                        a.btn.btn-them-1.btn-md(href="product-detail.html")
                                             span Learn More
                             
                             li.swiper-slide.product-box(data-filters="MegaPromoTrivia")
@@ -248,7 +254,7 @@ block content
                                             span.discount-rate.fs-12.fs-lg-14.fw-400 Only
                                             span.card-price-last.fs-14.fs-lg-16.fw-600.text-white $9.90
                                             
-                                        a.btn.btn-them-1.btn-md(href="/")
+                                        a.btn.btn-them-1.btn-md(href="product-detail.html")
                                             span Learn More
 
                             li.swiper-slide.product-box(data-filters="Education")
@@ -277,7 +283,7 @@ block content
                                         .card-price.d-flex.flex-column.justify-content-start
                                             span.card-price-last.fs-14.fs-lg-16.fw-600.text-white $9.90
                                             
-                                        a.btn.btn-them-1.btn-md(href="/")
+                                        a.btn.btn-them-1.btn-md(href="product-detail.html")
                                             span Learn More
                             
                             li.swiper-slide.product-box(data-filters="DigitalPublication")
@@ -307,7 +313,7 @@ block content
                                             span.discount-rate.fs-12.fs-lg-14.fw-400 Starting from
                                             span.card-price-last.fs-14.fs-lg-16.fw-600.text-white $9.90
                                             
-                                        a.btn.btn-them-1.btn-md(href="/")
+                                        a.btn.btn-them-1.btn-md(href="product-detail.html")
                                             span Learn More
                             
                             li.swiper-slide.product-box(data-filters="KidsClubEdutainment")
@@ -330,7 +336,7 @@ block content
                                             span.discount-rate.fs-12.fs-lg-14.fw-400 Starting from
                                             span.card-price-last.fs-14.fs-lg-16.fw-600.text-white $9.90
                                             
-                                        a.btn.btn-them-1.btn-md(href="/")
+                                        a.btn.btn-them-1.btn-md(href="product-detail.html")
                                             span Learn More
                             
                             li.swiper-slide.product-box(data-filters="Gaming")
@@ -360,7 +366,7 @@ block content
                                             span.discount-rate.fs-12.fs-lg-14.fw-400 Only
                                             span.card-price-last.fs-14.fs-lg-16.fw-600.text-white $9.90
                                             
-                                        a.btn.btn-them-1.btn-md(href="/")
+                                        a.btn.btn-them-1.btn-md(href="product-detail.html")
                                             span Learn More
         
     section.product-list.overflow-hidden.my-50.my-lg-120
@@ -398,7 +404,7 @@ block content
                                     .card-price.d-flex.flex-column.justify-content-start
                                         span.card-price-last.fs-14.fs-lg-16.fw-600.text-white $9.90
                                         
-                                    a.btn.btn-them-1.btn-md(href="/")
+                                    a.btn.btn-them-1.btn-md(href="product-detail.html")
                                         span Learn More
                         
                         li.swiper-slide
@@ -428,7 +434,7 @@ block content
                                         span.discount-rate.fs-12.fs-lg-14.fw-400 Starting from
                                         span.card-price-last.fs-14.fs-lg-16.fw-600.text-white $9.90
                                         
-                                    a.btn.btn-them-1.btn-md(href="/")
+                                    a.btn.btn-them-1.btn-md(href="product-detail.html")
                                         span Learn More
                         
                         li.swiper-slide
@@ -451,7 +457,7 @@ block content
                                         span.discount-rate.fs-12.fs-lg-14.fw-400 Starting from
                                         span.card-price-last.fs-14.fs-lg-16.fw-600.text-white $9.90
                                         
-                                    a.btn.btn-them-1.btn-md(href="/")
+                                    a.btn.btn-them-1.btn-md(href="product-detail.html")
                                         span Learn More
                         
                         li.swiper-slide
@@ -481,7 +487,7 @@ block content
                                         span.discount-rate.fs-12.fs-lg-14.fw-400 Only
                                         span.card-price-last.fs-14.fs-lg-16.fw-600.text-white $9.90
                                         
-                                    a.btn.btn-them-1.btn-md(href="/")
+                                    a.btn.btn-them-1.btn-md(href="product-detail.html")
                                         span Learn More
                                         
                         li.swiper-slide
@@ -510,7 +516,7 @@ block content
                                     .card-price.d-flex.flex-column.justify-content-start
                                         span.card-price-last.fs-14.fs-lg-16.fw-600.text-white $9.90
                                         
-                                    a.btn.btn-them-1.btn-md(href="/")
+                                    a.btn.btn-them-1.btn-md(href="product-detail.html")
                                         span Learn More
                         
                         li.swiper-slide
@@ -540,7 +546,7 @@ block content
                                         span.discount-rate.fs-12.fs-lg-14.fw-400 Starting from
                                         span.card-price-last.fs-14.fs-lg-16.fw-600.text-white $9.90
                                         
-                                    a.btn.btn-them-1.btn-md(href="/")
+                                    a.btn.btn-them-1.btn-md(href="product-detail.html")
                                         span Learn More
                         
                         li.swiper-slide
@@ -563,7 +569,7 @@ block content
                                         span.discount-rate.fs-12.fs-lg-14.fw-400 Starting from
                                         span.card-price-last.fs-14.fs-lg-16.fw-600.text-white $9.90
                                         
-                                    a.btn.btn-them-1.btn-md(href="/")
+                                    a.btn.btn-them-1.btn-md(href="product-detail.html")
                                         span Learn More
                         
                         li.swiper-slide
@@ -593,7 +599,7 @@ block content
                                         span.discount-rate.fs-12.fs-lg-14.fw-400 Only
                                         span.card-price-last.fs-14.fs-lg-16.fw-600.text-white $9.90
                                         
-                                    a.btn.btn-them-1.btn-md(href="/")
+                                    a.btn.btn-them-1.btn-md(href="product-detail.html")
                                         span Learn More
 
     section.banner1-slider
@@ -613,7 +619,7 @@ block content
                                                 h3.text-dark.fs-20.fs-lg-36.fw-600.lh-1.mb-10.mb-lg-15 Explore Hot Bundles with Great Offers
                                                 span.text-dark.fs-14.fs-lg-16 Get Spotify & Netflix, both with ads, for $9.99/month. 
                                                 .d-block
-                                                    a.btn.btn-them-7.btn-lg.mt-30.mt-lg-50.mb-0(href="/")
+                                                    a.btn.btn-them-7.btn-lg.mt-30.mt-lg-50.mb-0(href="product-detail.html")
                                                         span Learn More
                                                         svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
                                                             path(fill-rule='evenodd' clip-rule='evenodd' d='M17.3889 11.2258V9.21393C17.3889 9.03956 17.5525 8.93762 17.6696 9.04224L24.2082 15.5625C24.5973 15.9032 24.5973 16.1701 24.2082 16.5135C24.2082 16.5135 17.7868 22.8575 17.6696 22.9594C17.5525 23.0614 17.3889 22.9594 17.3889 22.7851V20.7731C17.3889 20.6363 17.5348 20.4271 17.5348 20.4271L20.9837 16.875H8.5V15.125H20.9839L17.5348 11.5719C17.4442 11.4914 17.3889 11.3627 17.3889 11.2258Z')
@@ -630,15 +636,15 @@ block content
                                                 h3.text-dark.fs-20.fs-lg-36.fw-600.lh-1.mb-10.mb-lg-15 Explore Hot Bundles with Great Offers
                                                 span.text-dark.fs-14.fs-lg-16 Get Spotify & Netflix, both with ads, for $9.99/month. 
                                                 .d-block
-                                                    a.btn.btn-them-7.btn-lg.mt-30.mt-lg-50.mb-0(href="/")
+                                                    a.btn.btn-them-7.btn-lg.mt-30.mt-lg-50.mb-0(href="product-detail.html")
                                                         span Learn More
                                                         svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
                                                             path(fill-rule='evenodd' clip-rule='evenodd' d='M17.3889 11.2258V9.21393C17.3889 9.03956 17.5525 8.93762 17.6696 9.04224L24.2082 15.5625C24.5973 15.9032 24.5973 16.1701 24.2082 16.5135C24.2082 16.5135 17.7868 22.8575 17.6696 22.9594C17.5525 23.0614 17.3889 22.9594 17.3889 22.7851V20.7731C17.3889 20.6363 17.5348 20.4271 17.5348 20.4271L20.9837 16.875H8.5V15.125H20.9839L17.5348 11.5719C17.4442 11.4914 17.3889 11.3627 17.3889 11.2258Z')
         
     section.bg-dark-them-1-sm-dark.product-list.tab-nav-box.overflow-hidden.py-50.py-lg-120.pb-0.pb-lg-120
         .container.px-15.px-lg-40
-            .row.justify-content-center
-                .col-12.col-lg-4
+            .row.align-items-start
+                .col-12.col-lg-4.sticky-lg-top.z-0.mt-0
                     .nav.nav-pills.me-3(id='v-pills-tab' role='tablist' aria-orientation='vertical')
                         a.nav-link.active(id='v-pills-one-tab' data-bs-toggle='pill' data-bs-target='#v-pills-one' type='button' role='tab' aria-controls='v-pills-one' aria-selected='true')
                             span Best This Month
@@ -686,7 +692,7 @@ block content
                                                 span.card-price-last.fs-16.fw-600.text-white $9.90
                                                 span.card-price-first.fs-12.text-gray.text-decoration-line-through $12.90
                                             
-                                        a.btn.btn-them-1.btn-md.mt-10(href="/")
+                                        a.btn.btn-them-1.btn-md.mt-10(href="product-detail.html")
                                             span Learn More
                                             
                                 .card.card-prd-2.d-flex.align-items-center.justify-content-between
@@ -716,7 +722,7 @@ block content
                                                 span.card-price-last.fs-16.fw-600.text-white $9.90
                                                 span.card-price-first.fs-12.text-gray.text-decoration-line-through $12.90
                                             
-                                        a.btn.btn-them-1.btn-md.mt-10(href="/")
+                                        a.btn.btn-them-1.btn-md.mt-10(href="product-detail.html")
                                             span Learn More
                                             
                                 .card.card-prd-2.d-flex.align-items-center.justify-content-between
@@ -746,7 +752,7 @@ block content
                                                 span.card-price-last.fs-16.fw-600.text-white $9.90
                                                 span.card-price-first.fs-12.text-gray.text-decoration-line-through $12.90
                                             
-                                        a.btn.btn-them-1.btn-md.mt-10(href="/")
+                                        a.btn.btn-them-1.btn-md.mt-10(href="product-detail.html")
                                             span Learn More
                                             
                                 .card.card-prd-2.d-flex.align-items-center.justify-content-between
@@ -776,7 +782,7 @@ block content
                                                 span.card-price-last.fs-16.fw-600.text-white $9.90
                                                 span.card-price-first.fs-12.text-gray.text-decoration-line-through $12.90
                                             
-                                        a.btn.btn-them-1.btn-md.mt-10(href="/")
+                                        a.btn.btn-them-1.btn-md.mt-10(href="product-detail.html")
                                             span Learn More
                                             
                                 .card.card-prd-2.d-flex.align-items-center.justify-content-between
@@ -806,7 +812,7 @@ block content
                                                 span.card-price-last.fs-16.fw-600.text-white $9.90
                                                 span.card-price-first.fs-12.text-gray.text-decoration-line-through $12.90
                                             
-                                        a.btn.btn-them-1.btn-md.mt-10(href="/")
+                                        a.btn.btn-them-1.btn-md.mt-10(href="product-detail.html")
                                             span Learn More
                                             
                                 .card.card-prd-2.d-flex.align-items-center.justify-content-between
@@ -836,7 +842,7 @@ block content
                                                 span.card-price-last.fs-16.fw-600.text-white $9.90
                                                 span.card-price-first.fs-12.text-gray.text-decoration-line-through $12.90
                                             
-                                        a.btn.btn-them-1.btn-md.mt-10(href="/")
+                                        a.btn.btn-them-1.btn-md.mt-10(href="product-detail.html")
                                             span Learn More
                                             
                                 .card.card-prd-2.d-flex.align-items-center.justify-content-between
@@ -866,7 +872,7 @@ block content
                                                 span.card-price-last.fs-16.fw-600.text-white $9.90
                                                 span.card-price-first.fs-12.text-gray.text-decoration-line-through $12.90
                                             
-                                        a.btn.btn-them-1.btn-md.mt-10(href="/")
+                                        a.btn.btn-them-1.btn-md.mt-10(href="product-detail.html")
                                             span Learn More
 
                         div.tab-pane.fade(id='v-pills-two' role='tabpanel' aria-labelledby='v-pills-two-tab' tabindex="0")
@@ -898,7 +904,7 @@ block content
                                                 span.card-price-last.fs-16.fw-600.text-white $9.90
                                                 span.card-price-first.fs-12.text-gray.text-decoration-line-through $12.90
                                             
-                                        a.btn.btn-them-1.btn-md.mt-10(href="/")
+                                        a.btn.btn-them-1.btn-md.mt-10(href="product-detail.html")
                                             span Learn More
                                             
                                 .card.card-prd-2.d-flex.align-items-center.justify-content-between
@@ -928,7 +934,7 @@ block content
                                                 span.card-price-last.fs-16.fw-600.text-white $9.90
                                                 span.card-price-first.fs-12.text-gray.text-decoration-line-through $12.90
                                             
-                                        a.btn.btn-them-1.btn-md.mt-10(href="/")
+                                        a.btn.btn-them-1.btn-md.mt-10(href="product-detail.html")
                                             span Learn More
 
                         div.tab-pane.fade(id='v-pills-three' role='tabpanel' aria-labelledby='v-pills-three-tab' tabindex="0")
@@ -960,7 +966,7 @@ block content
                                                 span.card-price-last.fs-16.fw-600.text-white $9.90
                                                 span.card-price-first.fs-12.text-gray.text-decoration-line-through $12.90
                                             
-                                        a.btn.btn-them-1.btn-md.mt-10(href="/")
+                                        a.btn.btn-them-1.btn-md.mt-10(href="product-detail.html")
                                             span Learn More
                                             
                                 .card.card-prd-2.d-flex.align-items-center.justify-content-between
@@ -990,7 +996,7 @@ block content
                                                 span.card-price-last.fs-16.fw-600.text-white $9.90
                                                 span.card-price-first.fs-12.text-gray.text-decoration-line-through $12.90
                                             
-                                        a.btn.btn-them-1.btn-md.mt-10(href="/")
+                                        a.btn.btn-them-1.btn-md.mt-10(href="product-detail.html")
                                             span Learn More
                                             
                                 .card.card-prd-2.d-flex.align-items-center.justify-content-between
@@ -1020,7 +1026,7 @@ block content
                                                 span.card-price-last.fs-16.fw-600.text-white $9.90
                                                 span.card-price-first.fs-12.text-gray.text-decoration-line-through $12.90
                                             
-                                        a.btn.btn-them-1.btn-md.mt-10(href="/")
+                                        a.btn.btn-them-1.btn-md.mt-10(href="product-detail.html")
                                             span Learn More
                                             
                                 .card.card-prd-2.d-flex.align-items-center.justify-content-between
@@ -1050,7 +1056,7 @@ block content
                                                 span.card-price-last.fs-16.fw-600.text-white $9.90
                                                 span.card-price-first.fs-12.text-gray.text-decoration-line-through $12.90
                                             
-                                        a.btn.btn-them-1.btn-md.mt-10(href="/")
+                                        a.btn.btn-them-1.btn-md.mt-10(href="product-detail.html")
                                             span Learn More
 
     section.product-list.overflow-hidden.my-50.my-lg-120
@@ -1088,7 +1094,7 @@ block content
                                     .card-price.d-flex.flex-column.justify-content-start
                                         span.card-price-last.fs-14.fs-lg-16.fw-600.text-white $9.90
                                         
-                                    a.btn.btn-them-1.btn-md(href="/")
+                                    a.btn.btn-them-1.btn-md(href="product-detail.html")
                                         span Learn More
                         
                         li.swiper-slide
@@ -1118,7 +1124,7 @@ block content
                                         span.discount-rate.fs-12.fs-lg-14.fw-400 Starting from
                                         span.card-price-last.fs-14.fs-lg-16.fw-600.text-white $9.90
                                         
-                                    a.btn.btn-them-1.btn-md(href="/")
+                                    a.btn.btn-them-1.btn-md(href="product-detail.html")
                                         span Learn More
                         
                         li.swiper-slide
@@ -1141,7 +1147,7 @@ block content
                                         span.discount-rate.fs-12.fs-lg-14.fw-400 Starting from
                                         span.card-price-last.fs-14.fs-lg-16.fw-600.text-white $9.90
                                         
-                                    a.btn.btn-them-1.btn-md(href="/")
+                                    a.btn.btn-them-1.btn-md(href="product-detail.html")
                                         span Learn More
                         
                         li.swiper-slide
@@ -1171,7 +1177,7 @@ block content
                                         span.discount-rate.fs-12.fs-lg-14.fw-400 Only
                                         span.card-price-last.fs-14.fs-lg-16.fw-600.text-white $9.90
                                         
-                                    a.btn.btn-them-1.btn-md(href="/")
+                                    a.btn.btn-them-1.btn-md(href="product-detail.html")
                                         span Learn More
                                         
                         li.swiper-slide
@@ -1200,7 +1206,7 @@ block content
                                     .card-price.d-flex.flex-column.justify-content-start
                                         span.card-price-last.fs-14.fs-lg-16.fw-600.text-white $9.90
                                         
-                                    a.btn.btn-them-1.btn-md(href="/")
+                                    a.btn.btn-them-1.btn-md(href="product-detail.html")
                                         span Learn More
                         
                         li.swiper-slide
@@ -1230,7 +1236,7 @@ block content
                                         span.discount-rate.fs-12.fs-lg-14.fw-400 Starting from
                                         span.card-price-last.fs-14.fs-lg-16.fw-600.text-white $9.90
                                         
-                                    a.btn.btn-them-1.btn-md(href="/")
+                                    a.btn.btn-them-1.btn-md(href="product-detail.html")
                                         span Learn More
                         
                         li.swiper-slide
@@ -1253,7 +1259,7 @@ block content
                                         span.discount-rate.fs-12.fs-lg-14.fw-400 Starting from
                                         span.card-price-last.fs-14.fs-lg-16.fw-600.text-white $9.90
                                         
-                                    a.btn.btn-them-1.btn-md(href="/")
+                                    a.btn.btn-them-1.btn-md(href="product-detail.html")
                                         span Learn More
                         
                         li.swiper-slide
@@ -1283,7 +1289,7 @@ block content
                                         span.discount-rate.fs-12.fs-lg-14.fw-400 Only
                                         span.card-price-last.fs-14.fs-lg-16.fw-600.text-white $9.90
                                         
-                                    a.btn.btn-them-1.btn-md(href="/")
+                                    a.btn.btn-them-1.btn-md(href="product-detail.html")
                                         span Learn More
 
     section.product-list.overflow-hidden.my-50.my-lg-120.mt-0
@@ -1319,7 +1325,7 @@ block content
                                 .card-price.d-flex.flex-column.justify-content-start
                                     span.card-price-last.fs-14.fs-lg-16.fw-600.text-white $9.90
                                     
-                                a.btn.btn-them-1.btn-md(href="/")
+                                a.btn.btn-them-1.btn-md(href="product-detail.html")
                                     span Learn More
                     
                     .col-6.col-lg-3
@@ -1349,7 +1355,7 @@ block content
                                     span.discount-rate.fs-12.fs-lg-14.fw-400 Starting from
                                     span.card-price-last.fs-14.fs-lg-16.fw-600.text-white $9.90
                                     
-                                a.btn.btn-them-1.btn-md(href="/")
+                                a.btn.btn-them-1.btn-md(href="product-detail.html")
                                     span Learn More
                     
                     .col-6.col-lg-3
@@ -1372,6 +1378,6 @@ block content
                                     span.discount-rate.fs-12.fs-lg-14.fw-400 Starting from
                                     span.card-price-last.fs-14.fs-lg-16.fw-600.text-white $9.90
                                     
-                                a.btn.btn-them-1.btn-md(href="/")
+                                a.btn.btn-them-1.btn-md(href="product-detail.html")
                                     span Learn More
 

@@ -1,0 +1,410 @@
+.product-head-title{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background: $them-dark-color-1;
+    gap: 16px;
+    min-height: 90px;
+    padding: 32px 24px;
+    margin: 40px 0 0 0;
+    h3{
+        color: $body-text-color;
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 38px;
+    }
+    span{
+        color: $body-text-color;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+    }
+}
+
+.product-categories{
+    .filter-box{
+        max-width: 100%;
+        margin: 16px 0;
+        .filter-head{
+            display: flex;
+            width: 100%;
+            height: 44px;
+            padding: 8px 24px;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 32px;
+            background: $them-dark-color-1;
+            margin-bottom: 16px;
+            .filter-btn{
+                display: flex;
+                width: 50%;
+                justify-content: center;
+                align-items: center;
+                gap: 4px;
+                flex-shrink: 0;
+                span{
+                    color: $white;
+                    font-size: 17px;
+                    font-weight: 400;
+                    line-height: 23px;
+                    cursor: pointer;
+                    text-decoration: none;
+                }
+                svg{
+                    height: 32px;
+                    width: 32px;
+                }
+            }
+            .filter-sortby{
+                display: flex;
+                width: 50%;
+                justify-content: center;
+                align-items: center;
+                gap: 4px;
+                flex-shrink: 0;
+                span{
+                    color: $white;
+                    font-size: 17px;
+                    font-weight: 400;
+                    line-height: 23px;
+                    cursor: pointer;
+                    text-decoration: none;
+                }
+                svg{
+                    height: 32px;
+                    width: 32px;
+                }
+            }
+            .filter-clear{
+                span{
+                    color: $gray2;
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: normal;
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
+        }
+        .filter-settings{   
+            display: none;
+            &.active{
+                display: block;
+                position: fixed;
+                z-index: 9999;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 100vh;
+                width: 100%;                
+                background: $content-bg-color;
+            }         
+            .filter-head-settings{
+                position: fixed;
+                display: flex;
+                width: 100%;
+                height: $site-header-height-mini;
+                justify-content: space-between;
+                align-items: center;
+                background: transparent;
+                margin-bottom: 0;
+                padding: 12px 24px;
+                border-bottom: 5px solid $body-bg-color;
+                .filter-btn{
+                    span{
+                        color: $white;
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 23px;
+                        cursor: pointer;
+                        text-decoration: none;
+                    }
+                }
+                .filter-close{
+                    svg{
+                        height: 32px;
+                        width: 32px;
+                    }
+                }
+            }
+            .filter-content-scroll{            
+                overflow-y: scroll;
+                position: relative;
+                top: 65px;
+                height: 81%;
+                .filter-tag{            
+                    display: inline-block;                
+                    padding: 8px 24px 0 24px;
+                    margin-bottom: 8px;
+                    margin-top: 0;
+                    width: 100%;
+                    position: relative;
+                    .filter-tag-item{
+                        background: rgba(255, 255, 255, 0.10);
+                        display: flex;
+                        padding: 0px 2px 0px 8px;
+                        justify-content: center;
+                        align-items: center;
+                        float: left;
+                        margin: 0 8px 8px 0;
+                        span{
+                            color: $gray2;
+                            text-align: center;
+                            font-size: 12px;
+                            font-weight: 400;
+                            line-height: 17px;
+                        }
+                        svg{
+                            width: 24px;
+                            height: 24px;
+                        }
+                    }
+                }
+                .filter-clear{   
+                    display: inline-block;                
+                    padding: 0 24px 12px 24px;
+                    margin-bottom: 32px;
+                    width: 100%;
+                    position: relative;
+                    span{
+                        color: $gray2;
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: normal;
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+                }
+                .accordion{
+                    .accordion-item{
+                        border: 0;         
+                        padding: 0 24px;
+                        background: transparent;
+                        .accordion-header{
+                            .accordion-button{
+                                display: flex;
+                                height: 48px;
+                                justify-content: space-between;
+                                align-items: center;
+                                align-self: stretch;
+                                border-top: 1px solid #262B30;
+                                background: transparent;
+                                padding: 0;
+                                span{
+                                    color: $body-text-color;
+                                    font-size: 18px;
+                                    font-weight: 500;
+                                    line-height: 25px;
+                                }
+                                &::after {
+                                    display: none;
+                                }
+                                &:not(.collapsed)::after {
+                                    background-image: none;
+                                }
+                                svg{
+                                    width: 27px;
+                                    height: 27px;
+                                    margin: 5px;
+                                    background: $them-color;
+                                    border-radius: 30px;
+                                    stroke:$them-dark-color-1;
+                                    &.icon-plus_minus{
+                                        display: block;
+                                    }
+                                    &.icon-plus_minuss{
+                                        display: none;
+                                    }
+                                }
+                                &:not(.collapsed) {
+                                    svg{
+                                        width: 27px;
+                                        height: 27px;
+                                        margin: 5px;
+                                        background: $them-color;
+                                        border-radius: 30px;
+                                        stroke:$them-dark-color-1;
+                                        &.icon-plus_minus{
+                                            display: none;
+                                        }
+                                        &.icon-plus_minuss{
+                                            display: block;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .accordion-collapse{
+                            &.show{
+
+                            }
+                            .accordion-body{
+                                padding: 0 0 32px 0;
+                                .all-check-box{
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap:8px;
+                                }
+                            }
+                            &.collapse:not(.show) {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+                
+            .filter-footer-settings{
+                position: fixed;
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
+                background: $body-bg-color;
+                bottom: 0;
+                gap: 16px;
+                padding: 24px 24px;
+                .filter-total-number{
+                    display: flex;
+                    justify-content: flex-start;
+                    span{
+                        color: #AFB3B5;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 23px;
+                        cursor: pointer;
+                        text-decoration: none;
+                    }
+                }
+                .btn{
+                }
+            }
+        }
+        .accordion-clear{
+            position: relative;
+            display: block;
+            margin-bottom: 16px;
+            span{
+                color: $gray2;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: normal;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .ems-data-filter-header {
+        display: none;
+        &.active{
+            display: block;
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 100vh;
+            width: 100%;                
+            background: $content-bg-color;
+        } 
+        .filter-sortby-head-settings{
+            position: fixed;
+            display: flex;
+            width: 100%;
+            height: $site-header-height-mini;
+            justify-content: space-between;
+            align-items: center;
+            background: transparent;
+            margin-bottom: 0;
+            padding: 12px 24px;
+            border-bottom: 5px solid $body-bg-color;
+            .filter-btn{
+                span{
+                    color: $white;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 23px;
+                    cursor: pointer;
+                    text-decoration: none;
+                }
+            }
+            .filter-close{
+                svg{
+                    height: 32px;
+                    width: 32px;
+                }
+            }
+        }
+        .filter-sortby-content-scroll{
+            overflow-y: scroll;
+            position: relative;
+            top: 65px;
+            height: 81%;
+            padding: 24px 24px;
+            border-radius: 0;
+            background: transparent;
+            display: inline-block;
+            flex-direction: column;
+            width: 100%;
+            overflow-x: hidden;
+            .ems-data-filter-link{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 8px;
+                padding: 32px 0;
+                background: transparent;
+                border-radius: 0;
+                border-bottom: 1px solid var(--blue-grey-4, #262B30);
+                cursor: pointer;
+                text-decoration: none;
+                transition: all 0.2s linear 0.1s;
+                .link-item{
+                    font-weight: 400;
+                    font-size: 16px;
+                    color: $gray2;
+                }
+                &.active{
+                    .link-item{
+                        font-weight: 400;
+                        font-size: 16px;
+                        color: $white;
+                    }
+                }
+                .radiomark{
+                    margin-right: 8px;
+                }
+            }
+        }            
+        .filter-sortby-footer-settings{
+            position: fixed;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            background: $body-bg-color;
+            bottom: 0;
+            gap: 16px;
+            padding: 24px 24px;
+            .btn{
+            }
+        }
+    }
+    .accordion-clear{
+        position: relative;
+        display: block;
+        margin-bottom: 16px;
+        span{
+            color: $gray2;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: normal;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+}

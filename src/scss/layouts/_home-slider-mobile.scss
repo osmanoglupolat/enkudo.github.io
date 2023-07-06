@@ -3,35 +3,34 @@
     .swiper-button-prev, .swiper-button-next {
       display: none;
     }
-    
-      //pagination
-      .swiper-pagination {
+    //pagination
+    .swiper-pagination {
       display: flex;
       align-items: center;
       justify-content: center;
-          > .swiper-pagination-bullet{
+        > .swiper-pagination-bullet{
         position: relative;
         left: auto;
-        &:before {
-          width: 9px;
-          height: 9px;
-          background: #fff;
-          transition: all .32s cubic-bezier(0, 0, 0.2, 1);
-        }
-        &.swiper-pagination-bullet-active{
-          width: 45px;
-          height: 9px;
-          background: #ffffff23;
-          border-radius: 5px;
-          display: flex;
-          transition: all .32s cubic-bezier(0, 0, 0.2, 1);
           &:before {
-            width: 19px;
-            border-radius: 5px;
-          }        
-        }
+            width: 9px;
+            height: 9px;
+            background: #fff;
+            transition: all .32s cubic-bezier(0, 0, 0.2, 1);
           }
-      }
+          &.swiper-pagination-bullet-active{
+            width: 45px;
+            height: 9px;
+            background: #ffffff23;
+            border-radius: 5px;
+            display: flex;
+            transition: all .32s cubic-bezier(0, 0, 0.2, 1);
+            &:before {
+              width: 19px;
+              border-radius: 5px;
+            }        
+          }
+        }
+    }
     .swiper-fraction{
         right: 33px;
         bottom: 76px
@@ -41,7 +40,7 @@
         max-width: 340px;
         .slider-text-line{
           width: 1px;
-          height: 40px;
+          padding: 20px 0;
           position: relative;
           display: flex;
           background: $white;
@@ -50,6 +49,7 @@
       }
       picture{        
         height: 650px;
+        width: 100%;
         overflow: hidden;
         position: relative;
         display: block;
@@ -98,6 +98,7 @@
       
       .video-bg{        
         height: 650px;
+        width: 100%;
         overflow: hidden;
         position: relative;
         display: block;

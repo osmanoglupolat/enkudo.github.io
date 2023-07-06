@@ -7,198 +7,384 @@ block prepend head
     - var pageClass = "page-body-class"
 
 block content
-    section.main-slider                
+    section.main-slider.main-slider-list
         .main-slider-section.col-12(onclick="moveMinuteHand()")
             .breadcrumb-list-top
-                .container-fluid.px-lg-60
+                .container-fluid.px-20.px-lg-60
                     nav(aria-label="breadcrumb")
                         ol.breadcrumb
                             li.readcrumb-item
-                                a(href='#') Home
+                                a(href='index.html') Home
                             li.readcrumb-item.active(aria-current='page') Gaming
 
             +swiper('widgetAuto', true, true, false, true)(class="main-slider")
                 -for(var i=0; i<1; i++)
                     li.swiper-slide
-                        .w-100
+                        .d-flex.align-items-center.justify-content-center
                             picture
                                 source.lazy-picture(media='(max-width:0)' srcset='frontend/images/1x1.svg')
                                 source(media='(max-width: 767px)' srcset='frontend/images/slider/3.png 2x')
                                 source(media='(min-width: 768px)' srcset='frontend/images/slider/3.png')
                                 img.w-100(src='frontend/images/slider/3.png' alt='slide 1')
                                 .overleyslider
-                            .container.px-20.px-lg-0
-                                .row.g-0
-                                    .swiper-slide-overlay.position-absolute.top-50.w-100.h-100.text-start.d-flex.align-items-start.justify-content-start
-                                        .slide-desc.d-flex.flex-column.w-lg-50.mt-0.mt-lg-0
-                                            .d-flex.align-items-center.mb-10.mb-lg-15
-                                                h3.text-white.fs-32.fs-lg-48.fw-600.lh-1.mt-0.mt-lg-0 Need For Speed
-                                                .slider-text-line
-                                                span.text-white.fs-18.fs-lg-20.fw-400.lh-1.mt-0.mt-lg-0 GAİN
-                                            span.text-white.fs-16.fs-lg-18 For a limited time get monthly “Need for Speed” subscription %10 off and start to play your favorite game on your device 
-                                            .d-flex.d-flex.align-items-center.justify-content-start.mt-40.mb-10
-                                                a.btn.btn-them-1.btn-lg.mxw-200.w-100(href="/")
-                                                    span Discover
-                                                    svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                                        path(fill-rule='evenodd' clip-rule='evenodd' d='M17.3889 11.2258V9.21393C17.3889 9.03956 17.5525 8.93762 17.6696 9.04224L24.2082 15.5625C24.5973 15.9032 24.5973 16.1701 24.2082 16.5135C24.2082 16.5135 17.7868 22.8575 17.6696 22.9594C17.5525 23.0614 17.3889 22.9594 17.3889 22.7851V20.7731C17.3889 20.6363 17.5348 20.4271 17.5348 20.4271L20.9837 16.875H8.5V15.125H20.9839L17.5348 11.5719C17.4442 11.4914 17.3889 11.3627 17.3889 11.2258Z')
-                                                        
-                                                .d-flex.align-items-center.justify-content-center.text-center.px-25
-                                                    span.card-price-last.fs-18.fs-lg-24.fw-600.text-white $9.90
-                                                    span.card-price-first.fs-14.fs-lg-16.text-gray.text-decoration-line-through.px-5 $12.90
+                            .position-absolute.w-100.top-50
+                                .container.px-20.px-lg-0
+                                    .row.g-0
+                                        .w-100.h-100.z-1.text-start.d-flex.align-items-start.justify-content-start
+                                            .slide-desc.d-flex.flex-column.w-lg-50.mt-0.mt-lg-0
+                                                .d-flex.align-items-center.mb-10.mb-lg-15
+                                                    h3.text-white.fs-32.fs-lg-48.fw-600.lh-1.mt-0.mt-lg-0 Need For Speed
+                                                    .slider-text-line
+                                                    span.text-white.fs-18.fs-lg-20.fw-400.lh-1.mt-0.mt-lg-0 GAİN
+                                                span.text-white.fs-16.fs-lg-18 For a limited time get monthly “Need for Speed” subscription %10 off and start to play your favorite game on your device 
+                                                .d-flex.d-flex.align-items-center.justify-content-start.mt-40.mb-10
+                                                    a.btn.btn-them-1.btn-lg.mxw-200.w-100(href="product-detail.html")
+                                                        span Discover
+                                                        svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                                            path(fill-rule='evenodd' clip-rule='evenodd' d='M17.3889 11.2258V9.21393C17.3889 9.03956 17.5525 8.93762 17.6696 9.04224L24.2082 15.5625C24.5973 15.9032 24.5973 16.1701 24.2082 16.5135C24.2082 16.5135 17.7868 22.8575 17.6696 22.9594C17.5525 23.0614 17.3889 22.9594 17.3889 22.7851V20.7731C17.3889 20.6363 17.5348 20.4271 17.5348 20.4271L20.9837 16.875H8.5V15.125H20.9839L17.5348 11.5719C17.4442 11.4914 17.3889 11.3627 17.3889 11.2258Z')
+                                                            
+                                                    .d-flex.align-items-center.justify-content-center.text-center.px-25
+                                                        span.card-price-last.fs-18.fs-lg-24.fw-600.text-white $9.90
+                                                        span.card-price-first.fs-14.fs-lg-16.text-gray.text-decoration-line-through.px-5 $12.90
 
-                                            span.fs-12.fs-lg-14.fw-400.text-white
-                                                p.my-0 *This offer ends April 8th 2023 and valid on annual subscription.
+                                                span.fs-12.fs-lg-14.fw-400.text-white
+                                                    p.my-0 *This offer ends April 8th 2023 and valid on annual subscription.
+                                                    
                     li.swiper-slide
-                        .w-100
-                            picture
-                                source.lazy-picture(media='(max-width:0)' srcset='frontend/images/1x1.svg')
-                                source(media='(max-width: 767px)' srcset='frontend/images/slider/1.png 2x')
-                                source(media='(min-width: 768px)' srcset='frontend/images/slider/1.png')
-                                img.w-100(src='frontend/images/slider/1.png' alt='slide 1')
-                                .overleyslider
-                            .container.px-20.px-lg-0
-                                .row.g-0
-                                    .swiper-slide-overlay.position-absolute.top-50.w-100.h-100.text-start.d-flex.align-items-start.justify-content-start
-                                        .slide-desc.d-flex.flex-column.w-lg-50.mt-0.mt-lg-0
-                                            .d-flex.align-items-center.mb-10.mb-lg-15
-                                                h3.text-white.fs-32.fs-lg-48.fw-600.lh-1.mt-0.mt-lg-0 Ayak İşleri
-                                                .slider-text-line
-                                                span.text-white.fs-18.fs-lg-20.fw-400.lh-1.mt-0.mt-lg-0 GAİN
-                                            span.text-white.fs-16.fs-lg-18 For a limited time get annual Gain subscription %20 off and start to watch your favourite programs on Gain. 
-                                            .d-block
-                                                a.btn.btn-them-1.btn-lg.mt-40.mb-10(href="/")
-                                                    span Learn More
-                                                    svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                                        path(fill-rule='evenodd' clip-rule='evenodd' d='M17.3889 11.2258V9.21393C17.3889 9.03956 17.5525 8.93762 17.6696 9.04224L24.2082 15.5625C24.5973 15.9032 24.5973 16.1701 24.2082 16.5135C24.2082 16.5135 17.7868 22.8575 17.6696 22.9594C17.5525 23.0614 17.3889 22.9594 17.3889 22.7851V20.7731C17.3889 20.6363 17.5348 20.4271 17.5348 20.4271L20.9837 16.875H8.5V15.125H20.9839L17.5348 11.5719C17.4442 11.4914 17.3889 11.3627 17.3889 11.2258Z')
-                                            span.fs-12.fs-lg-14.fw-400.text-white
-                                                p.my-0 *This offer ends April 8th 2023 and valid on annual subscription.
-                                                p.my-0 *Starting at $19.90
-                    li.swiper-slide
-                        .w-100
+                        .d-flex.align-items-center.justify-content-center
                             picture
                                 source.lazy-picture(media='(max-width:0)' srcset='frontend/images/1x1.svg')
                                 source(media='(max-width: 767px)' srcset='frontend/images/slider/2.png 2x')
                                 source(media='(min-width: 768px)' srcset='frontend/images/slider/2.png')
                                 img.w-100(src='frontend/images/slider/2.png' alt='slide 2')
                                 .overleyslider
-                            .container.px-20.px-lg-0
-                                .row.g-0
-                                    .swiper-slide-overlay.position-absolute.top-50.w-100.h-100.text-start.d-flex.align-items-start.justify-content-start
-                                        .slide-desc.d-flex.flex-column.w-lg-50.mt-0.mt-lg-0
-                                            .d-flex.align-items-center.mb-10.mb-lg-15
-                                                h3.text-white.fs-32.fs-lg-48.fw-600.lh-1.mt-0.mt-lg-0 Ayak İşleri
-                                                .slider-text-line
-                                                span.text-white.fs-18.fs-lg-20.fw-400.lh-1.mt-0.mt-lg-0 GAİN
-                                            span.text-white.fs-16.fs-lg-18 For a limited time get annual Gain subscription %20 off and start to watch your favourite programs on Gain. 
-                                            .d-block
-                                                a.btn.btn-them-1.btn-lg.mt-40.mb-10(href="/")
-                                                    span Learn More
-                                                    svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                                        path(fill-rule='evenodd' clip-rule='evenodd' d='M17.3889 11.2258V9.21393C17.3889 9.03956 17.5525 8.93762 17.6696 9.04224L24.2082 15.5625C24.5973 15.9032 24.5973 16.1701 24.2082 16.5135C24.2082 16.5135 17.7868 22.8575 17.6696 22.9594C17.5525 23.0614 17.3889 22.9594 17.3889 22.7851V20.7731C17.3889 20.6363 17.5348 20.4271 17.5348 20.4271L20.9837 16.875H8.5V15.125H20.9839L17.5348 11.5719C17.4442 11.4914 17.3889 11.3627 17.3889 11.2258Z')
-                                            span.fs-12.fs-lg-14.fw-400.text-white
-                                                p.my-0 *This offer ends April 8th 2023 and valid on annual subscription.
-                                                p.my-0 *Starting at $19.90
+                            .position-absolute.w-100.top-50
+                                .container.px-20.px-lg-0
+                                    .row.g-0
+                                        .w-100.h-100.z-1.text-start.d-flex.align-items-start.justify-content-start
+                                            .slide-desc.d-flex.flex-column.w-lg-50.mt-0.mt-lg-0
+                                                .d-flex.align-items-center.mb-10.mb-lg-15
+                                                    h3.text-white.fs-32.fs-lg-48.fw-600.lh-1.mt-0.mt-lg-0 Need For Speed
+                                                    .slider-text-line
+                                                    span.text-white.fs-18.fs-lg-20.fw-400.lh-1.mt-0.mt-lg-0 GAİN
+                                                span.text-white.fs-16.fs-lg-18 For a limited time get monthly “Need for Speed” subscription %10 off and start to play your favorite game on your device 
+                                                .d-flex.d-flex.align-items-center.justify-content-start.mt-40.mb-10
+                                                    a.btn.btn-them-1.btn-lg.mxw-200.w-100(href="product-detail.html")
+                                                        span Discover
+                                                        svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                                            path(fill-rule='evenodd' clip-rule='evenodd' d='M17.3889 11.2258V9.21393C17.3889 9.03956 17.5525 8.93762 17.6696 9.04224L24.2082 15.5625C24.5973 15.9032 24.5973 16.1701 24.2082 16.5135C24.2082 16.5135 17.7868 22.8575 17.6696 22.9594C17.5525 23.0614 17.3889 22.9594 17.3889 22.7851V20.7731C17.3889 20.6363 17.5348 20.4271 17.5348 20.4271L20.9837 16.875H8.5V15.125H20.9839L17.5348 11.5719C17.4442 11.4914 17.3889 11.3627 17.3889 11.2258Z')
+                                                            
+                                                    .d-flex.align-items-center.justify-content-center.text-center.px-25
+                                                        span.card-price-last.fs-18.fs-lg-24.fw-600.text-white $9.90
+                                                        span.card-price-first.fs-14.fs-lg-16.text-gray.text-decoration-line-through.px-5 $12.90
+
+                                                span.fs-12.fs-lg-14.fw-400.text-white
+                                                    p.my-0 *This offer ends April 8th 2023 and valid on annual subscription.
+                                                    
                     li.swiper-slide
-                        .w-100.video-bg
+                        .d-flex.align-items-center.justify-content-center.video-bg
                             video(poster="frontend/images/slider/video1.png" autobuffer="" autoplay="" loop="" muted="" playsinline="")
                                 source(src="frontend/images/slider/video1.mp4" type="video/mp4")
                                 source(src="frontend/images/slider/video1.webm" type="video/webm")
                                 source(src="frontend/images/slider/video1.ogg" type="video/ogg")
                                 .overleyslider
-                            .container.px-20.px-lg-0
-                                .row.g-0
-                                    .swiper-slide-overlay.position-absolute.top-50.w-100.h-100.text-start.d-flex.align-items-start.justify-content-start
-                                        .slide-desc.d-flex.flex-column.w-lg-50.mt-0.mt-lg-0
-                                            .d-flex.align-items-center.mb-10.mb-lg-15
-                                                h3.text-white.fs-32.fs-lg-48.fw-600.lh-1.mt-0.mt-lg-0 Ayak İşleri
-                                                .slider-text-line
-                                                span.text-white.fs-18.fs-lg-20.fw-400.lh-1.mt-0.mt-lg-0 GAİN
-                                            span.text-white.fs-16.fs-lg-18 For a limited time get annual Gain subscription %20 off and start to watch your favourite programs on Gain. 
-                                            .d-block    
-                                                a.btn.btn-them-1.btn-lg.mt-40.mb-10(href="/")
-                                                    span Learn More
-                                                    svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                                        path(fill-rule='evenodd' clip-rule='evenodd' d='M17.3889 11.2258V9.21393C17.3889 9.03956 17.5525 8.93762 17.6696 9.04224L24.2082 15.5625C24.5973 15.9032 24.5973 16.1701 24.2082 16.5135C24.2082 16.5135 17.7868 22.8575 17.6696 22.9594C17.5525 23.0614 17.3889 22.9594 17.3889 22.7851V20.7731C17.3889 20.6363 17.5348 20.4271 17.5348 20.4271L20.9837 16.875H8.5V15.125H20.9839L17.5348 11.5719C17.4442 11.4914 17.3889 11.3627 17.3889 11.2258Z')
-                                            span.fs-12.fs-lg-14.fw-400.text-white
-                                                p.my-0 *This offer ends April 8th 2023 and valid on annual subscription.
-                                                p.my-0 *Starting at $19.90
-                                                
+                            .position-absolute.w-100.top-50
+                                .container.px-20.px-lg-0
+                                    .row.g-0
+                                        .w-100.h-100.z-1.text-start.d-flex.align-items-start.justify-content-start
+                                            .slide-desc.d-flex.flex-column.w-lg-50.mt-0.mt-lg-0
+                                                .d-flex.align-items-center.mb-10.mb-lg-15
+                                                    h3.text-white.fs-32.fs-lg-48.fw-600.lh-1.mt-0.mt-lg-0 Need For Speed
+                                                    .slider-text-line
+                                                    span.text-white.fs-18.fs-lg-20.fw-400.lh-1.mt-0.mt-lg-0 GAİN
+                                                span.text-white.fs-16.fs-lg-18 For a limited time get monthly “Need for Speed” subscription %10 off and start to play your favorite game on your device 
+                                                .d-flex.d-flex.align-items-center.justify-content-start.mt-40.mb-10
+                                                    a.btn.btn-them-1.btn-lg.mxw-200.w-100(href="product-detail.html")
+                                                        span Discover
+                                                        svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                                            path(fill-rule='evenodd' clip-rule='evenodd' d='M17.3889 11.2258V9.21393C17.3889 9.03956 17.5525 8.93762 17.6696 9.04224L24.2082 15.5625C24.5973 15.9032 24.5973 16.1701 24.2082 16.5135C24.2082 16.5135 17.7868 22.8575 17.6696 22.9594C17.5525 23.0614 17.3889 22.9594 17.3889 22.7851V20.7731C17.3889 20.6363 17.5348 20.4271 17.5348 20.4271L20.9837 16.875H8.5V15.125H20.9839L17.5348 11.5719C17.4442 11.4914 17.3889 11.3627 17.3889 11.2258Z')
+                                                            
+                                                    .d-flex.align-items-center.justify-content-center.text-center.px-25
+                                                        span.card-price-last.fs-18.fs-lg-24.fw-600.text-white $9.90
+                                                        span.card-price-first.fs-14.fs-lg-16.text-gray.text-decoration-line-through.px-5 $12.90
 
-    section
-        .container
+                                                span.fs-12.fs-lg-14.fw-400.text-white
+                                                    p.my-0 *This offer ends April 8th 2023 and valid on annual subscription.
+                                                                                                    
+    section.overflow-hidden
+        .container.px-0.px-lg-5
             .product-head-title
                 h3 Gaming
                 span 139 services
 
-    section.product-list.product-categories
+    section.overflow-hidden.product-list.product-categories
         .container
             .row 
                 .col-12.col-lg-4
-                    .filter-box(id='filter-content')
+                    .filter-box.sticky-lg-top.z-0
                         .filter-head
                             .filter-btn(id='filter-btn')
                                 span Filter 
-                            .filter-clear
+                                +icon("filter").d-flex.d-lg-none
+                            .filter-sortby(id='filter-sortby').d-flex.d-lg-none
+                                span Sort By 
+                                +icon("sorting")
+                            .filter-clear.d-none.d-lg-block
                                 span Clean All
-                            .filter-close(id="filter-close")
-                        
-                        .filter-tag
-                            .filter-tag-item
-                                span HTML 5
-                                +icon("delete")
+                        .filter-settings(id='filter-content')                            
+                            .filter-head-settings.d-flex.align-items-center.justify-content-between.d-lg-none
+                                .filter-btn(id='filter-btn')
+                                    span Filter
+                                .filter-close(id="filter-close")
+                                    +icon("menuclose")
+                            
+                            .filter-content-scroll
+                                .filter-tag
+                                    .filter-tag-item
+                                        span HTML 5
+                                        +icon("delete")
+                                    .filter-tag-item
+                                        span Quiz 12
+                                        +icon("delete")
+                                    .filter-tag-item
+                                        span Sports 45
+                                        +icon("delete")
+                                    .filter-tag-item
+                                        span E-Sports 1
+                                        +icon("delete")
+                                    .filter-tag-item
+                                        span Indie 50
+                                        +icon("delete")
+                                                            
+                                .filter-clear.d-block.d-lg-none
+                                    span Clean All
 
-                        .filter-settings
-                            #accordionPanelsStayOpenExample.accordion
-                                .accordion-item
-                                    h2.accordion-header
-                                        button.accordion-button(type='button', data-bs-toggle='collapse', data-bs-target='#panelsStayOpen-filter1', aria-expanded='true', aria-controls='panelsStayOpen-filter1') 
-                                            span Categories
-                                            +icon("plus_minus")
-                                    #panelsStayOpen-filter1.accordion-collapse.collapse.show
-                                        .accordion-body
-                                            strong cheched list
-                                            strong cheched list
-                                            strong cheched list
-                                            strong cheched list
-                                .accordion-item
-                                    h2.accordion-header
-                                        button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#panelsStayOpen-filter2', aria-expanded='false', aria-controls='panelsStayOpen-filter2')
-                                            span Genre
-                                            +icon("plus_minus")
-                                    #panelsStayOpen-filter2.accordion-collapse.collapse
-                                        .accordion-body
-                                            strong cheched list
-                                            strong cheched list
-                                            strong cheched list
-                                            strong cheched list
-                                .accordion-item
-                                    h2.accordion-header
-                                        button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#panelsStayOpen-filter3', aria-expanded='false', aria-controls='panelsStayOpen-filter3')
-                                            span Maturity Rating
-                                            +icon("plus_minus")
-                                    #panelsStayOpen-filter3.accordion-collapse.collapse
-                                        .accordion-body
-                                            strong cheched list
-                                            strong cheched list
-                                            strong cheched list
-                                            strong cheched list    
-    
+                                #accordionPanelsStayOpenExample.accordion
+                                    .accordion-item
+                                        h2.accordion-header
+                                            button.accordion-button(type='button', data-bs-toggle='collapse', data-bs-target='#panelsStayOpen-filter1', aria-expanded='true', aria-controls='panelsStayOpen-filter1') 
+                                                span Categories
+                                                +icon("plus_minus")
+                                                +icon("plus_minuss")
+                                        #panelsStayOpen-filter1.accordion-collapse.collapse.show
+                                            .accordion-body
+                                                .accordion-clear
+                                                    span Clean All
+                                                .all-check-box
+                                                    .form-check
+                                                        label.checkbox-container(for='myCheckbox1')
+                                                            input.form-check-input.rounded-0.fs-15(type='checkbox' id='myCheckbox1')
+                                                            span.checkmark
+                                                            .form-check-text All (139)
+                                                    .form-check
+                                                        label.checkbox-container(for='myCheckbox2')
+                                                            input.form-check-input.rounded-0.fs-15(type='checkbox' id='myCheckbox2' checked)
+                                                            span.checkmark
+                                                            .form-check-text HTML5 (25)
+                                                    .form-check
+                                                        label.checkbox-container(for='myCheckbox3')
+                                                            input.form-check-input.rounded-0.fs-15(type='checkbox' id='myCheckbox3')
+                                                            span.checkmark
+                                                            .form-check-text Quiz (2)
+                                                    .form-check
+                                                        label.checkbox-container(for='myCheckbox4')
+                                                            input.form-check-input.rounded-0.fs-15(type='checkbox' id='myCheckbox4')
+                                                            span.checkmark
+                                                            .form-check-text Sports (45)
+                                                    .form-check
+                                                        label.checkbox-container(for='myCheckbox5')
+                                                            input.form-check-input.rounded-0.fs-15(type='checkbox' id='myCheckbox5')
+                                                            span.checkmark
+                                                            .form-check-text Hyper Casual (50)
+                                                    .form-check
+                                                        label.checkbox-container(for='myCheckbox6')
+                                                            input.form-check-input.rounded-0.fs-15(type='checkbox' id='myCheckbox6')
+                                                            span.checkmark
+                                                            .form-check-text AAA Games (8)
+                                                    .form-check
+                                                        label.checkbox-container(for='myCheckbox7')
+                                                            input.form-check-input.rounded-0.fs-15(type='checkbox' id='myCheckbox7')
+                                                            span.checkmark
+                                                            .form-check-text Educational (6)
+                                                    .form-check
+                                                        label.checkbox-container(for='myCheckbox8')
+                                                            input.form-check-input.rounded-0.fs-15(type='checkbox' id='myCheckbox8')
+                                                            span.checkmark
+                                                            .form-check-text E-Sports (1)
+
+                                    .accordion-item
+                                        h2.accordion-header
+                                            button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#panelsStayOpen-filter2', aria-expanded='false', aria-controls='panelsStayOpen-filter2')
+                                                span Genre
+                                                +icon("plus_minus")
+                                                +icon("plus_minuss")
+                                        #panelsStayOpen-filter2.accordion-collapse.collapse
+                                            .accordion-body
+                                                .accordion-clear
+                                                    span Clean All
+                                                .all-check-box
+                                                    .form-check
+                                                        label.checkbox-container(for='myCheckbox9')
+                                                            input.form-check-input.rounded-0.fs-15(type='checkbox' id='myCheckbox9')
+                                                            span.checkmark
+                                                            .form-check-text Action & Adventure (24)
+                                                    .form-check
+                                                        label.checkbox-container(for='myCheckbox10')
+                                                            input.form-check-input.rounded-0.fs-15(type='checkbox' id='myCheckbox10')
+                                                            span.checkmark
+                                                            .form-check-text Shooter (2)
+                                                    .form-check
+                                                        label.checkbox-container(for='myCheckbox11')
+                                                            input.form-check-input.rounded-0.fs-15(type='checkbox' id='myCheckbox11')
+                                                            span.checkmark
+                                                            .form-check-text Fighting (45)
+                                                    .form-check
+                                                        label.checkbox-container(for='myCheckbox12')
+                                                            input.form-check-input.rounded-0.fs-15(type='checkbox' id='myCheckbox12')
+                                                            span.checkmark
+                                                            .form-check-text Indie (50)
+                                                    .form-check
+                                                        label.checkbox-container(for='myCheckbox13')
+                                                            input.form-check-input.rounded-0.fs-15(type='checkbox' id='myCheckbox13')
+                                                            span.checkmark
+                                                            .form-check-text Kids & Family (8)
+                                                    .form-check
+                                                        label.checkbox-container(for='myCheckbox14')
+                                                            input.form-check-input.rounded-0.fs-15(type='checkbox' id='myCheckbox14')
+                                                            span.checkmark
+                                                            .form-check-text Racing (5)
+                                                    .form-check
+                                                        label.checkbox-container(for='myCheckbox15')
+                                                            input.form-check-input.rounded-0.fs-15(type='checkbox' id='myCheckbox15')
+                                                            span.checkmark
+                                                            .form-check-text Strategy (5)
+
+                                    .accordion-item
+                                        h2.accordion-header
+                                            button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#panelsStayOpen-filter3', aria-expanded='false', aria-controls='panelsStayOpen-filter3')
+                                                span Maturity Rating
+                                                +icon("plus_minus")
+                                                +icon("plus_minuss")
+                                        #panelsStayOpen-filter3.accordion-collapse.collapse
+                                            .accordion-body
+                                                .accordion-clear
+                                                    span Clean All
+                                                .all-check-box
+                                                    .form-check
+                                                        label.checkbox-container(for='myCheckbox16')
+                                                            input.form-check-input.rounded-0.fs-15(type='checkbox' id='myCheckbox16')
+                                                            span.checkmark
+                                                            .form-check-text Everyone (76)
+                                                    .form-check
+                                                        label.checkbox-container(for='myCheckbox17')
+                                                            input.form-check-input.rounded-0.fs-15(type='checkbox' id='myCheckbox17')
+                                                            span.checkmark
+                                                            .form-check-text Everyone 10+ (34)
+                                                    .form-check
+                                                        label.checkbox-container(for='myCheckbox17')
+                                                            input.form-check-input.rounded-0.fs-15(type='checkbox' id='myCheckbox18')
+                                                            span.checkmark
+                                                            .form-check-text Teen (2)
+                                                    .form-check
+                                                        label.checkbox-container(for='myCheckbox18')
+                                                            input.form-check-input.rounded-0.fs-15(type='checkbox' id='myCheckbox18')
+                                                            span.checkmark
+                                                            .form-check-text Mature 17+(4)
+                                                    .form-check
+                                                        label.checkbox-container(for='myCheckbox19')
+                                                            input.form-check-input.rounded-0.fs-15(type='checkbox' id='myCheckbox19')
+                                                            span.checkmark
+                                                            .form-check-text Kids &Family (35)
+
+                                    .accordion-item
+                                        h2.accordion-header
+                                            button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#panelsStayOpen-filter3', aria-expanded='false', aria-controls='panelsStayOpen-filter3')
+                                                span Offers
+                                                +icon("plus_minus")
+                                                +icon("plus_minuss")
+                                        #panelsStayOpen-filter3.accordion-collapse.collapse
+                                            .accordion-body
+                                                .accordion-clear
+                                                    span Clean All
+                                                .all-check-box
+                                                    .form-check
+                                                        label.checkbox-container(for='myCheckbox20')
+                                                            input.form-check-input.rounded-0.fs-15(type='checkbox' id='myCheckbox20')
+                                                            span.checkmark
+                                                            .form-check-text On Sale (54)
+                                                    .form-check
+                                                        label.checkbox-container(for='myCheckbox21')
+                                                            input.form-check-input.rounded-0.fs-15(type='checkbox' id='myCheckbox21')
+                                                            span.checkmark
+                                                            .form-check-text Special Offers (34)
+                                                    .form-check
+                                                        label.checkbox-container(for='myCheckbox22')
+                                                            input.form-check-input.rounded-0.fs-15(type='checkbox' id='myCheckbox22')
+                                                            span.checkmark
+                                                            .form-check-text Bundle Offers (2)
+                          
+                            .filter-footer-settings.d-flex.align-items-center.justify-content-between.d-lg-none
+                                .filter-total-number
+                                    span 117 results 
+                                a.btn.btn-them-1.btn-lg(href="javascript:void(0);")
+                                    span Show Results
+                                    svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                        path(fill-rule='evenodd' clip-rule='evenodd' d='M17.3889 11.2258V9.21393C17.3889 9.03956 17.5525 8.93762 17.6696 9.04224L24.2082 15.5625C24.5973 15.9032 24.5973 16.1701 24.2082 16.5135C24.2082 16.5135 17.7868 22.8575 17.6696 22.9594C17.5525 23.0614 17.3889 22.9594 17.3889 22.7851V20.7731C17.3889 20.6363 17.5348 20.4271 17.5348 20.4271L20.9837 16.875H8.5V15.125H20.9839L17.5348 11.5719C17.4442 11.4914 17.3889 11.3627 17.3889 11.2258Z')
+
 
                 .col-12.col-lg-8
                     .ems-data-filter
-                        .ems-data-filter-header.filter-buttons.mb-15
-                            a.ems-data-filter-link(href="javascript:void(0);" data-filter="all")
-                                span All
-                            a.ems-data-filter-link(href="javascript:void(0);" data-filter="Recommended")
-                                span Recommended
-                            a.ems-data-filter-link.active(href="javascript:void(0);" data-filter="MostPopular")
-                                span Most Popular
-                            a.ems-data-filter-link(href="javascript:void(0);" data-filter="TopSelling")
-                                span Top Selling
-                            a.ems-data-filter-link(href="javascript:void(0);" data-filter="HighestRated")
-                                span Highest Rated
-                            a.ems-data-filter-link(href="javascript:void(0);" data-filter="LowestPrice")
-                                span Lowest Price
+                        .ems-data-filter-header.filter-buttons.mb-15(id="filter-sortby-content")                           
+                            .filter-sortby-head-settings.d-flex.align-items-center.justify-content-between.d-lg-none
+                                .filter-btn(id='filter-sortby')
+                                    span Sort By
+                                .filter-close(id="filter-sortby-close")
+                                    +icon("menuclose")
+                            
+                            .filter-sortby-content-scroll.ems-data-filter-scroll
+                                a.ems-data-filter-link(href="javascript:void(0);" data-filter="all")
+                                    .form-radio
+                                        label.radio-container(for='myRadio1')
+                                            input.form-radio-input.d-flex.d-lg-none(type='radio' name='myRaio' id='myRadio1' checked)
+                                            span.radiomark.d-flex.d-lg-none
+                                            .link-item All
+                                a.ems-data-filter-link(href="javascript:void(0);" data-filter="Recommended")
+                                    .form-radio
+                                        label.radio-container(for='myRadio2')
+                                            input.form-radio-input.d-flex.d-lg-none(type='radio' name='myRaio' id='myRadio2')
+                                            span.radiomark.d-flex.d-lg-none
+                                            .link-item Recommended
+                                a.ems-data-filter-link.active(href="javascript:void(0);" data-filter="MostPopular")
+                                    .form-radio
+                                        label.radio-container(for='myRadio3')
+                                            input.form-radio-input.d-flex.d-lg-none(type='radio' name='myRaio' id='myRadio3')
+                                            span.radiomark.d-flex.d-lg-none
+                                            .link-item Most Popular
+                                a.ems-data-filter-link(href="javascript:void(0);" data-filter="TopSelling")
+                                    .form-radio
+                                        label.radio-container(for='myRadio4')
+                                            input.form-radio-input.d-flex.d-lg-none(type='radio' name='myRaio' id='myRadio4')
+                                            span.radiomark.d-flex.d-lg-none
+                                            .link-item Top Selling
+                                a.ems-data-filter-link(href="javascript:void(0);" data-filter="HighestRated")
+                                    .form-radio
+                                        label.radio-container(for='myRadio5')
+                                            input.form-radio-input.d-flex.d-lg-none(type='radio' name='myRaio' id='myRadio5')
+                                            span.radiomark.d-flex.d-lg-none
+                                            .link-item Highest Rated
+                                a.ems-data-filter-link(href="javascript:void(0);" data-filter="LowestPrice")
+                                    .form-radio
+                                        label.radio-container(for='myRadio6')
+                                            input.form-radio-input.d-flex.d-lg-none(type='radio' name='myRaio' id='myRadio6')
+                                            span.radiomark.d-flex.d-lg-none
+                                            .link-item Lowest Price                                    
+
+                            .filter-sortby-footer-settings.d-flex.align-items-center.justify-content-between.d-lg-none
+                                a.btn.btn-them-1.btn-lg.w-100(href="javascript:void(0);")
+                                    span Show Results
+                                    svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                        path(fill-rule='evenodd' clip-rule='evenodd' d='M17.3889 11.2258V9.21393C17.3889 9.03956 17.5525 8.93762 17.6696 9.04224L24.2082 15.5625C24.5973 15.9032 24.5973 16.1701 24.2082 16.5135C24.2082 16.5135 17.7868 22.8575 17.6696 22.9594C17.5525 23.0614 17.3889 22.9594 17.3889 22.7851V20.7731C17.3889 20.6363 17.5348 20.4271 17.5348 20.4271L20.9837 16.875H8.5V15.125H20.9839L17.5348 11.5719C17.4442 11.4914 17.3889 11.3627 17.3889 11.2258Z')
+
                         
                         .ems-data-filter-content
                             .row.product-slider.g-15
@@ -228,7 +414,7 @@ block content
                                             .card-price.d-flex.flex-column.justify-content-start
                                                 span.card-price-last.fs-14.fs-lg-16.fw-600.text-white $9.90
                                                 
-                                            a.btn.btn-them-1.btn-md(href="/")
+                                            a.btn.btn-them-1.btn-md(href="product-detail.html")
                                                 span Learn More
                                 
                                 .col-6.col-lg-4.product-box(data-filters="MostPopular")
@@ -258,7 +444,7 @@ block content
                                                 span.discount-rate.fs-12.fs-lg-14.fw-400 Starting from
                                                 span.card-price-last.fs-14.fs-lg-16.fw-600.text-white $9.90
                                                 
-                                            a.btn.btn-them-1.btn-md(href="/")
+                                            a.btn.btn-them-1.btn-md(href="product-detail.html")
                                                 span Learn More
                                 
                                 .col-6.col-lg-4.product-box(data-filters="TopSelling")
@@ -281,7 +467,7 @@ block content
                                                 span.discount-rate.fs-12.fs-lg-14.fw-400 Starting from
                                                 span.card-price-last.fs-14.fs-lg-16.fw-600.text-white $9.90
                                                 
-                                            a.btn.btn-them-1.btn-md(href="/")
+                                            a.btn.btn-them-1.btn-md(href="product-detail.html")
                                                 span Learn More
                                 
                                 .col-6.col-lg-4.product-box(data-filters="HighestRated")
@@ -311,7 +497,7 @@ block content
                                                 span.discount-rate.fs-12.fs-lg-14.fw-400 Only
                                                 span.card-price-last.fs-14.fs-lg-16.fw-600.text-white $9.90
                                                 
-                                            a.btn.btn-them-1.btn-md(href="/")
+                                            a.btn.btn-them-1.btn-md(href="product-detail.html")
                                                 span Learn More
 
                                 .col-6.col-lg-4.product-box(data-filters="LowestPrice")
@@ -340,7 +526,7 @@ block content
                                             .card-price.d-flex.flex-column.justify-content-start
                                                 span.card-price-last.fs-14.fs-lg-16.fw-600.text-white $9.90
                                                 
-                                            a.btn.btn-them-1.btn-md(href="/")
+                                            a.btn.btn-them-1.btn-md(href="product-detail.html")
                                                 span Learn More
                                 
                                 .col-6.col-lg-4.product-box(data-filters="Recommended")
@@ -370,7 +556,7 @@ block content
                                                 span.discount-rate.fs-12.fs-lg-14.fw-400 Starting from
                                                 span.card-price-last.fs-14.fs-lg-16.fw-600.text-white $9.90
                                                 
-                                            a.btn.btn-them-1.btn-md(href="/")
+                                            a.btn.btn-them-1.btn-md(href="product-detail.html")
                                                 span Learn More
                                 
                                 .col-6.col-lg-4.product-box(data-filters="MostPopular")
@@ -393,7 +579,7 @@ block content
                                                 span.discount-rate.fs-12.fs-lg-14.fw-400 Starting from
                                                 span.card-price-last.fs-14.fs-lg-16.fw-600.text-white $9.90
                                                 
-                                            a.btn.btn-them-1.btn-md(href="/")
+                                            a.btn.btn-them-1.btn-md(href="product-detail.html")
                                                 span Learn More
                                 
                                 .col-6.col-lg-4.product-box(data-filters="TopSelling")
@@ -423,7 +609,7 @@ block content
                                                 span.discount-rate.fs-12.fs-lg-14.fw-400 Only
                                                 span.card-price-last.fs-14.fs-lg-16.fw-600.text-white $9.90
                                                 
-                                            a.btn.btn-them-1.btn-md(href="/")
+                                            a.btn.btn-them-1.btn-md(href="product-detail.html")
                                                 span Learn More
                                                 
                                 .col-6.col-lg-4.product-box(data-filters="Recommended")
@@ -452,7 +638,7 @@ block content
                                             .card-price.d-flex.flex-column.justify-content-start
                                                 span.card-price-last.fs-14.fs-lg-16.fw-600.text-white $9.90
                                                 
-                                            a.btn.btn-them-1.btn-md(href="/")
+                                            a.btn.btn-them-1.btn-md(href="product-detail.html")
                                                 span Learn More
                                 
                                 .col-6.col-lg-4.product-box(data-filters="MostPopular")
@@ -482,7 +668,7 @@ block content
                                                 span.discount-rate.fs-12.fs-lg-14.fw-400 Starting from
                                                 span.card-price-last.fs-14.fs-lg-16.fw-600.text-white $9.90
                                                 
-                                            a.btn.btn-them-1.btn-md(href="/")
+                                            a.btn.btn-them-1.btn-md(href="product-detail.html")
                                                 span Learn More
                                 
                                 .col-6.col-lg-4.product-box(data-filters="TopSelling")
@@ -505,7 +691,7 @@ block content
                                                 span.discount-rate.fs-12.fs-lg-14.fw-400 Starting from
                                                 span.card-price-last.fs-14.fs-lg-16.fw-600.text-white $9.90
                                                 
-                                            a.btn.btn-them-1.btn-md(href="/")
+                                            a.btn.btn-them-1.btn-md(href="product-detail.html")
                                                 span Learn More
                                 
                                 .col-6.col-lg-4.product-box(data-filters="HighestRated")
@@ -535,7 +721,7 @@ block content
                                                 span.discount-rate.fs-12.fs-lg-14.fw-400 Only
                                                 span.card-price-last.fs-14.fs-lg-16.fw-600.text-white $9.90
                                                 
-                                            a.btn.btn-them-1.btn-md(href="/")
+                                            a.btn.btn-them-1.btn-md(href="product-detail.html")
                                                 span Learn More
 
                                 .col-6.col-lg-4.product-box(data-filters="LowestPrice")
@@ -564,7 +750,7 @@ block content
                                             .card-price.d-flex.flex-column.justify-content-start
                                                 span.card-price-last.fs-14.fs-lg-16.fw-600.text-white $9.90
                                                 
-                                            a.btn.btn-them-1.btn-md(href="/")
+                                            a.btn.btn-them-1.btn-md(href="product-detail.html")
                                                 span Learn More
                                 
                                 .col-6.col-lg-4.product-box(data-filters="Recommended")
@@ -594,7 +780,7 @@ block content
                                                 span.discount-rate.fs-12.fs-lg-14.fw-400 Starting from
                                                 span.card-price-last.fs-14.fs-lg-16.fw-600.text-white $9.90
                                                 
-                                            a.btn.btn-them-1.btn-md(href="/")
+                                            a.btn.btn-them-1.btn-md(href="product-detail.html")
                                                 span Learn More
                                 
                                 .col-6.col-lg-4.product-box(data-filters="MostPopular")
@@ -617,7 +803,7 @@ block content
                                                 span.discount-rate.fs-12.fs-lg-14.fw-400 Starting from
                                                 span.card-price-last.fs-14.fs-lg-16.fw-600.text-white $9.90
                                                 
-                                            a.btn.btn-them-1.btn-md(href="/")
+                                            a.btn.btn-them-1.btn-md(href="product-detail.html")
                                                 span Learn More
                                 
                                 .col-6.col-lg-4.product-box(data-filters="TopSelling")
@@ -647,7 +833,7 @@ block content
                                                 span.discount-rate.fs-12.fs-lg-14.fw-400 Only
                                                 span.card-price-last.fs-14.fs-lg-16.fw-600.text-white $9.90
                                                 
-                                            a.btn.btn-them-1.btn-md(href="/")
+                                            a.btn.btn-them-1.btn-md(href="product-detail.html")
                                                 span Learn More
                
                                 .col-6.col-lg-4.product-box(data-filters="Recommended")
@@ -676,7 +862,7 @@ block content
                                             .card-price.d-flex.flex-column.justify-content-start
                                                 span.card-price-last.fs-14.fs-lg-16.fw-600.text-white $9.90
                                                 
-                                            a.btn.btn-them-1.btn-md(href="/")
+                                            a.btn.btn-them-1.btn-md(href="product-detail.html")
                                                 span Learn More
                                 
                                 .col-6.col-lg-4.product-box(data-filters="MostPopular")
@@ -706,27 +892,38 @@ block content
                                                 span.discount-rate.fs-12.fs-lg-14.fw-400 Starting from
                                                 span.card-price-last.fs-14.fs-lg-16.fw-600.text-white $9.90
                                                 
-                                            a.btn.btn-them-1.btn-md(href="/")
+                                            a.btn.btn-them-1.btn-md(href="product-detail.html")
                                                 span Learn More
 
                             .row
-                                .col-12.d-flex.align-items-center.justify-content-center.mt-60.mb-120
+                                .col-12.d-flex.align-items-center.justify-content-center.mt-25.mt-lg-60.mb-40.mb-lg-120
                                     nav(aria-label='Page navigation example')
                                         .pagination
                                             .page-item
                                                 a.page-link.left-icon(href='#', aria-label='Previous')
-                                                    span(aria-hidden='true') &laquo;
+                                                    span(aria-hidden='true')
+                                                        svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                                            path(fill-rule='evenodd' clip-rule='evenodd' d='M14 10.7566V12.4811C14 12.5984 14.0466 12.7087 14.1231 12.7777L17.75 16.5732L14.1231 20.3679C14.1231 20.3679 14 20.5472 14 20.6645C14 20.7818 14 22.2395 14 22.389C14 22.5385 14.138 22.6258 14.2369 22.5385C14.3357 22.4511 19.7538 17.0134 19.7538 17.0134C20.0821 16.719 20.0821 16.4903 19.7538 16.1982L14.2369 10.6095C14.138 10.5198 14 10.6072 14 10.7566Z')
+
                                             .page-item
-                                                a.page-link.active(href='#') 1
+                                                a.page-link.active(href='#')
+                                                    span 1
                                             .page-item
-                                                a.page-link(href='#') 2
+                                                a.page-link(href='#')
+                                                    span 2
                                             .page-item
-                                                a.page-link(href='#') 3
+                                                a.page-link(href='#')
+                                                    span 3
                                             .page-item
-                                                a.page-link(href='#') 4
+                                                a.page-link(href='#')
+                                                    span 4
                                             .page-item
-                                                a.page-link(href='#') 5
+                                                a.page-link(href='#')
+                                                    span 5
                                             .page-item
                                                 a.page-link.right-icon(href='#', aria-label='Next')
-                                                    span(aria-hidden='true') &raquo;
+                                                    span(aria-hidden='true') 
+                                                        svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                                            path(fill-rule='evenodd' clip-rule='evenodd' d='M14 10.7566V12.4811C14 12.5984 14.0466 12.7087 14.1231 12.7777L17.75 16.5732L14.1231 20.3679C14.1231 20.3679 14 20.5472 14 20.6645C14 20.7818 14 22.2395 14 22.389C14 22.5385 14.138 22.6258 14.2369 22.5385C14.3357 22.4511 19.7538 17.0134 19.7538 17.0134C20.0821 16.719 20.0821 16.4903 19.7538 16.1982L14.2369 10.6095C14.138 10.5198 14 10.6072 14 10.7566Z')
+
 

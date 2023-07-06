@@ -46,8 +46,8 @@ progress[value] {
 
 
 
-.scroll-top-bx{
-    display: flex;
+#scroll-top-bx {
+    display: none;
     width: 45px;
     height: 45px;
     padding: 7px 7px 6px 6px;
@@ -60,15 +60,19 @@ progress[value] {
     right: 32px;
     bottom: 40px;
     z-index: 9;
+    outline: none;
+    cursor: pointer;
     svg{
       display: flex;
       width: 32px;
       height: 32px;
+      padding: 8px 9px;
       justify-content: center;
       align-items: center;
       flex-shrink: 0;
     }
-  }
-  html{
-    scroll-behavior: smooth;
-  }
+}
+  
+#scroll-top-bx.show {
+    display: flex;
+}

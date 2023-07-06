@@ -1,3 +1,78 @@
 .pagination{
-    
+    display: flex;    
+    gap: 5px;
+    .page-item{
+        .page-link{
+            display: flex;
+            height: 30px;
+            padding: 4px 16px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 21px;
+            background: rgba(255, 255, 255, 0.05);
+            color: #50575B;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 19px;
+            border-color: transparent;
+            span{
+                display: flex;
+                width: 21px;
+                flex-direction: column;
+                justify-content: center;
+            }
+            &.left-icon{
+                background: transparent;
+                svg{
+                    width: 24px;
+                    height: 24px;
+                    transform: rotate(180deg);
+                    path{
+                        fill:$white;
+                    }
+                }
+                &:hover{                    
+                    svg{
+                        path{
+                            fill:$them-color;
+                        }
+                    }
+                }
+            }
+            &.right-icon{
+                background: transparent;
+                svg{
+                    width: 24px;
+                    height: 24px;
+                    path{
+                        fill:$white;
+                    }
+                }
+                &:hover{                    
+                    svg{
+                        path{
+                            fill:$them-color;
+                        }
+                    }
+                }
+            }
+            &:focus {
+                background-color: $them-color;
+                color: #50575B;
+                box-shadow: none;
+            }            
+            &.active,.active>.page-link {
+                    color: #50575B;
+                    background-color: $them-color;
+                    border-color: none;
+                    color: #50575B;
+                    text-align: center;
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 19px;
+            }
+        }
+    }
 }

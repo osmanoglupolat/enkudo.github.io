@@ -273,58 +273,124 @@ select:active, textarea:active, input:active {
 //     transform: rotate(135deg);
 //   }
 
-  //checkbox
-  .check-btn {
-    position: relative;
-    width: 16px;
-    height: 16px;
-    border-radius: 2px;
-    &::before {
-        content: "";
-        position: absolute;
-        width: 16px;
-        height: 16px;
-        border: 2px solid $gray3;
-        border-radius: 2px;
+/// new checked
+
+// Checkbox
+.form-check{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    .checkbox-container {
+        display: flex;
+        align-items: center;
+        position: relative;
         cursor: pointer;
-        left: 0;
-        top: 0;
-    }
-    &-reverse {
-        &::before {
-            left: auto;
-            right: 0;
-        }
-        span {
-            margin-left: 30px;
-        }
-    }
-
-    &-radio {
-        &::before {
-            border-radius: 50%;
-        }
-    }
-
-    &.selected {
-        &::before {
-            border: 2px solid $accent;
-            background-color: $white;
-            background-image: escape-svg($form-check-input-checked-bg-image);
-        }
-        &::after {
+        font-size: 16px;      
+        input[type="checkbox"] {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+        }      
+        .checkmark {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          top: 0;
+          left: 0;
+          height: 20px;
+          width: 20px;
+          background-color: transparent;
+          border: 0.12rem solid $white;
+          margin: 5px;      
+          &:hover {
+            background-color: $content-bg-color;
+          }      
+          &:after {
             content: "";
             position: absolute;
-            border: 2px solid $accent;
-            border-radius: 1px;
-            background-color: $accent;
-            left: 4px;
-            top: 4px;
-            width: 8px;
-            height: 8px;
+            display: none;
+          }
+        }      
+        input[type="checkbox"]:checked + .checkmark {
+          background-color: $them-color;
+          border: 0.12rem solid $them-color;      
+          &:after {
+            display: block;
+            left: 6px;
+            top: 2px;
+            width: 6px;
+            height: 12px;
+            border: solid $content-bg-color;
+            border-width: 0 3px 3px 0;
+            transform: rotate(45deg);
+          }
+        }        
+        .form-check-text{
+            color: #AFB3B5;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1;
+            margin-left: 5px;
         }
     }
 }
+
+// Radio
+.form-radio{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  .radio-container {
+      display: flex;
+      align-items: center;
+      position: relative;
+      cursor: pointer;
+      font-size: 16px;      
+      input[type="radio"] {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+      }      
+      .radiomark {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        height: 14px;
+        width: 14px;
+        border-radius: 20px;
+        background-color: transparent;
+        border: 0.12rem solid #50575B;
+        margin: 5px;      
+        &:hover {
+          background-color: $content-bg-color;
+        }      
+        &:after {
+          content: "";
+          position: absolute;
+          display: none;
+        }
+      }      
+      input[type="radio"]:checked + .radiomark {
+        border: 5px solid $them-color;      
+        &:after {
+          display: block;
+        }
+      }        
+      .form-radio-text{
+          color: #AFB3B5;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 1;
+          margin-left: 5px;
+      }
+  }
+}
+
+
 
 //Cost Range Slider 
     input[type="text"].rangeValue {
@@ -515,3 +581,4 @@ input[type=range] {
         display: block;
     }
 }
+

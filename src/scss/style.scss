@@ -5,6 +5,7 @@
 // Bootstrap
 @import 'vendors/bootstrap-custom';
 
+
 // Components
 @import 'components/swiper';
 @import 'components/tab';
@@ -13,6 +14,7 @@
 @import 'components/toastify';
 @import 'components/button';
 @import 'components/breadcrumb';
+@import 'components/input';
 
 // Layouts
 @import 'layouts/header';
@@ -40,8 +42,9 @@
   @import 'components/modal-mobile';
   @import 'components/accordion-mobile';
   @import 'components/tab-mobile';
+  @import 'components/breadcrumb-mobile';
   @import 'components/pagination-mobile';
-
+  @import 'components/input-mobile';
 
   // Layouts
   @import 'layouts/header-mobile';
@@ -50,8 +53,8 @@
   @import 'layouts/pages-mobile';
   @import 'layouts/banner1-slider-mobile';
   @import 'layouts/product-category-mobile';
-  @import 'layouts/product-detail-mobile';
   @import 'layouts/product-list-mobile';
+  @import 'layouts/product-detail-mobile';
   @import 'layouts/footer-mobile';
 }
 
@@ -72,15 +75,14 @@
   @import 'components/tab-desktop';
   @import 'components/button';
   @import 'components/pagination-desktop';
+  @import 'components/input-desktop';
 
   // Layouts
   @import 'layouts/header-desktop';
   @import 'layouts/footer-desktop';
   @import 'layouts/product-category-desktop';
-
-
-  @import 'layouts/product-detail-desktop';
   @import 'layouts/product-list-desktop';
+  @import 'layouts/product-detail-desktop';
 
   //Modules
   @import 'modules/cookies-desktop';

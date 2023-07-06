@@ -50,25 +50,25 @@
                     font-size: 14px;
                     font-weight: 500;
                     line-height: normal;
-                    text-decoration-line: underline;
+                    text-decoration: underline;
                     cursor: pointer;
-                    text-decoration: none;
                 }
             }
         }
-        .filter-tag{
-            display: flex;
+        .filter-tag{            
+            display: inline-block;
             padding-left: 24px;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 8px;
             margin-bottom: 32px;
+            width: 300px;
+            position: relative;
             .filter-tag-item{
+                background: rgba(255, 255, 255, 0.10);
                 display: flex;
                 padding: 0px 2px 0px 8px;
                 justify-content: center;
                 align-items: center;
-                background: rgba(255, 255, 255, 0.10);
+                float: left;
+                margin: 0 8px 8px 0;
                 span{
                     color: $gray2;
                     text-align: center;
@@ -95,6 +95,7 @@
                             align-self: stretch;
                             border-top: 1px solid #262B30;
                             background: transparent;
+                            padding: 0;
                             span{
                                 color: $body-text-color;
                                 font-size: 18px;
@@ -107,14 +108,34 @@
                             &:not(.collapsed)::after {
                                 background-image: none;
                             }
-                            svg{                                
-                                width: 32px;
-                                height: 32px;
+                            svg{
+                                width: 27px;
+                                height: 27px;
+                                margin: 5px;
+                                background: $them-color;
+                                border-radius: 30px;
+                                stroke:$them-dark-color-1;
+                                &.icon-plus_minus{
+                                    display: block;
+                                }
+                                &.icon-plus_minuss{
+                                    display: none;
+                                }
                             }
                             &:not(.collapsed) {
-                                svg{                                
-                                    width: 32px;
-                                    height: 32px;
+                                svg{
+                                    width: 27px;
+                                    height: 27px;
+                                    margin: 5px;
+                                    background: $them-color;
+                                    border-radius: 30px;
+                                    stroke:$them-dark-color-1;
+                                    &.icon-plus_minus{
+                                        display: none;
+                                    }
+                                    &.icon-plus_minuss{
+                                        display: block;
+                                    }
                                 }
                             }
                         }
@@ -124,13 +145,31 @@
 
                         }
                         .accordion-body{
-
+                            padding: 0 0 32px 0;
+                            .all-check-box{
+                                display: flex;
+                                flex-direction: column;
+                                gap:8px;
+                            }
                         }
                         &.collapse:not(.show) {
                             display: none;
                         }
                     }
                 }
+            }
+        }
+        .accordion-clear{
+            position: relative;
+            display: block;
+            margin-bottom: 16px;
+            span{
+                color: $gray2;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: normal;
+                text-decoration: underline;
+                cursor: pointer;
             }
         }
     }
@@ -146,18 +185,25 @@
                 padding: 10px 20px;
                 justify-content: center;
                 align-items: center;
-                color: $body-text-color;
                 background: transparent;
-                font-weight: 400;
-                font-size: 14px;
                 border-radius: 28px;
                 cursor: pointer;
                 text-decoration: none;
                 transition: all 0.2s linear 0.1s;
+                .link-item{
+                    font-weight: 400;
+                    font-size: 14px;
+                    color: $body-text-color;
+                }
                 &.active{
                     background: $white;
                     color: $content-bg-color;
                     transition: all 0.2s linear 0.1s;
+                    .link-item{
+                        font-weight: 400;
+                        font-size: 14px;
+                        color: $them-dark-color-1;
+                    }
                 }
             }
         }

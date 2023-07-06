@@ -56,6 +56,9 @@
 
     .menubox{
       a.menubtn{
+        span{
+          display: none;
+        }
         &.show{
           z-index: 99;
           &::before{
@@ -64,6 +67,7 @@
           span{
             z-index: 1;
             font-size: 16px;
+            display: block;
           }        
           svg.icon-menuclose{
             display: block;
