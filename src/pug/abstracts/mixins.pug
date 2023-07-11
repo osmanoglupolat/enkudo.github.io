@@ -64,15 +64,12 @@ mixin swiper(type = 'main', pagination = false, navigation = false, scrollbar = 
 mixin breadcrumb(...items)
     nav.ems-breadcrumb(aria-label="breadcrumb")&attributes(attributes)
         ol.breadcrumb.flex-nowrap.text-nowrap.ems-scrollbar.ems-scrollbar-hide
-            li.breadcrumb-item
-                a(href="index.html") 
-                    +icon('point')
             each item, i in items
                 - last = (i == items.length - 1)
                     if last 
-                        li.breadcrumb-item.active(aria-current="page")=item[0]
+                        li.readcrumb-item.active(aria-current="page")=item[0]
                     else
-                        li.breadcrumb-item
+                        li.readcrumb-item
                             a(href=item[1])=item[0]
 
 

@@ -4,7 +4,7 @@ block prepend head
     - var pageTitle = "Enkudo"
     - var pageDescription = "Ürün Detay sayfası, Enkudo"
     - var pageName = "Ürün Detay"
-    - var pageClass = "page-body-class"
+    - var pageClass = "page-product-detail"
 
 block content
     section.product-detail-banner
@@ -14,18 +14,18 @@ block content
                 source(src="frontend/images/slider/video1.webm" type="video/webm")
                 source(src="frontend/images/slider/video1.ogg" type="video/ogg")
                 .overleyslider
-        .d-flex.align-items-end.justify-content-center
+        .d-block.d-lg-flex.align-items-end.justify-content-center
             picture
                 source.lazy-picture(media='(max-width:0)' srcset='frontend/images/1x1.svg')
-                source(media='(max-width: 767px)' srcset='frontend/images/slider/1.png 2x')
+                source(media='(max-width: 767px)' srcset='frontend/images/slider/bp-1.jpg 2x')
                 source(media='(min-width: 768px)' srcset='frontend/images/slider/1.png')
                 img.w-100(src='frontend/images/slider/1.png' alt='slide 1')
                 .overleyslider
-            .position-absolute.w-100
-                .container-fluid.px-20.px-lg-0
-                    .row.g-0
-                        .w-100.h-100.z-1.text-start.d-flex.align-items-start.justify-content-between
-                            .slide-desc.d-flex.flex-column.w-lg-50.mt-0.mt-lg-0
+            .position-relative.position-lg-absolute.mmt-50.w-100
+                .container-fluid.px-0.px-lg-0
+                    .row.g-0.w-100.h-100.z-1.text-start.d-flex.align-items-start.justify-content-between
+                        .col-12.col-lg-6
+                            .slide-desc.d-flex.flex-column.mt-0.mt-lg-0
                                 .d-flex.align-items-center.mb-10.mb-lg-15
                                     h3.text-white.fs-32.fs-lg-40.fw-600.lh-1.mt-0.mt-lg-0 Netflix
                                     .slider-text-line.bg-transparent.mx-10
@@ -47,7 +47,8 @@ block content
                                         +icon("info")
 
                                 span.text-white.fs-16.fs-lg-18 Netflix, Inc. is an American media company based in Los Gatos, California. Founded in 1997 by Reed Hastings and Marc Randolph in Scotts Valley, California. 
-
+                                
+                        .col-12.col-lg-6.d-flex.justify-content-end
                             .pdb-price-box.bg-dark-them-2.d-flex.flex-column.my-40.my-lg-0
                                 h3.text-white.fs-14.fs-lg-16.fw-700.lh-1.mt-0.mt-lg-0.mb-0.mb-lg-0 CHOOSE YOUR PLAN
                                 .d-block.position-relative.w-100
@@ -57,31 +58,41 @@ block content
                                                 .pdb-list-bg
                                                 input.form-radio-input.rounded-0.fs-15(type='radio' name='PirceTableRaio' id='myPirceTableRaido1')
                                                 span.radiomark
-                                                .d-flex.flex-column.mx-5.position-relative.z-1
-                                                    .fs-11.fw-400.text-white.mb-5 DAILY
-                                                    .fs-16.fs-lg-18.fw-700.text-white.lh-1 $1.90
+                                                .d-flex.flex-lg-column.mx-0.mx-lg-5.position-relative.z-1
+                                                    .fs-11.fw-400.text-white.mb-0.mb-lg-5.mx-5.mx-lg-0 DAILY
+                                                    .d-flex.align-items-start.justify-content-center
+                                                        .fs-16.fs-lg-18.fw-700.text-white.lh-1 $1.90
 
                                             label.radio-container(for='myPirceTableRaido2')
                                                 .pdb-list-bg
                                                 input.form-radio-input.rounded-0.fs-15(type='radio' name='PirceTableRaio' id='myPirceTableRaido2')
                                                 span.radiomark
-                                                .d-flex.flex-column.mx-5.position-relative.z-1
-                                                    .fs-11.fw-400.text-white.mb-5 MONTHLY
-                                                    .fs-16.fs-lg-18.fw-700.text-white.lh-1 $9.90
+                                                .d-flex.flex-lg-column.mx-0.mx-lg-5.position-relative.z-1
+                                                    .fs-11.fw-400.text-white.mb-0.mb-lg-5.mx-5.mx-lg-0 MONTHLY
+                                                    .d-flex.align-items-start.justify-content-center
+                                                        .fs-16.fs-lg-18.fw-700.text-white.lh-1 $9.90
 
                                             label.radio-container(for='myPirceTableRaido3')
                                                 .pdb-list-bg
                                                 input.form-radio-input.rounded-0.fs-15(type='radio' name='PirceTableRaio' id='myPirceTableRaido3')
                                                 span.radiomark
-                                                .d-flex.flex-column.mx-5.position-relative.z-1
-                                                    .fs-11.fw-400.text-white.mb-5 YEARLY
-                                                    .fs-16.fs-lg-18.fw-700.text-white.lh-1 $109.90
+                                                .d-flex.flex-lg-column.mx-0.mx-lg-5.position-relative.z-1
+                                                    .fs-11.fw-400.text-white.mb-0.mb-lg-5 YEARLY
+                                                    .d-flex.align-items-start.justify-content-center
+                                                        .fs-16.fs-lg-18.fw-700.text-white.lh-1.mx-5.mx-lg-0 $109.90
+                                                        .card-price-first.fs-12.lh-1.text-gray.text-decoration-line-through.mx-5 $119.90
 
                                 .d-flex.d-flex.align-items-center.justify-content-start.mt-0
-                                    a.btn.btn-them-1.btn-lg(href="/")
-                                        span Subscribe
-                                        svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                            path(fill-rule='evenodd' clip-rule='evenodd' d='M17.3889 11.2258V9.21393C17.3889 9.03956 17.5525 8.93762 17.6696 9.04224L24.2082 15.5625C24.5973 15.9032 24.5973 16.1701 24.2082 16.5135C24.2082 16.5135 17.7868 22.8575 17.6696 22.9594C17.5525 23.0614 17.3889 22.9594 17.3889 22.7851V20.7731C17.3889 20.6363 17.5348 20.4271 17.5348 20.4271L20.9837 16.875H8.5V15.125H20.9839L17.5348 11.5719C17.4442 11.4914 17.3889 11.3627 17.3889 11.2258Z')
+                                    .pd-price-btn-mobil-bottom.position-fixed.position-lg-relative
+                                        .d-flex.d-lg-none.align-items-center.justify-content-between.mx-0.mx-lg-5
+                                            .fs-16.fw-400.text-gary MONTHLY
+                                            .d-flex.align-items-center.justify-content-center
+                                                .card-price-first.fs-16.lh-1.text-gray.text-decoration-line-through.mx-5 $119.90
+                                                .fs-20.fw-700.text-white.lh-1 $9.90
+                                        a.btn.btn-them-1.btn-lg(href="/")
+                                            span Subscribe
+                                            svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                                path(fill-rule='evenodd' clip-rule='evenodd' d='M17.3889 11.2258V9.21393C17.3889 9.03956 17.5525 8.93762 17.6696 9.04224L24.2082 15.5625C24.5973 15.9032 24.5973 16.1701 24.2082 16.5135C24.2082 16.5135 17.7868 22.8575 17.6696 22.9594C17.5525 23.0614 17.3889 22.9594 17.3889 22.7851V20.7731C17.3889 20.6363 17.5348 20.4271 17.5348 20.4271L20.9837 16.875H8.5V15.125H20.9839L17.5348 11.5719C17.4442 11.4914 17.3889 11.3627 17.3889 11.2258Z')
                                             
                                     .icon-box-fav-share.d-flex.align-items-center.justify-content-start
                                         a(href="/")
@@ -89,41 +100,306 @@ block content
                                         a(href="/")
                                             +icon("share")
 
-    section.product-list.tab-nav-box.overflow-hidden.pt-30.pt-lg-60.pb-30.pb-lg-70
-        .container.px-15.px-lg-40
-            .row.align-items-start
+    section.product-list.pd-tab-nav-box.overflow-hidden.pt-0.pt-lg-60.pb-30.pb-lg-70
+        .container-fluid.px-0.px-lg-0
+            .row.g-0
                 .col-12.col-lg-12
-                    .nav.nav-pills.me-3(id='v-pills-tab' role='tablist' aria-orientation='vertical')
-                        a.nav-link.active(id='v-pills-one-tab' data-bs-toggle='pill' data-bs-target='#v-pills-one' type='button' role='tab' aria-controls='v-pills-one' aria-selected='true')
-                            span Details
-                            svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                path(fill-rule='evenodd' clip-rule='evenodd' d='M14 10.7566V12.4811C14 12.5984 14.0466 12.7087 14.1231 12.7777L17.75 16.5732L14.1231 20.3679C14.1231 20.3679 14 20.5472 14 20.6645C14 20.7818 14 22.2395 14 22.389C14 22.5385 14.138 22.6258 14.2369 22.5385C14.3357 22.4511 19.7538 17.0134 19.7538 17.0134C20.0821 16.719 20.0821 16.4903 19.7538 16.1982L14.2369 10.6095C14.138 10.5198 14 10.6072 14 10.7566Z')
+                    .tab-content(id='v-pills-tabContent')
+                        .tab-pane.fade(id='v-pills-ratings-review-2').pt-0.pt-lg-0.pb-40.pb-lg-60
+                            .pd-gallert-box
+                                .pd-gallert-list
+                                    .item
+                                        +picture('ratio ratio-1x1 ratio-gallery', lazy="true", dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png')(class="w-100 img-fluid", alt="slide 1")
 
-                        a.nav-link(id='v-pills-two-tab' data-bs-toggle='pill' data-bs-target='#v-pills-two' type='button' role='tab' aria-controls='v-pills-two' aria-selected='false')
-                            span Ratings & Review
-                            svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                path(fill-rule='evenodd' clip-rule='evenodd' d='M14 10.7566V12.4811C14 12.5984 14.0466 12.7087 14.1231 12.7777L17.75 16.5732L14.1231 20.3679C14.1231 20.3679 14 20.5472 14 20.6645C14 20.7818 14 22.2395 14 22.389C14 22.5385 14.138 22.6258 14.2369 22.5385C14.3357 22.4511 19.7538 17.0134 19.7538 17.0134C20.0821 16.719 20.0821 16.4903 19.7538 16.1982L14.2369 10.6095C14.138 10.5198 14 10.6072 14 10.7566Z')
-                                
-                        a.nav-link(id='v-pills-three-tab' data-bs-toggle='pill' data-bs-target='#v-pills-three' type='button' role='tab' aria-controls='v-pills-three' aria-selected='false')
-                            span Gallery
-                            svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                path(fill-rule='evenodd' clip-rule='evenodd' d='M14 10.7566V12.4811C14 12.5984 14.0466 12.7087 14.1231 12.7777L17.75 16.5732L14.1231 20.3679C14.1231 20.3679 14 20.5472 14 20.6645C14 20.7818 14 22.2395 14 22.389C14 22.5385 14.138 22.6258 14.2369 22.5385C14.3357 22.4511 19.7538 17.0134 19.7538 17.0134C20.0821 16.719 20.0821 16.4903 19.7538 16.1982L14.2369 10.6095C14.138 10.5198 14 10.6072 14 10.7566Z')
-            
+                                    .item
+                                        +picture('ratio ratio-1x1 ratio-gallery', lazy="true", dirFrontend + 'images/product/img-8.png', dirFrontend + 'images/product/img-8.png', dirFrontend + 'images/product/img-8.png')(class="w-100 img-fluid", alt="slide 1")
+
+                                    .item
+                                        +picture('ratio ratio-1x1 ratio-gallery', lazy="true", dirFrontend + 'images/product/img-5.png', dirFrontend + 'images/product/img-5.png', dirFrontend + 'images/product/img-5.png')(class="w-100 img-fluid", alt="slide 1")
+
+                                    .item
+                                        +picture('ratio ratio-1x1 ratio-gallery', lazy="true", dirFrontend + 'images/product/img-6.png', dirFrontend + 'images/product/img-6.png', dirFrontend + 'images/product/img-6.png')(class="w-100 img-fluid", alt="slide 1")
+
+                                    .item
+                                        +picture('ratio ratio-1x1 ratio-gallery', lazy="true", dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png')(class="w-100 img-fluid", alt="slide 1")
+
+                                    .item
+                                        +picture('ratio ratio-1x1 ratio-gallery', lazy="true", dirFrontend + 'images/product/img-8.png', dirFrontend + 'images/product/img-8.png', dirFrontend + 'images/product/img-8.png')(class="w-100 img-fluid", alt="slide 1")
+
                 .col-12.col-lg-12
-                    .tab-content.pt-15.pt-lg-60.pb-15.pb-lg-70(id='v-pills-tabContent')
-                        div.tab-pane.fade.show.active(id='v-pills-one' role='tabpanel' aria-labelledby='v-pills-one-tab' tabindex="0")
-                            .d-flex.flex-column
+                    .d-flex.align-items-center.justify-content-center
+                        .nav.nav-pills.me-3(id='v-pills-tab' role='tablist' aria-orientation='vertical')
+                            a.nav-link.active(id='v-pills-detail-tab' data-bs-toggle='pill' data-bs-target='#v-pills-detail' type='button' role='tab' aria-controls='v-pills-detail' aria-selected='true')
                                 span Details
+                                
+                            a.nav-link(id='v-pills-ratings-review-tab' data-bs-toggle='pill' data-bs-target='#v-pills-ratings-review' type='button' role='tab' aria-controls='v-pills-ratings-review' aria-selected='false')
+                                span Ratings & Review
 
-                        div.tab-pane.fade(id='v-pills-two' role='tabpanel' aria-labelledby='v-pills-two-tab' tabindex="0")
-                            .d-flex.flex-column 
-                                span  Ratings & Review
-
-                        div.tab-pane.fade(id='v-pills-three' role='tabpanel' aria-labelledby='v-pills-three-tab' tabindex="0")
-                            .d-flex.flex-column
+                            a.nav-link(id='v-pills-gallery-tab' data-bs-toggle='pill' data-bs-target='#v-pills-gallery' type='button' role='tab' aria-controls='v-pills-gallery' aria-selected='false')
                                 span Gallery
 
-    section.product-list.overflow-hidden.my-50.my-lg-120
+                .col-12.col-lg-12
+                    .tab-content.mt-0.mt-lg-60.mb-15.mb-lg-70(id='v-pills-tabContent')
+                        div.tab-pane.fade.show.active(id='v-pills-detail' role='tabpanel' aria-labelledby='v-pills-detail-tab' tabindex="0")
+                            .row.px-15.px-lg-0
+                                .col-12.col-lg-6
+                                    .pd-text-content-detail
+                                        h3.text-white.fs-18.fs-lg-20.fw-600.m-0 Description
+                                        p.text-gray.fs-14.fs-lg-16.mb-0.mt-10 Netflix, Inc. is an American media company based in Los Gatos, California. Founded in 1997 by Reed Hastings and Marc Randolph in Scotts Valley, California, it operates the over-the-top subscription video on-demand service Netflix brand, which includes original films and television series commissioned or acquired by the company, and...
+                                        div.text-white.fs-14.fs-lg-16.text-decoration-underline more
+
+                                .col-12.col-lg-6.d-flex.flex-column.align-items-end
+                                    .pd-text-content-list-box.mb-40.mb-lg-40
+                                        .list-title.dropdown-toggle(href='javascript:;' id='dropdownMenu' aria-haspopup='true' data-bs-toggle='dropdown' data-bs-auto-close='outside' aria-expanded='false')
+                                            h3.text-white.fs-18.fs-lg-20.fw-600.mb-0 Additional Details
+                                            +icon("plus_minus")
+                                            +icon("plus_minuss")
+                                        .dropdown-menu(aria-labelledby='dropdownMenu')
+                                            .pd-text-content-list-item
+                                                .pd-text-content-list-title Current Version
+                                                .pd-text-content-list-desc 12.2
+                                            .pd-text-content-list-item
+                                                .pd-text-content-list-title Category
+                                                .pd-text-content-list-desc Streaming Video
+                                            .pd-text-content-list-item
+                                                .pd-text-content-list-title Genres
+                                                .pd-text-content-list-desc -
+                                            .pd-text-content-list-item
+                                                .pd-text-content-list-title Languages
+                                                .pd-text-content-list-desc English, French (France), German, Japanese, Korean, Spanish (Argentina), Spanish (Chile), Spanish (Colombia), Spanish (Mexico), Spanish (Peru), Spanish (Puerto Rico), Spanish (Venezuela)
+                                            .pd-text-content-list-item
+                                                .pd-text-content-list-title Publisher
+                                                .pd-text-content-list-desc Netflix
+                                            .pd-text-content-list-item
+                                                .pd-text-content-list-title Website
+                                                .pd-text-content-list-desc https://www.netflix.com/tr-en/
+                                            .pd-text-content-list-item
+                                                .pd-text-content-list-title Release date
+                                                .pd-text-content-list-desc April 10, 2023
+                                            .pd-text-content-list-item
+                                                .pd-text-content-list-title Provider Privacy Policy
+                                                .pd-text-content-list-desc https://help.netflix.com/legal/privacy
+                                            .pd-text-content-list-item
+                                                .pd-text-content-list-title Provider Terms of Service
+                                                .pd-text-content-list-desc https://help.netflix.com/legal/privacy
+
+                                    .pd-text-content-list-box
+                                        h3.text-white.fs-18.fs-lg-20.fw-600.mb-0 Provider Contact
+                                        .pd-text-content-list-item-2
+                                            .pd-text-content-list-icon
+                                                +icon("mail").rateicon-1
+                                            .pd-text-content-list-title Email
+                                            .pd-text-content-list-desc CS@netflix.Shop
+                                        .pd-text-content-list-item-2.mt-5
+                                            .pd-text-content-list-icon
+                                                +icon("location").rateicon-1
+                                            .pd-text-content-list-title Adress
+                                            .pd-text-content-list-desc Los Angeles, California
+
+                        div.tab-pane.fade(id='v-pills-ratings-review' role='tabpanel' aria-labelledby='v-pills-ratings-review-tab' tabindex="0")
+                            .ratings-review-box
+                                .row.g-0.px-15.px-lg-0
+                                    .col-12.col-lg-5
+                                        .rrb-left
+                                            .comments-box.d-flex.d-lg-none
+                                                .rrb-filter-head
+                                                    .rrb-filter-btn(id='rrb-filter-btn')
+                                                        span Filter 
+                                                        +icon("filter")
+                                                    .rrb-filter-sortby(id='rrb-filter-btn')
+                                                        span Sort By 
+                                                        +icon("compare")
+
+                                            .rrb-left-box
+                                                .rrb-left-box-title
+                                                    .d-flex.align-items-center.mb-10.mb-lg-15
+                                                        h3.text-white.fs-32.fs-lg-40.fw-600.lh-1.mt-0.mt-lg-0 4.3
+                                                        span.text-white.fs-18.fs-lg-20.fw-400.lh-1.mt-0.mt-lg-0                                        
+                                                            div.card-stars-box.card-stars-box-3
+                                                                +icon("rate").rateicon-1
+                                                                +icon("rate").rateicon-2
+                                                                +icon("rate").rateicon-3
+                                                                +icon("rate").rateicon-4
+                                                                +icon("rate").rateicon-5
+                                                                span.card-stars-box-text 256 Total Review
+
+                                                .rrb-left-box-statistics
+                                                    .list
+                                                        .list-text 5 stars
+                                                        .progress(role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100")
+                                                            .progress-bar(style="width: 78%")                                                
+                                                        .list-text 107
+                                                    .list
+                                                        .list-text 4 stars
+                                                        .progress(role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100")
+                                                            .progress-bar(style="width: 15%")                                                
+                                                        .list-text 34
+                                                    .list
+                                                        .list-text 3 stars
+                                                        .progress(role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100")
+                                                            .progress-bar(style="width: 7%")                                                
+                                                        .list-text 15
+                                                    .list
+                                                        .list-text 2 stars
+                                                        .progress(role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100")
+                                                            .progress-bar(style="width: 0%")                                                
+                                                        .list-text 107
+                                                    .list
+                                                        .list-text 1 stars
+                                                        .progress(role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100")
+                                                            .progress-bar(style="width: 0%")                                                
+                                                        .list-text 107
+                                                        
+                                            .rrb-left-box-text
+                                                a.btn.btn-them-2.btn-lg.mxw-200.w-100(href="/")
+                                                    span Login to Add a Review
+                                                span.text-gray2.fs-14.mxw-300 To add a review, you need to subscribe to this service and log in. 
+
+                                    .col-12.col-lg-6
+                                        .rrb-right
+                                            .comments-box
+                                                .rrb-filter-head.d-none.d-lg-flex
+                                                    .rrb-filter-btn(id='rrb-filter-btn')
+                                                        span Filter 
+                                                        +icon("filter")
+                                                    .rrb-filter-sortby(id='rrb-filter-btn')
+                                                        span Sort By 
+                                                        +icon("compare")
+                                            
+                                                .comments-list
+                                                    .comments-item
+                                                        .comments-item-user
+                                                            +icon("comment-user")                                                    
+                                                        .comments-item-content
+                                                            .comments-item-name
+                                                                span *********5555
+                                                            .comments-item-date
+                                                                span 15 April, 2023
+                                                            .comments-item-stars
+                                                                div.card-stars-box.card-stars-box-3
+                                                                    +icon("rate").rateicon-1
+                                                                    +icon("rate").rateicon-2
+                                                                    +icon("rate").rateicon-3
+                                                                    +icon("rate").rateicon-4
+                                                                    +icon("rate").rateicon-5
+                                                            .comments-item-title
+                                                                span Our favourite Service
+                                                            .comments-item-text
+                                                                span This game is good. For the first real Sekiro clone they did a great job. Some tips are required however for newer players however: 1. Armor has weight, if you...
+                                                                    a.comments-item-text-more(href='javascript:;') more                                                        
+                                                            .comments-item-btn
+                                                                a.btn.btn-them-2.btn-md(href="/")
+                                                                    svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                                                        path(fill-rule='evenodd' clip-rule='evenodd' d='M14.8745 6.5H15.1995C15.9686 6.5 16.7062 6.80553 17.2501 7.34939C17.7939 7.89324 18.0995 8.63086 18.0995 9.39998V12.1H22.1248C22.4282 12.097 22.7286 12.1597 23.0054 12.284C23.2831 12.4086 23.5304 12.5922 23.7302 12.8219C23.93 13.0516 24.0774 13.322 24.1623 13.6144C24.2471 13.9067 24.2674 14.214 24.2218 14.515L23.1178 21.7149C23.1177 21.715 23.1178 21.7147 23.1178 21.7149C23.0417 22.2154 22.7874 22.6722 22.4016 23.0001C22.0164 23.3274 21.5262 23.5049 21.0208 23.4999H7.49951V13.7H11.6746L14.8745 6.5ZM11.4995 14.7H8.49951V22.4999H11.4995V14.7ZM12.4995 22.4999H21.0291C21.2944 22.5029 21.5518 22.41 21.7539 22.2381C21.9561 22.0663 22.0893 21.8272 22.1291 21.5649L23.2331 14.3649C23.2331 14.3648 23.2331 14.365 23.2331 14.3649C23.257 14.2074 23.2463 14.0462 23.2019 13.8932C23.1575 13.74 23.0802 13.5984 22.9756 13.4781C22.871 13.3577 22.7414 13.2616 22.5959 13.1963C22.4505 13.131 22.2925 13.0981 22.1331 13.0999L22.1274 13.1L17.0995 13.1V9.39998C17.0995 8.89608 16.8993 8.41281 16.543 8.05649C16.2614 7.77491 15.9005 7.59084 15.5128 7.52601L12.4995 14.3061V22.4999Z')
+                                                                    span Usefull (23)
+
+                                                    .comments-item
+                                                        .comments-item-user
+                                                            +icon("comment-user")                                                    
+                                                        .comments-item-content
+                                                            .comments-item-name
+                                                                span *********5555
+                                                            .comments-item-date
+                                                                span 15 April, 2023
+                                                            .comments-item-stars
+                                                                div.card-stars-box.card-stars-box-3
+                                                                    +icon("rate").rateicon-1
+                                                                    +icon("rate").rateicon-2
+                                                                    +icon("rate").rateicon-3
+                                                                    +icon("rate").rateicon-4
+                                                                    +icon("rate").rateicon-5
+                                                            .comments-item-title
+                                                                span Our favourite Service
+                                                            .comments-item-text
+                                                                span This game is good. For the first real Sekiro clone they did a great job. Some tips are required however for newer players however: 1. Armor has weight, if you find dodging or deflecting impossible you may be overweight. Armors with a high defense stat tend to be heavier and you can check your weight via equipment menu.                                                       
+                                                            .comments-item-btn
+                                                                a.btn.btn-them-2.btn-md(href="/")
+                                                                    svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                                                        path(fill-rule='evenodd' clip-rule='evenodd' d='M14.8745 6.5H15.1995C15.9686 6.5 16.7062 6.80553 17.2501 7.34939C17.7939 7.89324 18.0995 8.63086 18.0995 9.39998V12.1H22.1248C22.4282 12.097 22.7286 12.1597 23.0054 12.284C23.2831 12.4086 23.5304 12.5922 23.7302 12.8219C23.93 13.0516 24.0774 13.322 24.1623 13.6144C24.2471 13.9067 24.2674 14.214 24.2218 14.515L23.1178 21.7149C23.1177 21.715 23.1178 21.7147 23.1178 21.7149C23.0417 22.2154 22.7874 22.6722 22.4016 23.0001C22.0164 23.3274 21.5262 23.5049 21.0208 23.4999H7.49951V13.7H11.6746L14.8745 6.5ZM11.4995 14.7H8.49951V22.4999H11.4995V14.7ZM12.4995 22.4999H21.0291C21.2944 22.5029 21.5518 22.41 21.7539 22.2381C21.9561 22.0663 22.0893 21.8272 22.1291 21.5649L23.2331 14.3649C23.2331 14.3648 23.2331 14.365 23.2331 14.3649C23.257 14.2074 23.2463 14.0462 23.2019 13.8932C23.1575 13.74 23.0802 13.5984 22.9756 13.4781C22.871 13.3577 22.7414 13.2616 22.5959 13.1963C22.4505 13.131 22.2925 13.0981 22.1331 13.0999L22.1274 13.1L17.0995 13.1V9.39998C17.0995 8.89608 16.8993 8.41281 16.543 8.05649C16.2614 7.77491 15.9005 7.59084 15.5128 7.52601L12.4995 14.3061V22.4999Z')
+                                                                    span Usefull (23)
+                                                    
+                                                    .comments-item
+                                                        .comments-item-user
+                                                            +icon("comment-user")                                                    
+                                                        .comments-item-content
+                                                            .comments-item-name
+                                                                span *********5555
+                                                            .comments-item-date
+                                                                span 15 April, 2023
+                                                            .comments-item-stars
+                                                                div.card-stars-box.card-stars-box-3
+                                                                    +icon("rate").rateicon-1
+                                                                    +icon("rate").rateicon-2
+                                                                    +icon("rate").rateicon-3
+                                                                    +icon("rate").rateicon-4
+                                                                    +icon("rate").rateicon-5
+                                                            .comments-item-title
+                                                                span Our favourite Service
+                                                            .comments-item-text
+                                                                span This game is good. For the first real Sekiro clone they did a great job. Some tips are required however for newer players however: 1. Armor has weight, if you...
+                                                                    a.comments-item-text-more(href='javascript:;') more                                                        
+                                                            .comments-item-btn
+                                                                a.btn.btn-them-2.btn-md(href="/")
+                                                                    svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                                                        path(fill-rule='evenodd' clip-rule='evenodd' d='M14.8745 6.5H15.1995C15.9686 6.5 16.7062 6.80553 17.2501 7.34939C17.7939 7.89324 18.0995 8.63086 18.0995 9.39998V12.1H22.1248C22.4282 12.097 22.7286 12.1597 23.0054 12.284C23.2831 12.4086 23.5304 12.5922 23.7302 12.8219C23.93 13.0516 24.0774 13.322 24.1623 13.6144C24.2471 13.9067 24.2674 14.214 24.2218 14.515L23.1178 21.7149C23.1177 21.715 23.1178 21.7147 23.1178 21.7149C23.0417 22.2154 22.7874 22.6722 22.4016 23.0001C22.0164 23.3274 21.5262 23.5049 21.0208 23.4999H7.49951V13.7H11.6746L14.8745 6.5ZM11.4995 14.7H8.49951V22.4999H11.4995V14.7ZM12.4995 22.4999H21.0291C21.2944 22.5029 21.5518 22.41 21.7539 22.2381C21.9561 22.0663 22.0893 21.8272 22.1291 21.5649L23.2331 14.3649C23.2331 14.3648 23.2331 14.365 23.2331 14.3649C23.257 14.2074 23.2463 14.0462 23.2019 13.8932C23.1575 13.74 23.0802 13.5984 22.9756 13.4781C22.871 13.3577 22.7414 13.2616 22.5959 13.1963C22.4505 13.131 22.2925 13.0981 22.1331 13.0999L22.1274 13.1L17.0995 13.1V9.39998C17.0995 8.89608 16.8993 8.41281 16.543 8.05649C16.2614 7.77491 15.9005 7.59084 15.5128 7.52601L12.4995 14.3061V22.4999Z')
+                                                                    span Usefull (23)
+                                                                    
+                                                .d-flex.align-items-center.justify-content-start.mt-0
+                                                    nav(aria-label='Page navigation example')
+                                                        .pagination
+                                                            .page-item
+                                                                a.page-link.left-icon(href='#', aria-label='Previous')
+                                                                    span(aria-hidden='true')
+                                                                        svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                                                            path(fill-rule='evenodd' clip-rule='evenodd' d='M14 10.7566V12.4811C14 12.5984 14.0466 12.7087 14.1231 12.7777L17.75 16.5732L14.1231 20.3679C14.1231 20.3679 14 20.5472 14 20.6645C14 20.7818 14 22.2395 14 22.389C14 22.5385 14.138 22.6258 14.2369 22.5385C14.3357 22.4511 19.7538 17.0134 19.7538 17.0134C20.0821 16.719 20.0821 16.4903 19.7538 16.1982L14.2369 10.6095C14.138 10.5198 14 10.6072 14 10.7566Z')
+                                                            .page-item
+                                                                a.page-link.active(href='#')
+                                                                    span 1
+                                                            .page-item
+                                                                a.page-link(href='#')
+                                                                    span 2
+                                                            .page-item
+                                                                a.page-link(href='#')
+                                                                    span 3
+                                                            .page-item
+                                                                a.page-link(href='#')
+                                                                    span 4
+                                                            .page-item
+                                                                a.page-link.right-icon(href='#', aria-label='Next')
+                                                                    span(aria-hidden='true') 
+                                                                        svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                                                            path(fill-rule='evenodd' clip-rule='evenodd' d='M14 10.7566V12.4811C14 12.5984 14.0466 12.7087 14.1231 12.7777L17.75 16.5732L14.1231 20.3679C14.1231 20.3679 14 20.5472 14 20.6645C14 20.7818 14 22.2395 14 22.389C14 22.5385 14.138 22.6258 14.2369 22.5385C14.3357 22.4511 19.7538 17.0134 19.7538 17.0134C20.0821 16.719 20.0821 16.4903 19.7538 16.1982L14.2369 10.6095C14.138 10.5198 14 10.6072 14 10.7566Z')
+
+                        div.tab-pane.fade(id='v-pills-gallery' role='tabpanel' aria-labelledby='v-pills-gallery-tab' tabindex="0")
+                            .pd-gallert-box.pd-gallert-box-2
+                                .pd-gallert-list
+                                    .item
+                                        +picture('ratio ratio-1x1 ratio-gallery', lazy="true", dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png')(class="w-100 img-fluid", alt="slide 1")
+
+                                    .item
+                                        +picture('ratio ratio-1x1 ratio-gallery', lazy="true", dirFrontend + 'images/product/img-8.png', dirFrontend + 'images/product/img-8.png', dirFrontend + 'images/product/img-8.png')(class="w-100 img-fluid", alt="slide 1")
+
+                                    .item
+                                        +picture('ratio ratio-1x1 ratio-gallery', lazy="true", dirFrontend + 'images/product/img-6.png', dirFrontend + 'images/product/img-6.png', dirFrontend + 'images/product/img-6.png')(class="w-100 img-fluid", alt="slide 1")
+
+                                    .item
+                                        +picture('ratio ratio-1x1 ratio-gallery', lazy="true", dirFrontend + 'images/product/img-5.png', dirFrontend + 'images/product/img-5.png', dirFrontend + 'images/product/img-5.png')(class="w-100 img-fluid", alt="slide 1")
+
+                                    .item
+                                        +picture('ratio ratio-1x1 ratio-gallery', lazy="true", dirFrontend + 'images/product/img-6.png', dirFrontend + 'images/product/img-6.png', dirFrontend + 'images/product/img-6.png')(class="w-100 img-fluid", alt="slide 1")
+
+                                    .item
+                                        +picture('ratio ratio-1x1 ratio-gallery', lazy="true", dirFrontend + 'images/product/img-5.png', dirFrontend + 'images/product/img-5.png', dirFrontend + 'images/product/img-5.png')(class="w-100 img-fluid", alt="slide 1")
+
+                                    .item
+                                        +picture('ratio ratio-1x1 ratio-gallery', lazy="true", dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png')(class="w-100 img-fluid", alt="slide 1")
+
+                                    .item
+                                        +picture('ratio ratio-1x1 ratio-gallery', lazy="true", dirFrontend + 'images/product/img-8.png', dirFrontend + 'images/product/img-8.png', dirFrontend + 'images/product/img-8.png')(class="w-100 img-fluid", alt="slide 1")
+
+                                
+
+    section.product-list.overflow-hidden.mb-50.mb-lg-120.mt-0
         .container            
             .d-lg-flex.align-items-lg-center.mb-25
                 h2.section-title.text-start.pt-0.pb-0 Educate

@@ -167,6 +167,43 @@ function handleFilterButtons() {
 handleFilterButtons();
 // Data Filtre
 
+// Tab All Selected
+document.addEventListener('DOMContentLoaded', function() {
+  var ratingsReviewTab = document.getElementById('v-pills-ratings-review-tab');
+  var ratingsReview2Tab = document.getElementById('v-pills-ratings-review-2');
+
+  function handleTabToggleProductDetail() {
+    if (ratingsReviewTab.classList.contains('active')) {
+      ratingsReview2Tab.classList.add('active');
+    } else {
+      ratingsReview2Tab.classList.remove('active');
+    }
+  }
+
+  ratingsReviewTab.addEventListener('click', function() {
+    if (ratingsReviewTab.classList.contains('active')) {
+      ratingsReview2Tab.classList.add('active');
+    } else {
+      ratingsReview2Tab.classList.remove('active');
+    }
+  });
+
+  handleTabToggleProductDetail();
+
+  var observer = new MutationObserver(function(mutationsList) {
+    for (var mutation of mutationsList) {
+      if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+        if (!ratingsReviewTab.classList.contains('active')) {
+          ratingsReview2Tab.classList.remove('active');
+        }
+      }
+    }
+  });
+
+  observer.observe(ratingsReviewTab, { attributes: true });
+});
+
+// Tab All Selected
 
 // Product List Filter
 const filterBtn = document.getElementById('filter-btn');
@@ -220,5 +257,7 @@ document.addEventListener('mouseup', function() {
 function mouseMoveHandler(event) {
   scrollableContainer.scrollLeft -= event.movementX;
 }
-
 // Scroll Top
+
+
+// Scroll Gallery

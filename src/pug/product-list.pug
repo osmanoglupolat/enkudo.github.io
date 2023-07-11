@@ -4,18 +4,14 @@ block prepend head
     - var pageTitle = "Enkudo"
     - var pageDescription = "Product List sayfası, Enkudo"
     - var pageName = "product-list"
-    - var pageClass = "page-body-class"
+    - var pageClass = "page-product-list"
 
 block content
     section.main-slider.main-slider-list
         .main-slider-section.col-12(onclick="moveMinuteHand()")
             .breadcrumb-list-top
                 .container-fluid.px-20.px-lg-60
-                    nav(aria-label="breadcrumb")
-                        ol.breadcrumb
-                            li.readcrumb-item
-                                a(href='index.html') Home
-                            li.readcrumb-item.active(aria-current='page') Gaming
+                    +breadcrumb(["Home", "index.html"],["Gaming", "product-list.html"])
 
             +swiper('widgetAuto', true, true, false, true)(class="main-slider")
                 -for(var i=0; i<1; i++)
