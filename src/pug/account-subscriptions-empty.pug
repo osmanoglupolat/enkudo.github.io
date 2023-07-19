@@ -1,0 +1,50 @@
+extends layouts/default.pug
+
+block prepend head
+    - var pageTitle = "Enkudo"
+    - var pageDescription = "Subscriptions Sayfası, Enkudo"
+    - var pageName = "Subscriptions"
+    - var pageClass = "page-account-subscriptions-empty"
+    - var SubscriptionsActive = "active"
+
+block content
+    section.account-section.mb-80
+        .container.p-0
+            .row.g-5
+                .account-box
+                    .left-box
+                        include includes/account-left-menu
+
+                    .right-box 
+                        .rb-content.bg-dark-them-2
+                            .rb-content-subscriptions
+                                .product-list.mb-40.mb-lg-0.w-100
+                                    .title-box
+                                        h4.d-none.d-lg-block Subscriptions
+                                        p You can see and manage your all subscriptions in here
+
+                                    .d-flex.align-items-center.justify-content-center.w-100
+                                            .nav.nav-pills.me-3(id='v-pills-tab' role='tablist' aria-orientation='vertical')
+                                                a.nav-link.active(id='v-pills-All-tab' data-bs-toggle='pill' data-bs-target='#v-pills-All' type='button' role='tab' aria-controls='v-pills-All' aria-selected='true')
+                                                    span All
+                                                    
+                                                a.nav-link(id='v-pills-Active-tab' data-bs-toggle='pill' data-bs-target='#v-pills-Active' type='button' role='tab' aria-controls='v-pills-Active' aria-selected='false')
+                                                    span Active
+
+                                                a.nav-link(id='v-pills-Suspended-tab' data-bs-toggle='pill' data-bs-target='#v-pills-Suspended' type='button' role='tab' aria-controls='v-pills-Suspended' aria-selected='false')
+                                                    span Suspended
+
+                                                a.nav-link(id='v-pills-Inactive-tab' data-bs-toggle='pill' data-bs-target='#v-pills-Inactive' type='button' role='tab' aria-controls='v-pills-Inactive' aria-selected='false')
+                                                    span Inactive
+                                    
+                                    .mt-0.mb-0.px-15.px-lg-0
+                                        .box-empty
+                                            +icon("empty-sub").empty-icons
+                                            .title-box-empty
+                                                h4 You currently do not have any subscriptions.
+                                                p Discover hundreds of services available on Enkudo, and easily manage them here.
+                                                a.btn.btn-them-2.btn-lg.mt-70.mxw-200.w-100(href="/")
+                                                    span Discover
+                                                    svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                                        path(fill-rule='evenodd' clip-rule='evenodd' d='M17.3889 11.2258V9.21393C17.3889 9.03956 17.5525 8.93762 17.6696 9.04224L24.2082 15.5625C24.5973 15.9032 24.5973 16.1701 24.2082 16.5135C24.2082 16.5135 17.7868 22.8575 17.6696 22.9594C17.5525 23.0614 17.3889 22.9594 17.3889 22.7851V20.7731C17.3889 20.6363 17.5348 20.4271 17.5348 20.4271L20.9837 16.875H8.5V15.125H20.9839L17.5348 11.5719C17.4442 11.4914 17.3889 11.3627 17.3889 11.2258Z')
+                                        

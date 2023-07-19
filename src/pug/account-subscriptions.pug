@@ -1,0 +1,491 @@
+extends layouts/default.pug
+
+block prepend head
+    - var pageTitle = "Enkudo"
+    - var pageDescription = "Subscriptions Sayfası, Enkudo"
+    - var pageName = "Subscriptions"
+    - var pageClass = "page-account-subscriptions"
+    - var SubscriptionsActive = "active"
+
+block content
+    section.account-section.mb-80
+        .container.p-0
+            .row.g-5
+                .account-box
+                    .left-box
+                        include includes/account-left-menu
+
+                    .right-box 
+                        .rb-content.bg-dark-them-2
+                            .rb-content-subscriptions
+                                .product-list.mb-40.mb-lg-0.w-100
+                                    .title-box
+                                        h4.d-none.d-lg-block Subscriptions
+                                        p You can see and manage your all subscriptions in here
+                                    
+                                    .ems-tab
+                                        .ems-tab-header.me-3
+                                            a.nav-link.selected(href="javascript:void(0);" rel="tab-1" aria-label="Tab 1")
+                                                span All
+                                                
+                                            a.nav-link(href="javascript:void(0);" rel="tab-2" aria-label="Tab 2")
+                                                span Active
+
+                                            a.nav-link(href="javascript:void(0);" rel="tab-3" aria-label="Tab 3")
+                                                span Suspended
+
+                                            a.nav-link(href="javascript:void(0);" rel="tab-4" aria-label="Tab 4")
+                                                span Inactive
+
+                                        .ems-tab-content
+                                            div.tab-pane.selected(rel="tab-1" id="tab-1")
+                                                .ems-tab-inner-content
+                                                    .d-flex.flex-column
+                                                        .card-sub
+                                                            .card-sub-top
+                                                                .cst-title
+                                                                    h5 Netflix
+                                                                    span All in One
+                                                                a.cst-close(href="javascript:void(0);")
+                                                                    +icon("sub-cancel")
+                                                                    span Cancel subscription
+                                                            .card-sub-bottom
+                                                                .csb-img
+                                                                    +picture('ratio ratio-1x1', lazy="true", dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png')(class="w-100 img-fluid", alt="slide 1")
+                                                                .csb-body
+                                                                    .csb-left-text
+                                                                        .csb-left-text-item 
+                                                                            span Subscription Date
+                                                                            p 10.04.2023
+                                                                        .csb-left-text-item 
+                                                                            span Period
+                                                                            p Montly
+                                                                        .csb-left-text-item 
+                                                                            span Next Bill
+                                                                            p 10.05.2023                                                                            
+                                                                    
+                                                                    .csb-right-text
+                                                                        .csb-right-text-item 
+                                                                            span Price
+                                                                            .csb-price-box
+                                                                                .csb-price-firs.text-decoration-line-through $19.90
+                                                                                .csb-price-text $18.90
+                                                                        .csb-right-text-item 
+                                                                            span Status
+                                                                            .csb-price-box
+                                                                                .csb-status.active Active 
+                                                                            
+                                                        .card-sub
+                                                            .card-sub-top
+                                                                .cst-title
+                                                                    h5 Spotify
+                                                                    span Streaming Music
+                                                                a.cst-close(href="javascript:void(0);")
+                                                                    +icon("sub-cancel")
+                                                                    span Cancel subscription
+                                                            .card-sub-bottom
+                                                                .csb-img
+                                                                    +picture('ratio ratio-1x1', lazy="true", dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png')(class="w-100 img-fluid", alt="slide 1")
+                                                                .csb-body
+                                                                    .csb-left-text
+                                                                        .csb-left-text-item 
+                                                                            span Subscription Date
+                                                                            p 10.04.2023
+                                                                        .csb-left-text-item 
+                                                                            span Period
+                                                                            p Montly
+                                                                        .csb-left-text-item 
+                                                                            span Next Bill
+                                                                            p 10.05.2023                                                                            
+                                                                    
+                                                                    .csb-right-text
+                                                                        .csb-right-text-item 
+                                                                            span Price
+                                                                            .csb-price-box
+                                                                                .csb-price-text $8.90
+                                                                        .csb-right-text-item 
+                                                                            span Status
+                                                                            .csb-price-box
+                                                                                .csb-status.suspended Suspended 
+
+                                                        .card-sub
+                                                            .card-sub-top
+                                                                .cst-title
+                                                                    h5 Blu Tv
+                                                                    span Streaming Video
+                                                                a.cst-close(href="javascript:void(0);")
+                                                                    +icon("sub-sync")
+                                                                    span Renew Subscription
+                                                            .card-sub-bottom
+                                                                .csb-img
+                                                                    +picture('ratio ratio-1x1', lazy="true", dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png')(class="w-100 img-fluid", alt="slide 1")
+                                                                .csb-body
+                                                                    .csb-left-text
+                                                                        .csb-left-text-item 
+                                                                            span Subscription Date
+                                                                            p 10.04.2023
+                                                                        .csb-left-text-item 
+                                                                            span Period
+                                                                            p Montly
+                                                                        .csb-left-text-item 
+                                                                            span Next Bill
+                                                                            p 10.05.2023                                                                            
+                                                                    
+                                                                    .csb-right-text
+                                                                        .csb-right-text-item 
+                                                                            span Price
+                                                                            .csb-price-box
+                                                                                .csb-price-text $8.90
+                                                                        .csb-right-text-item 
+                                                                            span Status
+                                                                            .csb-price-box
+                                                                                .csb-status.inactive Inactive
+                                                                            
+                                                        .card-sub
+                                                            .card-sub-top
+                                                                .cst-title
+                                                                    h5 Blu Tv
+                                                                    span Streaming Video
+                                                                a.cst-close(href="javascript:void(0);")
+                                                                    +icon("sub-sync")
+                                                                    span Renew Subscription
+                                                            .card-sub-bottom
+                                                                .csb-img
+                                                                    +picture('ratio ratio-1x1', lazy="true", dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png')(class="w-100 img-fluid", alt="slide 1")
+                                                                .csb-body
+                                                                    .csb-left-text
+                                                                        .csb-left-text-item 
+                                                                            span Subscription Date
+                                                                            p 10.04.2023
+                                                                        .csb-left-text-item 
+                                                                            span Period
+                                                                            p Montly
+                                                                        .csb-left-text-item 
+                                                                            span Next Bill
+                                                                            p 10.05.2023                                                                            
+                                                                    
+                                                                    .csb-right-text
+                                                                        .csb-right-text-item 
+                                                                            span Price
+                                                                            .csb-price-box
+                                                                                .csb-price-text $8.90
+                                                                        .csb-right-text-item 
+                                                                            span Status
+                                                                            .csb-price-box
+                                                                                .csb-status.active Active 
+                                                                            
+                                                        .card-sub
+                                                            .card-sub-top
+                                                                .cst-title
+                                                                    h5 Blu Tv
+                                                                    span Streaming Video
+                                                                a.cst-close(href="javascript:void(0);")
+                                                                    +icon("sub-sync")
+                                                                    span Renew Subscription
+                                                            .card-sub-bottom
+                                                                .csb-img
+                                                                    +picture('ratio ratio-1x1', lazy="true", dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png')(class="w-100 img-fluid", alt="slide 1")
+                                                                .csb-body
+                                                                    .csb-left-text
+                                                                        .csb-left-text-item 
+                                                                            span Subscription Date
+                                                                            p 10.04.2023
+                                                                        .csb-left-text-item 
+                                                                            span Period
+                                                                            p Montly
+                                                                        .csb-left-text-item 
+                                                                            span Next Bill
+                                                                            p 10.05.2023                                                                            
+                                                                    
+                                                                    .csb-right-text
+                                                                        .csb-right-text-item 
+                                                                            span Price
+                                                                            .csb-price-box
+                                                                                .csb-price-text $8.90
+                                                                        .csb-right-text-item 
+                                                                            span Status
+                                                                            .csb-price-box
+                                                                                .csb-status.active Active 
+
+                                                    .d-flex.align-items-center.justify-content-center.mt-20
+                                                        nav(aria-label='Page navigation example')
+                                                            .pagination
+                                                                .page-item
+                                                                    a.page-link.left-icon(href='#', aria-label='Previous')
+                                                                        span(aria-hidden='true')
+                                                                            svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                                                                path(fill-rule='evenodd' clip-rule='evenodd' d='M14 10.7566V12.4811C14 12.5984 14.0466 12.7087 14.1231 12.7777L17.75 16.5732L14.1231 20.3679C14.1231 20.3679 14 20.5472 14 20.6645C14 20.7818 14 22.2395 14 22.389C14 22.5385 14.138 22.6258 14.2369 22.5385C14.3357 22.4511 19.7538 17.0134 19.7538 17.0134C20.0821 16.719 20.0821 16.4903 19.7538 16.1982L14.2369 10.6095C14.138 10.5198 14 10.6072 14 10.7566Z')
+                                                                .page-item
+                                                                    a.page-link.active(href='#')
+                                                                        span 1
+                                                                .page-item
+                                                                    a.page-link(href='#')
+                                                                        span 2
+                                                                .page-item
+                                                                    a.page-link(href='#')
+                                                                        span 3
+                                                                .page-item
+                                                                    a.page-link(href='#')
+                                                                        span 4
+                                                                .page-item
+                                                                    a.page-link.right-icon(href='#', aria-label='Next')
+                                                                        span(aria-hidden='true') 
+                                                                            svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                                                                path(fill-rule='evenodd' clip-rule='evenodd' d='M14 10.7566V12.4811C14 12.5984 14.0466 12.7087 14.1231 12.7777L17.75 16.5732L14.1231 20.3679C14.1231 20.3679 14 20.5472 14 20.6645C14 20.7818 14 22.2395 14 22.389C14 22.5385 14.138 22.6258 14.2369 22.5385C14.3357 22.4511 19.7538 17.0134 19.7538 17.0134C20.0821 16.719 20.0821 16.4903 19.7538 16.1982L14.2369 10.6095C14.138 10.5198 14 10.6072 14 10.7566Z')
+
+
+                                            div.tab-pane(rel="tab-2" id="tab-2")
+                                                .ems-tab-inner-content
+                                                    .d-flex.flex-column
+                                                        .card-sub
+                                                            .card-sub-top
+                                                                .cst-title
+                                                                    h5 Netflix
+                                                                    span All in One
+                                                                a.cst-close(href="javascript:void(0);")
+                                                                    +icon("sub-cancel")
+                                                                    span Cancel subscription
+                                                            .card-sub-bottom
+                                                                .csb-img
+                                                                    +picture('ratio ratio-1x1', lazy="true", dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png')(class="w-100 img-fluid", alt="slide 1")
+                                                                .csb-body
+                                                                    .csb-left-text
+                                                                        .csb-left-text-item 
+                                                                            span Subscription Date
+                                                                            p 10.04.2023
+                                                                        .csb-left-text-item 
+                                                                            span Period
+                                                                            p Montly
+                                                                        .csb-left-text-item 
+                                                                            span Next Bill
+                                                                            p 10.05.2023                                                                            
+                                                                    
+                                                                    .csb-right-text
+                                                                        .csb-right-text-item 
+                                                                            span Price
+                                                                            .csb-price-box
+                                                                                .csb-price-firs.text-decoration-line-through $19.90
+                                                                                .csb-price-text $18.90
+                                                                        .csb-right-text-item 
+                                                                            span Status
+                                                                            .csb-price-box
+                                                                                .csb-status.active Active
+
+                                                        .card-sub
+                                                            .card-sub-top
+                                                                .cst-title
+                                                                    h5 Blu Tv
+                                                                    span Streaming Video
+                                                                a.cst-close(href="javascript:void(0);")
+                                                                    +icon("sub-sync")
+                                                                    span Renew Subscription
+                                                            .card-sub-bottom
+                                                                .csb-img
+                                                                    +picture('ratio ratio-1x1', lazy="true", dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png')(class="w-100 img-fluid", alt="slide 1")
+                                                                .csb-body
+                                                                    .csb-left-text
+                                                                        .csb-left-text-item 
+                                                                            span Subscription Date
+                                                                            p 10.04.2023
+                                                                        .csb-left-text-item 
+                                                                            span Period
+                                                                            p Montly
+                                                                        .csb-left-text-item 
+                                                                            span Next Bill
+                                                                            p 10.05.2023                                                                            
+                                                                    
+                                                                    .csb-right-text
+                                                                        .csb-right-text-item 
+                                                                            span Price
+                                                                            .csb-price-box
+                                                                                .csb-price-text $8.90
+                                                                        .csb-right-text-item 
+                                                                            span Status
+                                                                            .csb-price-box
+                                                                                .csb-status.active Active 
+                                                                            
+                                                        .card-sub
+                                                            .card-sub-top
+                                                                .cst-title
+                                                                    h5 Blu Tv
+                                                                    span Streaming Video
+                                                                a.cst-close(href="javascript:void(0);")
+                                                                    +icon("sub-sync")
+                                                                    span Renew Subscription
+                                                            .card-sub-bottom
+                                                                .csb-img
+                                                                    +picture('ratio ratio-1x1', lazy="true", dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png')(class="w-100 img-fluid", alt="slide 1")
+                                                                .csb-body
+                                                                    .csb-left-text
+                                                                        .csb-left-text-item 
+                                                                            span Subscription Date
+                                                                            p 10.04.2023
+                                                                        .csb-left-text-item 
+                                                                            span Period
+                                                                            p Montly
+                                                                        .csb-left-text-item 
+                                                                            span Next Bill
+                                                                            p 10.05.2023                                                                            
+                                                                    
+                                                                    .csb-right-text
+                                                                        .csb-right-text-item 
+                                                                            span Price
+                                                                            .csb-price-box
+                                                                                .csb-price-text $8.90
+                                                                        .csb-right-text-item 
+                                                                            span Status
+                                                                            .csb-price-box
+                                                                                .csb-status.active Active 
+
+                                                    .d-flex.align-items-center.justify-content-center.mt-20
+                                                        nav(aria-label='Page navigation example')
+                                                            .pagination
+                                                                .page-item
+                                                                    a.page-link.left-icon(href='#', aria-label='Previous')
+                                                                        span(aria-hidden='true')
+                                                                            svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                                                                path(fill-rule='evenodd' clip-rule='evenodd' d='M14 10.7566V12.4811C14 12.5984 14.0466 12.7087 14.1231 12.7777L17.75 16.5732L14.1231 20.3679C14.1231 20.3679 14 20.5472 14 20.6645C14 20.7818 14 22.2395 14 22.389C14 22.5385 14.138 22.6258 14.2369 22.5385C14.3357 22.4511 19.7538 17.0134 19.7538 17.0134C20.0821 16.719 20.0821 16.4903 19.7538 16.1982L14.2369 10.6095C14.138 10.5198 14 10.6072 14 10.7566Z')
+                                                                .page-item
+                                                                    a.page-link.active(href='#')
+                                                                        span 1
+                                                                .page-item
+                                                                    a.page-link(href='#')
+                                                                        span 2
+                                                                .page-item
+                                                                    a.page-link(href='#')
+                                                                        span 3
+                                                                .page-item
+                                                                    a.page-link(href='#')
+                                                                        span 4
+                                                                .page-item
+                                                                    a.page-link.right-icon(href='#', aria-label='Next')
+                                                                        span(aria-hidden='true') 
+                                                                            svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                                                                path(fill-rule='evenodd' clip-rule='evenodd' d='M14 10.7566V12.4811C14 12.5984 14.0466 12.7087 14.1231 12.7777L17.75 16.5732L14.1231 20.3679C14.1231 20.3679 14 20.5472 14 20.6645C14 20.7818 14 22.2395 14 22.389C14 22.5385 14.138 22.6258 14.2369 22.5385C14.3357 22.4511 19.7538 17.0134 19.7538 17.0134C20.0821 16.719 20.0821 16.4903 19.7538 16.1982L14.2369 10.6095C14.138 10.5198 14 10.6072 14 10.7566Z')
+
+
+                                            div.tab-pane(rel="tab-3" id="tab-3")
+                                                .ems-tab-inner-content
+                                                    .d-flex.flex-column                                                                                
+                                                        .card-sub
+                                                            .card-sub-top
+                                                                .cst-title
+                                                                    h5 Spotify
+                                                                    span Streaming Music
+                                                                a.cst-close(href="javascript:void(0);")
+                                                                    +icon("sub-cancel")
+                                                                    span Cancel subscription
+                                                            .card-sub-bottom
+                                                                .csb-img
+                                                                    +picture('ratio ratio-1x1', lazy="true", dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png')(class="w-100 img-fluid", alt="slide 1")
+                                                                .csb-body
+                                                                    .csb-left-text
+                                                                        .csb-left-text-item 
+                                                                            span Subscription Date
+                                                                            p 10.04.2023
+                                                                        .csb-left-text-item 
+                                                                            span Period
+                                                                            p Montly
+                                                                        .csb-left-text-item 
+                                                                            span Next Bill
+                                                                            p 10.05.2023                                                                            
+                                                                    
+                                                                    .csb-right-text
+                                                                        .csb-right-text-item 
+                                                                            span Price
+                                                                            .csb-price-box
+                                                                                .csb-price-text $8.90
+                                                                        .csb-right-text-item 
+                                                                            span Status
+                                                                            .csb-price-box
+                                                                                .csb-status.suspended Suspended
+                                                                                
+                                                    .d-flex.align-items-center.justify-content-center.mt-20
+                                                        nav(aria-label='Page navigation example')
+                                                            .pagination
+                                                                .page-item
+                                                                    a.page-link.left-icon(href='#', aria-label='Previous')
+                                                                        span(aria-hidden='true')
+                                                                            svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                                                                path(fill-rule='evenodd' clip-rule='evenodd' d='M14 10.7566V12.4811C14 12.5984 14.0466 12.7087 14.1231 12.7777L17.75 16.5732L14.1231 20.3679C14.1231 20.3679 14 20.5472 14 20.6645C14 20.7818 14 22.2395 14 22.389C14 22.5385 14.138 22.6258 14.2369 22.5385C14.3357 22.4511 19.7538 17.0134 19.7538 17.0134C20.0821 16.719 20.0821 16.4903 19.7538 16.1982L14.2369 10.6095C14.138 10.5198 14 10.6072 14 10.7566Z')
+                                                                .page-item
+                                                                    a.page-link.active(href='#')
+                                                                        span 1
+                                                                .page-item
+                                                                    a.page-link(href='#')
+                                                                        span 2
+                                                                .page-item
+                                                                    a.page-link(href='#')
+                                                                        span 3
+                                                                .page-item
+                                                                    a.page-link(href='#')
+                                                                        span 4
+                                                                .page-item
+                                                                    a.page-link.right-icon(href='#', aria-label='Next')
+                                                                        span(aria-hidden='true') 
+                                                                            svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                                                                path(fill-rule='evenodd' clip-rule='evenodd' d='M14 10.7566V12.4811C14 12.5984 14.0466 12.7087 14.1231 12.7777L17.75 16.5732L14.1231 20.3679C14.1231 20.3679 14 20.5472 14 20.6645C14 20.7818 14 22.2395 14 22.389C14 22.5385 14.138 22.6258 14.2369 22.5385C14.3357 22.4511 19.7538 17.0134 19.7538 17.0134C20.0821 16.719 20.0821 16.4903 19.7538 16.1982L14.2369 10.6095C14.138 10.5198 14 10.6072 14 10.7566Z')
+
+                                            div.tab-pane(rel="tab-4" id="tab-4")
+                                                .ems-tab-inner-content
+                                                    .d-flex.flex-column
+                                                        .card-sub
+                                                            .card-sub-top
+                                                                .cst-title
+                                                                    h5 Blu Tv
+                                                                    span Streaming Video
+                                                                a.cst-close(href="javascript:void(0);")
+                                                                    +icon("sub-sync")
+                                                                    span Renew Subscription
+                                                            .card-sub-bottom
+                                                                .csb-img
+                                                                    +picture('ratio ratio-1x1', lazy="true", dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png')(class="w-100 img-fluid", alt="slide 1")
+                                                                .csb-body
+                                                                    .csb-left-text
+                                                                        .csb-left-text-item 
+                                                                            span Subscription Date
+                                                                            p 10.04.2023
+                                                                        .csb-left-text-item 
+                                                                            span Period
+                                                                            p Montly
+                                                                        .csb-left-text-item 
+                                                                            span Next Bill
+                                                                            p 10.05.2023                                                                            
+                                                                    
+                                                                    .csb-right-text
+                                                                        .csb-right-text-item 
+                                                                            span Price
+                                                                            .csb-price-box
+                                                                                .csb-price-text $8.90
+                                                                        .csb-right-text-item 
+                                                                            span Status
+                                                                            .csb-price-box
+                                                                                .csb-status.inactive Inactive
+
+                                                    .d-flex.align-items-center.justify-content-center.mt-20
+                                                        nav(aria-label='Page navigation example')
+                                                            .pagination
+                                                                .page-item
+                                                                    a.page-link.left-icon(href='#', aria-label='Previous')
+                                                                        span(aria-hidden='true')
+                                                                            svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                                                                path(fill-rule='evenodd' clip-rule='evenodd' d='M14 10.7566V12.4811C14 12.5984 14.0466 12.7087 14.1231 12.7777L17.75 16.5732L14.1231 20.3679C14.1231 20.3679 14 20.5472 14 20.6645C14 20.7818 14 22.2395 14 22.389C14 22.5385 14.138 22.6258 14.2369 22.5385C14.3357 22.4511 19.7538 17.0134 19.7538 17.0134C20.0821 16.719 20.0821 16.4903 19.7538 16.1982L14.2369 10.6095C14.138 10.5198 14 10.6072 14 10.7566Z')
+                                                                .page-item
+                                                                    a.page-link.active(href='#')
+                                                                        span 1
+                                                                .page-item
+                                                                    a.page-link(href='#')
+                                                                        span 2
+                                                                .page-item
+                                                                    a.page-link(href='#')
+                                                                        span 3
+                                                                .page-item
+                                                                    a.page-link(href='#')
+                                                                        span 4
+                                                                .page-item
+                                                                    a.page-link.right-icon(href='#', aria-label='Next')
+                                                                        span(aria-hidden='true') 
+                                                                            svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                                                                path(fill-rule='evenodd' clip-rule='evenodd' d='M14 10.7566V12.4811C14 12.5984 14.0466 12.7087 14.1231 12.7777L17.75 16.5732L14.1231 20.3679C14.1231 20.3679 14 20.5472 14 20.6645C14 20.7818 14 22.2395 14 22.389C14 22.5385 14.138 22.6258 14.2369 22.5385C14.3357 22.4511 19.7538 17.0134 19.7538 17.0134C20.0821 16.719 20.0821 16.4903 19.7538 16.1982L14.2369 10.6095C14.138 10.5198 14 10.6072 14 10.7566Z')
+
+                                                                                

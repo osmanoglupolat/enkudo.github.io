@@ -115,35 +115,59 @@
                 svg{              
                   width: 32px;
                   height: 32px;
-                  path{
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    padding: 7px 8.001px 7.857px 7.999px;
-                    stroke:$white;
-                  }
+                  fill:none;
+                  stroke: $white;
                 }
               }
               .login-user-btn{
                 display: none;
               }
+              .active-none{
+                display: block;
+                font-size: 14px;
+                color: $body-text-color;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 20px;
+              }
+              .active-block{
+                display: none;
+                font-size: 14px;
+                color: $white;
+                font-size: 14px;
+                font-weight: 400;                
+              }
+              .login-user-btn{
+                  display: none;
+                  span{                            
+                      color: $gray2;
+                      font-size: 12px;
+                      font-weight: 400;
+                      line-height: 17px;
+                      border-bottom: 1px solid $gray2;
+                  }
+              }
               &.active{
-                .login-user-icon{
-                  border: 1px solid $them-color;
-                  background: $them-color;
-                  svg{              
-                    path{
-                      stroke: $content-bg-color;
-                    }
-                  } 
-                }                 
+                .login-user-btn{
+                    display: block;
+                    .login-user-icon{
+                      border: 1px solid $them-color;
+                      background: $them-color;
+                      svg{ 
+                        fill:none;
+                        stroke: $body-bg-color;
+                      } 
+                    }   
+                }              
                 .login-user-btn{
                   display: block;
                 }
-              }
-              span{
-                font-size: 14px;
-                color: $body-text-color;
+                .active-none{
+                  display: none;
+                }
+                .active-block{
+                  display: block;
+                }
               }
             }
           }
@@ -156,7 +180,7 @@
             height: 60px;
             border-bottom: 1px solid rgba(232, 232, 232, 0.05);
             span{
-              color: #959C9F;
+              color: $gray5;
               margin-left: 10px;
               font-weight: 400;
               font-size: 16px;
@@ -165,15 +189,15 @@
               width: 32px;
               height: 32px;
               path{
-                fill: #959C9F;
+                fill: $gray5;
                 &.fillnone-strokeyes{                  
                   fill:none;               
-                  stroke: #959C9F;
+                  stroke: $gray5;
                 }
               }
               &.icon-arrow-right{                  
                 path{
-                  fill: #959C9F;
+                  fill: $gray5;
                 }
               }
             }
@@ -194,7 +218,7 @@
               }
               &.icon-arrow-right{                  
                 path{
-                  fill: #959C9F;
+                  fill: $gray5;
                 }
               }
             }

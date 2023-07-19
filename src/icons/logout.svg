@@ -1,5 +1,5 @@
 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M19.9995 11.0888L19.9995 8L7.99951 8L7.99951 24L19.9995 24L19.9995 20.511" stroke="white"/>
-<path d="M27.999 16L16.999 16" stroke="white"/>
-<path d="M23.999 11L27.999 16L23.999 21" stroke="white"/>
+<path d="M19.9995 11.0888L19.9995 8L7.99951 8L7.99951 24L19.9995 24L19.9995 20.511" stroke="inherit"/>
+<path d="M27.999 16L16.999 16" stroke="inherit"/>
+<path d="M23.999 11L27.999 16L23.999 21" stroke="inherit"/>
 </svg>

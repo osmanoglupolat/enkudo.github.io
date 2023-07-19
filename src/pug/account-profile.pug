@@ -1,0 +1,55 @@
+extends layouts/default.pug
+
+block prepend head
+    - var pageTitle = "Enkudo"
+    - var pageDescription = "Hesabım sayfası, Enkudo"
+    - var pageName = "Profile"
+    - var pageClass = "page-account-profile"
+    - var ProfileActive = "active"
+
+block content
+    section.account-section
+        .container.p-0
+            .row.g-5
+                .account-box
+                    .left-box
+                        include includes/account-left-menu
+                    .right-box 
+                        .rb-content.bg-dark-them-2.d-flex.align-items-center
+                            form.ems-form(action='' method='post')
+                                .rb-content-profile
+                                    .rbcp-box1
+                                        .rbcp-left
+                                            h4 Profile Information
+                                            p You can change your username in here
+                                        .rbcp-right
+                                            .ems-field.form-floating.mb-30
+                                                input#Name.input-login.form-control(type='text' name='Name' value='' placeholder='User Name')
+                                                label(for='Name') User Name
+                                                .ems-field-feedback
+                                            .ems-field
+                                                button.btn.btn-them-3.btn-lg.w-100(type='submit')
+                                                    span Save
+                                    
+                                    .user-form-line.w-100
+                                    
+                                    .rbcp-box1
+                                        .rbcp-left
+                                            h4 Contact Information
+                                            p Your current phone number is as written here
+                                        .rbcp-right.d-flex
+                                            .ems-field.form-floating
+                                                .phone-bg
+                                                    .phone-control
+                                                        .top-text Country Code*
+                                                        .pc-select-box
+                                                            .pc-select-box-left
+                                                                +img('ratio ratio-1x1 ratio-bg-circle telflagform', true, dirFrontend + 'images/tel-flag.png')
+                                                                span +232                                                        
+                                                            .pc-select-box-right
+                                                                +icon("select-down")  
+                                            .ems-field.form-floating.input-user-tel
+                                                input#Number.form-control(type='text' name='Number' value='******5555' placeholder='' disabled)
+                                                label(for='Number') Number
+                                                .ems-field-feedback
+                                            

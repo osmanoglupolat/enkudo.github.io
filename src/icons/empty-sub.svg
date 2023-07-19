@@ -1,0 +1,5 @@
+<svg width="81" height="80" viewBox="0 0 81 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.1" d="M40.5 80C62.5914 80 80.5 62.0914 80.5 40C80.5 17.9086 62.5914 0 40.5 0C18.4086 0 0.5 17.9086 0.5 40C0.5 62.0914 18.4086 80 40.5 80Z" fill="#FADB14" fill-opacity="0.8"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M37.5 61.1719L36.5 31.1719L44.5 31.1719L43.5 61.1719L37.5 61.1719Z" fill="#FADB14"/>
+<circle cx="40.5" cy="23.1719" r="5" transform="rotate(-180 40.5 23.1719)" fill="#FADB14"/>
+</svg>
