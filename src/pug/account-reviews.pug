@@ -1,0 +1,94 @@
+extends layouts/default.pug
+
+block prepend head
+    - var pageTitle = "Enkudo"
+    - var pageDescription = "My Favoriets Sayfası, Enkudo"
+    - var pageName = "My Favoriets"
+    - var pageClass = "page-account-reviews"
+    - var RatingsReviewsActive = "active"
+
+block content
+    section.account-section.mb-80
+        .container.p-0
+            .row.g-5
+                .account-box
+                    .left-box
+                        include includes/account-left-menu
+
+                    .right-box 
+                        .rb-content.bg-dark-them-2
+                            .rb-content-ratings-reviews
+                                .product-list.mb-0.mb-lg-0.w-100
+                                    .title-box
+                                        h4.d-none.d-lg-block Ratings & Reviews
+                                        p You can manage your comments and ratings in here.
+                                    
+                                    .icon-set-box
+                                        .isb-list
+                                            +icon("reviews-time")
+                                            span <b>2 services</b> are waiting for review.
+                                        .isb-list
+                                            +icon("reviews-time")
+                                            span Your <b>4 comments</b> were found useful by users.
+
+                                
+                                    .mt-0.mb-0.px-15.px-lg-0.fav-list-box.product-list-view(rel="listb_fav")
+                                        .d-flex.flex-column
+                                            .card-sub
+                                                .card-sub-left
+                                                    a.ems-check-list(href="javascript:void(0);" aria-label="product_type" rel="listb_fav_5")
+                                                .card-sub-right
+                                                    .img-text-box
+                                                        .csb-img
+                                                            +picture('ratio ratio-1x1', lazy="true", dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png')(class="w-100 img-fluid", alt="slide 1")
+                                                        
+                                                        .csb-left-text
+                                                            h5 Netflix
+                                                            span All in One
+                                                            .d-flex.align-items-center.justify-content-start.gap-5
+                                                                span.fs-16 Starting from
+                                                                p $9.90                                                                       
+                                                    
+                                                    .csb-right-text
+                                                        a.cbs-text-remove(href="javascript:void(0);")
+                                                            span Remove
+                                                        a.btn.btn-them-2.btn-md.w-100(href="/")
+                                                            span Learn More
+                                                            svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                                                path(fill-rule='evenodd' clip-rule='evenodd' d='M17.3889 11.2258V9.21393C17.3889 9.03956 17.5525 8.93762 17.6696 9.04224L24.2082 15.5625C24.5973 15.9032 24.5973 16.1701 24.2082 16.5135C24.2082 16.5135 17.7868 22.8575 17.6696 22.9594C17.5525 23.0614 17.3889 22.9594 17.3889 22.7851V20.7731C17.3889 20.6363 17.5348 20.4271 17.5348 20.4271L20.9837 16.875H8.5V15.125H20.9839L17.5348 11.5719C17.4442 11.4914 17.3889 11.3627 17.3889 11.2258Z')
+
+                                        .row-g-0.fav-footer.mt-20
+                                            .col-6.col-lg-3.order-1.order-lg-1
+                                                a.ems-check-list(href="javascript:void(0);" aria-label="product_type" rel="listb_fav_all")
+                                                    span Select all
+
+                                            nav.col-12.col-lg-6.order-3.order-lg-2(aria-label='Page navigation example')
+                                                .pagination
+                                                    .page-item
+                                                        a.page-link.left-icon(href='#', aria-label='Previous')
+                                                            span(aria-hidden='true')
+                                                                svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                                                    path(fill-rule='evenodd' clip-rule='evenodd' d='M14 10.7566V12.4811C14 12.5984 14.0466 12.7087 14.1231 12.7777L17.75 16.5732L14.1231 20.3679C14.1231 20.3679 14 20.5472 14 20.6645C14 20.7818 14 22.2395 14 22.389C14 22.5385 14.138 22.6258 14.2369 22.5385C14.3357 22.4511 19.7538 17.0134 19.7538 17.0134C20.0821 16.719 20.0821 16.4903 19.7538 16.1982L14.2369 10.6095C14.138 10.5198 14 10.6072 14 10.7566Z')
+                                                    .page-item
+                                                        a.page-link.active(href='#')
+                                                            span 1
+                                                    .page-item
+                                                        a.page-link(href='#')
+                                                            span 2
+                                                    .page-item
+                                                        a.page-link(href='#')
+                                                            span 3
+                                                    .page-item
+                                                        a.page-link(href='#')
+                                                            span 4
+                                                    .page-item
+                                                        a.page-link.right-icon(href='#', aria-label='Next')
+                                                            span(aria-hidden='true') 
+                                                                svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                                                    path(fill-rule='evenodd' clip-rule='evenodd' d='M14 10.7566V12.4811C14 12.5984 14.0466 12.7087 14.1231 12.7777L17.75 16.5732L14.1231 20.3679C14.1231 20.3679 14 20.5472 14 20.6645C14 20.7818 14 22.2395 14 22.389C14 22.5385 14.138 22.6258 14.2369 22.5385C14.3357 22.4511 19.7538 17.0134 19.7538 17.0134C20.0821 16.719 20.0821 16.4903 19.7538 16.1982L14.2369 10.6095C14.138 10.5198 14 10.6072 14 10.7566Z')
+                                            
+                                            .col-6.col-lg-3.order-2.order-lg-3
+                                                a.fav-remove-selected(href="javascript:void(0);")
+                                                    +icon("trash")
+                                                    span Remove Selected
+                                                    

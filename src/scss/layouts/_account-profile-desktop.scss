@@ -718,6 +718,9 @@
                     }
                                         
                     .fav-footer{ 
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
                         .ems-check-list{    
                             justify-content: flex-start;    
                             margin: 10px 0 10px 10px;                    
@@ -757,6 +760,195 @@
 
                 .rb-content-ratings-reviews{
                     
+                    display: flex;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    padding:56px 45px;
+                    .title-box{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        align-self: stretch;
+                        gap: 16px;
+                        margin-bottom: 40px;
+                        h4{
+                            color:#E8E8E8;
+                            font-size: 24px;
+                            font-weight: 600;
+                            line-height: 25px;
+                        }
+                        p{
+                            color: $gray2;
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 22px;
+                            margin-bottom: 0;
+                        }
+                    }
+                    .icon-set-box{     
+                        display: flex;
+                        align-items: flex-start;
+                        gap: 8px;
+                        align-self: stretch;    
+                        margin-bottom: 40px;               
+                        .isb-list{
+                            display: flex;
+                            width: 100%;
+                            max-width: 323px;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            gap: 8px;
+                            svg{
+                                width: 45px;
+                                height: 45px;
+                            }
+                            span{
+                                color: #B5B5B5;
+                                font-size: 20px;
+                                font-weight: 400;
+                                line-height: 24px;
+                                max-width: 70%;
+                                b{
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+                    }
+                    .card-sub{
+                        display: flex;
+                        max-width: 729px;
+                        width: 100%;
+                        padding: 24px 24px 24px 12px;
+                        align-items: flex-start;
+                        background: $body-bg-color;
+                        margin-bottom: 12px;
+                        .card-sub-left{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            position: relative;
+                            width: 24px;
+                            height: 24px;
+                            margin-right: 12px;
+                        }
+                        .card-sub-right{   
+                            display: flex;
+                            align-items: center;
+                            gap: 16px;
+                            width: 100%;
+                            .img-text-box{
+                                display: flex;
+                                align-items: center;
+                                gap: 16px;
+                                width: 100%;
+                                .csb-img{
+                                    display: flex;
+                                    width: 120px;
+                                    height: 80px;
+                                    justify-content: center;
+                                    align-items: center;
+                                    .ratio::before {
+                                        padding-top: calc(80 / 120 * 100%) !important;
+                                    }
+                                }
+                                .csb-left-text{
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-items: flex-start;
+                                    gap: 4px;
+                                    max-width: 340px;
+                                    width: 100%;
+                                    margin-right: 21px;
+                                    h5{
+                                        color: $body-text-color;
+                                        font-size: 18px;
+                                        font-weight: 600;
+                                        line-height: 22px;
+                                    }
+                                    span{
+                                        color: $gray2;
+                                        font-size: 14px;
+                                        font-weight: 400;
+                                        line-height: 19px;
+                                    }
+                                    p{
+                                        color: $body-text-color;
+                                        font-size: 16px;
+                                        font-weight: 600;
+                                        line-height: 22px;
+                                        margin-bottom: 0;
+                                    }
+                                }
+                            }
+                            .csb-right-text{
+                                display: flex;
+                                flex-direction: column;
+                                max-width: 160px;
+                                width: 100%;
+                                gap: 16px;
+                                align-items: center;
+                                .cbs-text-remove{
+                                    display: flex;
+                                    width: 114px;
+                                    height: 18px;
+                                    padding:  2px 19px 2px 19px;
+                                    justify-content: center;
+                                    align-items: center;
+                                    span{
+                                        color: $body-text-color;
+                                        text-align: center;
+                                        font-size: 14px;
+                                        font-weight: 500;
+                                        line-height: 20px;
+                                        text-decoration-line: underline;
+                                        text-underline-position: under;
+                                    }
+                                }
+                                .btn{                                        
+                                    max-width: 160px;
+                                    width: 100%;
+                                }
+                            }                       
+                        }
+                    }
+                                        
+                    .fav-footer{ 
+                        .ems-check-list{    
+                            justify-content: flex-start;    
+                            margin: 10px 0 10px 10px;                    
+                            span{
+                                color: $body-text-color;
+                                text-align: center;
+                                font-size: 14px;
+                                font-weight: 500;
+                                line-height: 20px;
+                                padding: 0px 5px 0px 6px;
+                                margin-left: 8px;
+                                text-decoration-line: underline;
+                                text-underline-position: under;
+                            }
+                        }                       
+                        .fav-remove-selected{
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-end;
+                            svg{
+                                width: 32px;
+                                height: 32px;
+                            }
+                            span{
+                                color: $body-text-color;
+                                text-align: center;
+                                font-size: 14px;
+                                font-weight: 500;
+                                line-height: 20px;
+                                padding: 0px 5px 2px 6px;
+                                text-decoration-line: underline;
+                                text-underline-position: under;
+                            }
+                        }
+                    }                    
                 }     
                 .rb-content-notification{
                     
