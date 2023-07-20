@@ -176,6 +176,24 @@
     }
 }
 
+//Reviews Modal
+.ems-prd-Reviews {
+    width: 580px !important;
+    &-ready & {
+        @extend  %ems-modal-lg-ready;
+    }
+    &-animate & {
+        @extend %ems-modal-lg-animate-x;
+        @extend %ems-modal-lg-animate;
+        &-overlay {
+            @extend %ems-modal-lg-animate-overlay;
+        }
+    }
+    &-animate {
+        @extend %ems-modal-lg-animate-body;
+    }
+}
+
 // .ems-xx-ready .ems-modal-lg
 %ems-modal-lg-ready {
     display: flex;

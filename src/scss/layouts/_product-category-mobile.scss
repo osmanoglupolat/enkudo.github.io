@@ -52,6 +52,7 @@
                     text-decoration: none;
                 }
                 svg{
+                    color: $white;
                     height: 32px;
                     width: 32px;
                 }
@@ -72,6 +73,7 @@
                     text-decoration: none;
                 }
                 svg{
+                    color: $white;
                     height: 32px;
                     width: 32px;
                 }
@@ -124,6 +126,7 @@
                 }
                 .filter-close{
                     svg{
+                        color: $white;
                         height: 32px;
                         width: 32px;
                     }
@@ -157,6 +160,7 @@
                             line-height: 17px;
                         }
                         svg{
+                            color: #71777B;
                             width: 24px;
                             height: 24px;
                         }
@@ -210,7 +214,7 @@
                                     margin: 5px;
                                     background: $them-color;
                                     border-radius: 30px;
-                                    stroke:$them-dark-color-1;
+                                    color:$them-dark-color-1;
                                     &.icon-plus_minus{
                                         display: block;
                                     }
@@ -225,7 +229,7 @@
                                         margin: 5px;
                                         background: $them-color;
                                         border-radius: 30px;
-                                        stroke:$them-dark-color-1;
+                                        color:$them-dark-color-1;
                                         &.icon-plus_minus{
                                             display: none;
                                         }
@@ -334,6 +338,7 @@
             }
             .filter-close{
                 svg{
+                    color: $white;
                     height: 32px;
                     width: 32px;
                 }

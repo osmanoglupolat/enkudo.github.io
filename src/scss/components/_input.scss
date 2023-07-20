@@ -14,6 +14,120 @@ textarea {
 }
 
 
+
+// Thems Form
+
+                    
+.form-floating {
+    position: relative;                          
+    > input.form-control,
+    > .form-select {
+        width: 100%;
+        height: 48px;
+        padding: 0px 16px 0px 16px;
+        align-items: center;
+        background: $them-dark-color-2;
+        color: $body-text-color;
+        border: 0;
+    }  
+    textarea.form-control {
+        display: flex;
+        width: 100%;
+        height: 108px;
+        padding: 11px 16px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 7px;
+        background: $them-dark-color-2;
+        color: $body-text-color;
+        border: 0;
+    }                         
+    &.f-textarea{
+        label {
+            align-items: flex-start;
+            padding: 11px 5px 0px 16px;
+        }
+        textarea::placeholder {
+            padding-top: 18px;
+            color: #50575B;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+        }
+        textarea:focus{
+            &::placeholder {
+                color: transparent;
+            }
+        }
+    }                  
+    > input.form-control:disabled[value],
+    > .form-select:disabled[value] {
+        color: rgba(233, 233, 233, 50%) !important;
+    }                           
+    > input.form-control:disabled ,
+    > .form-select:disabled  {
+        background: $gray-dark1;
+        color: $body-text-color;                            
+        font-size: 14px;
+    }                              
+    > input.form-control:disabled + label,
+    > .form-select:disabled + label{
+        opacity: .5;
+    }                      
+    > label {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      top: 0;
+      left: 0;
+      height: 100%;
+      padding: 0px 5px 0px 16px;
+      color: $gray5;
+      font-size: 14px;
+      line-height: 17px;
+      font-weight: 400;
+      pointer-events: none;
+      border: 0 solid transparent;
+      transform-origin: 0 0;
+      transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
+    }                          
+    @media (prefers-reduced-motion: reduce) {
+      > label {
+        transition: none;
+      }
+    }                         
+    > .form-control::placeholder {
+      color: transparent;
+    }                          
+    > .form-control:focus,
+    > .form-control:not(:placeholder-shown) {
+      padding-top: 1.625rem;
+      padding-bottom: 0.625rem;
+    }                          
+    > .form-control:-webkit-autofill {
+      padding-top: 1.625rem;
+      padding-bottom: 0.625rem;
+    }                          
+    > .form-select {
+      padding-top: 1.625rem;
+      padding-bottom: 0.625rem;
+    }                          
+    > .form-control:focus ~ label,
+    > .form-control:not(:placeholder-shown) ~ label,
+    > .form-select ~ label {
+        font-size: 12px;
+        opacity: 1;
+        transform: scale(0.9) translateY(-0.4rem) translateX(0.15rem);
+    }                          
+    > .form-control:-webkit-autofill ~ label {
+        font-size: 12px;
+        opacity: 1;
+        transform: scale(0.9) translateY(-0.4rem) translateX(0.15rem);
+    }
+}   
+
+
 .ems-check-list{
     position: relative;
     display: flex;
@@ -331,12 +445,13 @@ select:active, textarea:active, input:active {
           display: flex;
           align-items: center;
           justify-content: center;
+          flex-shrink: 0;
           top: 0;
           left: 0;
           height: 20px;
           width: 20px;
           background-color: transparent;
-          border: 0.12rem solid $white;
+          border: 0.12rem solid $gray2;
           margin: 5px;      
           &:hover {
             background-color: $content-bg-color;

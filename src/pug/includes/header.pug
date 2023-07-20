@@ -16,7 +16,7 @@ nav.navbar.navbar-fixed-top.navbar-inverse
 									.menu-login-box
 										.login-user-box
 											.login-user-icon
-												+icon("profil")
+												+icon("profil").stroke-icon
 											.d-flex.flex-column
 												span.active-none Welcome to Enkudo
 												span.active-block *******5555
@@ -28,48 +28,36 @@ nav.navbar.navbar-fixed-top.navbar-inverse
 									.nav-menu.d-flex.flex-column.me-3
 										a.nav-link(href="javascript:;" id='v-pills-1')
 											.d-flex.align-items-center
-												svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-													path(fill-rule='evenodd' clip-rule='evenodd' d='M28.4252 22.858C28.4252 22.858 29.8074 14.2675 26.3323 10.0425L26.3234 10.0402C25.3764 8.78411 23.8767 7.96841 22.1825 7.96841C21.4157 7.96841 20.6904 8.13902 20.0355 8.4376C20.0355 8.4376 18.0772 9.52308 16.2623 9.52308C14.4601 9.52308 12.489 8.4376 12.489 8.4376C11.8341 8.13903 11.1088 7.96841 10.3421 7.96841C8.64781 7.96841 7.14803 8.78411 6.2011 10.0402L6.19212 10.0425C2.71724 14.2677 4.09947 22.858 4.09947 22.858L4.11804 22.8631C4.26722 24.1658 5.37211 25.178 6.71474 25.178C7.55823 25.178 8.30637 24.777 8.78451 24.1572L10.7641 21.9301C12.1657 20.4544 13.5951 20.3207 14.0672 20.3207C14.1716 20.3207 14.2292 20.3272 14.2292 20.3272H18.2955C18.2955 20.3272 18.353 20.3207 18.4575 20.3207C18.9296 20.3207 20.359 20.4544 21.7606 21.9301L23.7402 24.1572C24.2183 24.7772 24.9665 25.178 25.8099 25.178C27.1526 25.178 28.2575 24.1658 28.4066 22.8631L28.4252 22.858ZM18.2546 19.3272L18.2779 19.3257C18.3241 19.323 18.3845 19.3207 18.4575 19.3207C19.1226 19.3207 20.8459 19.5149 22.4856 21.2414L22.497 21.2534L22.508 21.2657L24.4876 23.4929L24.5107 23.5189L24.532 23.5465C24.8303 23.9333 25.2917 24.178 25.8099 24.178C26.6376 24.178 27.321 23.5538 27.4131 22.7494L27.49 22.0779L27.5201 22.0696C27.5425 21.8731 27.5671 21.6356 27.5906 21.3637C27.6634 20.5207 27.7253 19.356 27.6825 18.0678C27.5989 15.5504 27.1208 12.7782 25.7559 10.9291L25.7377 10.9246L25.5248 10.6422C24.7572 9.62384 23.5471 8.96841 22.1825 8.96841C21.5774 8.96841 21.0034 9.10023 20.48 9.3341C20.462 9.34376 20.4382 9.35636 20.4091 9.3715C20.3435 9.40562 20.2504 9.4528 20.134 9.50868C19.9019 9.62013 19.5738 9.76775 19.1837 9.9155C18.421 10.2044 17.3461 10.5231 16.2623 10.5231C15.1844 10.5231 14.1093 10.2041 13.3463 9.91576C12.9558 9.76817 12.6268 9.62074 12.394 9.50947C12.2772 9.45368 12.1838 9.40659 12.118 9.37256C12.0881 9.35708 12.0638 9.34428 12.0456 9.33456C11.5219 9.1004 10.9475 8.96841 10.3421 8.96841C8.97747 8.96841 7.7673 9.62385 6.99962 10.6422L6.78672 10.9246L6.7686 10.9291C5.40377 12.7783 4.92571 15.5505 4.84216 18.0679C4.79941 19.3561 4.86124 20.5207 4.93408 21.3637C4.95757 21.6356 4.98213 21.8731 5.00453 22.0696L5.03465 22.0779L5.11154 22.7493C5.20367 23.5538 5.88713 24.178 6.71474 24.178C7.2329 24.178 7.69436 23.9332 7.99274 23.5464L8.01398 23.5189L8.03709 23.4929L10.0167 21.2657L10.0277 21.2534L10.039 21.2414C11.6788 19.515 13.402 19.3207 14.0672 19.3207C14.1402 19.3207 14.2005 19.323 14.2467 19.3257L14.27 19.3272H18.2546ZM22.6908 12.8033C22.6908 13.3535 22.2446 13.7998 21.6943 13.7998C21.1441 13.7998 20.6977 13.3535 20.6977 12.8033C20.6977 12.2529 21.1441 11.8068 21.6943 11.8068C22.2447 11.8068 22.6908 12.2529 22.6908 12.8033ZM21.6943 17.5698C22.2446 17.5698 22.6908 17.1237 22.6908 16.5733C22.6908 16.0229 22.2447 15.5768 21.6943 15.5768C21.1441 15.5768 20.6977 16.0229 20.6977 16.5733C20.6977 17.1237 21.1441 17.5698 21.6943 17.5698ZM24.5758 14.6383C24.5758 15.1887 24.1297 15.6348 23.5793 15.6348C23.0289 15.6348 22.5828 15.1887 22.5828 14.6383C22.5828 14.0881 23.0289 13.6418 23.5793 13.6418C24.1297 13.6418 24.5758 14.0881 24.5758 14.6383ZM19.8093 15.6348C20.3597 15.6348 20.8058 15.1887 20.8058 14.6383C20.8058 14.0881 20.3597 13.6418 19.8093 13.6418C19.2589 13.6418 18.8128 14.0881 18.8128 14.6383C18.8128 15.1887 19.2589 15.6348 19.8093 15.6348ZM9.16503 12.2243H10.165V14.2243H12.165V15.2243H10.165V17.2243H9.16503V15.2243H7.16503V14.2243H9.16503V12.2243Z')
+												+icon("gaming")
 												span Gaming
-											svg.icon-arrow-right(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-												path(d='M14 10.7566V12.4811C14 12.5984 14.0466 12.7087 14.1231 12.7777L17.75 16.5732L14.1231 20.3679C14.1231 20.3679 14 20.5472 14 20.6645C14 20.7818 14 22.2395 14 22.389C14 22.5385 14.138 22.6258 14.2369 22.5385C14.3357 22.4511 19.7538 17.0134 19.7538 17.0134C20.0821 16.719 20.0821 16.4903 19.7538 16.1982L14.2369 10.6095C14.138 10.5198 14 10.6072 14 10.7566Z')
+											+icon("arrow-right").icon-arrow-right
 										a.nav-link(href="javascript:;" id='v-pills-2')
 											.d-flex.align-items-center
-												svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-													path.fillnone-strokeyes(fill-rule='evenodd' clip-rule='evenodd' d='m10 24.9h18.4m-24.9 0h3.5m-3-18h24v14h-24zm15.5 7l-6 3.5v-7zm-11 12.5c-0.8 0-1.5-0.7-1.5-1.5 0-0.8 0.7-1.5 1.5-1.5 0.8 0 1.5 0.7 1.5 1.5 0 0.8-0.7 1.5-1.5 1.5z')
+												+icon("video").stroke-icon
 												span Streaming Video
-											svg.icon-arrow-right(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-												path(d='M14 10.7566V12.4811C14 12.5984 14.0466 12.7087 14.1231 12.7777L17.75 16.5732L14.1231 20.3679C14.1231 20.3679 14 20.5472 14 20.6645C14 20.7818 14 22.2395 14 22.389C14 22.5385 14.138 22.6258 14.2369 22.5385C14.3357 22.4511 19.7538 17.0134 19.7538 17.0134C20.0821 16.719 20.0821 16.4903 19.7538 16.1982L14.2369 10.6095C14.138 10.5198 14 10.6072 14 10.7566Z')
+											+icon("arrow-right").icon-arrow-right
 										a.nav-link(href="javascript:;" id='v-pills-3')
 											.d-flex.align-items-center
-												svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-													path.fillnone-strokeyes(fill-rule='evenodd' clip-rule='evenodd' d='m23.5 19.2h-1c-0.8 0-1.5 0.6-1.5 1.4v0.2c0 0.7-0.5 1.2-1.2 1.2-0.7 0-1.2-0.5-1.2-1.2v-3.5c0-0.6-0.5-1.1-1.2-1.1-0.7 0-1.2 0.5-1.2 1.1v5.6c0 0.7-0.5 1.3-1.2 1.3-0.7 0-1.2-0.6-1.2-1.3v-3.5c0-0.6-0.6-1.2-1.2-1.2-0.7 0-1.2 0.6-1.2 1.2v1.5c0 0.2-0.2 0.4-0.5 0.4h-1.4m16 1.9v-5.5c0-5.3-4.3-9.5-9.5-9.5-5.2 0-9.5 4.2-9.5 9.5v5.5m0-5v-0.5h-0.5-1c-0.8 0-1.5 0.6-1.5 1.5v2c0 0.8 0.7 1.5 1.5 1.5h1 0.5v-0.5zm19 0v-0.5h0.5 1c0.8 0 1.5 0.6 1.5 1.5v2c0 0.8-0.7 1.5-1.5 1.5h-1-0.5v-0.5z')
+												+icon("music").stroke-icon
 												span Streaming Music
-											svg.icon-arrow-right(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-												path(d='M14 10.7566V12.4811C14 12.5984 14.0466 12.7087 14.1231 12.7777L17.75 16.5732L14.1231 20.3679C14.1231 20.3679 14 20.5472 14 20.6645C14 20.7818 14 22.2395 14 22.389C14 22.5385 14.138 22.6258 14.2369 22.5385C14.3357 22.4511 19.7538 17.0134 19.7538 17.0134C20.0821 16.719 20.0821 16.4903 19.7538 16.1982L14.2369 10.6095C14.138 10.5198 14 10.6072 14 10.7566Z')
+											+icon("arrow-right").icon-arrow-right
 										a.nav-link(href="javascript:;")
 											.d-flex.align-items-center
-												svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-													path.fillnone-strokeyes(fill-rule='evenodd' clip-rule='evenodd' d='m10 24.9h18.4m-24.9 0h3.5m-3-18h24v14h-24zm15.5 7l-6 3.5v-7zm-11 12.5c-0.8 0-1.5-0.7-1.5-1.5 0-0.8 0.7-1.5 1.5-1.5 0.8 0 1.5 0.7 1.5 1.5 0 0.8-0.7 1.5-1.5 1.5z')
+												+icon("trivia").stroke-icon
 												span Mega Promo/Trivia
 										a.nav-link(href="javascript:;" id='v-pills-5')
 											.d-flex.align-items-center
-												svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-													path.fillnone-strokeyes(fill-rule='evenodd' clip-rule='evenodd' d='m19 24.2h-6v-5h-8v-12h22v12h-8zm4.1-12.2c0-1-0.8-1.8-1.8-1.8-1 0-1.9 0.8-1.9 1.8 0 0.6 0.4 1.2 0.9 1.6q-0.8 0.2-1.3 0.7c-0.7 0.6-1 1.3-1 2.1q0 0.3 0.2 0.5 0.2 0.2 0.4 0.2l5.3 0.1q0.3-0.1 0.5-0.3 0.1-0.2 0.1-0.5c0-0.8-0.3-1.5-0.9-2.1q-0.6-0.5-1.4-0.7c0.6-0.4 0.9-1 0.9-1.6zm-15.1 2.2h8v-4h-8zm3 10h10m3.1-7.8l-0.1 0.2')
+												+icon("education").stroke-icon
 												span Education
-											svg.icon-arrow-right(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-												path(d='M14 10.7566V12.4811C14 12.5984 14.0466 12.7087 14.1231 12.7777L17.75 16.5732L14.1231 20.3679C14.1231 20.3679 14 20.5472 14 20.6645C14 20.7818 14 22.2395 14 22.389C14 22.5385 14.138 22.6258 14.2369 22.5385C14.3357 22.4511 19.7538 17.0134 19.7538 17.0134C20.0821 16.719 20.0821 16.4903 19.7538 16.1982L14.2369 10.6095C14.138 10.5198 14 10.6072 14 10.7566Z')
+											+icon("arrow-right").icon-arrow-right
 										a.nav-link(href="javascript:;" id='v-pills-6')
 											.d-flex.align-items-center
-												svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-													path.fillnone-strokeyes(fill-rule='evenodd' clip-rule='evenodd' d='m8.2 9.2h-0.2v-2.1c0-0.1 0.1-0.3 0.2-0.3 1.2-0.6 2.6-0.8 4-0.8 1.3 0 2.6 0.2 3.8 0.7 1.2-0.5 2.5-0.7 3.8-0.7 1.4 0 2.7 0.2 4 0.8 0.1 0 0.2 0.2 0.2 0.3v2.1h-0.2m3.2 0v12h-8v5h-6v-5h-8v-12h3v7.9q0 0.2 0.1 0.3 0.2 0.1 0.4 0.1c1.1-0.5 2.4-0.8 3.7-0.8 1.2 0 2.5 0.3 3.7 0.8q0 0 0.1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0 0.1 0c1.2-0.5 2.5-0.8 3.7-0.8 1.3 0 2.6 0.3 3.7 0.8q0.2 0 0.4-0.1 0.1-0.1 0.1-0.3v-7.9zm-11 8.3q-0.1 0-0.2-0.1-0.1-0.1-0.1-0.3v-10c0-0.1 0-0.3 0.2-0.3q0-0.1 0.1-0.1 0.1 0 0.2 0.1c0.1 0 0.2 0.2 0.2 0.3v10q0 0.2-0.1 0.3-0.1 0.1-0.3 0.1zm0 0q0 0 0 0zm-3.8-1.5q0 0 0 0 0 0 0 0zm0 0q-1.8 0-3.5 0.6v-9.3c2.2-0.9 4.7-0.9 7 0v9.3q-1.7-0.6-3.5-0.6zm3.8 1.5q0 0 0 0 0 0 0 0 0 0 0 0zm3.9-1.5q0 0 0 0 0 0 0 0zm-3.5 0.6v-9.3c2.2-0.9 4.7-0.9 6.9 0v9.3q-1.7-0.6-3.4-0.6-1.8 0-3.5 0.6zm1.8-6.9q1.8-0.9 3.3 0 0.1 0.1 0.2 0 0.2 0 0.3-0.1 0-0.2 0-0.3-0.1-0.2-0.2-0.2-1.8-1.1-3.9 0c-0.1 0-0.2 0.2-0.2 0.4 0.1 0.1 0.2 0.2 0.4 0.2q0.1 0 0.1 0zm0 2.3q1.8-0.8 3.3 0 0.1 0.1 0.2 0.1 0.2-0.1 0.3-0.2 0-0.1 0-0.3-0.1-0.1-0.2-0.2-1.8-1-3.9 0c-0.1 0.1-0.2 0.2-0.2 0.4 0.1 0.2 0.2 0.3 0.4 0.3q0.1 0 0.1-0.1zm-7.5-2.3q1.7-0.9 3.2 0 0.2 0.1 0.3 0 0.1 0 0.2-0.1 0.1-0.2 0-0.3 0-0.2-0.1-0.2-1.8-1.1-3.9 0c-0.2 0-0.3 0.2-0.2 0.4 0 0.1 0.2 0.2 0.3 0.2q0.1 0 0.2 0zm0 4.7q1.7-0.9 3.2 0c0.2 0.1 0.4 0 0.5-0.2 0.1-0.2 0-0.4-0.1-0.5q-1.8-1-3.9 0c-0.2 0.1-0.3 0.3-0.2 0.4 0 0.2 0.2 0.3 0.3 0.3q0.1 0 0.2 0zm7.5 0q1.8-0.9 3.3 0c0.1 0.1 0.4 0 0.4-0.2 0.1-0.2 0.1-0.4-0.1-0.5q-1.8-1-3.9 0c-0.1 0.1-0.2 0.3-0.2 0.4 0.1 0.2 0.2 0.3 0.4 0.3q0.1 0 0.1 0zm-7.5-2.4q1.7-0.8 3.2 0c0.2 0.1 0.4 0.1 0.5-0.1 0.1-0.2 0-0.4-0.1-0.5q-1.8-1-3.9 0c-0.2 0.1-0.3 0.2-0.2 0.4 0 0.2 0.2 0.3 0.3 0.3q0.1 0 0.2-0.1zm0.3 14.2h10')
+												+icon("digital").stroke-icon
 												span Digital Publications
-											svg.icon-arrow-right(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-												path(d='M14 10.7566V12.4811C14 12.5984 14.0466 12.7087 14.1231 12.7777L17.75 16.5732L14.1231 20.3679C14.1231 20.3679 14 20.5472 14 20.6645C14 20.7818 14 22.2395 14 22.389C14 22.5385 14.138 22.6258 14.2369 22.5385C14.3357 22.4511 19.7538 17.0134 19.7538 17.0134C20.0821 16.719 20.0821 16.4903 19.7538 16.1982L14.2369 10.6095C14.138 10.5198 14 10.6072 14 10.7566Z')
+											+icon("arrow-right").icon-arrow-right
 										a.nav-link(href="javascript:;")
 											.d-flex.align-items-center
-												svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-													path(fill-rule='evenodd' clip-rule='evenodd' d='M8.56647 15.2956C8.68516 14.8374 8.46624 14.3587 8.04196 14.1487C6.83486 13.5513 6 12.2946 6 10.8357C6 8.79074 7.63635 7.15222 9.63158 7.15222C11.0578 7.15222 12.2998 7.9873 12.8941 9.21541C13.1026 9.64632 13.5873 9.869 14.0501 9.74654C14.6719 9.58199 15.3252 9.49396 16 9.49396C16.6748 9.49396 17.3281 9.58199 17.9499 9.74654C18.4127 9.869 18.8974 9.64632 19.1059 9.21541C19.7002 7.9873 20.9422 7.15222 22.3684 7.15222C24.3637 7.15222 26 8.79074 26 10.8357C26 12.2946 25.1651 13.5513 23.958 14.1487C23.5338 14.3587 23.3148 14.8374 23.4335 15.2956C23.5969 15.9266 23.6842 16.59 23.6842 17.2755C23.6842 21.5836 20.2334 25.057 16 25.057C11.7666 25.057 8.31579 21.5836 8.31579 17.2755C8.31579 16.59 8.40307 15.9266 8.56647 15.2956ZM5 10.8357C5 12.6849 6.05966 14.2834 7.59841 15.0449C7.41395 15.7571 7.31579 16.5048 7.31579 17.2755C7.31579 22.1253 11.2038 26.057 16 26.057C20.7962 26.057 24.6842 22.1253 24.6842 17.2755C24.6842 16.5048 24.586 15.7571 24.4016 15.0449C25.9403 14.2834 27 12.6849 27 10.8357C27 8.24898 24.9264 6.15222 22.3684 6.15222C20.5398 6.15222 18.9587 7.2239 18.2058 8.77981C17.5014 8.59344 16.7622 8.49396 16 8.49396C15.2378 8.49396 14.4986 8.59344 13.7942 8.77981C13.0413 7.2239 11.4602 6.15222 9.63158 6.15222C7.0736 6.15222 5 8.24898 5 10.8357ZM19.5 18.1522C19.5 20.0852 17.933 21.6522 16 21.6522C14.067 21.6522 12.5 20.0852 12.5 18.1522C12.5 17.8761 12.2761 17.6522 12 17.6522C11.7239 17.6522 11.5 17.8761 11.5 18.1522C11.5 20.6375 13.5147 22.6522 16 22.6522C18.4853 22.6522 20.5 20.6375 20.5 18.1522C20.5 17.8761 20.2761 17.6522 20 17.6522C19.7239 17.6522 19.5 17.8761 19.5 18.1522Z')
+												+icon("kids").stroke-icon
 												span Kids Club/Edutainment
 								.col-12.col-lg-9
 									.nav-content.overflow-hidden
@@ -85,51 +73,43 @@ nav.navbar.navbar-fixed-top.navbar-inverse
 												p Enkudo provides a game subscription service that anyone can enjoy, with 200+ incredibly fun games — all without ads or in-app purchases.
 												a.btn.btn-them-6.my-40(href="/")
 													span Explore All Games
-													svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-														path(fill-rule='evenodd' clip-rule='evenodd' d='M17.3889 11.2258V9.21393C17.3889 9.03956 17.5525 8.93762 17.6696 9.04224L24.2082 15.5625C24.5973 15.9032 24.5973 16.1701 24.2082 16.5135C24.2082 16.5135 17.7868 22.8575 17.6696 22.9594C17.5525 23.0614 17.3889 22.9594 17.3889 22.7851V20.7731C17.3889 20.6363 17.5348 20.4271 17.5348 20.4271L20.9837 16.875H8.5V15.125H20.9839L17.5348 11.5719C17.4442 11.4914 17.3889 11.3627 17.3889 11.2258Z')
+													+icon("ArrowRight").icon-arrow-right
 												.row.align-items-end.w-100.g-5
 													a.menu-img-box(href="/")
 														+img('w-100', false, dirImages + 'menu/1.png')
 														.btn.btn-them-link
 															span HTML5
-															svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-																path(fill-rule='evenodd' clip-rule='evenodd' d='M14 10.7566V12.4811C14 12.5984 14.0466 12.7087 14.1231 12.7777L17.75 16.5732L14.1231 20.3679C14.1231 20.3679 14 20.5472 14 20.6645C14 20.7818 14 22.2395 14 22.389C14 22.5385 14.138 22.6258 14.2369 22.5385C14.3357 22.4511 19.7538 17.0134 19.7538 17.0134C20.0821 16.719 20.0821 16.4903 19.7538 16.1982L14.2369 10.6095C14.138 10.5198 14 10.6072 14 10.7566Z')
+															+icon("arrow-right").icon-arrow-right
 													a.menu-img-box(href="/")
 														+img('w-100', false, dirImages + 'menu/2.png')
 														.btn.btn-them-link
 															span Quiz
-															svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-																path(fill-rule='evenodd' clip-rule='evenodd' d='M14 10.7566V12.4811C14 12.5984 14.0466 12.7087 14.1231 12.7777L17.75 16.5732L14.1231 20.3679C14.1231 20.3679 14 20.5472 14 20.6645C14 20.7818 14 22.2395 14 22.389C14 22.5385 14.138 22.6258 14.2369 22.5385C14.3357 22.4511 19.7538 17.0134 19.7538 17.0134C20.0821 16.719 20.0821 16.4903 19.7538 16.1982L14.2369 10.6095C14.138 10.5198 14 10.6072 14 10.7566Z')
+															+icon("arrow-right").icon-arrow-right
 													a.menu-img-box(href="/")
 														+img('w-100', false, dirImages + 'menu/3.png')
 														.btn.btn-them-link
 															span Sports
-															svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-																path(fill-rule='evenodd' clip-rule='evenodd' d='M14 10.7566V12.4811C14 12.5984 14.0466 12.7087 14.1231 12.7777L17.75 16.5732L14.1231 20.3679C14.1231 20.3679 14 20.5472 14 20.6645C14 20.7818 14 22.2395 14 22.389C14 22.5385 14.138 22.6258 14.2369 22.5385C14.3357 22.4511 19.7538 17.0134 19.7538 17.0134C20.0821 16.719 20.0821 16.4903 19.7538 16.1982L14.2369 10.6095C14.138 10.5198 14 10.6072 14 10.7566Z')
+															+icon("arrow-right").icon-arrow-right
 													a.menu-img-box(href="/")
 														+img('w-100', false, dirImages + 'menu/4.png')
 														.btn.btn-them-link
 															span Hyper Casual
-															svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-																path(fill-rule='evenodd' clip-rule='evenodd' d='M14 10.7566V12.4811C14 12.5984 14.0466 12.7087 14.1231 12.7777L17.75 16.5732L14.1231 20.3679C14.1231 20.3679 14 20.5472 14 20.6645C14 20.7818 14 22.2395 14 22.389C14 22.5385 14.138 22.6258 14.2369 22.5385C14.3357 22.4511 19.7538 17.0134 19.7538 17.0134C20.0821 16.719 20.0821 16.4903 19.7538 16.1982L14.2369 10.6095C14.138 10.5198 14 10.6072 14 10.7566Z')
+															+icon("arrow-right").icon-arrow-right
 													a.menu-img-box(href="/")
 														+img('w-100', false, dirImages + 'menu/5.png')
 														.btn.btn-them-link
 															span AAA
-															svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-																path(fill-rule='evenodd' clip-rule='evenodd' d='M14 10.7566V12.4811C14 12.5984 14.0466 12.7087 14.1231 12.7777L17.75 16.5732L14.1231 20.3679C14.1231 20.3679 14 20.5472 14 20.6645C14 20.7818 14 22.2395 14 22.389C14 22.5385 14.138 22.6258 14.2369 22.5385C14.3357 22.4511 19.7538 17.0134 19.7538 17.0134C20.0821 16.719 20.0821 16.4903 19.7538 16.1982L14.2369 10.6095C14.138 10.5198 14 10.6072 14 10.7566Z')
+															+icon("arrow-right").icon-arrow-right
 													a.menu-img-box(href="/")
 														+img('w-100', false, dirImages + 'menu/6.png')
 														.btn.btn-them-link
 															span Educational
-															svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-																path(fill-rule='evenodd' clip-rule='evenodd' d='M14 10.7566V12.4811C14 12.5984 14.0466 12.7087 14.1231 12.7777L17.75 16.5732L14.1231 20.3679C14.1231 20.3679 14 20.5472 14 20.6645C14 20.7818 14 22.2395 14 22.389C14 22.5385 14.138 22.6258 14.2369 22.5385C14.3357 22.4511 19.7538 17.0134 19.7538 17.0134C20.0821 16.719 20.0821 16.4903 19.7538 16.1982L14.2369 10.6095C14.138 10.5198 14 10.6072 14 10.7566Z')
+															+icon("arrow-right").icon-arrow-right
 													a.menu-img-box(href="/")
 														+img('w-100', false, dirImages + 'menu/7.png')
 														.btn.btn-them-link
 															span E-Sports
-															svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-																path(fill-rule='evenodd' clip-rule='evenodd' d='M14 10.7566V12.4811C14 12.5984 14.0466 12.7087 14.1231 12.7777L17.75 16.5732L14.1231 20.3679C14.1231 20.3679 14 20.5472 14 20.6645C14 20.7818 14 22.2395 14 22.389C14 22.5385 14.138 22.6258 14.2369 22.5385C14.3357 22.4511 19.7538 17.0134 19.7538 17.0134C20.0821 16.719 20.0821 16.4903 19.7538 16.1982L14.2369 10.6095C14.138 10.5198 14 10.6072 14 10.7566Z')
+															+icon("arrow-right").icon-arrow-right
 										
 										.nav-content-box(id="v-pills-2")
 											.nav-content-box-header.d-flex.d-lg-none.align-items-center.justify-content-between
@@ -143,21 +123,18 @@ nav.navbar.navbar-fixed-top.navbar-inverse
 												p Subcribe to watch popular movies and TV shows, including award-winning series.
 												a.btn.btn-them-6.my-40(href="/")
 													span Explore All sVOD
-													svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-														path(fill-rule='evenodd' clip-rule='evenodd' d='M17.3889 11.2258V9.21393C17.3889 9.03956 17.5525 8.93762 17.6696 9.04224L24.2082 15.5625C24.5973 15.9032 24.5973 16.1701 24.2082 16.5135C24.2082 16.5135 17.7868 22.8575 17.6696 22.9594C17.5525 23.0614 17.3889 22.9594 17.3889 22.7851V20.7731C17.3889 20.6363 17.5348 20.4271 17.5348 20.4271L20.9837 16.875H8.5V15.125H20.9839L17.5348 11.5719C17.4442 11.4914 17.3889 11.3627 17.3889 11.2258Z')
+													+icon("ArrowRight").icon-arrow-right
 												.row.align-items-end.w-100.g-5
 													a.menu-img-box(href="/")
 														+img('w-100', false, dirImages + 'menu/8.png')
 														.btn.btn-them-link
 															span All in One
-															svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-																path(fill-rule='evenodd' clip-rule='evenodd' d='M14 10.7566V12.4811C14 12.5984 14.0466 12.7087 14.1231 12.7777L17.75 16.5732L14.1231 20.3679C14.1231 20.3679 14 20.5472 14 20.6645C14 20.7818 14 22.2395 14 22.389C14 22.5385 14.138 22.6258 14.2369 22.5385C14.3357 22.4511 19.7538 17.0134 19.7538 17.0134C20.0821 16.719 20.0821 16.4903 19.7538 16.1982L14.2369 10.6095C14.138 10.5198 14 10.6072 14 10.7566Z')
+															+icon("arrow-right").icon-arrow-right
 													a.menu-img-box(href="/")
 														+img('w-100', false, dirImages + 'menu/9.png')
 														.btn.btn-them-link
 															span Drama
-															svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-																path(fill-rule='evenodd' clip-rule='evenodd' d='M14 10.7566V12.4811C14 12.5984 14.0466 12.7087 14.1231 12.7777L17.75 16.5732L14.1231 20.3679C14.1231 20.3679 14 20.5472 14 20.6645C14 20.7818 14 22.2395 14 22.389C14 22.5385 14.138 22.6258 14.2369 22.5385C14.3357 22.4511 19.7538 17.0134 19.7538 17.0134C20.0821 16.719 20.0821 16.4903 19.7538 16.1982L14.2369 10.6095C14.138 10.5198 14 10.6072 14 10.7566Z')
+															+icon("arrow-right").icon-arrow-right
 											
 										.nav-content-box(id="v-pills-3")
 											.nav-content-box-header.d-flex.d-lg-none.align-items-center.justify-content-between
@@ -171,15 +148,13 @@ nav.navbar.navbar-fixed-top.navbar-inverse
 												p Enkudo provides a game subscription service that anyone can enjoy, with 200+ incredibly fun games — all without ads or in-app purchases.
 												a.btn.btn-them-6.my-40(href="/")
 													span Explore All Games
-													svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-														path(fill-rule='evenodd' clip-rule='evenodd' d='M17.3889 11.2258V9.21393C17.3889 9.03956 17.5525 8.93762 17.6696 9.04224L24.2082 15.5625C24.5973 15.9032 24.5973 16.1701 24.2082 16.5135C24.2082 16.5135 17.7868 22.8575 17.6696 22.9594C17.5525 23.0614 17.3889 22.9594 17.3889 22.7851V20.7731C17.3889 20.6363 17.5348 20.4271 17.5348 20.4271L20.9837 16.875H8.5V15.125H20.9839L17.5348 11.5719C17.4442 11.4914 17.3889 11.3627 17.3889 11.2258Z')
+													+icon("ArrowRight").icon-arrow-right
 												.row.align-items-end.position-relative.w-100.g-5
 													.menu-alt-box
 														.btn-group.dropend
 															a.btn.btn-them-link.dropdown-toggle(data-bs-toggle='dropdown' aria-expanded='false')
 																span HTML5
-																svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-																	path(fill-rule='evenodd' clip-rule='evenodd' d='M14 10.7566V12.4811C14 12.5984 14.0466 12.7087 14.1231 12.7777L17.75 16.5732L14.1231 20.3679C14.1231 20.3679 14 20.5472 14 20.6645C14 20.7818 14 22.2395 14 22.389C14 22.5385 14.138 22.6258 14.2369 22.5385C14.3357 22.4511 19.7538 17.0134 19.7538 17.0134C20.0821 16.719 20.0821 16.4903 19.7538 16.1982L14.2369 10.6095C14.138 10.5198 14 10.6072 14 10.7566Z')
+																+icon("arrow-right").icon-arrow-right
 															ul.dropdown-menu
 																a.menu-alt-link(href="/") Sports
 																a.menu-alt-link(href="/") Hyper Casual
@@ -189,8 +164,7 @@ nav.navbar.navbar-fixed-top.navbar-inverse
 														.btn-group.dropend
 															a.btn.btn-them-link.dropdown-toggle(data-bs-toggle='dropdown' aria-expanded='false')
 																span Quiz
-																svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-																	path(fill-rule='evenodd' clip-rule='evenodd' d='M14 10.7566V12.4811C14 12.5984 14.0466 12.7087 14.1231 12.7777L17.75 16.5732L14.1231 20.3679C14.1231 20.3679 14 20.5472 14 20.6645C14 20.7818 14 22.2395 14 22.389C14 22.5385 14.138 22.6258 14.2369 22.5385C14.3357 22.4511 19.7538 17.0134 19.7538 17.0134C20.0821 16.719 20.0821 16.4903 19.7538 16.1982L14.2369 10.6095C14.138 10.5198 14 10.6072 14 10.7566Z')
+																+icon("arrow-right").icon-arrow-right
 															ul.dropdown-menu
 																a.menu-alt-link(href="/") AAA
 																a.menu-alt-link(href="/") Educational
@@ -200,28 +174,23 @@ nav.navbar.navbar-fixed-top.navbar-inverse
 														.btn-group.dropend
 															a.btn.btn-them-link
 																span Sports
-																svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-																	path(fill-rule='evenodd' clip-rule='evenodd' d='M14 10.7566V12.4811C14 12.5984 14.0466 12.7087 14.1231 12.7777L17.75 16.5732L14.1231 20.3679C14.1231 20.3679 14 20.5472 14 20.6645C14 20.7818 14 22.2395 14 22.389C14 22.5385 14.138 22.6258 14.2369 22.5385C14.3357 22.4511 19.7538 17.0134 19.7538 17.0134C20.0821 16.719 20.0821 16.4903 19.7538 16.1982L14.2369 10.6095C14.138 10.5198 14 10.6072 14 10.7566Z')
+																+icon("arrow-right").icon-arrow-right
 														.btn-group.dropend
 															a.btn.btn-them-link
 																span Hyper Casual
-																svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-																	path(fill-rule='evenodd' clip-rule='evenodd' d='M14 10.7566V12.4811C14 12.5984 14.0466 12.7087 14.1231 12.7777L17.75 16.5732L14.1231 20.3679C14.1231 20.3679 14 20.5472 14 20.6645C14 20.7818 14 22.2395 14 22.389C14 22.5385 14.138 22.6258 14.2369 22.5385C14.3357 22.4511 19.7538 17.0134 19.7538 17.0134C20.0821 16.719 20.0821 16.4903 19.7538 16.1982L14.2369 10.6095C14.138 10.5198 14 10.6072 14 10.7566Z')
+																+icon("arrow-right").icon-arrow-right
 														.btn-group.dropend
 															a.btn.btn-them-link
 																span AAA
-																svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-																	path(fill-rule='evenodd' clip-rule='evenodd' d='M14 10.7566V12.4811C14 12.5984 14.0466 12.7087 14.1231 12.7777L17.75 16.5732L14.1231 20.3679C14.1231 20.3679 14 20.5472 14 20.6645C14 20.7818 14 22.2395 14 22.389C14 22.5385 14.138 22.6258 14.2369 22.5385C14.3357 22.4511 19.7538 17.0134 19.7538 17.0134C20.0821 16.719 20.0821 16.4903 19.7538 16.1982L14.2369 10.6095C14.138 10.5198 14 10.6072 14 10.7566Z')
+																+icon("arrow-right").icon-arrow-right
 														.btn-group.dropend
 															a.btn.btn-them-link
 																span Educational
-																svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-																	path(fill-rule='evenodd' clip-rule='evenodd' d='M14 10.7566V12.4811C14 12.5984 14.0466 12.7087 14.1231 12.7777L17.75 16.5732L14.1231 20.3679C14.1231 20.3679 14 20.5472 14 20.6645C14 20.7818 14 22.2395 14 22.389C14 22.5385 14.138 22.6258 14.2369 22.5385C14.3357 22.4511 19.7538 17.0134 19.7538 17.0134C20.0821 16.719 20.0821 16.4903 19.7538 16.1982L14.2369 10.6095C14.138 10.5198 14 10.6072 14 10.7566Z')
+																+icon("arrow-right").icon-arrow-right
 														.btn-group.dropend
 															a.btn.btn-them-link
 																span E-Sports
-																svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-																	path(fill-rule='evenodd' clip-rule='evenodd' d='M14 10.7566V12.4811C14 12.5984 14.0466 12.7087 14.1231 12.7777L17.75 16.5732L14.1231 20.3679C14.1231 20.3679 14 20.5472 14 20.6645C14 20.7818 14 22.2395 14 22.389C14 22.5385 14.138 22.6258 14.2369 22.5385C14.3357 22.4511 19.7538 17.0134 19.7538 17.0134C20.0821 16.719 20.0821 16.4903 19.7538 16.1982L14.2369 10.6095C14.138 10.5198 14 10.6072 14 10.7566Z')
+																+icon("arrow-right").icon-arrow-right
 
 													.col
 														.menu-img-box-2
@@ -237,7 +206,7 @@ nav.navbar.navbar-fixed-top.navbar-inverse
 							.search-input-box
 								input#inputSearch(type='text', placeholder='Find Games, Digital Platforms and more...', required='')
 								a(href="/")
-									+icon("searchicon")
+									+icon("searchicon").stroke-icon
 						.dropdown-menu(aria-labelledby='dropdownSearch')
 							.dropdown-item
 								.search-head-title.d-flex.align-items-center.justify-content-between
@@ -325,28 +294,28 @@ nav.navbar.navbar-fixed-top.navbar-inverse
 					.lang-userbox
 						.dropdown.userbox
 							a.userbtn.dropdown-toggle(href='javascript:;' id='dropdownUserLogin' aria-haspopup='true' data-bs-toggle='dropdown' aria-expanded='false')
-								+icon("profil")
+								+icon("profil").stroke-icon
 								span.sr-only Login
 								+icon("arrow-down")
 							.dropdown-menu(aria-labelledby='dropdownUserLogin')
 								a.dropdown-item(href="account-profile.html")
-									+icon("profil")
+									+icon("profil").stroke-icon
 									div Profile
 								a.dropdown-item(href="account-subscriptions.html")
-									+icon("sub")
+									+icon("sub").stroke-icon
 									div Subscriptions
 								a.dropdown-item(href="account-favoriets.html")
-									+icon("fav")
+									+icon("fav").stroke-icon
 									div My Favoriets
 								a.dropdown-item(href="account-reviews.html")
-									+icon("rating")
+									+icon("rating").stroke-icon
 									div Ratings & Reviews
 								a.dropdown-item(href="account-notification.html")
-									+icon("notification")
+									+icon("notification").stroke-icon
 									div Notifictions
 								a.dropdown-item(href="setting-notification.html")
-									+icon("setting")
+									+icon("setting").stroke-icon
 									div Settings
 								a.dropdown-item(href="index.html")
-									+icon("logout")
+									+icon("logout").stroke-icon
 									div Log out

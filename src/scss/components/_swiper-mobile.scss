@@ -16,3 +16,37 @@
         }
     }
 }
+
+.widget-sm-auto li{width:auto !important}
+.widget-sm-1 li{width:100% !important}
+.widget-sm-1_25 li{width:calc(100% / 1.25) !important}
+.widget-sm-1_5 li{width:calc(100% / 1.5) !important}
+.widget-sm-1_75 li{width:calc(100% / 1.75) !important}
+.widget-sm-2 li{width:calc(100% / 2) !important}
+.widget-sm-2_25 li{width:calc(100% / 2.25) !important}
+.widget-sm-2_15 li{width:calc(100% / 2.15) !important}
+.widget-sm-2_5 li{width:calc(100% / 2.5) !important}
+.widget-sm-3 li{width:calc(100% / 3) !important}
+.widget-sm-3_5 li{width:calc(100% / 3.5) !important}
+.widget-sm-4 li{width:calc(100% / 4) !important}
+.widget-sm-4_15 li{width:calc(100% / 4.15) !important}
+.widget-sm-4_25 li{width:calc(100% / 4.25) !important}
+.widget-sm-4_5 li{width:calc(100% / 4.5) !important}
+.widget-sm-5 li{width:calc(100% / 5) !important}
+.widget-sm-5_5 li{width:calc(100% / 5.5) !important}
+.widget-sm-6 li{width:calc(100% / 6) !important}
+.widget-sm-6_5 li{width:calc(100% / 6.5) !important}
+.widget-sm-6_25 li{width:calc(100% / 6.25) !important}
+.widget-sm-7 li{width:calc(100% / 7) !important}
+.widget-sm-7_5 li{width:calc(100% / 7.5) !important}
+
+
+// MS Li
+@mixin generate-ms-sm($start, $end) {
+  @for $i from $start through $end {
+    .ms-sm-#{$i} li {
+      margin:0 #{$i}px !important;
+    }
+  }
+}
+@include generate-ms-sm(1, 100);

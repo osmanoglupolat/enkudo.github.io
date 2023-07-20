@@ -78,3 +78,38 @@
         }
     }
 }
+
+
+.widget-lg-auto li{width:auto !important}
+.widget-lg-1 li{width:100% !important}
+.widget-lg-1_25 li{width:calc(100% / 1.25) !important}
+.widget-lg-1_5 li{width:calc(100% / 1.5) !important}
+.widget-lg-1_75 li{width:calc(100% / 1.75) !important}
+.widget-lg-2 li{width:calc(100% / 2) !important}
+.widget-lg-2_15 li{width:calc(100% / 2.15) !important}
+.widget-lg-2_25 li{width:calc(100% / 2.25) !important}
+.widget-lg-2_5 li{width:calc(100% / 2.5) !important}
+.widget-lg-3 li{width:calc(100% / 3) !important}
+.widget-lg-3_5 li{width:calc(100% / 3.5) !important}
+.widget-lg-4 li{width:calc(100% / 4) !important}
+.widget-lg-4_15 li{width:calc(100% / 4.15) !important}
+.widget-lg-4_25 li{width:calc(100% / 4.25) !important}
+.widget-lg-4_5 li{width:calc(100% / 4.5) !important}
+.widget-lg-5 li{width:calc(100% / 5) !important}
+.widget-lg-5_5 li{width:calc(100% / 5.5) !important}
+.widget-lg-6 li{width:calc(100% / 6) !important}
+.widget-lg-6_25 li{width:calc(100% / 6.25) !important}
+.widget-lg-6_5 li{width:calc(100% / 6.5) !important}
+.widget-lg-7 li{width:calc(100% / 7) !important}
+.widget-lg-7_5 li{width:calc(100% / 7.5) !important}
+
+
+// MS Li
+@mixin generate-ms-lg($start, $end) {
+  @for $i from $start through $end {
+    .ms-lg-#{$i} li {
+      margin:0 #{$i}px !important;
+    }
+  }
+}
+@include generate-ms-lg(1, 100);

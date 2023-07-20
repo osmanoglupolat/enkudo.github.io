@@ -73,6 +73,7 @@
             display: block;
             position: fixed;
             right: 24px;
+            color: $white;
           }
         }
       }
@@ -115,8 +116,7 @@
                 svg{              
                   width: 32px;
                   height: 32px;
-                  fill:none;
-                  stroke: $white;
+                  color: $white;
                 }
               }
               .login-user-btn{
@@ -154,8 +154,7 @@
                       border: 1px solid $them-color;
                       background: $them-color;
                       svg{ 
-                        fill:none;
-                        stroke: $body-bg-color;
+                        color: $body-bg-color;
                       } 
                     }   
                 }              
@@ -188,17 +187,9 @@
             svg{            
               width: 32px;
               height: 32px;
-              path{
-                fill: $gray5;
-                &.fillnone-strokeyes{                  
-                  fill:none;               
-                  stroke: $gray5;
-                }
-              }
-              &.icon-arrow-right{                  
-                path{
-                  fill: $gray5;
-                }
+              color: $gray5;
+              &.icon-arrow-right{  
+                color: $gray5;
               }
             }
             &.active{   
@@ -207,19 +198,11 @@
                 font-weight: 500;
                 color: $them-color;
               }
-              svg{            
-                path{
-                  fill: $them-color;
-                  &.fillnone-strokeyes{                  
-                    fill:none;               
-                    stroke: $them-color;
-                  }
-                }
+              svg{   
+                color: $them-color;
               }
-              &.icon-arrow-right{                  
-                path{
-                  fill: $gray5;
-                }
+              &.icon-arrow-right{   
+                color: $gray5; 
               }
             }
             :hover{        
@@ -227,14 +210,8 @@
                 font-weight: 500;
                 color: $them-color;
               }
-              svg{            
-                path{
-                  fill: $them-color;
-                  &.fillnone-strokeyes{                  
-                    fill:none;               
-                    stroke: $them-color;
-                  }
-                }
+              svg{         
+                color: $them-color;
               }
             }
           }
@@ -257,9 +234,10 @@
               padding: 0 20px;
               background: $content-bg-color;
               svg{ 
-              position: relative;
-              display: block;
-              margin-top: 0;
+                position: relative;
+                display: block;
+                margin-top: 0;
+                color: $white;
               }
               span{
                 color: $white;
@@ -461,7 +439,7 @@
         color: $body-text-color;
         display: inline-flex;
         align-items: center;
-        font-weight: 500;
+        font-weight: 400;
         font-size: 14px;
         line-height: 19.6px;          
         box-sizing: border-box;

@@ -1,4 +1,6 @@
 <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M21 21.5733L24.5 25.0733" stroke="white"/>
-<circle cx="16.5" cy="16.0733" r="7" stroke="white"/>
+<g id="icon/search">
+<path id="Vector 41" d="M21 21.5733L24.5 25.0733" stroke="currentColor"/>
+<circle id="Ellipse 112" cx="16.5" cy="16.0733" r="7" stroke="currentColor"/>
+</g>
 </svg>

@@ -36,8 +36,7 @@ block content
                                                 .d-flex.d-flex.align-items-center.justify-content-start.mt-40.mb-10
                                                     a.btn.btn-them-1.btn-lg.mxw-200.w-100(href="product-detail.html")
                                                         span Discover
-                                                        svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                                            path(fill-rule='evenodd' clip-rule='evenodd' d='M17.3889 11.2258V9.21393C17.3889 9.03956 17.5525 8.93762 17.6696 9.04224L24.2082 15.5625C24.5973 15.9032 24.5973 16.1701 24.2082 16.5135C24.2082 16.5135 17.7868 22.8575 17.6696 22.9594C17.5525 23.0614 17.3889 22.9594 17.3889 22.7851V20.7731C17.3889 20.6363 17.5348 20.4271 17.5348 20.4271L20.9837 16.875H8.5V15.125H20.9839L17.5348 11.5719C17.4442 11.4914 17.3889 11.3627 17.3889 11.2258Z')
+                                                        +icon("ArrowRight").icon-arrow-right
                                                             
                                                     .d-flex.align-items-center.justify-content-center.text-center.px-25
                                                         span.card-price-last.fs-18.fs-lg-24.fw-600.text-white $9.90
@@ -67,8 +66,7 @@ block content
                                                 .d-flex.d-flex.align-items-center.justify-content-start.mt-40.mb-10
                                                     a.btn.btn-them-1.btn-lg.mxw-200.w-100(href="product-detail.html")
                                                         span Discover
-                                                        svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                                            path(fill-rule='evenodd' clip-rule='evenodd' d='M17.3889 11.2258V9.21393C17.3889 9.03956 17.5525 8.93762 17.6696 9.04224L24.2082 15.5625C24.5973 15.9032 24.5973 16.1701 24.2082 16.5135C24.2082 16.5135 17.7868 22.8575 17.6696 22.9594C17.5525 23.0614 17.3889 22.9594 17.3889 22.7851V20.7731C17.3889 20.6363 17.5348 20.4271 17.5348 20.4271L20.9837 16.875H8.5V15.125H20.9839L17.5348 11.5719C17.4442 11.4914 17.3889 11.3627 17.3889 11.2258Z')
+                                                        +icon("ArrowRight").icon-arrow-right
                                                             
                                                     .d-flex.align-items-center.justify-content-center.text-center.px-25
                                                         span.card-price-last.fs-18.fs-lg-24.fw-600.text-white $9.90
@@ -97,8 +95,7 @@ block content
                                                 .d-flex.d-flex.align-items-center.justify-content-start.mt-40.mb-10
                                                     a.btn.btn-them-1.btn-lg.mxw-200.w-100(href="product-detail.html")
                                                         span Discover
-                                                        svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                                            path(fill-rule='evenodd' clip-rule='evenodd' d='M17.3889 11.2258V9.21393C17.3889 9.03956 17.5525 8.93762 17.6696 9.04224L24.2082 15.5625C24.5973 15.9032 24.5973 16.1701 24.2082 16.5135C24.2082 16.5135 17.7868 22.8575 17.6696 22.9594C17.5525 23.0614 17.3889 22.9594 17.3889 22.7851V20.7731C17.3889 20.6363 17.5348 20.4271 17.5348 20.4271L20.9837 16.875H8.5V15.125H20.9839L17.5348 11.5719C17.4442 11.4914 17.3889 11.3627 17.3889 11.2258Z')
+                                                        +icon("ArrowRight").icon-arrow-right
                                                             
                                                     .d-flex.align-items-center.justify-content-center.text-center.px-25
                                                         span.card-price-last.fs-18.fs-lg-24.fw-600.text-white $9.90
@@ -108,20 +105,20 @@ block content
                                                     p.my-0 *This offer ends April 8th 2023 and valid on annual subscription.
                                                                                                     
     section.overflow-hidden
-        .container.px-0.px-lg-5
+        .container-fluid.px-0.px-lg-60
             .product-head-title
                 h3 Gaming
                 span 139 services
 
     section.overflow-hidden.product-list.product-categories
-        .container
-            .row 
+        .container-fluid.px-15.px-lg-60
+            .row.g-0
                 .col-12.col-lg-4
                     .filter-box.sticky-lg-top.z-0
                         .filter-head
                             .filter-btn(id='filter-btn')
                                 span Filter 
-                                +icon("filter").d-flex.d-lg-none
+                                +icon("filter").stroke-icon.d-flex.d-lg-none
                             .filter-sortby(id='filter-sortby').d-flex.d-lg-none
                                 span Sort By 
                                 +icon("sorting")
@@ -160,8 +157,8 @@ block content
                                         h2.accordion-header
                                             button.accordion-button(type='button', data-bs-toggle='collapse', data-bs-target='#panelsStayOpen-filter1', aria-expanded='true', aria-controls='panelsStayOpen-filter1') 
                                                 span Categories
-                                                +icon("plus_minus")
-                                                +icon("plus_minuss")
+                                                +icon("plus_minus").stroke-icon
+                                                +icon("plus_minuss").stroke-icon
                                         #panelsStayOpen-filter1.accordion-collapse.collapse.show
                                             .accordion-body
                                                 .accordion-clear
@@ -212,8 +209,8 @@ block content
                                         h2.accordion-header
                                             button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#panelsStayOpen-filter2', aria-expanded='false', aria-controls='panelsStayOpen-filter2')
                                                 span Genre
-                                                +icon("plus_minus")
-                                                +icon("plus_minuss")
+                                                +icon("plus_minus").stroke-icon
+                                                +icon("plus_minuss").stroke-icon
                                         #panelsStayOpen-filter2.accordion-collapse.collapse
                                             .accordion-body
                                                 .accordion-clear
@@ -259,8 +256,8 @@ block content
                                         h2.accordion-header
                                             button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#panelsStayOpen-filter3', aria-expanded='false', aria-controls='panelsStayOpen-filter3')
                                                 span Maturity Rating
-                                                +icon("plus_minus")
-                                                +icon("plus_minuss")
+                                                +icon("plus_minus").stroke-icon
+                                                +icon("plus_minuss").stroke-icon
                                         #panelsStayOpen-filter3.accordion-collapse.collapse
                                             .accordion-body
                                                 .accordion-clear
@@ -296,8 +293,8 @@ block content
                                         h2.accordion-header
                                             button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#panelsStayOpen-filter3', aria-expanded='false', aria-controls='panelsStayOpen-filter3')
                                                 span Offers
-                                                +icon("plus_minus")
-                                                +icon("plus_minuss")
+                                                +icon("plus_minus").stroke-icon
+                                                +icon("plus_minuss").stroke-icon
                                         #panelsStayOpen-filter3.accordion-collapse.collapse
                                             .accordion-body
                                                 .accordion-clear
@@ -324,8 +321,7 @@ block content
                                     span 117 results 
                                 a.btn.btn-them-1.btn-lg(href="javascript:void(0);")
                                     span Show Results
-                                    svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                        path(fill-rule='evenodd' clip-rule='evenodd' d='M17.3889 11.2258V9.21393C17.3889 9.03956 17.5525 8.93762 17.6696 9.04224L24.2082 15.5625C24.5973 15.9032 24.5973 16.1701 24.2082 16.5135C24.2082 16.5135 17.7868 22.8575 17.6696 22.9594C17.5525 23.0614 17.3889 22.9594 17.3889 22.7851V20.7731C17.3889 20.6363 17.5348 20.4271 17.5348 20.4271L20.9837 16.875H8.5V15.125H20.9839L17.5348 11.5719C17.4442 11.4914 17.3889 11.3627 17.3889 11.2258Z')
+                                    +icon("ArrowRight").icon-arrow-right
 
 
                 .col-12.col-lg-8
@@ -378,8 +374,7 @@ block content
                             .filter-sortby-footer-settings.d-flex.align-items-center.justify-content-between.d-lg-none
                                 a.btn.btn-them-1.btn-lg.w-100(href="javascript:void(0);")
                                     span Show Results
-                                    svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                        path(fill-rule='evenodd' clip-rule='evenodd' d='M17.3889 11.2258V9.21393C17.3889 9.03956 17.5525 8.93762 17.6696 9.04224L24.2082 15.5625C24.5973 15.9032 24.5973 16.1701 24.2082 16.5135C24.2082 16.5135 17.7868 22.8575 17.6696 22.9594C17.5525 23.0614 17.3889 22.9594 17.3889 22.7851V20.7731C17.3889 20.6363 17.5348 20.4271 17.5348 20.4271L20.9837 16.875H8.5V15.125H20.9839L17.5348 11.5719C17.4442 11.4914 17.3889 11.3627 17.3889 11.2258Z')
+                                    +icon("ArrowRight").icon-arrow-right
 
                         
                         .ems-data-filter-content
@@ -400,9 +395,8 @@ block content
                                                         +icon("rate").rateicon-4
                                                         +icon("rate").rateicon-5
                                                         span.card-stars-box-text 256 Reviews
-                                                button.btn.p-0.btn-fav.selected(type="button").ms-10
-                                                    svg.stroke-icon(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                                        path(fill-rule='evenodd' clip-rule='evenodd' d='M23.9873 9.65527C23.511 9.1788 22.9456 8.80083 22.3232 8.54295C21.7008 8.28507 21.0338 8.15234 20.3601 8.15234C19.6864 8.15234 19.0194 8.28507 18.397 8.54295C17.7746 8.80083 17.2092 9.1788 16.7329 9.65527L15.7445 10.6436L14.7562 9.65527C13.7942 8.69328 12.4894 8.15284 11.129 8.15284C9.76853 8.15284 8.4638 8.69328 7.50181 9.65527C6.53983 10.6173 5.99939 11.922 5.99939 13.2824C5.99939 14.6429 6.53983 15.9476 7.50181 16.9096L8.4902 17.898L15.7445 25.1523L22.9989 17.898L23.9873 16.9096C24.4637 16.4334 24.8417 15.8679 25.0996 15.2455C25.3575 14.6232 25.4902 13.9561 25.4902 13.2824C25.4902 12.6088 25.3575 11.9417 25.0996 11.3193C24.8417 10.697 24.4637 10.1315 23.9873 9.65527Z')
+                                                a.btn-fav.stretched-link-over(href="javascript:void(0);" aria-label="Fav")
+                                                    +icon('fav').stroke-icon
                                             
                                             p.cart-content-text.m-0 it operates the over-the-top subscription video on-demand service.. 
                                             a.cart-content-link(href="product-detail.html") See More 
@@ -429,9 +423,8 @@ block content
                                                         +icon("rate").rateicon-4
                                                         +icon("rate").rateicon-5
                                                         span.card-stars-box-text 256 Reviews
-                                                button.btn.p-0.btn-fav(type="button").ms-10
-                                                    svg.stroke-icon(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                                        path(fill-rule='evenodd' clip-rule='evenodd' d='M23.9873 9.65527C23.511 9.1788 22.9456 8.80083 22.3232 8.54295C21.7008 8.28507 21.0338 8.15234 20.3601 8.15234C19.6864 8.15234 19.0194 8.28507 18.397 8.54295C17.7746 8.80083 17.2092 9.1788 16.7329 9.65527L15.7445 10.6436L14.7562 9.65527C13.7942 8.69328 12.4894 8.15284 11.129 8.15284C9.76853 8.15284 8.4638 8.69328 7.50181 9.65527C6.53983 10.6173 5.99939 11.922 5.99939 13.2824C5.99939 14.6429 6.53983 15.9476 7.50181 16.9096L8.4902 17.898L15.7445 25.1523L22.9989 17.898L23.9873 16.9096C24.4637 16.4334 24.8417 15.8679 25.0996 15.2455C25.3575 14.6232 25.4902 13.9561 25.4902 13.2824C25.4902 12.6088 25.3575 11.9417 25.0996 11.3193C24.8417 10.697 24.4637 10.1315 23.9873 9.65527Z')
+                                                a.btn-fav.stretched-link-over.selected(href="javascript:void(0);" aria-label="Fav")
+                                                    +icon('fav').stroke-icon
                                             
                                             p.cart-content-text.m-0 it operates the over-the-top subscription video on-demand service.. 
                                             a.cart-content-link(href="product-detail.html") See More 
@@ -452,9 +445,8 @@ block content
                                                 .card-body-title.d-flex.flex-column.justify-content-start
                                                     p.card-title.m-0 Netflix
                                                     span.card-subtitle All in One
-                                                button.btn.p-0.btn-fav(type="button").ms-10
-                                                    svg.stroke-icon(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                                        path(fill-rule='evenodd' clip-rule='evenodd' d='M23.9873 9.65527C23.511 9.1788 22.9456 8.80083 22.3232 8.54295C21.7008 8.28507 21.0338 8.15234 20.3601 8.15234C19.6864 8.15234 19.0194 8.28507 18.397 8.54295C17.7746 8.80083 17.2092 9.1788 16.7329 9.65527L15.7445 10.6436L14.7562 9.65527C13.7942 8.69328 12.4894 8.15284 11.129 8.15284C9.76853 8.15284 8.4638 8.69328 7.50181 9.65527C6.53983 10.6173 5.99939 11.922 5.99939 13.2824C5.99939 14.6429 6.53983 15.9476 7.50181 16.9096L8.4902 17.898L15.7445 25.1523L22.9989 17.898L23.9873 16.9096C24.4637 16.4334 24.8417 15.8679 25.0996 15.2455C25.3575 14.6232 25.4902 13.9561 25.4902 13.2824C25.4902 12.6088 25.3575 11.9417 25.0996 11.3193C24.8417 10.697 24.4637 10.1315 23.9873 9.65527Z')
+                                                a.btn-fav.stretched-link-over(href="javascript:void(0);" aria-label="Fav")
+                                                    +icon('fav').stroke-icon
                                             
                                             p.cart-content-text.m-0 it operates the over-the-top subscription video on-demand service.. 
                                             a.cart-content-link(href="product-detail.html") See More 
@@ -482,9 +474,8 @@ block content
                                                         +icon("rate").rateicon-4
                                                         +icon("rate").rateicon-5
                                                         span.card-stars-box-text 256 Reviews
-                                                button.btn.p-0.btn-fav(type="button").ms-10
-                                                    svg.stroke-icon(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                                        path(fill-rule='evenodd' clip-rule='evenodd' d='M23.9873 9.65527C23.511 9.1788 22.9456 8.80083 22.3232 8.54295C21.7008 8.28507 21.0338 8.15234 20.3601 8.15234C19.6864 8.15234 19.0194 8.28507 18.397 8.54295C17.7746 8.80083 17.2092 9.1788 16.7329 9.65527L15.7445 10.6436L14.7562 9.65527C13.7942 8.69328 12.4894 8.15284 11.129 8.15284C9.76853 8.15284 8.4638 8.69328 7.50181 9.65527C6.53983 10.6173 5.99939 11.922 5.99939 13.2824C5.99939 14.6429 6.53983 15.9476 7.50181 16.9096L8.4902 17.898L15.7445 25.1523L22.9989 17.898L23.9873 16.9096C24.4637 16.4334 24.8417 15.8679 25.0996 15.2455C25.3575 14.6232 25.4902 13.9561 25.4902 13.2824C25.4902 12.6088 25.3575 11.9417 25.0996 11.3193C24.8417 10.697 24.4637 10.1315 23.9873 9.65527Z')
+                                                a.btn-fav.stretched-link-over(href="javascript:void(0);" aria-label="Fav")
+                                                    +icon('fav').stroke-icon
                                             
                                             p.cart-content-text.m-0 it operates the over-the-top subscription video on-demand service.. 
                                             a.cart-content-link(href="product-detail.html") See More 
@@ -512,9 +503,8 @@ block content
                                                         +icon("rate").rateicon-4
                                                         +icon("rate").rateicon-5
                                                         span.card-stars-box-text 256 Reviews
-                                                button.btn.p-0.btn-fav(type="button").ms-10
-                                                    svg.stroke-icon(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                                        path(fill-rule='evenodd' clip-rule='evenodd' d='M23.9873 9.65527C23.511 9.1788 22.9456 8.80083 22.3232 8.54295C21.7008 8.28507 21.0338 8.15234 20.3601 8.15234C19.6864 8.15234 19.0194 8.28507 18.397 8.54295C17.7746 8.80083 17.2092 9.1788 16.7329 9.65527L15.7445 10.6436L14.7562 9.65527C13.7942 8.69328 12.4894 8.15284 11.129 8.15284C9.76853 8.15284 8.4638 8.69328 7.50181 9.65527C6.53983 10.6173 5.99939 11.922 5.99939 13.2824C5.99939 14.6429 6.53983 15.9476 7.50181 16.9096L8.4902 17.898L15.7445 25.1523L22.9989 17.898L23.9873 16.9096C24.4637 16.4334 24.8417 15.8679 25.0996 15.2455C25.3575 14.6232 25.4902 13.9561 25.4902 13.2824C25.4902 12.6088 25.3575 11.9417 25.0996 11.3193C24.8417 10.697 24.4637 10.1315 23.9873 9.65527Z')
+                                                a.btn-fav.stretched-link-over(href="javascript:void(0);" aria-label="Fav")
+                                                    +icon('fav').stroke-icon
                                             
                                             p.cart-content-text.m-0 it operates the over-the-top subscription video on-demand service.. 
                                             a.cart-content-link(href="product-detail.html") See More 
@@ -541,9 +531,8 @@ block content
                                                         +icon("rate").rateicon-4
                                                         +icon("rate").rateicon-5
                                                         span.card-stars-box-text 256 Reviews
-                                                button.btn.p-0.btn-fav(type="button").ms-10
-                                                    svg.stroke-icon(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                                        path(fill-rule='evenodd' clip-rule='evenodd' d='M23.9873 9.65527C23.511 9.1788 22.9456 8.80083 22.3232 8.54295C21.7008 8.28507 21.0338 8.15234 20.3601 8.15234C19.6864 8.15234 19.0194 8.28507 18.397 8.54295C17.7746 8.80083 17.2092 9.1788 16.7329 9.65527L15.7445 10.6436L14.7562 9.65527C13.7942 8.69328 12.4894 8.15284 11.129 8.15284C9.76853 8.15284 8.4638 8.69328 7.50181 9.65527C6.53983 10.6173 5.99939 11.922 5.99939 13.2824C5.99939 14.6429 6.53983 15.9476 7.50181 16.9096L8.4902 17.898L15.7445 25.1523L22.9989 17.898L23.9873 16.9096C24.4637 16.4334 24.8417 15.8679 25.0996 15.2455C25.3575 14.6232 25.4902 13.9561 25.4902 13.2824C25.4902 12.6088 25.3575 11.9417 25.0996 11.3193C24.8417 10.697 24.4637 10.1315 23.9873 9.65527Z')
+                                                a.btn-fav.stretched-link-over(href="javascript:void(0);" aria-label="Fav")
+                                                    +icon('fav').stroke-icon
                                             
                                             p.cart-content-text.m-0 it operates the over-the-top subscription video on-demand service.. 
                                             a.cart-content-link(href="product-detail.html") See More 
@@ -564,9 +553,8 @@ block content
                                                 .card-body-title.d-flex.flex-column.justify-content-start
                                                     p.card-title.m-0 Netflix
                                                     span.card-subtitle All in One
-                                                button.btn.p-0.btn-fav.selected(type="button").ms-10
-                                                    svg.stroke-icon(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                                        path(fill-rule='evenodd' clip-rule='evenodd' d='M23.9873 9.65527C23.511 9.1788 22.9456 8.80083 22.3232 8.54295C21.7008 8.28507 21.0338 8.15234 20.3601 8.15234C19.6864 8.15234 19.0194 8.28507 18.397 8.54295C17.7746 8.80083 17.2092 9.1788 16.7329 9.65527L15.7445 10.6436L14.7562 9.65527C13.7942 8.69328 12.4894 8.15284 11.129 8.15284C9.76853 8.15284 8.4638 8.69328 7.50181 9.65527C6.53983 10.6173 5.99939 11.922 5.99939 13.2824C5.99939 14.6429 6.53983 15.9476 7.50181 16.9096L8.4902 17.898L15.7445 25.1523L22.9989 17.898L23.9873 16.9096C24.4637 16.4334 24.8417 15.8679 25.0996 15.2455C25.3575 14.6232 25.4902 13.9561 25.4902 13.2824C25.4902 12.6088 25.3575 11.9417 25.0996 11.3193C24.8417 10.697 24.4637 10.1315 23.9873 9.65527Z')
+                                                a.btn-fav.stretched-link-over(href="javascript:void(0);" aria-label="Fav")
+                                                    +icon('fav').stroke-icon
                                             
                                             p.cart-content-text.m-0 it operates the over-the-top subscription video on-demand service.. 
                                             a.cart-content-link(href="product-detail.html") See More 
@@ -594,9 +582,8 @@ block content
                                                         +icon("rate").rateicon-4
                                                         +icon("rate").rateicon-5
                                                         span.card-stars-box-text 256 Reviews
-                                                button.btn.p-0.btn-fav(type="button").ms-10
-                                                    svg.stroke-icon(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                                        path(fill-rule='evenodd' clip-rule='evenodd' d='M23.9873 9.65527C23.511 9.1788 22.9456 8.80083 22.3232 8.54295C21.7008 8.28507 21.0338 8.15234 20.3601 8.15234C19.6864 8.15234 19.0194 8.28507 18.397 8.54295C17.7746 8.80083 17.2092 9.1788 16.7329 9.65527L15.7445 10.6436L14.7562 9.65527C13.7942 8.69328 12.4894 8.15284 11.129 8.15284C9.76853 8.15284 8.4638 8.69328 7.50181 9.65527C6.53983 10.6173 5.99939 11.922 5.99939 13.2824C5.99939 14.6429 6.53983 15.9476 7.50181 16.9096L8.4902 17.898L15.7445 25.1523L22.9989 17.898L23.9873 16.9096C24.4637 16.4334 24.8417 15.8679 25.0996 15.2455C25.3575 14.6232 25.4902 13.9561 25.4902 13.2824C25.4902 12.6088 25.3575 11.9417 25.0996 11.3193C24.8417 10.697 24.4637 10.1315 23.9873 9.65527Z')
+                                                a.btn-fav.stretched-link-over(href="javascript:void(0);" aria-label="Fav")
+                                                    +icon('fav').stroke-icon
                                             
                                             p.cart-content-text.m-0 it operates the over-the-top subscription video on-demand service.. 
                                             a.cart-content-link(href="product-detail.html") See More 
@@ -624,9 +611,8 @@ block content
                                                         +icon("rate").rateicon-4
                                                         +icon("rate").rateicon-5
                                                         span.card-stars-box-text 256 Reviews
-                                                button.btn.p-0.btn-fav.selected(type="button").ms-10
-                                                    svg.stroke-icon(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                                        path(fill-rule='evenodd' clip-rule='evenodd' d='M23.9873 9.65527C23.511 9.1788 22.9456 8.80083 22.3232 8.54295C21.7008 8.28507 21.0338 8.15234 20.3601 8.15234C19.6864 8.15234 19.0194 8.28507 18.397 8.54295C17.7746 8.80083 17.2092 9.1788 16.7329 9.65527L15.7445 10.6436L14.7562 9.65527C13.7942 8.69328 12.4894 8.15284 11.129 8.15284C9.76853 8.15284 8.4638 8.69328 7.50181 9.65527C6.53983 10.6173 5.99939 11.922 5.99939 13.2824C5.99939 14.6429 6.53983 15.9476 7.50181 16.9096L8.4902 17.898L15.7445 25.1523L22.9989 17.898L23.9873 16.9096C24.4637 16.4334 24.8417 15.8679 25.0996 15.2455C25.3575 14.6232 25.4902 13.9561 25.4902 13.2824C25.4902 12.6088 25.3575 11.9417 25.0996 11.3193C24.8417 10.697 24.4637 10.1315 23.9873 9.65527Z')
+                                                a.btn-fav.stretched-link-over(href="javascript:void(0);" aria-label="Fav")
+                                                    +icon('fav').stroke-icon
                                             
                                             p.cart-content-text.m-0 it operates the over-the-top subscription video on-demand service.. 
                                             a.cart-content-link(href="product-detail.html") See More 
@@ -653,9 +639,8 @@ block content
                                                         +icon("rate").rateicon-4
                                                         +icon("rate").rateicon-5
                                                         span.card-stars-box-text 256 Reviews
-                                                button.btn.p-0.btn-fav(type="button").ms-10
-                                                    svg.stroke-icon(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                                        path(fill-rule='evenodd' clip-rule='evenodd' d='M23.9873 9.65527C23.511 9.1788 22.9456 8.80083 22.3232 8.54295C21.7008 8.28507 21.0338 8.15234 20.3601 8.15234C19.6864 8.15234 19.0194 8.28507 18.397 8.54295C17.7746 8.80083 17.2092 9.1788 16.7329 9.65527L15.7445 10.6436L14.7562 9.65527C13.7942 8.69328 12.4894 8.15284 11.129 8.15284C9.76853 8.15284 8.4638 8.69328 7.50181 9.65527C6.53983 10.6173 5.99939 11.922 5.99939 13.2824C5.99939 14.6429 6.53983 15.9476 7.50181 16.9096L8.4902 17.898L15.7445 25.1523L22.9989 17.898L23.9873 16.9096C24.4637 16.4334 24.8417 15.8679 25.0996 15.2455C25.3575 14.6232 25.4902 13.9561 25.4902 13.2824C25.4902 12.6088 25.3575 11.9417 25.0996 11.3193C24.8417 10.697 24.4637 10.1315 23.9873 9.65527Z')
+                                                a.btn-fav.stretched-link-over(href="javascript:void(0);" aria-label="Fav")
+                                                    +icon('fav').stroke-icon
                                             
                                             p.cart-content-text.m-0 it operates the over-the-top subscription video on-demand service.. 
                                             a.cart-content-link(href="product-detail.html") See More 
@@ -676,9 +661,8 @@ block content
                                                 .card-body-title.d-flex.flex-column.justify-content-start
                                                     p.card-title.m-0 Netflix
                                                     span.card-subtitle All in One
-                                                button.btn.p-0.btn-fav(type="button").ms-10
-                                                    svg.stroke-icon(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                                        path(fill-rule='evenodd' clip-rule='evenodd' d='M23.9873 9.65527C23.511 9.1788 22.9456 8.80083 22.3232 8.54295C21.7008 8.28507 21.0338 8.15234 20.3601 8.15234C19.6864 8.15234 19.0194 8.28507 18.397 8.54295C17.7746 8.80083 17.2092 9.1788 16.7329 9.65527L15.7445 10.6436L14.7562 9.65527C13.7942 8.69328 12.4894 8.15284 11.129 8.15284C9.76853 8.15284 8.4638 8.69328 7.50181 9.65527C6.53983 10.6173 5.99939 11.922 5.99939 13.2824C5.99939 14.6429 6.53983 15.9476 7.50181 16.9096L8.4902 17.898L15.7445 25.1523L22.9989 17.898L23.9873 16.9096C24.4637 16.4334 24.8417 15.8679 25.0996 15.2455C25.3575 14.6232 25.4902 13.9561 25.4902 13.2824C25.4902 12.6088 25.3575 11.9417 25.0996 11.3193C24.8417 10.697 24.4637 10.1315 23.9873 9.65527Z')
+                                                a.btn-fav.stretched-link-over(href="javascript:void(0);" aria-label="Fav")
+                                                    +icon('fav').stroke-icon
                                             
                                             p.cart-content-text.m-0 it operates the over-the-top subscription video on-demand service.. 
                                             a.cart-content-link(href="product-detail.html") See More 
@@ -706,9 +690,8 @@ block content
                                                         +icon("rate").rateicon-4
                                                         +icon("rate").rateicon-5
                                                         span.card-stars-box-text 256 Reviews
-                                                button.btn.p-0.btn-fav(type="button").ms-10
-                                                    svg.stroke-icon(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                                        path(fill-rule='evenodd' clip-rule='evenodd' d='M23.9873 9.65527C23.511 9.1788 22.9456 8.80083 22.3232 8.54295C21.7008 8.28507 21.0338 8.15234 20.3601 8.15234C19.6864 8.15234 19.0194 8.28507 18.397 8.54295C17.7746 8.80083 17.2092 9.1788 16.7329 9.65527L15.7445 10.6436L14.7562 9.65527C13.7942 8.69328 12.4894 8.15284 11.129 8.15284C9.76853 8.15284 8.4638 8.69328 7.50181 9.65527C6.53983 10.6173 5.99939 11.922 5.99939 13.2824C5.99939 14.6429 6.53983 15.9476 7.50181 16.9096L8.4902 17.898L15.7445 25.1523L22.9989 17.898L23.9873 16.9096C24.4637 16.4334 24.8417 15.8679 25.0996 15.2455C25.3575 14.6232 25.4902 13.9561 25.4902 13.2824C25.4902 12.6088 25.3575 11.9417 25.0996 11.3193C24.8417 10.697 24.4637 10.1315 23.9873 9.65527Z')
+                                                a.btn-fav.stretched-link-over(href="javascript:void(0);" aria-label="Fav")
+                                                    +icon('fav').stroke-icon
                                             
                                             p.cart-content-text.m-0 it operates the over-the-top subscription video on-demand service.. 
                                             a.cart-content-link(href="product-detail.html") See More 
@@ -736,9 +719,8 @@ block content
                                                         +icon("rate").rateicon-4
                                                         +icon("rate").rateicon-5
                                                         span.card-stars-box-text 256 Reviews
-                                                button.btn.p-0.btn-fav(type="button").ms-10
-                                                    svg.stroke-icon(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                                        path(fill-rule='evenodd' clip-rule='evenodd' d='M23.9873 9.65527C23.511 9.1788 22.9456 8.80083 22.3232 8.54295C21.7008 8.28507 21.0338 8.15234 20.3601 8.15234C19.6864 8.15234 19.0194 8.28507 18.397 8.54295C17.7746 8.80083 17.2092 9.1788 16.7329 9.65527L15.7445 10.6436L14.7562 9.65527C13.7942 8.69328 12.4894 8.15284 11.129 8.15284C9.76853 8.15284 8.4638 8.69328 7.50181 9.65527C6.53983 10.6173 5.99939 11.922 5.99939 13.2824C5.99939 14.6429 6.53983 15.9476 7.50181 16.9096L8.4902 17.898L15.7445 25.1523L22.9989 17.898L23.9873 16.9096C24.4637 16.4334 24.8417 15.8679 25.0996 15.2455C25.3575 14.6232 25.4902 13.9561 25.4902 13.2824C25.4902 12.6088 25.3575 11.9417 25.0996 11.3193C24.8417 10.697 24.4637 10.1315 23.9873 9.65527Z')
+                                                a.btn-fav.stretched-link-over(href="javascript:void(0);" aria-label="Fav")
+                                                    +icon('fav').stroke-icon
                                             
                                             p.cart-content-text.m-0 it operates the over-the-top subscription video on-demand service.. 
                                             a.cart-content-link(href="product-detail.html") See More 
@@ -765,9 +747,8 @@ block content
                                                         +icon("rate").rateicon-4
                                                         +icon("rate").rateicon-5
                                                         span.card-stars-box-text 256 Reviews
-                                                button.btn.p-0.btn-fav(type="button").ms-10
-                                                    svg.stroke-icon(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                                        path(fill-rule='evenodd' clip-rule='evenodd' d='M23.9873 9.65527C23.511 9.1788 22.9456 8.80083 22.3232 8.54295C21.7008 8.28507 21.0338 8.15234 20.3601 8.15234C19.6864 8.15234 19.0194 8.28507 18.397 8.54295C17.7746 8.80083 17.2092 9.1788 16.7329 9.65527L15.7445 10.6436L14.7562 9.65527C13.7942 8.69328 12.4894 8.15284 11.129 8.15284C9.76853 8.15284 8.4638 8.69328 7.50181 9.65527C6.53983 10.6173 5.99939 11.922 5.99939 13.2824C5.99939 14.6429 6.53983 15.9476 7.50181 16.9096L8.4902 17.898L15.7445 25.1523L22.9989 17.898L23.9873 16.9096C24.4637 16.4334 24.8417 15.8679 25.0996 15.2455C25.3575 14.6232 25.4902 13.9561 25.4902 13.2824C25.4902 12.6088 25.3575 11.9417 25.0996 11.3193C24.8417 10.697 24.4637 10.1315 23.9873 9.65527Z')
+                                                a.btn-fav.stretched-link-over(href="javascript:void(0);" aria-label="Fav")
+                                                    +icon('fav').stroke-icon
                                             
                                             p.cart-content-text.m-0 it operates the over-the-top subscription video on-demand service.. 
                                             a.cart-content-link(href="product-detail.html") See More 
@@ -788,9 +769,8 @@ block content
                                                 .card-body-title.d-flex.flex-column.justify-content-start
                                                     p.card-title.m-0 Netflix
                                                     span.card-subtitle All in One
-                                                button.btn.p-0.btn-fav.selected(type="button").ms-10
-                                                    svg.stroke-icon(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                                        path(fill-rule='evenodd' clip-rule='evenodd' d='M23.9873 9.65527C23.511 9.1788 22.9456 8.80083 22.3232 8.54295C21.7008 8.28507 21.0338 8.15234 20.3601 8.15234C19.6864 8.15234 19.0194 8.28507 18.397 8.54295C17.7746 8.80083 17.2092 9.1788 16.7329 9.65527L15.7445 10.6436L14.7562 9.65527C13.7942 8.69328 12.4894 8.15284 11.129 8.15284C9.76853 8.15284 8.4638 8.69328 7.50181 9.65527C6.53983 10.6173 5.99939 11.922 5.99939 13.2824C5.99939 14.6429 6.53983 15.9476 7.50181 16.9096L8.4902 17.898L15.7445 25.1523L22.9989 17.898L23.9873 16.9096C24.4637 16.4334 24.8417 15.8679 25.0996 15.2455C25.3575 14.6232 25.4902 13.9561 25.4902 13.2824C25.4902 12.6088 25.3575 11.9417 25.0996 11.3193C24.8417 10.697 24.4637 10.1315 23.9873 9.65527Z')
+                                                a.btn-fav.stretched-link-over(href="javascript:void(0);" aria-label="Fav")
+                                                    +icon('fav').stroke-icon
                                             
                                             p.cart-content-text.m-0 it operates the over-the-top subscription video on-demand service.. 
                                             a.cart-content-link(href="product-detail.html") See More 
@@ -818,9 +798,8 @@ block content
                                                         +icon("rate").rateicon-4
                                                         +icon("rate").rateicon-5
                                                         span.card-stars-box-text 256 Reviews
-                                                button.btn.p-0.btn-fav(type="button").ms-10
-                                                    svg.stroke-icon(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                                        path(fill-rule='evenodd' clip-rule='evenodd' d='M23.9873 9.65527C23.511 9.1788 22.9456 8.80083 22.3232 8.54295C21.7008 8.28507 21.0338 8.15234 20.3601 8.15234C19.6864 8.15234 19.0194 8.28507 18.397 8.54295C17.7746 8.80083 17.2092 9.1788 16.7329 9.65527L15.7445 10.6436L14.7562 9.65527C13.7942 8.69328 12.4894 8.15284 11.129 8.15284C9.76853 8.15284 8.4638 8.69328 7.50181 9.65527C6.53983 10.6173 5.99939 11.922 5.99939 13.2824C5.99939 14.6429 6.53983 15.9476 7.50181 16.9096L8.4902 17.898L15.7445 25.1523L22.9989 17.898L23.9873 16.9096C24.4637 16.4334 24.8417 15.8679 25.0996 15.2455C25.3575 14.6232 25.4902 13.9561 25.4902 13.2824C25.4902 12.6088 25.3575 11.9417 25.0996 11.3193C24.8417 10.697 24.4637 10.1315 23.9873 9.65527Z')
+                                                a.btn-fav.stretched-link-over(href="javascript:void(0);" aria-label="Fav")
+                                                    +icon('fav').stroke-icon
                                             
                                             p.cart-content-text.m-0 it operates the over-the-top subscription video on-demand service.. 
                                             a.cart-content-link(href="product-detail.html") See More 
@@ -848,9 +827,8 @@ block content
                                                         +icon("rate").rateicon-4
                                                         +icon("rate").rateicon-5
                                                         span.card-stars-box-text 256 Reviews
-                                                button.btn.p-0.btn-fav.selected(type="button").ms-10
-                                                    svg.stroke-icon(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                                        path(fill-rule='evenodd' clip-rule='evenodd' d='M23.9873 9.65527C23.511 9.1788 22.9456 8.80083 22.3232 8.54295C21.7008 8.28507 21.0338 8.15234 20.3601 8.15234C19.6864 8.15234 19.0194 8.28507 18.397 8.54295C17.7746 8.80083 17.2092 9.1788 16.7329 9.65527L15.7445 10.6436L14.7562 9.65527C13.7942 8.69328 12.4894 8.15284 11.129 8.15284C9.76853 8.15284 8.4638 8.69328 7.50181 9.65527C6.53983 10.6173 5.99939 11.922 5.99939 13.2824C5.99939 14.6429 6.53983 15.9476 7.50181 16.9096L8.4902 17.898L15.7445 25.1523L22.9989 17.898L23.9873 16.9096C24.4637 16.4334 24.8417 15.8679 25.0996 15.2455C25.3575 14.6232 25.4902 13.9561 25.4902 13.2824C25.4902 12.6088 25.3575 11.9417 25.0996 11.3193C24.8417 10.697 24.4637 10.1315 23.9873 9.65527Z')
+                                                a.btn-fav.stretched-link-over(href="javascript:void(0);" aria-label="Fav")
+                                                    +icon('fav').stroke-icon
                                             
                                             p.cart-content-text.m-0 it operates the over-the-top subscription video on-demand service.. 
                                             a.cart-content-link(href="product-detail.html") See More 
@@ -877,9 +855,8 @@ block content
                                                         +icon("rate").rateicon-4
                                                         +icon("rate").rateicon-5
                                                         span.card-stars-box-text 256 Reviews
-                                                button.btn.p-0.btn-fav(type="button").ms-10
-                                                    svg.stroke-icon(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                                        path(fill-rule='evenodd' clip-rule='evenodd' d='M23.9873 9.65527C23.511 9.1788 22.9456 8.80083 22.3232 8.54295C21.7008 8.28507 21.0338 8.15234 20.3601 8.15234C19.6864 8.15234 19.0194 8.28507 18.397 8.54295C17.7746 8.80083 17.2092 9.1788 16.7329 9.65527L15.7445 10.6436L14.7562 9.65527C13.7942 8.69328 12.4894 8.15284 11.129 8.15284C9.76853 8.15284 8.4638 8.69328 7.50181 9.65527C6.53983 10.6173 5.99939 11.922 5.99939 13.2824C5.99939 14.6429 6.53983 15.9476 7.50181 16.9096L8.4902 17.898L15.7445 25.1523L22.9989 17.898L23.9873 16.9096C24.4637 16.4334 24.8417 15.8679 25.0996 15.2455C25.3575 14.6232 25.4902 13.9561 25.4902 13.2824C25.4902 12.6088 25.3575 11.9417 25.0996 11.3193C24.8417 10.697 24.4637 10.1315 23.9873 9.65527Z')
+                                                a.btn-fav.stretched-link-over(href="javascript:void(0);" aria-label="Fav")
+                                                    +icon('fav').stroke-icon
                                             
                                             p.cart-content-text.m-0 it operates the over-the-top subscription video on-demand service.. 
                                             a.cart-content-link(href="product-detail.html") See More 

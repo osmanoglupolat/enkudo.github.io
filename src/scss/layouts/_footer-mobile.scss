@@ -37,14 +37,12 @@
             svg{            
               width: 32px;
               height: 32px;
+              color: $white;
               &.icon-plus_minus{
                 display: block;
               }
               &.icon-plus_minuss{
                 display: none;
-              }
-              path{
-                fill: #959C9F;
               }
             }
             &.show{   
@@ -57,7 +55,8 @@
                 color: $white;
                 font-weight: 500;
               }
-              svg{                
+              svg{ 
+                color: $white;               
                 &.icon-plus_minus{
                     display: none;
                 }

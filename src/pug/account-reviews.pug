@@ -25,70 +25,406 @@ block content
                                     
                                     .icon-set-box
                                         .isb-list
-                                            +icon("reviews-time")
+                                            +icon("reviews-time").stroke-icon
                                             span <b>2 services</b> are waiting for review.
                                         .isb-list
-                                            +icon("reviews-time")
+                                            +icon("reviews-thumbs").stroke-icon
                                             span Your <b>4 comments</b> were found useful by users.
 
-                                
-                                    .mt-0.mb-0.px-15.px-lg-0.fav-list-box.product-list-view(rel="listb_fav")
-                                        .d-flex.flex-column
-                                            .card-sub
-                                                .card-sub-left
-                                                    a.ems-check-list(href="javascript:void(0);" aria-label="product_type" rel="listb_fav_5")
-                                                .card-sub-right
-                                                    .img-text-box
-                                                        .csb-img
-                                                            +picture('ratio ratio-1x1', lazy="true", dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png')(class="w-100 img-fluid", alt="slide 1")
+                                    .ems-tab
+                                        .ems-tab-header.me-3
+                                            a.nav-link.selected(href="javascript:void(0);" rel="tab-1" aria-label="Tab 1")
+                                                span Waiting for Review (13)
+                                                
+                                            a.nav-link(href="javascript:void(0);" rel="tab-2" aria-label="Tab 2")
+                                                span Past Review (2)
+                                    
+                                        .ems-tab-content.mt-0.mb-0.px-15.px-lg-0.reviews-list-box
+                                            div.tab-pane.selected(rel="tab-1" id="tab-1")
+                                                .ems-tab-inner-content
+                                                    .row.g-10
+                                                        .col-12.col-lg-6
+                                                            .card-sub
+                                                                .card-sub-right
+                                                                    .img-text-box
+                                                                        .csb-img
+                                                                            +picture('ratio ratio-1x1', lazy="true", dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png')(class="w-100 img-fluid", alt="slide 1")
+                                                                        
+                                                                        .csb-left-text
+                                                                            h5 Netflix
+                                                                            span All in One                                                                            
+                                                                            div.card-stars-box.card-stars-box-3
+                                                                                +icon("rate").rateicon-1
+                                                                                +icon("rate").rateicon-2
+                                                                                +icon("rate").rateicon-3
+                                                                                +icon("rate").rateicon-4
+                                                                                +icon("rate").rateicon-5
+                                                                                span.card-stars-box-text 256 Reviews                                                                      
+                                                                    
+                                                                    .csb-bottom-text
+                                                                        a.card-remove(href="javascript:void(0);")
+                                                                            +icon("trash")
+                                                                        a.btn.btn-them-2.btn-md.w-100(href="javascript:void(0)" aria-label="Edit" data-target="body" data-ready="ems-prd-Reviews-ready" data-animate="ems-prd-Reviews-animate" data-type="add" ) 
+                                                                            span Write a Comment
+                                                                            +icon("reviews-pencil")
+
                                                         
-                                                        .csb-left-text
-                                                            h5 Netflix
-                                                            span All in One
-                                                            .d-flex.align-items-center.justify-content-start.gap-5
-                                                                span.fs-16 Starting from
-                                                                p $9.90                                                                       
-                                                    
-                                                    .csb-right-text
-                                                        a.cbs-text-remove(href="javascript:void(0);")
-                                                            span Remove
-                                                        a.btn.btn-them-2.btn-md.w-100(href="/")
-                                                            span Learn More
-                                                            svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                                                path(fill-rule='evenodd' clip-rule='evenodd' d='M17.3889 11.2258V9.21393C17.3889 9.03956 17.5525 8.93762 17.6696 9.04224L24.2082 15.5625C24.5973 15.9032 24.5973 16.1701 24.2082 16.5135C24.2082 16.5135 17.7868 22.8575 17.6696 22.9594C17.5525 23.0614 17.3889 22.9594 17.3889 22.7851V20.7731C17.3889 20.6363 17.5348 20.4271 17.5348 20.4271L20.9837 16.875H8.5V15.125H20.9839L17.5348 11.5719C17.4442 11.4914 17.3889 11.3627 17.3889 11.2258Z')
+                                                        .col-12.col-lg-6
+                                                            .card-sub
+                                                                .card-sub-right
+                                                                    .img-text-box
+                                                                        .csb-img
+                                                                            +picture('ratio ratio-1x1', lazy="true", dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png')(class="w-100 img-fluid", alt="slide 1")
+                                                                        
+                                                                        .csb-left-text
+                                                                            h5 Netflix
+                                                                            span All in One                                                                            
+                                                                            div.card-stars-box.card-stars-box-3
+                                                                                +icon("rate").rateicon-1
+                                                                                +icon("rate").rateicon-2
+                                                                                +icon("rate").rateicon-3
+                                                                                +icon("rate").rateicon-4
+                                                                                +icon("rate").rateicon-5
+                                                                                span.card-stars-box-text 256 Reviews                                                                      
+                                                                    
+                                                                    .csb-bottom-text
+                                                                        a.card-remove(href="javascript:void(0);")
+                                                                            +icon("trash")
+                                                                        a.btn.btn-them-2.btn-md.w-100(href="javascript:void(0)" aria-label="Edit" data-target="body" data-ready="ems-prd-Reviews-ready" data-animate="ems-prd-Reviews-animate" data-type="add" ) 
+                                                                            span Write a Comment
+                                                                            +icon("reviews-pencil")
 
-                                        .row-g-0.fav-footer.mt-20
-                                            .col-6.col-lg-3.order-1.order-lg-1
-                                                a.ems-check-list(href="javascript:void(0);" aria-label="product_type" rel="listb_fav_all")
-                                                    span Select all
+                                                        
+                                                        .col-12.col-lg-6
+                                                            .card-sub
+                                                                .card-sub-right
+                                                                    .img-text-box
+                                                                        .csb-img
+                                                                            +picture('ratio ratio-1x1', lazy="true", dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png')(class="w-100 img-fluid", alt="slide 1")
+                                                                        
+                                                                        .csb-left-text
+                                                                            h5 Netflix
+                                                                            span All in One                                                                            
+                                                                            div.card-stars-box.card-stars-box-3
+                                                                                +icon("rate").rateicon-1
+                                                                                +icon("rate").rateicon-2
+                                                                                +icon("rate").rateicon-3
+                                                                                +icon("rate").rateicon-4
+                                                                                +icon("rate").rateicon-5
+                                                                                span.card-stars-box-text 256 Reviews                                                                      
+                                                                    
+                                                                    .csb-bottom-text
+                                                                        a.card-remove(href="javascript:void(0);")
+                                                                            +icon("trash")
+                                                                        a.btn.btn-them-2.btn-md.w-100(href="javascript:void(0)" aria-label="Edit" data-target="body" data-ready="ems-prd-Reviews-ready" data-animate="ems-prd-Reviews-animate" data-type="add" ) 
+                                                                            span Write a Comment
+                                                                            +icon("reviews-pencil")
 
-                                            nav.col-12.col-lg-6.order-3.order-lg-2(aria-label='Page navigation example')
-                                                .pagination
-                                                    .page-item
-                                                        a.page-link.left-icon(href='#', aria-label='Previous')
-                                                            span(aria-hidden='true')
-                                                                svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                                                    path(fill-rule='evenodd' clip-rule='evenodd' d='M14 10.7566V12.4811C14 12.5984 14.0466 12.7087 14.1231 12.7777L17.75 16.5732L14.1231 20.3679C14.1231 20.3679 14 20.5472 14 20.6645C14 20.7818 14 22.2395 14 22.389C14 22.5385 14.138 22.6258 14.2369 22.5385C14.3357 22.4511 19.7538 17.0134 19.7538 17.0134C20.0821 16.719 20.0821 16.4903 19.7538 16.1982L14.2369 10.6095C14.138 10.5198 14 10.6072 14 10.7566Z')
-                                                    .page-item
-                                                        a.page-link.active(href='#')
-                                                            span 1
-                                                    .page-item
-                                                        a.page-link(href='#')
-                                                            span 2
-                                                    .page-item
-                                                        a.page-link(href='#')
-                                                            span 3
-                                                    .page-item
-                                                        a.page-link(href='#')
-                                                            span 4
-                                                    .page-item
-                                                        a.page-link.right-icon(href='#', aria-label='Next')
-                                                            span(aria-hidden='true') 
-                                                                svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                                                    path(fill-rule='evenodd' clip-rule='evenodd' d='M14 10.7566V12.4811C14 12.5984 14.0466 12.7087 14.1231 12.7777L17.75 16.5732L14.1231 20.3679C14.1231 20.3679 14 20.5472 14 20.6645C14 20.7818 14 22.2395 14 22.389C14 22.5385 14.138 22.6258 14.2369 22.5385C14.3357 22.4511 19.7538 17.0134 19.7538 17.0134C20.0821 16.719 20.0821 16.4903 19.7538 16.1982L14.2369 10.6095C14.138 10.5198 14 10.6072 14 10.7566Z')
-                                            
-                                            .col-6.col-lg-3.order-2.order-lg-3
-                                                a.fav-remove-selected(href="javascript:void(0);")
-                                                    +icon("trash")
-                                                    span Remove Selected
-                                                    
+                                        
+                                            div.tab-pane.selected(rel="tab-2" id="tab-2")
+                                                .ems-tab-inner-content
+                                                    .reviews-grid
+                                                        .reviews-grid-box
+                                                            .card-sub
+                                                                .card-sub-right
+                                                                    .img-text-box
+                                                                        .csb-img
+                                                                            +picture('ratio ratio-1x1', lazy="true", dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png')(class="w-100 img-fluid", alt="slide 1")
+                                                                        
+                                                                        .csb-left-text
+                                                                            h5 Netflix
+                                                                            span All in One                                                                            
+                                                                            div.card-stars-box.card-stars-box-3
+                                                                                +icon("rate").rateicon-1
+                                                                                +icon("rate").rateicon-2
+                                                                                +icon("rate").rateicon-3
+                                                                                +icon("rate").rateicon-4
+                                                                                +icon("rate").rateicon-5
+                                                                                span.card-stars-box-text 256 Reviews                                                                      
+                                                                    
+                                                                    .csb-bottom-text
+                                                                        .csb-box      
+                                                                            .csb-text-box                                                                       
+                                                                                div.card-stars-box.card-stars-box-2
+                                                                                    +icon("rate").rateicon-1
+                                                                                    +icon("rate").rateicon-2
+                                                                                    +icon("rate").rateicon-3
+                                                                                    +icon("rate").rateicon-4
+                                                                                    +icon("rate").rateicon-5
+                                                                                    span.card-stars-box-text Your Rating                                                                             
+                                                                                span Date: 10 April, 2023
+
+                                                                            .cbs-text-long-body 
+                                                                                span “A great service where I could find all the music I was looking for. I was able to subscribe very easily. I don't remember being able to subscribe practical...
+                                                        
+                                                        .reviews-grid-box
+                                                            .card-sub
+                                                                .card-sub-right
+                                                                    .img-text-box
+                                                                        .csb-img
+                                                                            +picture('ratio ratio-1x1', lazy="true", dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png')(class="w-100 img-fluid", alt="slide 1")
+                                                                        
+                                                                        .csb-left-text
+                                                                            h5 Netflix
+                                                                            span All in One                                                                            
+                                                                            div.card-stars-box.card-stars-box-3
+                                                                                +icon("rate").rateicon-1
+                                                                                +icon("rate").rateicon-2
+                                                                                +icon("rate").rateicon-3
+                                                                                +icon("rate").rateicon-4
+                                                                                +icon("rate").rateicon-5
+                                                                                span.card-stars-box-text 256 Reviews                                                                      
+                                                                    
+                                                                    .csb-bottom-text
+                                                                        .csb-box      
+                                                                            .csb-text-box                                                                       
+                                                                                div.card-stars-box.card-stars-box-2
+                                                                                    +icon("rate").rateicon-1
+                                                                                    +icon("rate").rateicon-2
+                                                                                    +icon("rate").rateicon-3
+                                                                                    +icon("rate").rateicon-4
+                                                                                    +icon("rate").rateicon-5
+                                                                                    span.card-stars-box-text Your Rating                                                                             
+                                                                                span Date: 10 April, 2023
+
+                                                        .reviews-grid-box
+                                                            .card-sub
+                                                                .card-sub-right
+                                                                    .img-text-box
+                                                                        .csb-img
+                                                                            +picture('ratio ratio-1x1', lazy="true", dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png')(class="w-100 img-fluid", alt="slide 1")
+                                                                        
+                                                                        .csb-left-text
+                                                                            h5 Netflix
+                                                                            span All in One                                                                            
+                                                                            div.card-stars-box.card-stars-box-3
+                                                                                +icon("rate").rateicon-1
+                                                                                +icon("rate").rateicon-2
+                                                                                +icon("rate").rateicon-3
+                                                                                +icon("rate").rateicon-4
+                                                                                +icon("rate").rateicon-5
+                                                                                span.card-stars-box-text 256 Reviews                                                                      
+                                                                    .csb-bottom-text
+                                                                        .csb-box      
+                                                                            .csb-text-box                                                                       
+                                                                                div.card-stars-box.card-stars-box-2
+                                                                                    +icon("rate").rateicon-1
+                                                                                    +icon("rate").rateicon-2
+                                                                                    +icon("rate").rateicon-3
+                                                                                    +icon("rate").rateicon-4
+                                                                                    +icon("rate").rateicon-5
+                                                                                    span.card-stars-box-text Your Rating                                                                             
+                                                                                span Date: 10 April, 2023
+
+                                                                            .cbs-text-long-body 
+                                                                                span “A great service where I could find all the music I was looking for. I was able to subscribe very easily. I don't remember being able to subscribe practical...
+                                                                    
+                                                        .reviews-grid-box
+                                                            .card-sub
+                                                                .card-sub-right
+                                                                    .img-text-box
+                                                                        .csb-img
+                                                                            +picture('ratio ratio-1x1', lazy="true", dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png')(class="w-100 img-fluid", alt="slide 1")
+                                                                        
+                                                                        .csb-left-text
+                                                                            h5 Netflix
+                                                                            span All in One                                                                            
+                                                                            div.card-stars-box.card-stars-box-3
+                                                                                +icon("rate").rateicon-1
+                                                                                +icon("rate").rateicon-2
+                                                                                +icon("rate").rateicon-3
+                                                                                +icon("rate").rateicon-4
+                                                                                +icon("rate").rateicon-5
+                                                                                span.card-stars-box-text 256 Reviews                                                                      
+                                                                    
+                                                                    .csb-bottom-text
+                                                                        .csb-box      
+                                                                            .csb-text-box                                                                       
+                                                                                div.card-stars-box.card-stars-box-2
+                                                                                    +icon("rate").rateicon-1
+                                                                                    +icon("rate").rateicon-2
+                                                                                    +icon("rate").rateicon-3
+                                                                                    +icon("rate").rateicon-4
+                                                                                    +icon("rate").rateicon-5
+                                                                                    span.card-stars-box-text Your Rating                                                                             
+                                                                                span Date: 10 April, 2023
+                                                        
+                                                        .reviews-grid-box
+                                                            .card-sub
+                                                                .card-sub-right
+                                                                    .img-text-box
+                                                                        .csb-img
+                                                                            +picture('ratio ratio-1x1', lazy="true", dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png')(class="w-100 img-fluid", alt="slide 1")
+                                                                        
+                                                                        .csb-left-text
+                                                                            h5 Netflix
+                                                                            span All in One                                                                            
+                                                                            div.card-stars-box.card-stars-box-3
+                                                                                +icon("rate").rateicon-1
+                                                                                +icon("rate").rateicon-2
+                                                                                +icon("rate").rateicon-3
+                                                                                +icon("rate").rateicon-4
+                                                                                +icon("rate").rateicon-5
+                                                                                span.card-stars-box-text 256 Reviews                                                                      
+                                                                    .csb-bottom-text
+                                                                        .csb-box      
+                                                                            .csb-text-box                                                                       
+                                                                                div.card-stars-box.card-stars-box-2
+                                                                                    +icon("rate").rateicon-1
+                                                                                    +icon("rate").rateicon-2
+                                                                                    +icon("rate").rateicon-3
+                                                                                    +icon("rate").rateicon-4
+                                                                                    +icon("rate").rateicon-5
+                                                                                    span.card-stars-box-text Your Rating                                                                             
+                                                                                span Date: 10 April, 2023
+
+                                                                            .cbs-text-long-body 
+                                                                                span “A great service where I could find all the music I was looking for. I was able to subscribe very easily. I don't remember being able to subscribe practical...
+                                                                    
+                                                        .reviews-grid-box
+                                                            .card-sub
+                                                                .card-sub-right
+                                                                    .img-text-box
+                                                                        .csb-img
+                                                                            +picture('ratio ratio-1x1', lazy="true", dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png')(class="w-100 img-fluid", alt="slide 1")
+                                                                        
+                                                                        .csb-left-text
+                                                                            h5 Netflix
+                                                                            span All in One                                                                            
+                                                                            div.card-stars-box.card-stars-box-3
+                                                                                +icon("rate").rateicon-1
+                                                                                +icon("rate").rateicon-2
+                                                                                +icon("rate").rateicon-3
+                                                                                +icon("rate").rateicon-4
+                                                                                +icon("rate").rateicon-5
+                                                                                span.card-stars-box-text 256 Reviews                                                                      
+                                                                    .csb-bottom-text
+                                                                        .csb-box      
+                                                                            .csb-text-box                                                                       
+                                                                                div.card-stars-box.card-stars-box-2
+                                                                                    +icon("rate").rateicon-1
+                                                                                    +icon("rate").rateicon-2
+                                                                                    +icon("rate").rateicon-3
+                                                                                    +icon("rate").rateicon-4
+                                                                                    +icon("rate").rateicon-5
+                                                                                    span.card-stars-box-text Your Rating                                                                             
+                                                                                span Date: 10 April, 2023
+
+                                                                            .cbs-text-long-body 
+                                                                                span “A great service where I could find all the music I was looking for. I was able to subscribe very easily. I don't remember being able to subscribe practical...
+                                                                    
+                                                        .reviews-grid-box
+                                                            .card-sub
+                                                                .card-sub-right
+                                                                    .img-text-box
+                                                                        .csb-img
+                                                                            +picture('ratio ratio-1x1', lazy="true", dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png')(class="w-100 img-fluid", alt="slide 1")
+                                                                        
+                                                                        .csb-left-text
+                                                                            h5 Netflix
+                                                                            span All in One                                                                            
+                                                                            div.card-stars-box.card-stars-box-3
+                                                                                +icon("rate").rateicon-1
+                                                                                +icon("rate").rateicon-2
+                                                                                +icon("rate").rateicon-3
+                                                                                +icon("rate").rateicon-4
+                                                                                +icon("rate").rateicon-5
+                                                                                span.card-stars-box-text 256 Reviews                                                                      
+                                                                    .csb-bottom-text
+                                                                        .csb-box      
+                                                                            .csb-text-box                                                                       
+                                                                                div.card-stars-box.card-stars-box-2
+                                                                                    +icon("rate").rateicon-1
+                                                                                    +icon("rate").rateicon-2
+                                                                                    +icon("rate").rateicon-3
+                                                                                    +icon("rate").rateicon-4
+                                                                                    +icon("rate").rateicon-5
+                                                                                    span.card-stars-box-text Your Rating                                                                             
+                                                                                span Date: 10 April, 2023
+
+                                                                            .cbs-text-long-body 
+                                                                                span “A great service where I could find all the music I was looking for. I was able to subscribe very easily. I don't remember being able to subscribe practical...
+                                                                    
+
+
+
+    .ems-prd-Reviews-overlay.ems-overlay(data-target="body" data-ready="ems-prd-Reviews-ready" data-animate="ems-prd-Reviews-animate" data-type="remove")
+    .ems-modal.ems-modal-lg.ems-prd-Reviews.ems-modal-end.ems-modal-lg-end
+        .modal-header.d-flex.justify-content-between
+            .title-modal Filtreler
+            .d-flex
+                a.d-flex(href="javascript:void(0)" aria-label="close" data-target="body" data-ready="ems-prd-Reviews-ready" data-animate="ems-prd-Reviews-animate" data-type="remove")
+                    +icon("close")
+
+        // Button Aksiyonundan sonra burası geliyor
+        //.modal-body.p-25.p-lg-40.ems-scrollbar.ems-scrollbar-vertical.d-flex.flex-column.align-items-center
+            .box-empty
+                +icon("empty-verify").empty-icons
+                .title-box-empty.mt-25
+                    h4 Your comment has been received
+                    p The comment will be published after it has been reviewed according to our publishing criteria.
+                    a.btn.btn-them-2.btn-lg.mt-70.mxw-200.w-100(href="/")
+                        span Go to Homepage
+
+        .modal-body.p-25.p-lg-40.ems-scrollbar.ems-scrollbar-vertical
+            .card-sub.p-0
+                .card-sub-right
+                    .img-text-box
+                        .csb-img
+                            +picture('ratio ratio-1x1', lazy="true", dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png', dirFrontend + 'images/product/img-2.png')(class="w-100 img-fluid", alt="slide 1")
+                        
+                        .csb-left-text
+                            h5 Netflix
+                            span All in One                                                                            
+                            div.card-stars-box.card-stars-box-3
+                                +icon("rate").rateicon-1
+                                +icon("rate").rateicon-2
+                                +icon("rate").rateicon-3
+                                +icon("rate").rateicon-4
+                                +icon("rate").rateicon-5
+                                span.card-stars-box-text 256 Reviews
+                                
+            .rating-box
+                .rating-title Your Rating
+                .rating-container
+                    input#star-5(type='radio' name='rating' value='5')
+                    label(for='star-5')
+                        +icon("rate")
+                    input#star-4(type='radio' name='rating' value='4')
+                    label(for='star-4')
+                        +icon("rate")
+                    input#star-3(type='radio' name='rating' value='3')
+                    label(for='star-3')
+                        +icon("rate")
+                    input#star-2(type='radio' name='rating' value='2')
+                    label(for='star-2')
+                        +icon("rate")
+                    input#star-1(type='radio' name='rating' value='1')
+                    label(for='star-1')
+                        +icon("rate")
+
+            form.ems-form(action='' method='post')
+                .reviews-modal-form
+                    .ems-field.form-floating.mb-15
+                        input#title.input-login.form-control(type='text' name='title' value='' placeholder='title')
+                        label(for='title') Title
+                        .ems-field-feedback
+                    .ems-field.form-floating.f-textarea.mb-0
+                        textarea#message.input-login.form-control(type='text' name='message' value='' placeholder='You can write your comment here')
+                        label(for='message') Write your message
+                        .text-form-left-bottom 0/250
+                        .ems-field-feedback
+
+        .modal-footer
+            .d-flex.flex-column.align-items-center.justify-content-end.w-100                    
+                .ems-field.mb-25
+                    .form-check
+                        label.checkbox-container.align-items-start(for='TermsandConditions')
+                            input.form-check-input.rounded-0.fs-15(type='checkbox' id='TermsandConditions')
+                            span.checkmark
+                            .form-check-textBy By clicking here, I state that I have read and understood the 
+                                a(data-title="Terms and Conditions" href="javascript:void(0);" class="ems-kvkk-trigger ems-link text-decoration-underline") Terms and Conditions</a>
+                        .ems-field-feedback 
+                .ems-field.mb-0.w-100
+                    button.btn.btn-them-2.btn-lg.w-100(type='submit')
+                        span Submit Comment 

@@ -91,57 +91,6 @@ handleMenuLinks();
 handleMenuBackNavs();
 // Menu
 
-// Swipper
-var swiper = new Swiper(".brand-slider", {
-  slidesPerView: 6,
-  spaceBetween: 12,
-  breakpoints: {
-      '922': {
-          slidesPerView: 6,
-      },
-      '768': {
-          slidesPerView: 4
-      },
-      '480': {
-          slidesPerView: 2.5
-      },
-      '0': {
-          slidesPerView: 2
-      }
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
-
-// Swipper
-var swiper = new Swiper(".product-slider", {
-  slidesPerView: 4,
-  spaceBetween: 16,
-  breakpoints: {
-      '922': {
-          slidesPerView: 4
-      },
-      '768': {
-          slidesPerView: 3,
-          spaceBetween: 10
-      },
-      '480': {
-          slidesPerView: 2.5,
-          spaceBetween: 5
-      },
-      '0': {
-          slidesPerView: 2,
-          spaceBetween: 5
-      }
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
-
 // Data Filtre
 function handleFilterButtons() {
   const filterButtons = document.querySelectorAll('.ems-data-filter-link');  
@@ -258,6 +207,3 @@ function mouseMoveHandler(event) {
   scrollableContainer.scrollLeft -= event.movementX;
 }
 // Scroll Top
-
-
-// Scroll Gallery

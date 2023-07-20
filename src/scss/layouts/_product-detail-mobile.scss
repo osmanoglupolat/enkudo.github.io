@@ -271,6 +271,7 @@
             svg{                
                 width: 32px;
                 height: 32px;
+                color: $white;
             }
         }
     }
@@ -420,14 +421,12 @@
         svg{            
           width: 32px;
           height: 32px;
+          color: $gray5;
           &.icon-plus_minus{
             display: block;
           }
           &.icon-plus_minuss{
             display: none;
-          }
-          path{
-            fill: #959C9F;
           }
         }
         &.show{   
@@ -440,7 +439,8 @@
             color: $white;
             font-weight: 500;
           }
-          svg{                
+          svg{         
+            color: $white;       
             &.icon-plus_minus{
                 display: none;
             }
@@ -502,7 +502,8 @@
         margin-top: 24px;
         .pd-text-content-list-icon{   
             margin-right: 4px; 
-            svg{                
+            svg{
+                color: $white;
                 display: block;
                 width: 32px;
                 height: 32px;
@@ -614,7 +615,7 @@
             svg{
                 width: 32px;
                 height: 32px;
-                fill:$body-text-color;
+                color:$body-text-color;
             }
         }
         .rrb-left-box{
@@ -722,7 +723,7 @@
                 svg{
                     width: 32px;
                     height: 32px;
-                    fill:$body-text-color;
+                    color:$body-text-color;
                 }
             }
             .comments-list{
@@ -738,7 +739,8 @@
                         justify-content: center;
                         align-items: center;
                         border-radius: 36px;
-                        svg{                            
+                        svg{
+                            color: $white;
                             width: 36px;
                             height: 36px;
                         }

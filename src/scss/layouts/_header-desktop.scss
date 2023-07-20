@@ -90,11 +90,13 @@
           display: block;
           width: 32px;
           height: 32px;
+          color: $white;
         }
         svg.icon-menuclose{
           display: none;
           width: 32px;
           height: 32px;
+          color: $white;
         }
         &.show{            
           background: $content-bg-color;          
@@ -168,18 +170,7 @@
             svg{            
               width: 32px;
               height: 32px;
-              path{
-                fill: $gray5;
-                &.fillnone-strokeyes{                  
-                  fill:none;               
-                  stroke: $gray5;
-                }
-              }
-              &.icon-arrow-right{                  
-                path{
-                  fill: $gray5;
-                }
-              }
+              color: $gray5;
             }
             &.active{   
               background-color: transparent;       
@@ -187,34 +178,18 @@
                 font-weight: 500;
                 color: $them-color;
               }
-              svg{            
-                path{
-                  fill: $them-color;
-                  &.fillnone-strokeyes{                  
-                    fill:none;               
-                    stroke: $them-color;
-                  }
-                }
-              }
-              &.icon-arrow-right{                  
-                path{
-                  fill: $gray5;
-                }
+              svg{
+                color: $them-color; 
               }
             }
-            :hover{        
+            &:hover{   
+              background-color: transparent;       
               span{
                 font-weight: 500;
                 color: $them-color;
               }
-              svg{            
-                path{
-                  fill: $them-color;
-                  &.fillnone-strokeyes{                  
-                    fill:none;               
-                    stroke: $them-color;
-                  }
-                }
+              svg{
+                color: $them-color !important; 
               }
             }
           }
@@ -227,7 +202,8 @@
               width: 100%;
               padding: 12px 20px;
               flex-shrink: 0;
-              svg{
+              svg{ 
+                color: $white;
                 display: block;
                 width: 32px;
                 height: 32px;                
@@ -275,20 +251,16 @@
                 .btn-them-link {  
                   width: 100%;                
                   svg{   
-                    display: none; 
-                    path{
-                      fill: $white !important;
-                    }
+                    color: $white !important;
+                    display: none;
                   }
                 }
                 &:hover {
                   > .btn-them-link {
                     color: $white !important;   
-                    svg{   
+                    svg{  
+                      color: $white !important; 
                       display: block;
-                      path{
-                        fill: $white !important;
-                      }
                     }
                   }
                 }
@@ -324,13 +296,9 @@
                       width: 32px;
                       height: 32px;
                       display: none;
-                      path{
-                        fill: $gray5;
-                      }
-                      &.icon-arrow-right{                  
-                        path{
-                          fill: $gray5;
-                        }
+                      color: $gray5;
+                      &.icon-arrow-right{ 
+                        color: $gray5;    
                       }
                     }
                     &.show{   
@@ -341,10 +309,8 @@
                       }
                       svg{        
                         display: block;                
-                        &.icon-arrow-right{                  
-                          path{
-                            fill: $white;
-                          }
+                        &.icon-arrow-right{  
+                          color: $white;
                         }
                       }
                     }
@@ -353,11 +319,9 @@
                         font-weight: 500;
                         color: $white;
                       }
-                      svg{     
-                        display: block;       
-                        path{
-                          fill: $white;
-                        }
+                      svg{  
+                        color: $white;   
+                        display: block;
                       }
                     }
                   }
@@ -380,7 +344,7 @@
                         content: "";
                         position: absolute;
                         left: 0%;
-                        top: -6%;
+                        top: -5%;
                         background: #081018;
                         width: 100%;
                         height: 100%;
@@ -483,6 +447,7 @@
         position: absolute;
         right: 8px;
         top: 0;
+        color: $white;
       }      
       .searchbtn{
         width: 100%;
@@ -692,7 +657,7 @@
             height: 14px;
             border: 1px solid $body-text-color;
             border-radius: 20px;
-            margin: 10px;
+            margin: 5px;
             z-index: 2;
           }
         }
@@ -715,7 +680,7 @@
         color: $body-text-color;
         display: inline-flex;
         align-items: center;
-        font-weight: 500;
+        font-weight: 400;
         font-size: 14px;
         line-height: 19.6px;          
         box-sizing: border-box;
@@ -734,6 +699,7 @@
         svg.icon-profil{
           width: 32px;
           height: 32px;
+          color: $body-text-color;  
         }
         &.show{   
           border-bottom: 1px solid #00070E;         
@@ -752,15 +718,15 @@
         min-width: 147px;
         font-weight: 500;
         font-size: 14px;
-        line-height: 19.6px;          
+        line-height: 19px;          
         box-sizing: border-box;
-        gap: 16px;
+        gap: 0;
         &.show{
           left: auto;
           display: flex;
           flex-direction: column;
           align-items: center;
-          padding: 80px 0px 12px 33px;
+          padding: 80px 0px 12px 32px;
           position: absolute;
           min-width: 270px;
           right: 0px;
@@ -772,7 +738,7 @@
             right: -60px;
             top: 0;              
             background: $content-bg-color;
-            width: 120%;
+            width: 122%;
             height: 100%;
             z-index: -1;
           }
@@ -780,7 +746,7 @@
         .dropdown-item{
           display: flex;
           align-items: center;
-          height: 46px;            
+          height: 56px;            
           border-bottom: 1px solid rgba(232, 232, 232, 0.05);
           gap:8px;
           padding: 0;
@@ -797,12 +763,11 @@
             width: 32px;
             height: 32px;
           }
-        }
-        :hover{
-          background: transparent;
-          opacity: 0.7;
-          span{
-            border: 5px solid $them-color;
+          &:hover{      
+            color: $them-color;
+            span{
+              border: 5px solid $them-color;
+            }  
           }
         }
       }
@@ -820,5 +785,104 @@
         }
       }
     }
+  }
+}
+
+//Menu
+.ems-menu {
+  //lvl1
+  .lvl-1 {
+    > li {
+      &.selected {
+        .lvl-2 {
+          display: block;
+        }
+      }
+    }
+  }
+  //lvl2
+    .lvl-2 {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0;
+    }
+
+    .menu-prd {
+        &-type,
+        &-brands {
+            li {
+                &:nth-child(n+2)
+                {
+                    margin-top: 12px;
+                }
+            }
+        }
+    }
+
+  
+  //lvl3
+  .lvl-3 {
+    display: none;
+    li {
+        &:nth-child(n+2)
+        {
+            margin-top: 12px;
+        }
+    }
+  }
+}
+
+//Search
+.ems-search {
+  background: $light !important;
+  overflow-x: hidden !important;
+  .search-blog {
+    border-top: 1px solid rgba(119, 113, 103, 0.2);
+    .blog-post {
+      &-subtitle,
+      &-title {
+        @include line-clamp(3);
+        height: 60px;
+      }
+      &-desc {
+        width: 80%;
+      }
+    }
+  }
+  .search {
+    &-input {
+      &-wrapper {
+        position: relative;
+        .ems-search-trigger {
+            position: absolute;
+            right: 10px;
+            top: calc(50% - 15px)
+        }
+      }
+    }
+  }
+
+    &-no-results {
+        .no-result-icon {
+            width: 65px;
+            height: 65px;
+            margin: 0 auto;
+            background: $gray4;
+            padding: 15px;
+            border-radius: 100%;
+            .icon-search {
+                font-size: 35px;
+            }
+        }
+    }
+}
+.search-suggest-list {
+  ul {
+      li > a {
+          background-color: $gray4;
+          padding: 8px 16px;
+          border-radius: 50px;
+      }
   }
 }

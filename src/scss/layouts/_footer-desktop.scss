@@ -36,14 +36,6 @@
               width: 32px;
               height: 32px;
               display: none;
-              path{
-                fill: #959C9F;
-              }
-              &.icon-arrow-right{                  
-                path{
-                  fill: #959C9F;
-                }
-              }
             }
             &.show{   
               background-color: transparent;       
@@ -52,12 +44,7 @@
                 font-weight: 500;
               }
               svg{        
-                display: none;                
-                &.icon-arrow-right{                  
-                  path{
-                    fill: $white;
-                  }
-                }
+                display: none;
               }
             }
         }

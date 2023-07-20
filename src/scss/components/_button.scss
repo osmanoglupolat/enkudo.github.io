@@ -47,10 +47,8 @@
       border:1px solid $them-color;
       transition: 0.7s;
       svg{    
-        path{
-          fill: $them-color !important;
-          transition: 0.5s;
-        }
+        color: $them-color !important;
+        transition: 0.5s;
       }
     }
   }
@@ -64,10 +62,8 @@
       border:1px solid $body-text-color;
       transition: 0.7s;
       svg{    
-        path{
-          fill: $body-text-color !important;
-          transition: 0.5s;
-        }
+        color: $body-text-color !important;
+        transition: 0.5s;
       }
     }
   }
@@ -99,19 +95,15 @@
     cursor: pointer;
     text-decoration: none;      
     svg{    
-      path{
-        fill: $body-text-color !important;
-        transition: 0.7s;
-      }
+      color: $body-text-color !important; 
+      transition: 0.7s; 
     }
     &:hover{      
       color: $them-color !important; 
       transition: 0.7s; 
       svg{    
-        path{
-          fill: $them-color !important;
-          transition: 0.7s;
-        }
+        color: $them-color !important;
+        transition: 0.7s; 
       }
     }
   }
@@ -123,10 +115,8 @@
       color: $them-color;
     }
     svg{    
-      path{
-        fill: $them-color !important;
-        transition: 0.5s;
-      }
+      color: $them-color !important;  
+      transition: 0.5s;
     }
     &:hover{
       color: $body-text-color;
@@ -138,10 +128,8 @@
         color: $body-text-color;
       }
       svg{    
-        path{
-          fill: $body-text-color !important;
-          transition: 0.5s;
-        }
+        color: $body-text-color !important; 
+        transition: 0.5s; 
       }
     }
   }
@@ -152,11 +140,9 @@
       transition: 0.5s;
       color: $body-text-color;
     }
-    svg{    
-      path{
-        fill: $body-text-color !important;
-        transition: 0.5s;
-      }
+    svg{
+      color: $body-text-color !important; 
+      transition: 0.5s; 
     }
     &:hover{
       color: $them-color;
@@ -168,10 +154,8 @@
         color: $them-color;
       }
       svg{    
-        path{
-          fill: $them-color !important;
-          transition: 0.5s;
-        }
+        color: $them-color !important;
+        transition: 0.5s;   
       }
     }
   }
@@ -183,10 +167,8 @@
       color: $body-bg-color;
     }
     svg{    
-      path{
-        fill: $body-bg-color !important;
-        transition: 0.5s;
-      }
+      color: $body-bg-color !important;
+      transition: 0.5s;
     }
     &:hover{
       color: $them-color;
@@ -198,10 +180,8 @@
         color: $them-color;
       }
       svg{    
-        path{
-          fill: $them-color !important;
-          transition: 0.5s;
-        }
+        color: $them-color !important;
+        transition: 0.5s;
       }
     }
   }
@@ -224,18 +204,18 @@
     gap: 4px;
     width: 32px;
     height: 32px;
-    svg{      
-      path{      
-        fill: transparent;
-        stroke: $body-text-color;
-      }
+    padding: 0;
+    svg{  
+      color: $white;
+      --fill2: $white;
+      --fill: transparent;
     }
     &.selected {
       svg{      
-        path{      
-          fill: #d72027;
-          stroke: #d72027;
-        }
+        color: transparent !important;
+        --fill: #D72027 !important;
+        --fill2: #D72027 !important;
+        stroke: #D72027 !important;
       }
     }
   }
