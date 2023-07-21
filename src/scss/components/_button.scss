@@ -70,15 +70,7 @@
   &-them-3 {
     color: #00070E;
     background: #50575B;
-    border:1px solid #50575B;
-    &.disable{      
-      &:hover{      
-        color: #00070E !important;
-        background: #50575B !important;
-        border:1px solid #50575B !important;
-        transition: 0.7s;
-      }
-    }    
+    border:1px solid #50575B;  
     &:hover{      
       color: $body-bg-color !important;
       background: $white !important;
@@ -217,6 +209,17 @@
         --fill2: #D72027 !important;
         stroke: #D72027 !important;
       }
+    }
+  }
+  &:disabled {    
+    color: #262B30;
+    background: #50575B;
+    border:1px solid #50575B;   
+    &:hover{      
+      color: #00070E !important;
+      background: #50575B !important;
+      border:1px solid #50575B !important;
+      transition: 0.7s;
     }
   }
 }

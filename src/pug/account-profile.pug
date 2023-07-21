@@ -4,7 +4,7 @@ block prepend head
     - var pageTitle = "Enkudo"
     - var pageDescription = "Hesabım sayfası, Enkudo"
     - var pageName = "Profile"
-    - var pageClass = "page-account-profile"
+    - var pageClass = "page page-account-profile"
     - var ProfileActive = "active"
 
 block content
@@ -47,7 +47,7 @@ block content
                                                                 +img('ratio ratio-1x1 ratio-bg-circle telflagform', true, dirFrontend + 'images/tel-flag.png')
                                                                 span +232                                                        
                                                             .pc-select-box-right
-                                                                +icon("select-down")  
+                                                                +icon("select-down").stroke-icon
                                             .ems-field.form-floating.input-user-tel
                                                 input#Number.form-control(type='text' name='Number' value='******5555' placeholder='' disabled)
                                                 label(for='Number') Number

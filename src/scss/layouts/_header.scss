@@ -16,6 +16,12 @@
     }
 }
 
+.page{
+  .site-header {
+    background: $body-bg-color;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+  }
+}
 // Header
 .site-header {
   width: 100%;
@@ -445,10 +451,11 @@
         width: 32px;
         height: 32px;
         position: absolute;
-        right: 8px;
-        top: 0;
+        right: 1px;
+        top: 1px;
         color: $white;
-      }      
+      }
+      .search-icons{z-index: 9;}
       .searchbtn{
         width: 100%;
         position: relative;

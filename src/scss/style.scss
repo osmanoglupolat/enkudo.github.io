@@ -59,6 +59,8 @@
   @import 'layouts/product-detail-mobile';
   @import 'layouts/footer-mobile';
   @import 'layouts/account-profile-mobile';
+  @import 'layouts/help-mobile';
+  @import 'layouts/contact-mobile';
 }
 
 // MIDDLE (> $breakpoint-lg & < $breakpoint-lg)
@@ -87,6 +89,8 @@
   @import 'layouts/product-list-desktop';
   @import 'layouts/product-detail-desktop';
   @import 'layouts/account-profile-desktop';
+  @import 'layouts/help-desktop';
+  @import 'layouts/contact-desktop';
 
   //Modules
   @import 'modules/cookies-desktop';

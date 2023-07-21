@@ -1,0 +1,106 @@
+extends layouts/default.pug
+
+block prepend head
+    - var pageTitle = "Enkudo"
+    - var pageDescription = "İlatişim sayfası, Enkudo"
+    - var pageName = "Contact"
+    - var pageClass = "page page-contact"
+
+block content
+    .breadcrumb-list-top
+        .container-fluid.px-20.px-lg-60
+            +breadcrumb(["Home", "index.html"],["Contact", "contact.html"])
+    section.contact-section
+        .container.p-0
+            .row.g-5
+                .col-12
+                    .contact-box
+                        .left-box
+                            .w-100.px-25.px-lg-20.mt-25.mt-lg-30.mb-25.mb-lg-30
+                                h4.fs-18.fs-lg-24.fw-600.text-gray1 Corporate Info
+                        
+                            .w-100.px-25.px-lg-30.mt-30.mt-lg-30.mb-10.mb-lg-30
+                                .contact-info-list
+                                    .cil-icon
+                                        +icon("location").stroke-icon
+                                    .cil-text-box
+                                        h5.cil-title Adress
+                                        p.cil-text Telenity Incorporated 755 Main Street, Building 7 Monroe, CT 06468, USA
+                                .contact-info-list
+                                    .cil-icon
+                                        +icon("phone").stroke-icon
+                                    .cil-text-box
+                                        h5.cil-title Phone
+                                        p.cil-text.mb-10 Our customer support team is ready to help.
+                                        a.cil-text.fw-600(href="tel:+232 87654 87") +232 87654 87
+                                .contact-info-list
+                                    .cil-icon
+                                        +icon("mail")
+                                    .cil-text-box
+                                        h5.cil-title Email
+                                        p.cil-text.mb-10 Our customer support team is ready to help.
+                                        a.cil-text.fw-600(href="mail:info@enkudo.com") info@enkudo.com
+
+                        .right-box 
+                            .rb-content.bg-dark-them-2
+                                h4.rb-title.mb-40.mb-lg-45 Mail Us
+                                form.ems-form.row.g-15(action='/' method='POST' id="hr-form")
+                                    .col-12.col-lg-6
+                                        .ems-field.form-floating.mb-0.mb-lg-20
+                                            input.form-control(id="Name" name="Name" type="text" placeholder="Name")
+                                            label(for="Name") Name
+                                            .ems-field-feedback.fs-12.d-none.position-absolute
+                                    .col-12.col-lg-6
+                                        .ems-field.form-floating.mb-0.mb-lg-20
+                                            input.form-control(id="Surname" name="Surname" type="text" placeholder="Surname")
+                                            label(for="Surname") Surname
+                                            .ems-field-feedback.fs-12.d-none.position-absolute
+                                    .col-12.col-lg-6
+                                        .ems-field.form-floating.mb-0.mb-lg-20
+                                            input.form-control(id="Email" type="text" name="Email" placeholder="Email" request)
+                                            label(for="Email") Email
+                                            .ems-field-feedback.fs-12.d-none.position-absolute
+                                    .col-12.col-lg-6
+                                        .row.g-5.mb-0.mb-lg-20
+                                            .col-auto.col-lg-auto
+                                                .ems-field.form-floating
+                                                    .phone-bg
+                                                        .phone-control
+                                                            .top-text Country Code*
+                                                            .pc-select-box
+                                                                .pc-select-box-left
+                                                                    +img('ratio ratio-1x1 ratio-bg-circle telflagform', true, dirFrontend + 'images/tel-flag.png')
+                                                                    span +232  
+                                                                .pc-select-box                                                      
+                                                                    .pc-select-box-right
+                                                                        +icon("select-down").stroke-icon
+                                            .col.col-lg-auto
+                                                .ems-field.form-floating.input-user-tel
+                                                    input#Number.form-control(type='text' name='Number' value='' placeholder='Number*')
+                                                    label(for='Number') Number*
+                                                    .ems-field-feedback.fs-12.d-none.position-absolute
+                                    .col-12.col-lg-6
+                                        .ems-field.form-floating.mb-0.mb-lg-20
+                                            select.form-select.ems-select(name='Select Topic' placeholder='Select Topic')
+                                                option(value="") Select Topic
+                                                option Access Problem 1
+                                                option Access Problem 2
+                                    .col-12.col-lg-6
+                                        .ems-field.form-floating.f-textarea.mb-30.mb-lg-20
+                                            textarea#message.input-login.form-control(type='text' name='message' value='' placeholder='You can write your comment here')
+                                            label(for='message') Write your message
+                                            .text-form-left-bottom 0/250
+                                            .ems-field-feedback.fs-12.d-none.position-absolute
+                                        
+                                        .ems-field.mb-25
+                                            .form-check
+                                                label.checkbox-container.align-items-start(for='TermsandConditions')
+                                                    input.form-check-input.rounded-0.fs-15(type='checkbox' id='TermsandConditions')
+                                                    span.checkmark
+                                                    .form-check-textBy By clicking here, I state that I have read and understood the
+                                                        a(data-title="Terms and Conditions" href="javascript:void(0);" class="ems-kvkk-trigger ems-link text-decoration-underline") terms and conditions.</a>
+                                                .ems-field-feedback 
+
+                                        .ems-field.mb-0.mb-lg-40.w-100
+                                            button.btn.btn-them-2.btn-lg.w-100(type='button')
+                                                span Send

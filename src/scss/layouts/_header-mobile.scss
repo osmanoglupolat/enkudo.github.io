@@ -323,26 +323,33 @@
     .searchbox{   
       display: block;
       min-width: 100%;
-      right: 0;
+      right: 24px;
       margin: 0;
       position: absolute;
-      top: -8px;  
+      top: 3px;  
+      .search-icons{z-index: 9;}
       .searchbtn{
         z-index: 14;
-        top: 0;
-        padding-top: 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-direction: column;
-        background: $content-bg-color;
+        height: 40px;
+        width: 40px;
+        left: auto;
+        right: 0;
+        top: 0px;
+        position: absolute;
+        background: transparent;
         svg{
           top: 11px;
           right: 24px;
         }
-        &.show{  
-          top: -5px;
-          padding-top: 5px; 
+        &.show{
+          top: -16px;
+          padding-top: 5px;
+          width: 100%;
+          height: auto;
+          left: auto;
+          right: -24px;
+          display: block;
+          background: $content-bg-color;
           svg{
             position: absolute;
             top: 4px;
@@ -382,6 +389,12 @@
               width: 32px;
               height: 32px;
             }
+          }
+          & + .search-icons{
+            z-index: 9999;
+            position: absolute;
+            right: 10px;
+            top: 78px;
           }
         }        
         input{

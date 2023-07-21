@@ -1,0 +1,163 @@
+.contact-section{
+    display: block;
+    position: relative;
+    margin-top: $site-header-height;
+    padding-top: 58px;
+    margin-bottom: 80px;
+    .contact-box{
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;        
+        .left-box{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            align-self: stretch;
+            max-width: 375px;
+            width: 100%;
+            .contact-info-list{
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                gap:4px;
+                max-width: 311px;
+                width: 100%;
+                margin-bottom: 40px;
+                .cil-icon{
+                    width: 32px;
+                    height: 32px;
+                    color: $white;
+                }
+                .cil-text-box{  
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    flex-direction: column;
+                    gap:8px;    
+                    width: 100%;    
+                    max-width: 271px;          
+                    .cil-title{
+                        display: flex;
+                        align-items: center;
+                        height: 32px;
+                        color: $body-text-color;
+                        font-size: 18px;
+                        font-weight: 600;
+                        line-height: 25px;
+                    }
+                    .cil-text{
+                        color: $gray2;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 22px;
+                    }
+                }
+            }                                
+        }
+        .right-box{
+            width: 100%;
+            max-width: 819px;
+            height: 100%;
+            .rb-content{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                padding:38px 45px 56px 45px;
+                .rb-title{
+                    color:#E8E8E8;
+                    font-size: 24px;
+                    font-weight: 600;
+                    line-height: 25px;
+                }
+                .ems-form{
+                    padding-right: 55px;
+                    .ems-field.ems-field-msg-error input.form-control,
+                    .ems-field.ems-field-msg-error textarea,
+                    .ems-field.ems-field-msg-error select,
+                    .ems-field.ems-field-msg-error
+                    .phone-bg {
+                            border: 1px solid #D93B41 !important;
+                    }
+                    .ems-field-feedback {
+                        position: relative;
+                        font-size: 12px;
+                        color: #D72027;
+                        margin-top: 5px;
+                    }                    
+                }
+                .phone-bg{
+                    display: flex;
+                    width: 115px;
+                    height: 48px;
+                    padding: 11px 14px 10px 15px;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    flex-shrink: 0;
+                    background: #262b30;   
+                    .phone-control{  
+                        display: flex;
+                        flex-direction: column;
+                        gap: 4px;                      
+                        .top-text {
+                            display: flex;
+                            align-items: center;
+                            color: $gray5;
+                            font-size: 11px;
+                            line-height: 12px;
+                            margin-top: -3px;
+                            font-weight: 400;
+                            pointer-events: none;
+                        }                            
+                        .pc-select-box{
+                            display: flex;
+                            align-items: center;
+                            gap: 16px;
+                            width: 100%;
+                            .pc-select-box-left{
+                                display: flex;
+                                align-items: center;
+                                gap: 4px;
+                                .telflagform{
+                                    position: relative;
+                                    width: 10px;
+                                    height: 10px;
+                                }
+                                span{
+                                    color: $body-text-color;
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    line-height: 16px;
+                                }  
+                            }                                                      
+                            .pc-select-box-right{
+                                .icon-select-down{
+                                    display: flex;
+                                    align-items: center;
+                                    width: 7.506px;
+                                    height: 4.105px;
+                                    stroke:$body-text-color;
+                                }
+                            }  
+                        }   
+                    }
+                }
+                .input-user-tel{
+                    width: 207px;
+                }
+                .user-form-line{
+                    display: flex;
+                    height: 4px;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 72px 0;
+                    background: $body-bg-color;
+                }
+            }
+        }
+    }
+}

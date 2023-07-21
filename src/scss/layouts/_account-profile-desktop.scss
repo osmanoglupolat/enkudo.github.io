@@ -1217,17 +1217,7 @@
             }
         }
         .reviews-modal-form{
-            .text-form-left-bottom{                
-                position: absolute;
-                top: auto;
-                bottom: 8px;
-                left: 16px;
-                padding-top: 18px;
-                color: #50575B;
-                font-size: 14px;
-                font-weight: 400;
-                line-height: 20px;
-            }
+           
         }
 
     }
@@ -1239,20 +1229,7 @@
         justify-content: flex-end;
         align-items: center;
         gap: 24px;
-        background: $body-bg-color;
-        .form-check-textBy{
-            color: $gray2;
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 20px;
-            margin-left: 4px;
-            margin-top: 1px;
-            a{                
-                color: $gray2;
-                text-decoration-line: underline;
-                text-underline-position: under;
-            }
-        }
+        background: $body-bg-color;        
     }
 }
 .ems-prd-Reviews-ready{

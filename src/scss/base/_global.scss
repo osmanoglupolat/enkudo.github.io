@@ -2,7 +2,6 @@
 body img:not([alt]),
 body a:not([href]),
 body button:not([type]) {
-  border: 0vw solid #910000 !important;
 }
 
 // Typography - https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight#Common_weight_name_mapping
@@ -72,7 +71,7 @@ html {
 
 // Text Selection
 ::selection {
-  background: $primary;
+  background: $them-color;
   color: $white;
   text-shadow: 0 0px 30px $white;
 }
@@ -397,12 +396,13 @@ $banner-arrow-size: 8px;
   &::after {
     content: "";
     display: block;
-    width: 15px;
-    height: 10px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.7;
     position: absolute;
     top: 50%;
-    right: 10px;
-    background: url(../../frontend/images//arrow-down.svg);
+    right: 24px;
+    background: url(../../frontend/images/arrow-down.svg);
     background-repeat: no-repeat;
   }
 }

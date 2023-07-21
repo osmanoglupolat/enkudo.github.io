@@ -28,8 +28,8 @@
           justify-content: center;
           top: 0;
           left: 0;
-          height: 20px;
-          width: 20px;
+          height: 16px;
+          width: 16px;
           background-color: transparent;
           border: 0.12rem solid $gray2;
           margin: 5px;      
@@ -47,9 +47,9 @@
           border: 0.12rem solid $them-color;      
           &:after {
             display: block;
-            left: 6px;
-            top: 2px;
-            width: 6px;
+            left: 4px;
+            top: 0px;
+            width: 5px;
             height: 12px;
             border: solid $content-bg-color;
             border-width: 0 3px 3px 0;
