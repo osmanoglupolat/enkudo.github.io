@@ -68,7 +68,7 @@
       a.menubtn{
         background: transparent;
         padding: 0;
-        color: $body-text-color;
+        color: $white;
         cursor: pointer;
         text-decoration: none;
         margin-right: 24px;
@@ -83,7 +83,7 @@
         }
         span{
           font-size: 14px;
-          line-height: 19.6px;
+          line-height: 20px;
           font-weight: 400;
         }
         svg.icon-menunav{
@@ -134,7 +134,7 @@
           top: 40px;
           font-weight: 600;
           font-size: 22px;
-          line-height: 26.4px;
+          line-height: 26px;
         }
         &.show{
           display: flex;
@@ -599,7 +599,7 @@
       a.langbtn{
         cursor: pointer;
         text-decoration: none;
-        color: $body-text-color;
+        color: $white;
         display: inline-flex;
         align-items: center;
         justify-content: flex-end;
@@ -620,6 +620,7 @@
         svg.icon-arrow-down{
           width: 24px;
           height: 24px;
+          color: $white;
         }
         &.show{       
           border-bottom: 1px solid #00070E;     
@@ -684,7 +685,7 @@
       a.userbtn{
         cursor: pointer;
         text-decoration: none;
-        color: $body-text-color;
+        color: $white;
         display: inline-flex;
         align-items: center;
         font-weight: 400;
@@ -701,12 +702,13 @@
         }
         svg.icon-arrow-down{
           width: 24px;
-          height: 24px;            
+          height: 24px;
+          color: $white;            
         }
         svg.icon-profil{
           width: 32px;
           height: 32px;
-          color: $body-text-color;  
+          color: $white; 
         }
         &.show{   
           border-bottom: 1px solid #00070E;         

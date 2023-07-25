@@ -85,7 +85,7 @@
           top: 40px;
           font-weight: 600;
           font-size: 22px;
-          line-height: 26.4px;
+          line-height: 26px;
         }
         &.show{
           top: $site-header-height-mini;
@@ -449,7 +449,7 @@
       a.userbtn{
         cursor: pointer;
         text-decoration: none;
-        color: $body-text-color;
+        color: $white;
         display: inline-flex;
         align-items: center;
         font-weight: 400;
@@ -466,11 +466,13 @@
         }
         svg.icon-arrow-down{
           width: 24px;
-          height: 24px;            
+          height: 24px;  
+          color: $white;          
         }
         svg.icon-profil{
           width: 32px;
           height: 32px;
+          color: $white;
         }
         &.show{   
           border-bottom: 1px solid #00070E;         
@@ -489,7 +491,7 @@
         min-width: 147px;
         font-weight: 500;
         font-size: 14px;
-        line-height: 19.6px;          
+        line-height: 19px;          
         box-sizing: border-box;
         gap: 16px;
         &.show{
@@ -533,6 +535,7 @@
           svg{
             width: 32px;
             height: 32px;
+            color: $white;
           }
         }
         :hover{

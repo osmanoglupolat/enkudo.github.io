@@ -1,0 +1,193 @@
+.filter-box
+    .filter-head
+        .filter-btn(href="javascript:void(0)" aria-label="Edit" data-target="body" data-ready="ems-prd-filter-ready" data-animate="ems-prd-filter-animate" data-type="add" )
+            span Filter
+            +icon("filter").stroke-icon.d-flex.d-lg-none
+        .filter-btn.d-flex.d-lg-none(href="javascript:void(0)" aria-label="Edit" data-target="body" data-ready="ems-prd-sortby-ready" data-animate="ems-prd-sortby-animate" data-type="add" )
+            span Sort By
+            +icon("sorting")
+        .filter-clear.d-none.d-lg-block
+            span Clean All
+
+    //Filter Modal
+    .ems-prd-filter-overlay.ems-overlay(data-target="body" data-ready="ems-prd-filter-ready" data-animate="ems-prd-filter-animate" data-type="remove")
+    .ems-modal.ems-modal-lg.ems-prd-filter.ems-modal-end.ems-modal-lg-end.filter-settings
+        .modal-header.filter-head-settings.d-flex.align-items-center.justify-content-between.d-lg-none                                
+            .filter-btn
+                span Filter
+            .filter-close(href="javascript:void(0)" aria-label="close" data-target="body" data-ready="ems-prd-filter-ready" data-animate="ems-prd-filter-animate" data-type="remove")
+                +icon("menuclose")
+                    
+        .modal-body.ems-scrollbar.ems-scrollbar-vertical
+            .filter-tag
+                .filter-tag-item
+                    span Need
+                    +icon("delete")
+                                        
+            .filter-clear.d-block.d-lg-none
+                span Clean All
+
+            ul.list-unstyled.accordion
+                li.accordion-item.slctd_lv2.selected(rel="tab-1")
+                    a.accordion-button(href="javascript:void(0);") 
+                        span Categories
+                        +icon("plus_minus").stroke-icon
+                        +icon("plus_minuss").stroke-icon
+                    ul.lv2.list-unstyled.accordion-body
+                        .accordion-clear
+                            span Clean All
+
+                        ul.list-unstyled.accordion
+                            li.accordion-item.slctd_lv3.selected(rel="tab-3")
+                                a.accordion-button(href="javascript:void(0);") 
+                                    .d-flex.justify-content-start
+                                        .ems-check-list(aria-label="product_type" rel="f_list_1_item_1")
+                                            span.form-check-text All (139)
+                                    +icon("plus_minus").stroke-icon
+                                    +icon("plus_minuss").stroke-icon
+                                ul.lv3.list-unstyled.accordion-body
+                                    .all-check-box.product-list-view(rel="f_list_1")
+                                        li 
+                                            a.ems-check-list(href="javascript:void(0);" aria-label="product_type" rel="f_list_1_item_1")
+                                                span.form-check-text All (139)
+                                        li 
+                                            a.ems-check-list(href="javascript:void(0);" aria-label="product_type" rel="f_list_1_item_2")
+                                                span.form-check-text Quiz (2)
+                                        li 
+                                            a.ems-check-list(href="javascript:void(0);" aria-label="product_type" rel="f_list_1_item_3")
+                                                span.form-check-text Sports (45)
+                                        li 
+                                            a.ems-check-list(href="javascript:void(0);" aria-label="product_type" rel="f_list_1_item_4")
+                                                span.form-check-text Hyper Casual (50)
+                                        li 
+                                            a.ems-check-list(href="javascript:void(0);" aria-label="product_type" rel="f_list_1_item_5")
+                                                span.form-check-text AAA Games (8)
+                                        li 
+                                            a.ems-check-list(href="javascript:void(0);" aria-label="product_type" rel="f_list_1_item_6")
+                                                span.form-check-text Educational (6)
+                                        li 
+                                            a.ems-check-list(href="javascript:void(0);" aria-label="product_type" rel="f_list_1_item_7")
+                                                span.form-check-text E-Sports (1)
+
+                        ul.list-unstyled.accordion
+                            li.accordion-item.slctd_lv3.selected(rel="tab-3")
+                                a.accordion-button(href="javascript:void(0);") 
+                                    .d-flex.justify-content-start.product-list-view(rel="f_list_1")
+                                        .ems-check-list(aria-label="product_type" rel="f_list_1_item_1")
+                                            span.form-check-text Streaming Video (6)
+                                    +icon("plus_minus").stroke-icon
+                                    +icon("plus_minuss").stroke-icon
+                                ul.lv3.list-unstyled.accordion-body
+                                    .all-check-box.product-list-view(rel="f_list_1")
+                                        li 
+                                            a.ems-check-list(href="javascript:void(0);" aria-label="product_type" rel="f_list_1_item_1")
+                                                span.form-check-text All in One (139)
+                                        li 
+                                            a.ems-check-list(href="javascript:void(0);" aria-label="product_type" rel="f_list_1_item_2")
+                                                span.form-check-text Drama (25)
+
+                        ul.list-unstyled.accordion
+                            li.accordion-item.slctd_lv3(rel="tab-3")
+                                a.accordion-button(href="javascript:void(0);") 
+                                    .d-flex.justify-content-start.product-list-view(rel="f_list_1")
+                                        .ems-check-list(aria-label="product_type" rel="f_list_1_item_1")
+                                            span.form-check-text Streaming Music (1)
+                                    +icon("plus_minus").stroke-icon
+                                    +icon("plus_minuss").stroke-icon
+                                ul.lv3.list-unstyled.accordion-body
+                                    .all-check-box.product-list-view(rel="f_list_1")
+                                        li 
+                                            a.ems-check-list(href="javascript:void(0);" aria-label="product_type" rel="f_list_1_item_1")
+                                                span.form-check-text All in One (139)
+                                        li 
+                                            a.ems-check-list(href="javascript:void(0);" aria-label="product_type" rel="f_list_1_item_2")
+                                                span.form-check-text Drama (25)
+
+                        ul.list-unstyled.accordion
+                            li.accordion-item.slctd_lv3(rel="tab-3")
+                                a.accordion-button(href="javascript:void(0);") 
+                                    .d-flex.justify-content-start.product-list-view(rel="f_list_1")
+                                        .ems-check-list(aria-label="product_type" rel="f_list_1_item_1")
+                                            span.form-check-text Digital Publications (18)
+                                    +icon("plus_minus").stroke-icon
+                                    +icon("plus_minuss").stroke-icon
+                                ul.lv3.list-unstyled.accordion-body
+                                    .all-check-box.product-list-view(rel="f_list_1")
+                                        li 
+                                            a.ems-check-list(href="javascript:void(0);" aria-label="product_type" rel="f_list_1_item_1")
+                                                span.form-check-text All in One (139)
+                                        li 
+                                            a.ems-check-list(href="javascript:void(0);" aria-label="product_type" rel="f_list_1_item_2")
+                                                span.form-check-text Drama (25)
+
+                        ul.list-unstyled.accordion
+                            li.accordion-item.slctd_lv3(rel="tab-3")
+                                a.accordion-button(href="javascript:void(0);") 
+                                    .d-flex.justify-content-start.product-list-view(rel="f_list_1")
+                                        .ems-check-list(aria-label="product_type" rel="f_list_1_item_1")
+                                            span.form-check-text Kids’ Club /Edutainment(1)
+                                    +icon("plus_minus").stroke-icon
+                                    +icon("plus_minuss").stroke-icon
+                                ul.lv3.list-unstyled.accordion-body
+                                    .all-check-box.product-list-view(rel="f_list_1")
+                                        li 
+                                            a.ems-check-list(href="javascript:void(0);" aria-label="product_type" rel="f_list_1_item_1")
+                                                span.form-check-text All in One (139)
+                                        li 
+                                            a.ems-check-list(href="javascript:void(0);" aria-label="product_type" rel="f_list_1_item_2")
+                                                span.form-check-text Drama (25)
+                                    
+            ul.list-unstyled.accordion
+                li.accordion-item.selected(rel="tab-3")
+                    a.accordion-button(href="javascript:void(0);") 
+                        span Maturity Rating
+                        +icon("plus_minus").stroke-icon
+                        +icon("plus_minuss").stroke-icon
+                    ul.lv2.list-unstyled.accordion-body
+                        .accordion-clear
+                            span Clean All
+                        .all-check-box.product-list-view(rel="f_list_1")
+                            li 
+                                a.ems-check-list(href="javascript:void(0);" aria-label="product_type" rel="f_list_1_item_1")
+                                    span.form-check-text Everyone (76)
+                            li 
+                                a.ems-check-list(href="javascript:void(0);" aria-label="product_type" rel="f_list_1_item_2")
+                                    span.form-check-text Everyone 10+ (34)
+                            li 
+                                a.ems-check-list(href="javascript:void(0);" aria-label="product_type" rel="f_list_1_item_3")
+                                    span.form-check-text Teen (2)
+                            li 
+                                a.ems-check-list(href="javascript:void(0);" aria-label="product_type" rel="f_list_1_item_4")
+                                    span.form-check-text Mature 17+(4)
+                            li 
+                                a.ems-check-list(href="javascript:void(0);" aria-label="product_type" rel="f_list_1_item_5")
+                                    span.form-check-text Kids &Family (35)
+
+            ul.list-unstyled.accordion
+                li.accordion-item.selected(rel="tab-4")
+                    a.accordion-button(href="javascript:void(0);") 
+                        span Offers
+                        +icon("plus_minus").stroke-icon
+                        +icon("plus_minuss").stroke-icon
+                    ul.lv2.list-unstyled.accordion-body
+                        .accordion-clear
+                            span Clean All
+                        .all-check-box.product-list-view(rel="f_list_1")
+                            li 
+                                a.ems-check-list(href="javascript:void(0);" aria-label="product_type" rel="f_list_1_item_1")
+                                    span.form-check-text On Sale (54)
+                            li 
+                                a.ems-check-list(href="javascript:void(0);" aria-label="product_type" rel="f_list_1_item_2")
+                                    span.form-check-text Special Offers (34)
+                            li 
+                                a.ems-check-list(href="javascript:void(0);" aria-label="product_type" rel="f_list_1_item_3")
+                                    span.form-check-text Bundle Offers (2)
+
+        .modal-footer.filter-footer-settings.d-flex.align-items-center.justify-content-between.d-lg-none                               
+            .filter-total-number
+                span 117 results 
+            a.btn.btn-them-1.btn-lg(href="#!" aria-label="search result") 
+                span Show Results
+                +icon("ArrowRight").icon-arrow-right
+    
+    //Filter Modal

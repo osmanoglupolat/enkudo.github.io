@@ -67,6 +67,24 @@
     }
 }
 
+//Sortby Modal
+.ems-prd-sortby {
+    width: 100% !important;
+    &-ready & {
+        @extend  %ems-modal-ready;
+    }
+    &-animate & {
+        @extend %ems-modal-animate-x;
+        @extend %ems-modal-animate;
+        &-overlay {
+            @extend %ems-modal-animate-overlay;
+        }
+    }
+    &-animate {
+        @extend %ems-modal-animate-body;
+    }
+}
+
 .ems-square {
     &-ready & {
         @extend  %ems-modal-ready;

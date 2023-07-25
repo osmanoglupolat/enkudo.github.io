@@ -2,119 +2,25 @@ extends layouts/default.pug
 
 block prepend head
     - var pageTitle = "Enkudo"
-    - var pageDescription = "Product List sayfası, Enkudo"
-    - var pageName = "product-list"
-    - var pageClass = "page-product-list"
+    - var pageDescription = "Search Result sayfası, Enkudo"
+    - var pageName = "search-result"
+    - var pageClass = "page page-search-result"
 
 block content
-    section.main-slider.main-slider-list
-        .main-slider-section.col-12(onclick="moveMinuteHand()")
-            .breadcrumb-list-top
-                .container-fluid.px-20.px-lg-60
-                    +breadcrumb(["Home", "index.html"],["Gaming", "product-list.html"])
+    .breadcrumb-list-top
+        .container-fluid.px-20.px-lg-60
+            +breadcrumb(["Home", "index.html"],["Search Results", "search-result.html"])
 
-            +swiper('widgetAuto', true, true, false, true)(class="main-slider")
-                -for(var i=0; i<1; i++)
-                    li.swiper-slide
-                        .d-flex.align-items-center.justify-content-center
-                            picture
-                                source.lazy-picture(media='(max-width:0)' srcset='frontend/images/1x1.svg')
-                                source(media='(max-width: 767px)' srcset='frontend/images/slider/3.png 2x')
-                                source(media='(min-width: 768px)' srcset='frontend/images/slider/3.png')
-                                img.w-100(src='frontend/images/slider/3.png' alt='slide 1')
-                                .overleyslider
-                            .position-absolute.w-100.top-50
-                                .container.px-20.px-lg-0
-                                    .row.g-0
-                                        .w-100.h-100.z-1.text-start.d-flex.align-items-start.justify-content-start
-                                            .slide-desc.d-flex.flex-column.w-lg-50.mt-0.mt-lg-0
-                                                .d-flex.align-items-center.mb-10.mb-lg-15
-                                                    h3.text-white.fs-32.fs-lg-48.fw-600.lh-1.mt-0.mt-lg-0 Need For Speed
-                                                    .slider-text-line
-                                                    span.text-white.fs-18.fs-lg-20.fw-400.lh-1.mt-0.mt-lg-0 GAİN
-                                                span.text-white.fs-16.fs-lg-18 For a limited time get monthly “Need for Speed” subscription %10 off and start to play your favorite game on your device 
-                                                .d-flex.d-flex.align-items-center.justify-content-start.mt-40.mb-10
-                                                    a.btn.btn-them-1.btn-lg.mxw-200.w-100(href="product-detail.html")
-                                                        span Discover
-                                                        +icon("ArrowRight").icon-arrow-right
-                                                            
-                                                    .d-flex.align-items-center.justify-content-center.text-center.px-25
-                                                        span.card-price-last.fs-18.fs-lg-24.fw-600.text-white $9.90
-                                                        span.card-price-first.fs-14.fs-lg-16.text-gray.text-decoration-line-through.px-5 $12.90
-
-                                                span.fs-12.fs-lg-14.fw-400.text-white
-                                                    p.my-0 *This offer ends April 8th 2023 and valid on annual subscription.
-                                                    
-                    li.swiper-slide
-                        .d-flex.align-items-center.justify-content-center
-                            picture
-                                source.lazy-picture(media='(max-width:0)' srcset='frontend/images/1x1.svg')
-                                source(media='(max-width: 767px)' srcset='frontend/images/slider/2.png 2x')
-                                source(media='(min-width: 768px)' srcset='frontend/images/slider/2.png')
-                                img.w-100(src='frontend/images/slider/2.png' alt='slide 2')
-                                .overleyslider
-                            .position-absolute.w-100.top-50
-                                .container.px-20.px-lg-0
-                                    .row.g-0
-                                        .w-100.h-100.z-1.text-start.d-flex.align-items-start.justify-content-start
-                                            .slide-desc.d-flex.flex-column.w-lg-50.mt-0.mt-lg-0
-                                                .d-flex.align-items-center.mb-10.mb-lg-15
-                                                    h3.text-white.fs-32.fs-lg-48.fw-600.lh-1.mt-0.mt-lg-0 Need For Speed
-                                                    .slider-text-line
-                                                    span.text-white.fs-18.fs-lg-20.fw-400.lh-1.mt-0.mt-lg-0 GAİN
-                                                span.text-white.fs-16.fs-lg-18 For a limited time get monthly “Need for Speed” subscription %10 off and start to play your favorite game on your device 
-                                                .d-flex.d-flex.align-items-center.justify-content-start.mt-40.mb-10
-                                                    a.btn.btn-them-1.btn-lg.mxw-200.w-100(href="product-detail.html")
-                                                        span Discover
-                                                        +icon("ArrowRight").icon-arrow-right
-                                                            
-                                                    .d-flex.align-items-center.justify-content-center.text-center.px-25
-                                                        span.card-price-last.fs-18.fs-lg-24.fw-600.text-white $9.90
-                                                        span.card-price-first.fs-14.fs-lg-16.text-gray.text-decoration-line-through.px-5 $12.90
-
-                                                span.fs-12.fs-lg-14.fw-400.text-white
-                                                    p.my-0 *This offer ends April 8th 2023 and valid on annual subscription.
-                                                    
-                    li.swiper-slide
-                        .d-flex.align-items-center.justify-content-center.video-bg
-                            video(poster="frontend/images/slider/video1.png" autobuffer="" autoplay="" loop="" muted="" playsinline="")
-                                source(src="frontend/images/slider/video1.mp4" type="video/mp4")
-                                source(src="frontend/images/slider/video1.webm" type="video/webm")
-                                source(src="frontend/images/slider/video1.ogg" type="video/ogg")
-                                .overleyslider
-                            .position-absolute.w-100.top-50
-                                .container.px-20.px-lg-0
-                                    .row.g-0
-                                        .w-100.h-100.z-1.text-start.d-flex.align-items-start.justify-content-start
-                                            .slide-desc.d-flex.flex-column.w-lg-50.mt-0.mt-lg-0
-                                                .d-flex.align-items-center.mb-10.mb-lg-15
-                                                    h3.text-white.fs-32.fs-lg-48.fw-600.lh-1.mt-0.mt-lg-0 Need For Speed
-                                                    .slider-text-line
-                                                    span.text-white.fs-18.fs-lg-20.fw-400.lh-1.mt-0.mt-lg-0 GAİN
-                                                span.text-white.fs-16.fs-lg-18 For a limited time get monthly “Need for Speed” subscription %10 off and start to play your favorite game on your device 
-                                                .d-flex.d-flex.align-items-center.justify-content-start.mt-40.mb-10
-                                                    a.btn.btn-them-1.btn-lg.mxw-200.w-100(href="product-detail.html")
-                                                        span Discover
-                                                        +icon("ArrowRight").icon-arrow-right
-                                                            
-                                                    .d-flex.align-items-center.justify-content-center.text-center.px-25
-                                                        span.card-price-last.fs-18.fs-lg-24.fw-600.text-white $9.90
-                                                        span.card-price-first.fs-14.fs-lg-16.text-gray.text-decoration-line-through.px-5 $12.90
-
-                                                span.fs-12.fs-lg-14.fw-400.text-white
-                                                    p.my-0 *This offer ends April 8th 2023 and valid on annual subscription.
-                                                                                                    
-    section.overflow-hidden
+    section.page-section.overflow-hidden.product-list.product-categories
         .container-fluid.px-0.px-lg-60
-            .product-head-title
-                h3 Gaming
-                span 139 services
+            .product-head-title.mt-30.mb-40
+                h3 Show Results for “Need” 
+                span 139 services 
 
-    section.overflow-hidden.product-list.product-categories
         .container-fluid.px-15.px-lg-60
             .row.g-0
                 .col-12.col-lg-4
-                    include includes/filter-left                    
+                    include includes/filter-left-search
 
                 .col-12.col-lg-8
                     .ems-data-filter

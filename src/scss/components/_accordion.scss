@@ -36,5 +36,45 @@
             font-weight: 700;
         }
     }
+    .slctd_lv2{
+        .lv2{
+            display: none;
+            .accordion{
+                margin-bottom: 0 !important;
+            }
+        }
+    }
+    >.slctd_lv2.selected{
+        .lv2 {
+            display: block;
+            padding-bottom: 0px !important;
+            .accordion:last-child{
+                margin-bottom: 0 !important;
+            }
+        }
+    }
+    .slctd_lv3{
+        .accordion-button{
+            span{                
+                color: #afb3b5 !important;
+                font-size: 14px !important;
+                font-weight: 400 !important;
+                line-height: 1 !important;
+                margin-left: 8px !important;
+            }
+            .ems-check-list::before {
+                margin: 5px;
+            }
+        }
+        .lv3{
+            display: none;
+        }
+    }
+    >.slctd_lv3.selected{
+        .lv3 {
+            display: block;
+            padding-left: 30px !important;
+        }
+    }
 
 }

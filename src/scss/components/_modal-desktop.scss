@@ -150,7 +150,25 @@
 
 //Filter Modal
 .ems-prd-filter {
-    width: 580px !important;
+    width: 100% !important;
+    &-ready & {
+        @extend  %ems-modal-lg-ready;
+    }
+    &-animate & {
+        @extend %ems-modal-lg-animate-x;
+        @extend %ems-modal-lg-animate;
+        &-overlay {
+            @extend %ems-modal-lg-animate-overlay;
+        }
+    }
+    &-animate {
+        @extend %ems-modal-lg-animate-body;
+    }
+}
+
+//Sortby Modal
+.ems-prd-sortby {
+    width: 100% !important;
     &-ready & {
         @extend  %ems-modal-lg-ready;
     }
@@ -166,6 +184,7 @@
     }
 }
 //Filter Modal
+
 .ems-square {
     &-ready & {
         @extend  %ems-modal-lg-ready;

@@ -1,3 +1,11 @@
+.page-section{
+    display: block;
+    position: relative;
+    margin-top: $site-header-height;
+    padding-top: 58px;
+    margin-bottom: 80px;
+}
+
 .notfound,
 .welcome {
     picture {
