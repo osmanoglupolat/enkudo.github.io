@@ -1,3 +1,18 @@
+// .ems-modal
+.ems-modal {
+    .modal-header{
+        a{
+            color: $white;
+            &:hover{
+                color: $them-color;
+            }
+        }
+    }
+}
+.ems-overlay{
+    background: $body-bg-color;
+    opacity: 0.6;
+}
 // .ems-modal-lg
 .ems-modal-lg {
     display: none;
@@ -7,7 +22,7 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background: $white;
+    background:$content-bg-color;
     opacity: 0;
     transition: all .12s cubic-bezier(0.950, 0.050, 0.795, 0.035);
 }
@@ -55,7 +70,7 @@
 // EMS Modal Compact
 .ems-modal-lg-compact {
     flex-direction: column;
-    background: $white;
+    background: $content-bg-color;
     position: fixed;
     top: 0;
     right: 0;
@@ -145,6 +160,62 @@
         &-overlay {
             @extend %ems-modal-lg-animate-overlay;
         }
+    }
+}
+
+//Product confirm Modal
+.ems-pdp-confirm {
+    width: 800px !important;
+    max-height: max-content;
+    height: auto;
+    left: 0;
+    right: 0;
+    top:0;
+    bottom: 0;
+    margin: auto;
+    z-index: -9999;
+   
+    &-animate & {
+        @extend %ems-modal-lg-ready;
+        @extend %ems-modal-lg-animate;
+        bottom: 0;
+
+        &-overlay {
+            @extend %ems-modal-lg-animate-overlay;
+        }
+    }
+}
+.ems-pdp-confirm-ready{
+    .ems-pdp-confirm {
+        z-index: 9999;
+    }
+}
+
+//Product verification Modal
+.ems-pdp-verification {
+    width: 720px !important;
+    max-height: 578px;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top:0;
+    bottom: 0;
+    margin: auto;
+    z-index: -9999;
+   
+    &-animate & {
+        @extend %ems-modal-lg-ready;
+        @extend %ems-modal-lg-animate;
+        bottom: 0;
+
+        &-overlay {
+            @extend %ems-modal-lg-animate-overlay;
+        }
+    }
+}
+.ems-pdp-verification-ready{
+    .ems-pdp-verification {
+        z-index: 9999;
     }
 }
 

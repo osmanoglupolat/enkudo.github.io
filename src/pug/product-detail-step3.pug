@@ -1,0 +1,28 @@
+extends layouts/default.pug
+
+block prepend head
+    - var pageTitle = "Enkudo"
+    - var pageDescription = "Ürün Detay sayfası, Enkudo"
+    - var pageName = "Ürün Detay"
+    - var pageClass = "page page-product-detail"
+
+block content
+    .breadcrumb-list-top.position-relative
+        .container-fluid.px-20.px-lg-60
+            +breadcrumb(["Home", "index.html"],["Contact", "contact.html"])
+    section.page-section.pt-15
+        .container.p-0
+            .row.g-5
+                .ems-pdp-review
+                    .ems-pdp-review-content
+                        +icon("empty-verify").empty-icons
+                        .title-box-empty
+                            h4 Congratulations!
+                            p Your subscription has been successfully confirmed. <br> You now have access to all the features and benefits of your chosen plan.
+                            p You can view your subscriptions at any time in the "Subscriptions" section under Profile.
+                        .btn-box-empty
+                            a.btn.btn-them-2.btn-lg.w-100(href="index.html")
+                                span Go to Homepage
+                            a.btn.btn-them-6.btn-lg.w-100(href="account-subscriptions.html")
+                                span View Subscriptions
+                                            

@@ -2,7 +2,68 @@
     min-width: 380px;
 }
 
-
+.phone-box{
+  .phone-bg{
+    display: flex;
+    width: 115px;
+    height: 48px;
+    padding: 11px 14px 10px 15px;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-shrink: 0;
+    background: #262b30;   
+    .phone-control{  
+        display: flex;
+        flex-direction: column;
+        gap: 4px;                      
+        .top-text {
+            display: flex;
+            align-items: center;
+            color: $gray5;
+            font-size: 11px;
+            line-height: 12px;
+            margin-top: -3px;
+            font-weight: 400;
+            pointer-events: none;
+        }                            
+        .pc-select-box{
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            width: 100%;
+            .pc-select-box-left{
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                .telflagform{
+                    position: relative;
+                    width: 10px;
+                    height: 10px;
+                }
+                span{
+                    color: $body-text-color;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 16px;
+                }  
+            }                                                      
+            .pc-select-box-right{
+                .icon-select-down{
+                    display: flex;
+                    align-items: center;
+                    width: 7.506px;
+                    height: 4.105px;
+                    stroke:$body-text-color;
+                }
+            }  
+        }   
+    }
+}
+.input-user-tel{
+    width: 207px;
+}
+}
 /// new checked
 
 // Checkbox

@@ -358,12 +358,11 @@ select:active, textarea:active, input:active {
 
 
 .circle-wrap {
-    margin: 40px auto;
+    margin: 0px auto;
     width: 80px;
     height: 80px;
-    background: rgba(119, 113, 103, .3);
+    background: rgba(46, 189, 89, 0.10);
     border-radius: 50%;
-    border: 1px solid #cdcbd0;
   }
   
   .circle-wrap .circle .mask,
@@ -372,43 +371,47 @@ select:active, textarea:active, input:active {
     height: 80px;
     position: absolute;
     border-radius: 50%;
-  }
-  
+  }  
   .circle-wrap .circle .mask {
     clip: rect(0px, 80px, 80px, 40px);
-  }
- 
+  } 
   .circle-wrap .inside-circle {
-    width: 68px;
-    height: 68px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
-    background: $light;
-    line-height: 68px;
+    background: $content-bg-color;
+    line-height: 70px;
     text-align: center;
-    margin-top: 6px;
-    margin-left: 6px;
-    color: $black;
+    margin-top: 5px;
+    margin-left: 5px;
+    color: $white;
     position: absolute;
     z-index: 100;
-    font-weight: 400;
-    font-size: .875rem;
-    font-weight: bold;
-  }
-  
+    font-size: 16px;
+    font-weight: 500;
+  }  
   /* color animation */
   
   /* 3rd progress bar */
   .mask .fill {
     clip: rect(0px, 40px, 80px, 0px);
-    background-color: $green;
-  }
-  
+    background-color: $green2;
+  }  
   .mask.full,
   .circle .fill {
-    animation: fill ease-in-out 3s;
-    transform: rotate(135deg);
+    animation: fill ease-in-out 120s;
+    transform: rotate(180deg);
   }
 
+  @keyframes fill {
+    0% {
+            transform: rotate(0deg)
+    }
+
+    100% {
+            transform: rotate(180deg)
+    }
+}
 
 // .circle-wrap {
 //     margin: 40px auto;

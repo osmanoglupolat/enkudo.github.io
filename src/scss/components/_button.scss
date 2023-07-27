@@ -9,7 +9,7 @@
   padding: 0px 24px 0px 32px;
   gap: 4px;
   height: 36px;
-  color: #00070E;
+  color: $dark;
   transition: 0.7s;
   span{      
     cursor: pointer;
@@ -20,7 +20,7 @@
     width: 32px;
     height: 32px;
     path{
-      fill: #00070E;
+      fill: $dark;
       transition: 0.7s;
     }
   }
@@ -38,7 +38,7 @@
   }
   // Theme Colors
   &-them-1 {
-    color: #00070E;
+    color: $dark;
     background: $them-color;
     border:1px solid $them-color;
     &:hover{      
@@ -53,7 +53,7 @@
     }
   }
   &-them-2 {
-    color: #00070E;
+    color: $dark;
     background: $body-text-color;
     border:1px solid $body-text-color;
     &:hover{      
@@ -68,7 +68,7 @@
     }
   }
   &-them-3 {
-    color: #00070E;
+    color: $dark;
     background: #50575B;
     border:1px solid #50575B;  
     &:hover{      
@@ -198,8 +198,8 @@
     height: 32px;
     padding: 0;
     svg{  
-      color: $white;
-      --fill2: $white;
+      color: $body-text-color;
+      --fill2: $body-text-color;
       --fill: transparent;
     }
     &.selected {
@@ -216,7 +216,7 @@
     background: #50575B;
     border:1px solid #50575B;   
     &:hover{      
-      color: #00070E !important;
+      color: $dark !important;
       background: #50575B !important;
       border:1px solid #50575B !important;
       transition: 0.7s;

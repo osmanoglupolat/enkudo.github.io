@@ -24,6 +24,14 @@
         overflow: auto;
         flex: 1;
     }
+    &-header {
+        a{
+            color: $white;
+            &:hover{
+                color: $them-color;
+            }
+        }
+    }
     &-header,
     &-footer {
         flex: none;
@@ -49,6 +57,10 @@
     
 }
 
+.ems-overlay{
+    background: $body-bg-color;
+    opacity: 0.6;
+}
 //Filter Modal
 .ems-prd-filter {
     width: 100% !important;
@@ -95,6 +107,78 @@
 
     }
     
+}
+
+//Privacy Policy Modal
+.ems-privacy {
+    height: 80%;
+    border-radius: 20px 20px 0 0;
+    top: auto;
+    bottom: -100%;
+   
+    &-animate & {
+        @extend %ems-modal-ready;
+        @extend %ems-modal-animate;
+        bottom: 0;
+
+        &-overlay {
+            @extend %ems-modal-animate-overlay;
+        }
+    }
+}
+
+//Product confirm Modal
+.ems-pdp-confirm {
+    height: 100% !important;
+    max-height: 100% !important;
+    width: 100% !important;
+    left: 0;
+    right: 0;
+    top:0;
+    bottom: 0;
+    z-index: -9999;
+   
+    &-animate & {
+        @extend %ems-modal-ready;
+        @extend %ems-modal-animate;
+        bottom: 0;
+
+        &-overlay {
+            @extend %ems-modal-animate-overlay;
+        }
+    }
+}
+.ems-pdp-confirm-ready{
+    .ems-pdp-confirm {
+        z-index: 9999;
+    }
+}
+
+//Product verification Modal
+.ems-pdp-verification {
+    height: 100% !important;
+    max-height: 100% !important;
+    width: 100% !important;
+    left: 0;
+    right: 0;
+    top:0;
+    bottom: 0;
+    z-index: -9999;
+   
+    &-animate & {
+        @extend %ems-modal-ready;
+        @extend %ems-modal-animate;
+        bottom: 0;
+
+        &-overlay {
+            @extend %ems-modal-animate-overlay;
+        }
+    }
+}
+.ems-pdp-verification-ready{
+    .ems-pdp-verification {
+        z-index: 9999;
+    }
 }
 
 //Reviews Modal
@@ -191,22 +275,4 @@
 // .ems-xx-animate .ems-xx-overlay
 %ems-modal-animate-overlay {
     display: block;
-}
-
-//Privacy Policy Modal
-.ems-privacy {
-    height: 80%;
-    border-radius: 20px 20px 0 0;
-    top: auto;
-    bottom: -100%;
-   
-    &-animate & {
-        @extend %ems-modal-ready;
-        @extend %ems-modal-animate;
-        bottom: 0;
-
-        &-overlay {
-            @extend %ems-modal-animate-overlay;
-        }
-    }
 }

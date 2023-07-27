@@ -1,0 +1,126 @@
+//PDP Confirm Modal
+.ems-pdp-confirm-overlay.ems-overlay(data-target="body" data-ready="ems-pdp-confirm-ready" data-animate="ems-pdp-confirm-animate" data-type="remove")
+.ems-modal.ems-modal-lg.ems-pdp-confirm
+    .modal-header.ems-modal-header.d-flex.align-items-center.justify-content-between
+        span Confirm Your Subscription
+        a(href="javascript:void(0)" aria-label="close" data-target="body" data-ready="ems-pdp-confirm-ready" data-animate="ems-pdp-confirm-animate" data-type="remove")
+            +icon("menuclose")
+                
+    .modal-body.ems-modal-body.ems-scrollbar.ems-scrollbar-vertical
+        // D-PDP_Confirm Subscription ve D- PDP_Confirm Subscription + phone yorum satırında iki kısımda burada
+        .content-box1
+            .content-list
+                .text1
+                    span You're just one step away from unlocking all the benefits.
+
+            .content-list
+                .text2
+                    span Subscription Details
+                
+                .cl-detail-box
+                    .row.g-5
+                        .col-12.col-lg-12
+                            .cl-detail-list
+                                .text-left
+                                    span Service Name
+                                .text-right
+                                    span League of legends: Wild Rift...
+                        .col-6.col-lg-12
+                            .cl-detail-list
+                                .text-left
+                                    span Billing Cycle
+                                .text-right
+                                    span Monthly
+                        .col-6.col-lg-12
+                            .cl-detail-list
+                                .text-left
+                                    span Price
+                                .text-right
+                                    span $9.90
+
+            .content-list
+                .text3
+                    span To confirm your subscription, simply click on the "Complete Subscription" button below.
+                    
+            //.content-list
+                .text3
+                    span To confirm your subscription, enter your number and simply click on the "Complete Subscription" button below.
+                    
+            //.content-list
+                .cl-phone
+                    .phone-box
+                        .ems-field.form-floating
+                            .phone-bg
+                                .phone-control
+                                    .top-text Country Code*
+                                    .pc-select-box
+                                        .pc-select-box-left
+                                            +img('ratio ratio-1x1 ratio-bg-circle telflagform', true, dirFrontend + 'images/tel-flag.png')
+                                            span +232                                                        
+                                        .pc-select-box-right
+                                            +icon("select-down").stroke-icon
+                        .ems-field.form-floating.input-user-tel
+                            input#Number.form-control(type='text' name='Number' value='******5555' placeholder='')
+                            label(for='Number') Number
+                            .ems-field-feedback
+
+            .content-list
+                .cl-alt.text-start
+                    .ems-field.w-100
+                        .form-check
+                            label.checkbox-container.align-items-start(for='TermsandConditions')
+                                input.form-check-input.rounded-0.fs-15(type='checkbox' id='TermsandConditions')
+                                span.checkmark
+                                .form-check-textBy By clicking here, I state that I have read and understood the 
+                                    a(data-title="Terms and Conditions" href="javascript:void(0);" class="ems-kvkk-trigger ems-link text-decoration-underline") Terms and Conditions</a>
+                            .ems-field-feedback 
+                    .ems-field.mb-0.w-100
+                        a.btn.btn-them-1.btn-lg.w-100(href="product-detail-step2.html")
+                            span Complete Subscription
+
+//PDP Confirm Modal
+
+
+//PDP Verification Modal 2
+.ems-pdp-verification-overlay.ems-overlay(data-target="body" data-ready="ems-pdp-verification-ready" data-animate="ems-pdp-verification-animate" data-type="remove")
+.ems-modal.ems-modal-lg.ems-pdp-verification
+    .logo
+        a(href="index.html")
+            +img('w-100', false, dirImages + 'logo.svg')
+    .modal-header.ems-modal-header.d-flex.align-items-center.justify-content-between
+        span Service Review
+        a(href="javascript:void(0)" aria-label="close" data-target="body" data-ready="ems-pdp-confirm-ready" data-animate="ems-pdp-confirm-animate" data-type="remove")
+            +icon("menuclose")
+    .modal-body.ems-modal-body.ems-scrollbar.ems-scrollbar-vertical
+        // D-PDP_Verification kısmı burada
+        .content-box2
+            .content-list
+                .content-list-head
+                    a(href="javascript:void(0)" aria-label="close" data-target="body" data-ready="ems-pdp-verification-ready" data-animate="ems-pdp-verification-animate" data-type="remove")
+                        +icon("ArrowLeft")
+                    .text1
+                        span Enter your verification code
+
+                .text2
+                    span Enter the verification code we have sent to the <b>+23412****34</b> mobile phone numbered via SMS.
+
+            .content-list
+                form.ems-form(action='' method='post')
+                    .circle-wrap
+                        .circle
+                            .mask.full
+                                .fill
+                            .mask.half
+                                .fill
+                            .inside-circle 01:51
+                    .ems-field.form-floating.mb-25.mt-25
+                        input#title.input-login.form-control(type='text' name='VerificationCode' value='' placeholder='Verification Code')
+                        label(for='VerificationCode') Verification Code
+                        .ems-field-feedback
+                    .ems-field.mb-0.w-100
+                        a.btn.btn-them-3.btn-lg.w-100(href="product-detail-step3.html")
+                            span Confirm
+                                
+
+//PDP Verification Modal
+
