@@ -3,6 +3,9 @@
 }
 
 .phone-box{
+  display: flex;
+  align-items: center;
+  gap:5px;
   .phone-bg{
     display: flex;
     width: 115px;
@@ -59,11 +62,13 @@
             }  
         }   
     }
-}
-.input-user-tel{
+  }
+  .input-user-tel{
     width: 207px;
+  }
 }
-}
+
+
 /// new checked
 
 // Checkbox

@@ -34,7 +34,6 @@ function handleDropdownSearchInput() {
     });
   });
 }
-handleDropdownSearchInput();
 // Search Close
 
 // Menu
@@ -87,8 +86,6 @@ function handleMenuBackNavs() {
     });
   });
 }
-handleMenuLinks();
-handleMenuBackNavs();
 // Menu
 
 // Data Filtre
@@ -113,14 +110,12 @@ function handleFilterButtons() {
     });
   });
 }
-handleFilterButtons();
 // Data Filtre
 
 // Tab All Selected
-document.addEventListener('DOMContentLoaded', function() {
+function handleTabToggleProductDetail() {
   var ratingsReviewTab = document.getElementById('v-pills-ratings-review-tab');
   var ratingsReview2Tab = document.getElementById('v-pills-ratings-review-2');
-
   function handleTabToggleProductDetail() {
     if (ratingsReviewTab.classList.contains('active')) {
       ratingsReview2Tab.classList.add('active');
@@ -128,7 +123,6 @@ document.addEventListener('DOMContentLoaded', function() {
       ratingsReview2Tab.classList.remove('active');
     }
   }
-
   ratingsReviewTab.addEventListener('click', function() {
     if (ratingsReviewTab.classList.contains('active')) {
       ratingsReview2Tab.classList.add('active');
@@ -136,74 +130,136 @@ document.addEventListener('DOMContentLoaded', function() {
       ratingsReview2Tab.classList.remove('active');
     }
   });
-
-  handleTabToggleProductDetail();
-
-  var observer = new MutationObserver(function(mutationsList) {
-    for (var mutation of mutationsList) {
-      if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
-        if (!ratingsReviewTab.classList.contains('active')) {
-          ratingsReview2Tab.classList.remove('active');
-        }
-      }
-    }
-  });
-
-  observer.observe(ratingsReviewTab, { attributes: true });
-});
-
+}
 // Tab All Selected
 
-// Product List Filter
-const filterBtn = document.getElementById('filter-btn');
-const filterContent = document.getElementById('filter-content');
-const filterClose = document.getElementById('filter-close');
-const filterSortBy = document.getElementById('filter-sortby');
-const filterSortByContent = document.getElementById('filter-sortby-content');
-const filterSortByClose = document.getElementById('filter-sortby-close');
-
-if (!window.matchMedia('(max-width: 768px)').matches) {
-  filterBtn.classList.add('active');
-  filterContent.classList.add('active');
-  filterSortBy.classList.add('active');
-  filterSortByContent.classList.add('active');
-}
-
-filterBtn.addEventListener('click', function() {
-  filterBtn.classList.add('active');
-  filterContent.classList.add('active');
-});
-
-filterSortBy.addEventListener('click', function() {
-  filterSortBy.classList.add('active');
-  filterSortByContent.classList.add('active');
-});
-
-filterClose.addEventListener('click', function() {
-  filterBtn.classList.remove('active');
-  filterContent.classList.remove('active');
-});
-
-filterSortByClose.addEventListener('click', function() {
-  filterSortBy.classList.remove('active');
-  filterSortByContent.classList.remove('active');
-});
-
-// Product List Filter
-
 // Scroll Top
-const scrollableContainer = document.querySelector('.ems-data-filter-header');
-
-scrollableContainer.addEventListener('mousedown', function(event) {
-  this.style.scrollBehavior = 'initial';
-  this.scrollLeft = event.pageX;
-  document.addEventListener('mousemove', mouseMoveHandler);
-});
-document.addEventListener('mouseup', function() {
-  document.removeEventListener('mousemove', mouseMoveHandler);
-  scrollableContainer.style.scrollBehavior = '';
-});
-function mouseMoveHandler(event) {
-  scrollableContainer.scrollLeft -= event.movementX;
+function setupScrollTop() {
+  const scrollableContainer = document.querySelector('.ems-data-filter-header');
+  scrollableContainer.addEventListener('mousedown', function(event) {
+    this.style.scrollBehavior = 'initial';
+    this.scrollLeft = event.pageX;
+    document.addEventListener('mousemove', mouseMoveHandler);
+  });
+  document.addEventListener('mouseup', function() {
+    document.removeEventListener('mousemove', mouseMoveHandler);
+    scrollableContainer.style.scrollBehavior = '';
+  });
+  function mouseMoveHandler(event) {
+    scrollableContainer.scrollLeft -= event.movementX;
+  }
 }
 // Scroll Top
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Search Close
+  if (document.getElementById('inputSearch')) {
+    handleDropdownSearchInput();
+  }
+  // Search Close
+  // Menu
+  if (document.querySelector('.nav-link')) {
+    handleMenuLinks();
+    handleMenuBackNavs();
+  }
+  // Menu
+  // Data Filtre
+  if (document.querySelector('.ems-data-filter-link')) {
+    handleFilterButtons();
+  }
+  // Data Filtre
+  // Tab All Selected
+  if (document.getElementById('v-pills-ratings-review-tab') && document.getElementById('v-pills-ratings-review-2')) {
+    handleTabToggleProductDetail();
+    var ratingsReviewTab = document.getElementById('v-pills-ratings-review-tab');
+    var observer = new MutationObserver(function(mutationsList) {
+      for (var mutation of mutationsList) {
+        if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+          if (!ratingsReviewTab.classList.contains('active')) {
+            document.getElementById('v-pills-ratings-review-2').classList.remove('active');
+          }
+        }
+      }
+    });
+    observer.observe(ratingsReviewTab, { attributes: true });
+  }
+  // Tab All Selected
+  // Product List Filter
+  if (document.getElementById('filter-btn') && document.getElementById('filter-content') && document.getElementById('filter-sortby') && document.getElementById('filter-sortby-content')) {
+    const filterBtn = document.getElementById('filter-btn');
+    const filterContent = document.getElementById('filter-content');
+    const filterClose = document.getElementById('filter-close');
+    const filterSortBy = document.getElementById('filter-sortby');
+    const filterSortByContent = document.getElementById('filter-sortby-content');
+    const filterSortByClose = document.getElementById('filter-sortby-close');
+
+    if (!window.matchMedia('(max-width: 768px)').matches) {
+      filterBtn.classList.add('active');
+      filterContent.classList.add('active');
+      filterSortBy.classList.add('active');
+      filterSortByContent.classList.add('active');
+    }
+
+    filterBtn.addEventListener('click', function() {
+      filterBtn.classList.add('active');
+      filterContent.classList.add('active');
+    });
+
+    filterSortBy.addEventListener('click', function() {
+      filterSortBy.classList.add('active');
+      filterSortByContent.classList.add('active');
+    });
+
+    filterClose.addEventListener('click', function() {
+      filterBtn.classList.remove('active');
+      filterContent.classList.remove('active');
+    });
+
+    filterSortByClose.addEventListener('click', function() {
+      filterSortBy.classList.remove('active');
+      filterSortByContent.classList.remove('active');
+    });
+  }
+  // Product List Filter
+
+  // Scroll Top
+  if (document.querySelector('.ems-data-filter-header')) {
+    setupScrollTop();
+  }
+});
+
+(function() {
+  // Değişiklik olayını dinleyin
+  document.addEventListener('input', function() {
+    // Inputların değerlerini alın
+    const numberValue = document.getElementById('Number').value;
+    const checkboxChecked = document.getElementById('CommunicationPermissions').checked;
+
+    // check-hiden-show elementini seçin
+    const checkHidenShow = document.querySelector('.check-hiden-show');
+
+    // Koşulu kontrol edin
+    if (numberValue && checkboxChecked) {
+      // Her iki koşul da sağlanıyorsa, check-hiden-show elementine d-none classını ekle
+      checkHidenShow.classList.add('d-none');
+    } else {
+      // Koşullardan en az biri eksikse, d-none classını kaldır
+      checkHidenShow.classList.remove('d-none');
+    }
+  });
+})();
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  var fillElements = document.querySelectorAll('.circle-wrap .fill');
+  var insideCircles = document.querySelectorAll('.inside-circle');
+
+  fillElements.forEach(function(fillElement) {
+    fillElement.addEventListener('animationend', function() {
+      fillElement.style.background = '#D93B41';
+      insideCircles.forEach(function(circle) {
+        circle.style.color = '#D93B41';
+      });
+    });
+  });
+});

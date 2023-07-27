@@ -1,0 +1,39 @@
+extends layouts/default.pug
+
+block prepend head
+    - var pageTitle = "Enkudo"
+    - var pageDescription = "Login Sayfası, Enkudo"
+    - var pageName = "Login"
+    - var pageClass = "page page-login"
+
+block header
+
+block content
+    section.login-section
+        .container-fluid.p-0
+            .row.g-0
+                .col
+                    .login-left
+                        .bg-img-cover.d-none.d-lg-block
+                            +img('ratio login-rotio', true , dirFrontend + 'images/bg-login.jpeg')
+                        
+                        .login-left-content
+                            .logo
+                                a(href="index.html")
+                                    +img('w-100', false, dirImages + 'logo.svg')
+                            .d-flex.flex-column.d-none.d-lg-block
+                                h2.section-title.text-start Enkudo Opens a New
+                                    <br> — Frontier for You
+                                p Enkudo provides services that anyone can enjoy, with 200+ incredibly fun games, sVOD, music, digital publications etc. — all without ads or in-app purchases.
+
+                
+                .login-right.pt-50.pt-lg-70
+                    .content-box3
+                        .content-box3-list
+                            +icon("empty-verify").empty-icons
+                            .title-box-empty
+                                h4 You were successfully logged in.
+                                p You will be redirected to the home page in <b>5 seconds...</b>
+
+
+block footer

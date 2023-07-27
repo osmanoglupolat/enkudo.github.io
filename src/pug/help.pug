@@ -12,64 +12,63 @@ block content
             +breadcrumb(["Home", "index.html"],["Help", "help.html"])
     section.help-section
         .container-fluid.p-0
-            .col-12.px-25.px-lg-100.mt-25.mt-lg-50.mb-25.mb-lg-50
+            .px-25.px-lg-100.mt-25.mt-lg-50.mb-25.mb-lg-50
                 h4.fs-18.fs-lg-24.fw-600.text-gray1 Help
-            .col-12
-                .ems-tab
-                    .ems-tab-header.px-0.px-lg-100.mt-5.mt-lg-5.mb-30.mb-lg-60
-                        a.nav-link.selected(href="javascript:void(0);" rel="tab-1" aria-label="Tab 1")
-                            span Frequently Asked Question                            
-                        a.nav-link(href="javascript:void(0);" rel="tab-2" aria-label="Tab 2")
-                            span Subscription                            
-                        a.nav-link(href="javascript:void(0);" rel="tab-3" aria-label="Tab 3")
-                            span Plans & Prices                         
-                        a.nav-link(href="javascript:void(0);" rel="tab-4" aria-label="Tab 4")
-                            span Cancellation Conditions
-                
-                    .ems-tab-content.px-25.px-lg-100.mt-5.mt-lg-5
-                        div.tab-pane.selected(rel="tab-1" id="tab-1")
-                            .col-12.mb-40.mb-lg-40.d-none.d-lg-block
-                                h4.fs-18.fs-lg-24.fw-600.text-gray Frequently Asked Questions
-                            .col-12.mt-5.mt-lg-5
-                                ul.list-unstyled.accordion.mt-5.mt-lg-10.faq-list
-                                    li.col(rel="faq-1") 
-                                        a.faq-list-btn(href="javascript:void(0);") 
-                                            span.accordion-title How do I cancel my subscription if I purchased it online through the web?
-                                            +icon("plus_minus").stroke-icon
-                                            +icon("plus_minuss").stroke-icon
-                                        .list-unstyled.faq-list-content.lv2
-                                            p You can cancel your subscription at any time in your subscription settings. If you've purchased a plan, you can cancel, and the system will still preserve any remaining time you've already paid for. You can cancel your subscription at any time in your subscription settings. If you've purchased a plan, you can cancel, and the system will still preserve any remaining time you've already paid for.
-                                                                                        
-                                    li.col(rel="faq-2") 
-                                        a.faq-list-btn(href="javascript:void(0);") 
-                                            span.accordion-title How do I cancel my subscription if I purchased it online through the web?
-                                            +icon("plus_minus").stroke-icon
-                                            +icon("plus_minuss").stroke-icon
-                                        .list-unstyled.faq-list-content.lv2
-                                            p You can cancel your subscription at any time in your subscription settings. If you've purchased a plan, you can cancel, and the system will still preserve any remaining time you've already paid for. You can cancel your subscription at any time in your subscription settings. If you've purchased a plan, you can cancel, and the system will still preserve any remaining time you've already paid for.
-                                                                                        
-                                    li.col(rel="faq-3") 
-                                        a.faq-list-btn(href="javascript:void(0);") 
-                                            span.accordion-title How do I cancel my subscription if I purchased it online through the web?
-                                            +icon("plus_minus").stroke-icon
-                                            +icon("plus_minuss").stroke-icon
-                                        .list-unstyled.faq-list-content.lv2
-                                            p You can cancel your subscription at any time in your subscription settings. If you've purchased a plan, you can cancel, and the system will still preserve any remaining time you've already paid for. You can cancel your subscription at any time in your subscription settings. If you've purchased a plan, you can cancel, and the system will still preserve any remaining time you've already paid for.
-                                                                                        
-                                    li.col(rel="faq-4") 
-                                        a.faq-list-btn(href="javascript:void(0);") 
-                                            span.accordion-title How do I cancel my subscription if I purchased it online through the web?
-                                            +icon("plus_minus").stroke-icon
-                                            +icon("plus_minuss").stroke-icon
-                                        .list-unstyled.faq-list-content.lv2
-                                            p You can cancel your subscription at any time in your subscription settings. If you've purchased a plan, you can cancel, and the system will still preserve any remaining time you've already paid for. You can cancel your subscription at any time in your subscription settings. If you've purchased a plan, you can cancel, and the system will still preserve any remaining time you've already paid for.
-                                            
-                        div.tab-pane(rel="tab-2" id="tab-2")
-                            .col-12.mb-40.mb-lg-40
-                                h4.fs-18.fs-lg-24.fw-600.text-gray Subscription
-                        div.tab-pane(rel="tab-3" id="tab-3")
-                            .col-12.mb-40.mb-lg-40
-                                h4.fs-18.fs-lg-24.fw-600.text-gray Plans & Prices
-                        div.tab-pane(rel="tab-4" id="tab-4")
-                            .col-12.mb-40.mb-lg-40
-                                h4.fs-18.fs-lg-24.fw-600.text-gray Cancellation Conditions
+            .ems-tab
+                .ems-tab-header.px-0.px-lg-100.mt-5.mt-lg-5.mb-30.mb-lg-60
+                    a.nav-link.selected(href="javascript:void(0);" rel="tab-1" aria-label="Tab 1")
+                        span Frequently Asked Question                            
+                    a.nav-link(href="javascript:void(0);" rel="tab-2" aria-label="Tab 2")
+                        span Subscription                            
+                    a.nav-link(href="javascript:void(0);" rel="tab-3" aria-label="Tab 3")
+                        span Plans & Prices                         
+                    a.nav-link(href="javascript:void(0);" rel="tab-4" aria-label="Tab 4")
+                        span Cancellation Conditions
+            
+                .ems-tab-content.px-25.px-lg-100.mt-5.mt-lg-5
+                    div.tab-pane.selected(rel="tab-1" id="tab-1")
+                        .col-12.mb-40.mb-lg-40.d-none.d-lg-block
+                            h4.fs-18.fs-lg-24.fw-600.text-gray Frequently Asked Questions
+                        .col-12.mt-5.mt-lg-5
+                            ul.list-unstyled.accordion.mt-5.mt-lg-10.faq-list
+                                li.col(rel="faq-1") 
+                                    a.faq-list-btn(href="javascript:void(0);") 
+                                        span.accordion-title How do I cancel my subscription if I purchased it online through the web?
+                                        +icon("plus_minus").stroke-icon
+                                        +icon("plus_minuss").stroke-icon
+                                    .list-unstyled.faq-list-content.lv2
+                                        p You can cancel your subscription at any time in your subscription settings. If you've purchased a plan, you can cancel, and the system will still preserve any remaining time you've already paid for. You can cancel your subscription at any time in your subscription settings. If you've purchased a plan, you can cancel, and the system will still preserve any remaining time you've already paid for.
+                                                                                    
+                                li.col(rel="faq-2") 
+                                    a.faq-list-btn(href="javascript:void(0);") 
+                                        span.accordion-title How do I cancel my subscription if I purchased it online through the web?
+                                        +icon("plus_minus").stroke-icon
+                                        +icon("plus_minuss").stroke-icon
+                                    .list-unstyled.faq-list-content.lv2
+                                        p You can cancel your subscription at any time in your subscription settings. If you've purchased a plan, you can cancel, and the system will still preserve any remaining time you've already paid for. You can cancel your subscription at any time in your subscription settings. If you've purchased a plan, you can cancel, and the system will still preserve any remaining time you've already paid for.
+                                                                                    
+                                li.col(rel="faq-3") 
+                                    a.faq-list-btn(href="javascript:void(0);") 
+                                        span.accordion-title How do I cancel my subscription if I purchased it online through the web?
+                                        +icon("plus_minus").stroke-icon
+                                        +icon("plus_minuss").stroke-icon
+                                    .list-unstyled.faq-list-content.lv2
+                                        p You can cancel your subscription at any time in your subscription settings. If you've purchased a plan, you can cancel, and the system will still preserve any remaining time you've already paid for. You can cancel your subscription at any time in your subscription settings. If you've purchased a plan, you can cancel, and the system will still preserve any remaining time you've already paid for.
+                                                                                    
+                                li.col(rel="faq-4") 
+                                    a.faq-list-btn(href="javascript:void(0);") 
+                                        span.accordion-title How do I cancel my subscription if I purchased it online through the web?
+                                        +icon("plus_minus").stroke-icon
+                                        +icon("plus_minuss").stroke-icon
+                                    .list-unstyled.faq-list-content.lv2
+                                        p You can cancel your subscription at any time in your subscription settings. If you've purchased a plan, you can cancel, and the system will still preserve any remaining time you've already paid for. You can cancel your subscription at any time in your subscription settings. If you've purchased a plan, you can cancel, and the system will still preserve any remaining time you've already paid for.
+                                        
+                    div.tab-pane(rel="tab-2" id="tab-2")
+                        .col-12.mb-40.mb-lg-40
+                            h4.fs-18.fs-lg-24.fw-600.text-gray Subscription
+                    div.tab-pane(rel="tab-3" id="tab-3")
+                        .col-12.mb-40.mb-lg-40
+                            h4.fs-18.fs-lg-24.fw-600.text-gray Plans & Prices
+                    div.tab-pane(rel="tab-4" id="tab-4")
+                        .col-12.mb-40.mb-lg-40
+                            h4.fs-18.fs-lg-24.fw-600.text-gray Cancellation Conditions

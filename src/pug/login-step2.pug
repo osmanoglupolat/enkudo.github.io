@@ -1,0 +1,63 @@
+extends layouts/default.pug
+
+block prepend head
+    - var pageTitle = "Enkudo"
+    - var pageDescription = "Login Sayfası, Enkudo"
+    - var pageName = "Login"
+    - var pageClass = "page page-login"
+
+block header
+
+block content
+    section.login-section
+        .container-fluid.p-0
+            .row.g-0
+                .col
+                    .login-left
+                        .bg-img-cover.d-none.d-lg-block
+                            +img('ratio login-rotio', true , dirFrontend + 'images/bg-login.jpeg')
+                        
+                        .login-left-content
+                            .logo
+                                a(href="index.html")
+                                    +img('w-100', false, dirImages + 'logo.svg')
+                            .d-flex.flex-column.d-none.d-lg-block
+                                h2.section-title.text-start Enkudo Opens a New
+                                    <br> — Frontier for You
+                                p Enkudo provides services that anyone can enjoy, with 200+ incredibly fun games, sVOD, music, digital publications etc. — all without ads or in-app purchases.
+
+                
+                .login-right
+                    .content-box2
+                        .content-list
+                            .content-list-head
+                                a(href="login.html")
+                                    +icon("ArrowLeft")
+                                .text1
+                                    span Enter your verification code
+                            .text2
+                                span Enter the verification code we have sent to the <b>+23412****34</b> mobile phone numbered via SMS.
+
+                        .content-list
+                            form.ems-form(action='' method='post')
+                                .ems-field <!--- .ems-field-msg-error --->
+                                    .circle-wrap
+                                        .circle
+                                            .mask.full
+                                                .fill
+                                            .mask.half
+                                                .fill
+                                            .inside-circle 01:51
+                                .ems-field.form-floating.mb-25.mt-25 <!--- .ems-field-msg-error --->
+                                    input#title.input-login.form-control(type='text' name='VerificationCode' value='' placeholder='Verification Code')
+                                    label(for='VerificationCode') Verification Code
+                                    .ems-field-feedback *The code you entered does not match. Please enter a valid code
+
+                                    a.reset-code.mb-25.mt-25 Resend the code
+
+                                .ems-field.mb-0.w-100
+                                    a.btn.btn-them-3.btn-lg.w-100(href="login-step3.html")
+                                        span Confirm
+
+
+block footer

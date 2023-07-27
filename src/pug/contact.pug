@@ -60,25 +60,24 @@ block content
                                             input.form-control(id="Email" type="text" name="Email" placeholder="Email" request)
                                             label(for="Email") Email
                                             .ems-field-feedback.fs-12.d-none.position-absolute
-                                    .col-12.col-lg-6
-                                        .row.g-5.mb-0.mb-lg-20
-                                            .col-auto.col-lg-auto
-                                                .ems-field.form-floating
+                                    .col-12.col-lg-6                                        
+                                        .ems-field.d-flex.flex-column.mb-0.mb-lg-20
+                                            .phone-box
+                                                .form-floating
                                                     .phone-bg
                                                         .phone-control
                                                             .top-text Country Code*
                                                             .pc-select-box
                                                                 .pc-select-box-left
                                                                     +img('ratio ratio-1x1 ratio-bg-circle telflagform', true, dirFrontend + 'images/tel-flag.png')
-                                                                    span +232  
-                                                                .pc-select-box                                                      
-                                                                    .pc-select-box-right
-                                                                        +icon("select-down").stroke-icon
-                                            .col.col-lg-auto
-                                                .ems-field.form-floating.input-user-tel
-                                                    input#Number.form-control(type='text' name='Number' value='' placeholder='Number*')
-                                                    label(for='Number') Number*
-                                                    .ems-field-feedback.fs-12.d-none.position-absolute
+                                                                    span +232                                                        
+                                                                .pc-select-box-right
+                                                                    +icon("select-down").stroke-icon
+                                                .form-floating.input-user-tel
+                                                    input#Number.form-control(type='text' name='Number' value='' placeholder='')
+                                                    label(for='Number') Number
+                                            .ems-field-feedback *Mobile phone number is missing or incorrect
+
                                     .col-12.col-lg-6
                                         .ems-field.form-floating.mb-0.mb-lg-20
                                             select.form-select.ems-select(name='Select Topic' placeholder='Select Topic')

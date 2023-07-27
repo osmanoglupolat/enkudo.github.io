@@ -38,18 +38,20 @@ block content
                                             h4 Contact Information
                                             p Your current phone number is as written here
                                         .rbcp-right.d-flex
-                                            .ems-field.form-floating
-                                                .phone-bg
-                                                    .phone-control
-                                                        .top-text Country Code*
-                                                        .pc-select-box
-                                                            .pc-select-box-left
-                                                                +img('ratio ratio-1x1 ratio-bg-circle telflagform', true, dirFrontend + 'images/tel-flag.png')
-                                                                span +232                                                        
-                                                            .pc-select-box-right
-                                                                +icon("select-down").stroke-icon
-                                            .ems-field.form-floating.input-user-tel
-                                                input#Number.form-control(type='text' name='Number' value='******5555' placeholder='' disabled)
-                                                label(for='Number') Number
-                                                .ems-field-feedback
-                                            
+                                            .ems-field.d-flex.flex-column.mb-0.mb-lg-0
+                                                .phone-box
+                                                    .form-floating
+                                                        .phone-bg
+                                                            .phone-control
+                                                                .top-text Country Code*
+                                                                .pc-select-box
+                                                                    .pc-select-box-left
+                                                                        +img('ratio ratio-1x1 ratio-bg-circle telflagform', true, dirFrontend + 'images/tel-flag.png')
+                                                                        span +232                                                        
+                                                                    .pc-select-box-right
+                                                                        +icon("select-down").stroke-icon
+                                                    .form-floating.input-user-tel
+                                                        input#Number.form-control(type='text' name='Number' value='******5555' placeholder='' disabled)
+                                                        label(for='Number') Number
+                                                .ems-field-feedback *Mobile phone number is missing or incorrect
+                                                
