@@ -1,0 +1,133 @@
+extends layouts/default.pug
+
+block prepend head
+    - var pageTitle = "Enkudo"
+    - var pageDescription = "Settings Sayfası, Enkudo"
+    - var pageName = "Settings"
+    - var pageClass = "page page-account-setting"
+    - var SettingsActive = "active"
+
+block content
+    section.account-section.mb-80
+        .container.p-0
+            .row.g-5
+                .account-box
+                    .left-box
+                        include includes/account-left-menu
+
+                    .right-box 
+                        .rb-content.bg-dark-them-2
+                            .rb-content-setting
+                                .product-list.mb-0.mb-lg-0.w-100
+                                    .title-box
+                                        h4.d-none.d-lg-block Notifications
+                                        p You can see your notifications in here.
+                                
+                                    .mt-0.mb-0.px-0.px-lg-0.fav-list-box
+                                        .d-flex.flex-column
+                                            .card-notification
+                                                .card-left
+                                                    .dot-notification.selected
+                                                .card-right
+                                                    .cl-left-text
+                                                        h5.text1 Get 20% off any gaming services through the month of April!
+                                                        span.text2 <a href="javascript:void(0);">Click here</a> to see gaming services
+                                                        span.text3 April 10th, 2023                                                                    
+                                                    
+                                                    .cr-right-text
+                                                        a.card-remove(href="javascript:void(0);")
+                                                            +icon("trash")
+
+
+                                            .card-notification
+                                                .card-left
+                                                    .dot-notification
+                                                .card-right
+                                                    .cl-left-text
+                                                        h5.text1 The item “BluTV” on your wishlist is on 40% off for monthly subscription. 
+                                                        span.text2 <a href="javascript:void(0);">Learn more</a> about BluTv
+                                                        span.text3 April 23th, 2023                                                                  
+                                                    
+                                                    .cr-right-text
+                                                        a.card-remove(href="javascript:void(0);")
+                                                            +icon("trash")
+                                                            
+                                            .card-notification
+                                                .card-left
+                                                    .dot-notification.selected
+                                                .card-right
+                                                    .cl-left-text
+                                                        h5.text1 Get 20% off any gaming services through the month of April!
+                                                        span.text2 <a href="javascript:void(0);">Click here</a> to see gaming services
+                                                        span.text3 April 10th, 2023                                                                    
+                                                    
+                                                    .cr-right-text
+                                                        a.card-remove(href="javascript:void(0);")
+                                                            +icon("trash")
+                                                            
+                                            .card-notification
+                                                .card-left
+                                                    .dot-notification
+                                                .card-right
+                                                    .cl-left-text
+                                                        h5.text1 Get 20% off any gaming services through the month of April!
+                                                        span.text2 <a href="javascript:void(0);">Click here</a> to see gaming services
+                                                        span.text3 April 10th, 2023                                                                    
+                                                    
+                                                    .cr-right-text
+                                                        a.card-remove(href="javascript:void(0);")
+                                                            +icon("trash")
+                                                            
+                                            .card-notification
+                                                .card-left
+                                                    .dot-notification
+                                                .card-right
+                                                    .cl-left-text
+                                                        h5.text1 Get 20% off any gaming services through the month of April!
+                                                        span.text2 <a href="javascript:void(0);">Click here</a> to see gaming services
+                                                        span.text3 April 10th, 2023                                                                    
+                                                    
+                                                    .cr-right-text
+                                                        a.card-remove(href="javascript:void(0);")
+                                                            +icon("trash")
+                                                            
+                                            .card-notification
+                                                .card-left
+                                                    .dot-notification
+                                                .card-right
+                                                    .cl-left-text
+                                                        h5.text1 Get 20% off any gaming services through the month of April!
+                                                        span.text2 <a href="javascript:void(0);">Click here</a> to see gaming services
+                                                        span.text3 April 10th, 2023                                                                    
+                                                    
+                                                    .cr-right-text
+                                                        a.card-remove(href="javascript:void(0);")
+                                                            +icon("trash")
+
+                                        .notification-footer.mt-25
+                                            nav(aria-label='Page navigation example')
+                                                .pagination
+                                                    .page-item
+                                                        a.page-link.left-icon(href='#', aria-label='Previous')
+                                                            span(aria-hidden='true')
+                                                                svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                                                    path(fill-rule='evenodd' clip-rule='evenodd' d='M14 10.7566V12.4811C14 12.5984 14.0466 12.7087 14.1231 12.7777L17.75 16.5732L14.1231 20.3679C14.1231 20.3679 14 20.5472 14 20.6645C14 20.7818 14 22.2395 14 22.389C14 22.5385 14.138 22.6258 14.2369 22.5385C14.3357 22.4511 19.7538 17.0134 19.7538 17.0134C20.0821 16.719 20.0821 16.4903 19.7538 16.1982L14.2369 10.6095C14.138 10.5198 14 10.6072 14 10.7566Z')
+                                                    .page-item
+                                                        a.page-link.active(href='#')
+                                                            span 1
+                                                    .page-item
+                                                        a.page-link(href='#')
+                                                            span 2
+                                                    .page-item
+                                                        a.page-link(href='#')
+                                                            span 3
+                                                    .page-item
+                                                        a.page-link(href='#')
+                                                            span 4
+                                                    .page-item
+                                                        a.page-link.right-icon(href='#', aria-label='Next')
+                                                            span(aria-hidden='true') 
+                                                                svg(viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                                                    path(fill-rule='evenodd' clip-rule='evenodd' d='M14 10.7566V12.4811C14 12.5984 14.0466 12.7087 14.1231 12.7777L17.75 16.5732L14.1231 20.3679C14.1231 20.3679 14 20.5472 14 20.6645C14 20.7818 14 22.2395 14 22.389C14 22.5385 14.138 22.6258 14.2369 22.5385C14.3357 22.4511 19.7538 17.0134 19.7538 17.0134C20.0821 16.719 20.0821 16.4903 19.7538 16.1982L14.2369 10.6095C14.138 10.5198 14 10.6072 14 10.7566Z')
+
+                                                    

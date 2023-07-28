@@ -233,7 +233,7 @@
                                             align-items: center;
                                             width: 7.506px;
                                             height: 4.105px;
-                                            stroke:$body-text-color;
+                                            color:$body-text-color;
                                         }
                                     }  
                                 }   
@@ -968,7 +968,132 @@
                 }   
 
                 .rb-content-notification{
-                    
+                    display: flex;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    padding:56px 45px;
+                    .title-box{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        align-self: stretch;
+                        gap: 16px;
+                        margin-bottom: 32px;
+                        h4{
+                            color:#E8E8E8;
+                            font-size: 24px;
+                            font-weight: 600;
+                            line-height: 25px;
+                        }
+                        p{
+                            color: $gray2;
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 22px;
+                            margin-bottom: 0;
+                        }
+                    }
+                    .card-notification{
+                        display: flex;
+                        max-width: 729px;
+                        width: 100%;
+                        padding: 24px 24px 24px 12px;
+                        align-items: flex-start;
+                        background: $body-bg-color;
+                        border: 0.4px solid $them-color;
+                        margin-bottom: 12px;
+                        .card-left{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            position: relative;
+                            width: 24px;
+                            height: 24px;
+                            margin-right: 16px;
+                            .dot-notification{
+                                width: 24px;
+                                height: 24px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                &::before{
+                                    content: '';
+                                    position: relative;
+                                    border-radius: 14px;
+                                    width: 14px;
+                                    height: 14px;
+                                    background: $gray6;
+                                }
+                                &.selected{                                    
+                                    &::before{
+                                        background: $green3;
+                                    }
+                                }
+                            }
+                        }
+                        .card-right{   
+                            display: flex;
+                            align-items: flex-start;
+                            width: 100%;
+                            .cl-left-text{
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: flex-start;
+                                width: 100%;
+                                .text1{
+                                    color: $body-text-color;
+                                    font-size: 16px;
+                                    font-weight: 600;
+                                    line-height: 22px;
+                                    margin-bottom: 8px;
+                                }
+                                .text2{
+                                    color: $gray2;
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    line-height: 19px;
+                                    margin-bottom: 16px;
+                                    a{                                        
+                                        color: $gray2;
+                                        font-size: 14px;
+                                        font-weight: 400;
+                                        line-height: 19px;
+                                        margin-bottom: 16px;
+                                        text-decoration-line: underline;
+                                        text-underline-position: under;
+                                    }
+                                }
+                                .text3{
+                                    color: $gray2;
+                                    font-size: 12px;
+                                    font-weight: 400;
+                                    line-height: 17px;
+                                    margin-bottom: 0;
+                                }
+                            }
+                            .cr-right-text{
+                                .card-remove{
+                                    display: flex;
+                                    justify-content: flex-end;
+                                    align-items: flex-start;
+                                    width: 32px;
+                                    height: 32px;
+                                    svg{
+                                        width: 32px;
+                                        height: 32px;
+                                        flex-shrink: 0;
+                                        color: $white;
+                                    }
+                                }
+                            }                       
+                        }
+                    }                                        
+                    .notification-footer{ 
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }                    
                 }     
                 .rb-content-settings{
                     
